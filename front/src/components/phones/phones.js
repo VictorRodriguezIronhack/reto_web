@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+
+
 const Phones = (props) => {
 
     const phones = props.phones
@@ -8,7 +10,7 @@ const Phones = (props) => {
         return phones.map((phone, index) => {
             return(
                 <div>
-                    <p>{phone.name}</p>
+                    <button onClick={() => props.selectPhone(index)} key={index}>{phone.name}</button>
                 </div>
             )
         })
