@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App .Phones {
+  margin-top: 4vw;
+}
+
+.App .Phones h3{
+  margin-bottom: 2vw;
+}
+
+.App .Card {
+  background-color: #fff;
+  width: 23%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  height: 22vw;
+  float: left;
+  border: 2px solid #8c8f8d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  -webkit-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.75);
+}
+
+.App .Card img,
+.App .SinglePhone img{
+  height: 12vw;
+}
+
+.App .Phones .Card{
+  color: black;
+  text-decoration: none;
+}
+
+h4{
+  font-size: 2rem;
+}
+
+.App .info {
+  width: 30vw;
+  margin: 2vw auto;
+  background-color: #fff;
+  border: 3px solid #8c8f8d;
+  padding: 2vw;
+  border-radius: 4px;
+  -webkit-box-shadow: 10px 10px 28px -14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 28px -14px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 28px -14px rgba(0,0,0,0.75);
+}
+
+.App .SinglePhone .description{
+  text-align: justify;
+}
+
+.App .SinglePhone a {
+  margin-top: 10px;
+}
+
+
+.App .loading {
+  margin: 20vh auto;
+  width: 30vw;
+}
+
+.App .loading i{
+  margin-bottom: 8px;
+}
+
