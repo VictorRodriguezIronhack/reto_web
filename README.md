@@ -62,7 +62,7 @@ Light footer is included too like you can see on above video.
 
 **9. Last steps on client:**
 
-  - Create the necesary service inside service folder to use it.
+  - Create the necesary service inside service folder to use it (Cloudinary).
   - Change the input form and checkit in React Developer Tools that all is correct :)
   - Check that it works to create and edit phones.
 
