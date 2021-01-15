@@ -60,7 +60,7 @@ Light footer is included too like you can see on above video.
   - Create the Base URL to correct use of Cloudinary.
 
 
-**9. Lasts steps on client:**
+**9. Last steps on client:**
 
   - Create the necesary service inside service folder to use it.
   - Change the input form and checkit in React Developer Tools that all is correct :)
