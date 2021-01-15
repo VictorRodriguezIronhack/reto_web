@@ -1,0 +1,25 @@
+h1 {
+  font-weight: 200;
+  text-align: center;
+}
+
+.navbarTop {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: -15px;
+}
+
+.mobileImg {
+  max-width: 8%;
+  margin-left: 50px;
+}
+
+.hero {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.phone-form {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
