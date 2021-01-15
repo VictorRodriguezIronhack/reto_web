@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PhoneService from '../../../service/phone.service'
+import FilesService from './../../../service/upload.service'
+import Loader from './../../shared/Loader/Loader'
 import { Container, Row, Col, Button, Form } from 'react-bootstrap'
 
 export default class PhoneForm extends Component {
@@ -17,9 +19,11 @@ export default class PhoneForm extends Component {
             processor: '',
             ramMemory: '',
             details: '',
+            uploadingPhotoActive: false,
             error: ''
         }
         this.phoneService = new PhoneService()
+        this.filesService = new FilesService()
     }
 
     handleInputChange = e => this.setState({ [e.target.name]: e.target.value })
@@ -34,6 +38,23 @@ export default class PhoneForm extends Component {
                 this.props.closeModal()
             })
             .catch(err=> this.setState({error: 'An error occurred while add new phone. Please try it again.' }))
+    }
+
+    handleFilesImage = e => {
+        const uploadImg = new FormData()
+        uploadImg.append('imageUrl', e.target.files[0])
+
+        this.setState({ uploadingPhotoActive: true })
+
+        this.filesService
+            .uploadFile(uploadImg)
+            .then(response => {
+                this.setState({
+                    imageUrl: response.data.secure_url,
+                    uploadingPhotoActive: false
+                })
+            })
+            .catch(err=> this.setState({error: 'An error has ocured. Please try it again.' }))
     }
 
     render() {
@@ -96,8 +117,8 @@ export default class PhoneForm extends Component {
                         </Col>
                     </Row>
                     <Form.Group controlId="imageUrl">
-                        <Form.Label style={{ marginLeft: '10px', fontSize: '1.2em', fontWeight: '300' }}>Phone image</Form.Label>
-                        <Form.Control type="text" minLength="5" name="imageUrl" value={this.state.imageUrl} onChange={this.handleInputChange} />
+                        <Form.Label style={{ marginLeft: '10px', fontSize: '1.2em', fontWeight: '300' }}>{this.state.uploadingPhotoActive ? <Loader /> : 'Phone image'}</Form.Label>
+                        <Form.Control type="file" name="imageUrl" onChange={this.handleFilesImage} />
                     </Form.Group>
                     <Button variant="dark btn-block" type="submit">Create new phone</Button>
                 </Form>

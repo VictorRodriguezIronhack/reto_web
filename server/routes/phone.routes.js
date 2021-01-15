@@ -43,11 +43,11 @@ router.get('/getOnePhone/:phone_id', (req, res) => {
 
 router.put('/editPhone/:phone_id', (req, res, next) => {
 
-    // const { title, manufacturer, description, color, price, imageUrl, screenSize, processor, ramMemory, details } = req.body
-    // if (!title || !manufacturer || !description || !color || !price || !imageUrl || !screenSize || !processor || !ramMemory || !details) {
-    //     res.status(404).json({ message: 'Invalid form' })
-    //     return
-    // }
+    const { title, manufacturer, description, color, price, imageUrl, screenSize, processor, ramMemory, details } = req.body
+    if (!title || !manufacturer || !description || !color || !price || !imageUrl || !screenSize || !processor || !ramMemory || !details) {
+        res.status(404).json({ message: 'Invalid form' })
+        return
+    }
 
     Phone
         .findByIdAndUpdate(req.params.phone_id, req.body)
