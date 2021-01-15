@@ -1,4 +1,4 @@
-# :iphone: Catalog App :iphone:
+# :iphone: Web Challenge:iphone:
 
 Light App to view different fake phones and their details.
 
