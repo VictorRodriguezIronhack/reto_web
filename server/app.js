@@ -6,7 +6,7 @@ require('./configs/debugger.config')
 //DB
 require('./configs/mongoose.config')
 
-//Clouinary
+//Cloudinary
 require('./configs/cloudinary.config')
 
 
