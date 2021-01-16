@@ -1,0 +1,8 @@
+.phone-card {
+    margin-bottom: 30px;
+}
+
+.phone-card img {
+    height: 220px;
+    object-fit: contain; 
+}
