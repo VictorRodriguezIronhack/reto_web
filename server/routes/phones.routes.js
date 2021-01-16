@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const PhonesData = require('../../phones.json')
+const PhonesController = require('../controllers/phonesControllers')
 
-router.get('/getall', (req, res) => res.json(PhonesData))
+router.get('/getall', PhonesController.getAll)
 
-router.get('/getone/:id', (req, res) => {
-    const phone = PhonesData.find(elm => elm.id === parseInt(req.params.id))
-    res.json(phone)
-})
+router.get('/getone/:phone_id', PhonesController.getOne)
+
+router.put('/addToWishList/:user_id/:phone_id', PhonesController.addPhone)
+
+router.delete('/removeFromWishList/:user_id/:phone_id', PhonesController.removePhone)
 
 module.exports = router

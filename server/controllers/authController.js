@@ -12,23 +12,21 @@ exports.createUser = async (req, res) => {
         return res.status(400).json({ message: errors.array() })
     }
 
-    const { username, email, password } = req.body
-
-    const salt = bcrypt.genSaltSync(bcryptSalt)
-    const hashPass = bcrypt.hashSync(password, salt)
-
     try {
 
-        const promise = (prop) => User.findOne({ prop })
+        const { username, password } = req.body
 
-        const results = await Promise.all([promise(username), promise(email)])
+        const usernameUsed = await User.findOne({ username })
 
-        if (results) {
-            return res.status(400).json({ message: 'Username or email in use' })
+        if (usernameUsed) {
+            return res.status(400).json({ message: 'Username in use' })
         }
 
-        const user = await User.create({ username, email, password: hashPass })
-        
+        const salt = bcrypt.genSaltSync(bcryptSalt)
+        const hashPass = bcrypt.hashSync(password, salt)
+
+        const user = await User.create({ username, password: hashPass })
+
         req.login(user, err => err ? res.status(500).json({ message: 'Login error' }) : res.status(200).json(user))
 
     } catch (error) {

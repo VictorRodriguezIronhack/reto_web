@@ -7,8 +7,6 @@ router.post('/signup',
     [
         check('username', 'Name should have min 3 characters.').isLength({ min: 3 }),
 
-        check('email', 'Invalid email').isEmail(),
-
         check('password', 'Password min 4 characters').isLength({ min: 4 })
     ],
     authController.createUser

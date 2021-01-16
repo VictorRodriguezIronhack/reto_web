@@ -6,17 +6,12 @@ const userSchema = mongoose.Schema({
         required: true,
         trim: true
     },
-    email: {
-        type: String,
-        required: true,
-        trim: true,
-        unique: true
-    },
     password: {
         type: String,
         required: true,
         trim: true
     },
+    wishlist: [Object],
     register: {
         type: Date,
         default: Date.now()
