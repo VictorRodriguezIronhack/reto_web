@@ -1,14 +1,10 @@
-# Bienvenid@ al reto de The Phone Cave
+# Tech Challenge Ironhack - The Phone Cave
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+Aplicación web desarrollada para el reto propuesto por Ironhack en la Career Week del Bootcamp. 
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+##### El objetivo
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
-
-##### El reto
-
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+Desarrollar una aplicación web con los siguientes requísitos mínimos:
 
 1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
  - Tenga 1 endpoint `/teléfonos`
@@ -22,24 +18,6 @@ Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no)
  - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
 3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
 
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+##### Ejecución
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
-
-
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+Para ejecutar la aplicación descarga ambas carpetas a tu dispositivo. Haz npm install en cada una de las carpetas para instalar los paquetes necesarios. Importante que lo hagas moviendo el terminal a cada una de las carpetas. Una vez hecho esto, en la carpeta back_phonecave debes crearte un documento .env que contenga la variable PORT asignándole el puerto que desees utilizar y la variable ENV con el valor development. Luego desde la ruta del proyecto back_phonecave ejecuta "npm run dev". Una vez hecho esto, mueve la terminal a la ruta front_phonecave y ejecuta el comando "npm start". Esto lanzará directamente tu aplicación al navegador.
