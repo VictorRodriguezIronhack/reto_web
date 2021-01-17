@@ -20,9 +20,9 @@ The challenge was to create a Single page application whose objetive is to offer
 
 #### Send the code to a public github repository with a README.md that explains how to run the API and the Frontend application.
 
-### How to start :rocket:
+### Setup :rocket:
 
-Setup: fork and clone this repository.
+First of all fork and clone this repository.
 
 #### Server
 - Run `npm i` on the directory
