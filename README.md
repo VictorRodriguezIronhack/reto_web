@@ -49,10 +49,10 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
 
 #### CARPETA SERVER
 
-1. Desde la carpeta `Server`:
+1. Desde la carpeta `server`:
 - Ejecuta `npm i` para instalar las dependencias requeridas en el `package.json`.
 - Crea un archivo `.env` y añade las siguientes lineas:
     - DB=phonesDB
     - PORT=5000
     - DOMAIN_LOCAL=http://localhost:3000
-2. 
+2. Desde la carpeta `server\bin`, ejecuta `node seed.js` para sembrar la base de datos.
