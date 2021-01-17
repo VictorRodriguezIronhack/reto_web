@@ -1,4 +1,4 @@
-# Ironhack Challenge - The Phone Cave by Natalia Fernández 
+# The Phone Cave by Natalia Fernández  - Ironhack Challenge
 
 The objective of the challenge is to create a Single Page Application with ReactJS that displays a list of phones and their details. It is a private page, so you need to register (Registro) or login (Inicio Sesión).
 
