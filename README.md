@@ -26,7 +26,7 @@ First of all fork and clone this repository.
 
 #### Server
 - Run `npm i` on the directory
-- Run `ǹpm run dev` command. 
+- Run `npm run dev` command. 
 
 #### Client
 - Run `npm i` on the directory.
