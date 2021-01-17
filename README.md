@@ -1,8 +1,8 @@
-# Bienvenid@ al reto de The Phone Cave
+## Ironhack Challenge - The Phone Cave
 
 Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+<img src="https://drive.google.com/file/d/1ZPWmVh3_ATPtSHCetczgBfaSBTg6dDwj/view?usp=sharing" width="500"/>
 
 En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
 
