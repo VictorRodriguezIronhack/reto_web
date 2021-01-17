@@ -9,7 +9,7 @@ const Phone = require('../models/phone.model')
 
 
 // Muestra la lista de todos los telefonos
-router.get('/getAllPhones', (req, res) => {
+router.get('/', (req, res) => {
     Phone
         .find()
         .then(response => res.json(response))
@@ -18,7 +18,7 @@ router.get('/getAllPhones', (req, res) => {
 
 
 // Muestra los detalles de un telefono
-router.get('/getOnePhone/:phone_id', (req, res) => {
+router.get('/:phone_id', (req, res) => {
 
     const phone_id = req.params.phone_id
 
