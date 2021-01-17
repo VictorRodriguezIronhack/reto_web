@@ -21,6 +21,12 @@ Escribir una aplicación de catálogo de telefonos muy simple (o no). Los requis
 
 # Solution and Instructions
 
+## Install
+
+- Run `npm i` on the root directory
+
+
+# SERVER
 
 1. Creation of a REST API with Express.js and Node.js. (Postman for testing the endpoints)
 
@@ -31,13 +37,9 @@ Escribir una aplicación de catálogo de telefonos muy simple (o no). Los requis
 | `http://localhost:5000/api/phones/getAllPhones` |    GET   | json with phones list |
 | `http://localhost:5000/api/phones/getOnePhone/:id` |    GET   | json with one phone |
 
-### Express generator
+## Express generator
 
 Boilerplate for a basic ExpressJS backend
-
-## Install
-
-- Run `npm i` on the /server directory
 
 ## Run
 
@@ -51,21 +53,18 @@ Boilerplate for a basic ExpressJS backend
 
 -Run `bin/seed.js`
 
-
+# CLIENT
 
 3. Creation of React App which shows phones list from the API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Run
 
-In /client directory, you can run:
+  In /client directory, you can run:
 
-### `npm start`
+- Run `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Open http://localhost:3000) to view it in the browser.The page will reload if you make edits.
+  You will also see any lint errors in the console.
 
