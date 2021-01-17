@@ -1,45 +1,24 @@
 ## Ironhack Challenge - The Phone Cave
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+The challenge was to create a Single page application whose objetive is to offer a list of phones and their details. First of allyou need to login with this username: Loreto and password: loretoalvarez.
 
-<img src="https://drive.google.com/file/d/1ZPWmVh3_ATPtSHCetczgBfaSBTg6dDwj/view?usp=sharing" width="500"/>
+### The Challenge
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
+#### Write a simple REST API.
+ - Have 1 endpoint `/phone`
+ - Return the attached "phones.json" charge
+ - There is no need for a persistence layer (BBDD). 
 
-##### El reto
+#### Write a React application that displays the API phones.
+ - Use Axios to get REST API data.
+ - Display an initial list of all phones.
+ - When a phone model is selected from the list, a detailed view of the phone is displayed showing some more details about it.
+ - Show a spinner or placeholder type component while the API request is in progress.
+ - Make it look decent. There's no need for a super sophisticated design, but at least make it a bit sensitive so that it doesn't look terrible on a cell phone. Add images for each device.
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+#### Send the code to a public github repository with a README.md that explains how to run the API and the Frontend application.
 
-1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Redux para la administración del estado y Axios (o una biblioteca similar) para obtener datos de la API REST. (Puedes no usar Redux)
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
+#### Technologies
 
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+HTML5 | CSS3 | JavaScript(ES6) | React.js | Hooks | Node.js | Express.js | MongoDB | Mongoose | Ajax | React Bootstrap | Styled Components | Passport 
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
-
-
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
