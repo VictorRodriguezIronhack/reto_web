@@ -1,10 +1,7 @@
-# Bienvenid@ al reto de The Phone Cave
-
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+# The Phone Cave challenge
 
 <img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
 
 ##### El reto
 
@@ -22,21 +19,17 @@ Escribir una aplicación de catálogo de telefonos muy simple (o no). Los requis
  - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
 3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
 
-##### Solución
+##### Solution and Instructions
 
 
-
-1. Creation of a REST API with Express.js and Node.js 
-
+1. Creation of a REST API with Express.js and Node.js. (Postman for testing the endpoints)
 
 ## Here's the route we will be using:
 
 |   Route   | HTTP Verb |   Description   |
 |-----------|-----------|-----------------|
-| `/api/phones/getAllPhones` |    GET   | json with phones list |
-| `/api/phones/getOnePhone/:phone_id` |    GET   | json with one phone |
-
-##### Instructions
+| `http://localhost:5000/api/phones/getAllPhones` |    GET   | json with phones list |
+| `http://localhost:5000/api/phones/getOnePhone/:id` |    GET   | json with one phone |
 
 # Express generator
 
@@ -44,9 +37,35 @@ Boilerplate for a basic ExpressJS backend
 
 ## Install
 
-- Run `npm i` on the root directory
+- Run `npm i` on the /server directory
 
 ## Run
 
-- Create a `.env` file on the server directory to populate the database ( DB_LOCAL=mongodb://localhost/phones ) and port ( PORT=5000 )
-- Run `npm run dev` command on the server directory
+- Create a `.env` file on the /server directory to populate the database ( DB_LOCAL=mongodb://localhost/phones ) and port ( PORT=5000 )
+- Run `npm run dev` command on the /server directory
+
+
+2. Seed MongoDB Database
+
+## Seed
+
+-Run `bin/seed.js`
+
+
+
+3. Creation of React App which shows phones list from the API
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In /client directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
