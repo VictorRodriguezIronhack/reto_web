@@ -1,6 +1,7 @@
 main {
     min-height: 85vh;
     margin-top: 130px;
+    margin-bottom: 100px;
 }
 
 img {
@@ -31,4 +32,19 @@ a {
     text-align: right;
     text-transform: uppercase;
     font-size: .9rem;
+}
+
+.phone-details {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.footer {
+    background-color: #5c2556;
+}
+
+.btn {
+    background-color: #5c2556;
+    border-color: lightgray;
 }

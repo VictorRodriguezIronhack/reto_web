@@ -16,7 +16,7 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <Form style={{padding: '0px 30px', width: '100%'}}>
+            <Form style={{marginRight: '20px'}}>
                 <Form.Control type="text" placeholder="Search..." value={this.state.search} onChange={this.inputSearch} />
             </Form>
         )

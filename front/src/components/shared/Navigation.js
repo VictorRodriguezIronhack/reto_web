@@ -19,8 +19,8 @@ const Navigation = () => {
                     <Link to='/'>
                         <Nav.Link as="div">All phones</Nav.Link>
                     </Link>
-                    <Link to='/new-phone'>
-                        <Nav.Link as="div">New phone</Nav.Link>
+                    <Link to='/login'>
+                        <Nav.Link as="div">Profile</Nav.Link>
                     </Link>
                 </Nav>
             </Navbar.Collapse>
