@@ -24,9 +24,9 @@ Escribir una aplicación de catálogo de telefonos muy simple (o no).
 ### Visualizar la solución
 
 1. Crea en `/back` un archivo `.env` con la siguiente información:
-    `PORT=5000
-    DB_LOCAL=mongodb://localhost/reto-web
-    DOMAIN_LOCAL=http://localhost:3000`
+    `PORT=5000`
+    `DB_LOCAL=mongodb://localhost/reto-web`
+    `DOMAIN_LOCAL=http://localhost:3000`
 2. Abre la terminal y accede al directorio `original-content`
 3. Ejecuta el comando `mongoimport --db=retoweb --collection=phones --file=phones.json --jsonArray` para crear la base de datos local con la información de los teléfonos.
 4. Divide verticalmente tu consola, vas a trabajar en dos directorios a la vez.
