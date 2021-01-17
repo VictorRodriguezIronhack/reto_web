@@ -41,7 +41,7 @@ class Navigation extends Component {
                             <Nav.Link as="div">Home</Nav.Link>
                         </Link>
                         <Link to="/phones">
-                            <Nav.Link as="div">Móviles</Nav.Link>
+                            <Nav.Link as="div">Phones</Nav.Link>
                         </Link>
                       
                         {this.props.loggedUser ?<>
@@ -61,9 +61,7 @@ class Navigation extends Component {
 
                             </>
                         }
-                        <Link to="/perfil">
-                            <Nav.Link as="div">{this.props.loggedUser ? `Hi ${this.props.loggedUser.username}` : 'hi guest'}</Nav.Link>
-                        </Link>
+                   
 
                     </Nav>
 

@@ -11,6 +11,7 @@ import AuthService from './../Service/Auth.service'
 import PhoneForm from './Pages/Phone/Phone-form'
 import PhoneList from './Pages/Phone/PhoneList'
 import PhoneDetails from './Pages/Phone/PhoneDetails'
+import PhoneEdit from './Pages/Phone/Phone-edit'
 
 class App extends Component {
     constructor() {
@@ -45,8 +46,9 @@ class App extends Component {
                         <Route path="/login" render={props => <Login storeUser={this.setTheUser} {...props} />} />
                         <Route path="/signup" render={props => <Signup storeUser={this.setTheUser} {...props} />} />
                         <Route path="/nuevo-telefono" render={() => <PhoneForm loggedUser={this.state.loggedInUser}></PhoneForm>} />
-                        <Route path="/phones" render={() => <PhoneList></PhoneList>} />
+                        <Route path="/phones" render={props => <PhoneList {...props} loggedUser={this.state.loggedInUser}></PhoneList>} />
                         <Route path="/phone/:phone_id" render={props => <PhoneDetails {...props}  />} />
+                        <Route path="/edit-phone/:phone_id" render={props => <PhoneEdit {...props} />} />
 
                     </main>
                 

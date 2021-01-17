@@ -4,12 +4,12 @@ import React, { Component } from 'react'
 import PhoneService from '../../../Service/Phone.service'
 
 
-class ProfileOwner extends Component {
+class PhoneList extends Component {
 
     constructor() {
         super()
         this.state = {
-
+logguedUser:undefined
                 }
         this.PhoneService = new PhoneService()
     }
@@ -36,7 +36,7 @@ class ProfileOwner extends Component {
                     {this.state.phones ?
                         <>
                             <Row>
-                                {this.state.phones.map(elm => <PhoneCard key={elm._id} {...elm} />)}
+                                {this.state.phones.map(elm => <PhoneCard loggedUser={this.props.loggedUser} key={elm._id} {...elm} />)}
                             </Row></>
                         :
                         <h1>cargando</h1>
@@ -47,5 +47,5 @@ class ProfileOwner extends Component {
     }
 }
 
-export default ProfileOwner
+export default PhoneList
 

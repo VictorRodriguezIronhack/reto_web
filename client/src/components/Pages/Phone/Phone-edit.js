@@ -6,7 +6,7 @@ import FilesService from '../../../Service/Upload.service'
 import './Phone-form.css'
 
 
-class PhoneForm extends Component {
+class PhoneEdit extends Component {
 
     constructor(props) {
 
@@ -14,12 +14,22 @@ class PhoneForm extends Component {
 
         this.state = {
             name: '',
-            user:this.props.loggedUser ? this.props.loggedUser._id : null
-       
+            user: this.props.loggedUser ? this.props.loggedUser._id : null
+
         }
         this.phoneService = new phoneService()
         this.filesService = new FilesService()
 
+    }
+    componentDidMount = () => {
+        const phoneId = this.props.match.params.phone_id
+        this.setState({ id: phoneId })
+        this.phoneService
+            .getPhone(phoneId)
+            .then(res => {
+
+                this.setState({ image: res.data.image,  name: res.data.name, color: res.data.color, manufacturer: res.data.manufacturer, price:res.data.price, processor:res.data.processor, screen: res.data.screenSize, ram: res.data.ram, description:res.data.description, user:res.data.user })
+            })
     }
 
     handleImageUpload = e => {
@@ -48,24 +58,28 @@ class PhoneForm extends Component {
 
     handleSubmit = e => {
 
-        console.log(this.props.loggedUser)
-    
-            e.preventDefault()
+        e.preventDefault()
 
-            this.phoneService
-                .newPhone(this.state)
-                .then(res => {
-                    this.props.history.push(`/phones`)
+        this.phoneService
+            .editPhone(this.state)
+            .then(res => {
+                this.props.history.push(`/phones`)
 
-                })
-                .catch(err => console.log('Ha habido un error', err))
-        
+            })
+            .catch(err => console.log('Ha habido un error', err))
 
 
-
-       
     }
 
+    delete = () => {
+         console.log( this.state.id)
+         this.phoneService
+             .deletePhone(this.state.id)
+             .then(res => {
+             this.props.history.push('/phones')
+         })
+   }
+    
 
     render() {
 
@@ -77,7 +91,7 @@ class PhoneForm extends Component {
                         <Col md={{ span: 8, offset: 2 }}>
                             <h1>New phone</h1>
                             <hr />
-                            <Form onSubmit={ this.handleSubmit }>
+                            <Form onSubmit={this.handleSubmit}>
                                 <Form.Group controlId="name">
                                     <Form.Label>Name</Form.Label>
                                     <Form.Control type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
@@ -102,7 +116,7 @@ class PhoneForm extends Component {
                                 <Form.Group controlId="image">
                                     <Form.Label>Image (file)</Form.Label>
                                     <Form.Control type="file" onChange={this.handleImageUpload} />
-                                    {this.state.image ? <img className="uploadedImg"    src={this.state.image} /> : null}
+                                    {this.state.image ? <img className="uploadedImg" src={this.state.image} /> : null}
                                 </Form.Group>
                                 <Form.Group controlId="sreen">
                                     <Form.Label>Screen size</Form.Label>
@@ -119,8 +133,11 @@ class PhoneForm extends Component {
                                 <br>
 
                                 </br>
-                                <Button variant="dark" type="submit" className="create" >Create phone</Button>
-                                <br/>
+                                <Button variant="dark" type="submit" className="create" >Edit phone</Button>
+
+                                <Button onClick={this.delete} className="create" >Delete phone</Button>
+
+                                <br />
 
                             </Form>
                         </Col>
@@ -131,4 +148,4 @@ class PhoneForm extends Component {
     }
 }
 
-export default PhoneForm
+export default PhoneEdit

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default class AuthService {
+export default class PhoneService {
 
     constructor() {
         this.apiHandler = axios.create({
@@ -10,9 +10,9 @@ export default class AuthService {
     }
 
     newPhone = (props) => this.apiHandler.post('/new', props)
-    signupOwner = credentials => this.apiHandler.post('/signup-owner', credentials)
     getPhones = () => this.apiHandler.get('/phones')
     getPhone = phoneId => this.apiHandler.get(`/getOnePhone/${phoneId}`)
-
+    editPhone = (props) => this.apiHandler.post('/edit-phone/', props)
+    deletePhone = phoneId =>this.apiHandler.post(`/deletePhone/${phoneId}`)
    
 }

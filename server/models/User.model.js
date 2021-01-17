@@ -19,7 +19,7 @@ const userSchema = new Schema({
     favMovil: [{
         movilid: {
             type: Schema.Types.ObjectId,
-            ref: 'phone'
+            ref: 'phones'
         }
     }],
     telephone: String

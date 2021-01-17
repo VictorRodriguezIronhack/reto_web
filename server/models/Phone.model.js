@@ -33,6 +33,12 @@ const phoneSchema = new Schema({
     ram: {
         type: Number, 
     },
+    user: {
+        
+            type: Schema.Types.ObjectId,
+            ref: 'users'
+        
+    },
     
 }, { timestamps: true })
 
