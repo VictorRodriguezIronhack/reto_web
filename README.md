@@ -1,8 +1,8 @@
-## Ironhack Challenge - The Phone Cave
+## Ironhack Challenge - The Phone Cave :rocket:
 
 The challenge was to create a Single page application whose objetive is to offer a list of phones and their details. First of allyou need to login with this `username:` Loreto and `password:` loretoalvarez.
 
-### The Challenge
+### The Challenge :muscle:
 
 #### Write a simple REST API.
  - Have 1 endpoint `/phone`
