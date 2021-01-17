@@ -19,7 +19,7 @@ Escribir una aplicación de catálogo de telefonos muy simple (o no). Los requis
  - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
 3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
 
-##### Solution and Instructions
+# Solution and Instructions
 
 
 1. Creation of a REST API with Express.js and Node.js. (Postman for testing the endpoints)
@@ -31,7 +31,7 @@ Escribir una aplicación de catálogo de telefonos muy simple (o no). Los requis
 | `http://localhost:5000/api/phones/getAllPhones` |    GET   | json with phones list |
 | `http://localhost:5000/api/phones/getOnePhone/:id` |    GET   | json with one phone |
 
-# Express generator
+### Express generator
 
 Boilerplate for a basic ExpressJS backend
 
