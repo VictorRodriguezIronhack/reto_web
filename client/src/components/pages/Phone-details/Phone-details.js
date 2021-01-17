@@ -25,14 +25,12 @@ class PhoneDetails extends Component {
 
         this.phoneService
             .getPhone(phone_id)
-            .then(res => {
-                this.setState({ phone: res.data[0] })
-                console.log(this.state.phone)
-            })
+            .then(res => this.setState({ phone: res.data[0] }))
             .catch(err => console.log(err))
         
     }
 
+    
     render() {
         return (
             <Container>

@@ -33,7 +33,7 @@ class PhoneList extends Component {
         return (
             <>
                 <Container fluid>
-                    <h1 className="text-center phone-list-title">Phone List</h1>
+                    <h1 className="text-center">Phone List</h1>
                     <Row className="justify-content-center">
                         {
                             this.state.phones

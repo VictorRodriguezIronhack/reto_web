@@ -8,7 +8,6 @@ import PhoneDetails from './pages/Phone-details/Phone-details'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
 
 
 function App() {
@@ -28,5 +27,6 @@ function App() {
     </>
   )
 }
+
 
 export default App

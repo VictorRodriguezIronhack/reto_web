@@ -5,7 +5,7 @@ import { Col, Card, ButtonGroup } from 'react-bootstrap'
 import './Phone-card.css'
 
 
-const PhoneCard = ({ name, manufacturer, description, color, price, imageFileName, screen, processor, ram, id }) => {
+const PhoneCard = ({ name, manufacturer, imageFileName, id }) => {
 
     return (
 
