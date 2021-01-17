@@ -36,3 +36,11 @@ First of all fork and clone this repository.
 
 HTML5 | CSS3 | JavaScript(ES6) | React.js | Hooks | Node.js | Express.js | MongoDB | Mongoose | Ajax | React Bootstrap | Styled Components | Passport |
 
+### Author :woman: 
+Hello, it´s me! Loreto Álvarez
+#### My Contact
+<i><a href="https://www.linkedin.com/in/loreto-alvarez-voces/">Linkedin</a></i></br>
+<i><a href = "mailto: loretoavoces@gmail.com">Send Email</a></i> <br />
+
+
+
