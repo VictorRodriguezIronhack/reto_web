@@ -2,7 +2,7 @@
 
 The challenge was to create a Single page application whose objetive is to offer a list of phones and their details. First of allyou need to login with this `username:` Loreto and `password:` loretoalvarez.
 
-<img src="https://res.cloudinary.com/loretoavoces/image/upload/v1610918603/fotos-navidad/Captura_de_pantalla_de_2021-01-17_22-20-58_sq8urr.png"></img>
+<img src="https://res.cloudinary.com/loretoavoces/image/upload/v1610918696/fotos-navidad/Captura_de_pantalla_de_2021-01-17_22-20-58_bd3x6d.png"></img>
 
 ### The Challenge :muscle:
 
