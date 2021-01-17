@@ -33,9 +33,9 @@ class PhoneList extends Component {
     render() {
         return (
             <>
-                <Container>
-                    <h1>Telefonos</h1>
-                    <Row>
+                <Container fluid>
+                    <h1 className="text-center">Lista de teléfonos</h1>
+                    <Row className="justify-content-center">
                         {
                             this.state.phones
                                 ?
