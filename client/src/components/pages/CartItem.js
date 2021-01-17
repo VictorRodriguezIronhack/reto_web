@@ -13,7 +13,7 @@ const CartItem = () => {
                     <img src="https://dl.airtable.com/.attachments/64b266ad865098befbda3c3577a773c9/24497852/yedjpkwxljtb75t3tezl.png" alt="Samsung Galaxy S8" />
                     <Link to={'/phone'} className="d-flex flex-column" style={{ textDecoration: 'none' }}>
                         <h4 style={{ fontSize: '1.2em' }}>Samsung Galaxy S8</h4>
-                        <p className="item-price">$399.99</p>
+                        <p className="item-price">399.99 €</p>
                         <Button className="remove-btn" size="sm" variant="secondary" >Remove</Button>
                     </Link>
                 </article >

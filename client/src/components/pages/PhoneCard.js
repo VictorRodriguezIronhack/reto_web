@@ -13,7 +13,7 @@ const PhoneCard = ({ productId, name, manufacturer, description, color, price, i
                     <Card.Title className="phone-name mb-2">{manufacturer} {name}</Card.Title>
                     <Card.Text className="details  mb-2">
                         <p className="phone-description">{description.substring(0, 100)}...</p>
-                        <p className="phone-price">{price} $</p>
+                        <p className="phone-price">{price} €</p>
                     </Card.Text>
                     {/* <Link to={`/phone/${phone_id}`}>View More</Link> */}
                     <Link to={`/phone/${productId}`} className="btn btn-block btn-outline-secondary">View More</Link>

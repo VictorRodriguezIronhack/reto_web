@@ -44,7 +44,7 @@ const PhoneDetails = ({ match, history }) => {
                                 <h3 className="phone-manifacturer mb-3"><strong>{product.manufacturer} {product.name}</strong></h3>
                                 <p>{product.description}</p>
                                 <p className="phone-color"><strong>Color:</strong> {product.color}</p>
-                                <p className="phone-price"><strong>Price:</strong> {product.price} $</p>
+                                <p className="phone-price"><strong>Price:</strong> {product.price} €</p>
                                 <p className="phone-screen"><strong>Screen:</strong> {product.screen}</p>
                                 <p className="phone-processor"><strong>Processor:</strong> {product.processor}</p>
                                 <p className="phone-ram"><strong>RAM:</strong> {product.ram}</p>
@@ -53,10 +53,13 @@ const PhoneDetails = ({ match, history }) => {
 
                                 <Card>
                                     <Card.Header>Shop this product</Card.Header>
-                                    <ListGroup.Item>Price:</ListGroup.Item>
+                                    <ListGroup.Item>Price: {product.price} €</ListGroup.Item>
+                                    <ListGroup.Item>Stock:
+                                        {product.stock > 0 ? ` ${product.stock} left` : "Out of Stock"}
+                                    </ListGroup.Item>
                                     <ListGroup.Item className="d-flex ">
                                         <p className="mr-3 my-auto">Quantity</p>
-                                        <Form.Control as="select" defaultValue="Choose...">
+                                        <Form.Control as="select" defaultValue="Choose..." value={qty} onChange={e => setQty(e.target.value)}>
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
