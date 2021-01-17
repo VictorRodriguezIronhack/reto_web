@@ -1,0 +1,28 @@
+.cart-item{
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+ 
+
+}
+.cart-item a {
+    color:#3c3b37;
+    cursor: pointer;
+}
+
+.cart-item a:hover{
+    color:#3080a0;
+}
+
+.cart-item-name{
+    overflow: hidden;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1rem;
+}
+
+.cart-item img {
+    height: 90px;
+    object-fit: contain;
+} 
