@@ -8,7 +8,7 @@ En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el
 
 ##### El reto
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+Escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
 
 1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
  - Tenga 1 endpoint `/teléfonos`
@@ -22,24 +22,31 @@ Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no)
  - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
 3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
 
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
-
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
+##### Solución
 
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+
+1. Creation of a REST API with Express.js and Node.js 
+
+
+## Here's the route we will be using:
+
+|   Route   | HTTP Verb |   Description   |
+|-----------|-----------|-----------------|
+| `/api/phones/getAllPhones` |    GET   | json with phones list |
+| `/api/phones/getOnePhone/:phone_id` |    GET   | json with one phone |
+
+##### Instructions
+
+# Express generator
+
+Boilerplate for a basic ExpressJS backend
+
+## Install
+
+- Run `npm i` on the root directory
+
+## Run
+
+- Create a `.env` file on the server directory to populate the database ( DB_LOCAL=mongodb://localhost/phones ) and port ( PORT=5000 )
+- Run `npm run dev` command on the server directory
