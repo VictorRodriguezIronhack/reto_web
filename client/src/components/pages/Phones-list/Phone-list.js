@@ -5,6 +5,7 @@ import PhoneService from '../../../service/phones.service'
 
 // Components
 import PhoneCard from './Phone-card'
+import Alert from './../../shared/Alert/Alert'
 
 // Styles
 import { Container, Row } from 'react-bootstrap'
@@ -15,7 +16,9 @@ class PhoneList extends Component {
     constructor() {
         super()
         this.state = {
-            phones: undefined
+            phones: undefined,
+            showToast: false,
+            toastText: ''
         }
         this.phoneService = new PhoneService()
     }
@@ -25,8 +28,11 @@ class PhoneList extends Component {
         this.phoneService
             .getPhones()
             .then(res => this.setState({ phones: res.data }))
-            .catch(err => console.log(err))
+            .catch(err => this.setState({ showToast: true, toastText: err.response.data.message }))
     }
+
+
+    handleToast = (visible, text) => this.setState({ showToast: visible, toastText: text })
 
 
     render() {
@@ -44,6 +50,8 @@ class PhoneList extends Component {
                         }
                     </Row>
                 </Container>
+
+                <Alert show={this.state.showToast} handleToast={this.handleToast} toastText={this.state.toastText} />
             </>
         )
     }
