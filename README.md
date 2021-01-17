@@ -1,45 +1,91 @@
-# Bienvenid@ al reto de The Phone Cave
+# :iphone: Web Challenge :iphone:
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+Light App to view different fake phones and their details.
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+Created by: **Héctor Carramiñana**.
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
+A responsive ReactJS App with four available different actions by the user (CRUD):
 
-##### El reto
+- Create
+- Read
+- Update
+- Delete
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+Site URL (Heroku deploy): [Catalog_App](https://catalog-phone-app.herokuapp.com/) 
 
-1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Redux para la administración del estado y Axios (o una biblioteca similar) para obtener datos de la API REST. (Puedes no usar Redux)
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
+## Video summary of the app:
+Click to see the video :)
 
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+[![YoutubeShow](http://img.youtube.com/vi/oHulvViHLus/0.jpg)](http://www.youtube.com/watch?v=oHulvViHLus "ShowIndex")
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
+I have added a slight effect on the navbar to make it go from transparent to white when the user starts to see the content, and prevent it affect their usage experience.
 
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
+Light footer is included too like you can see on above video.
 
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
+## How was it done!? :exploding_head:
 
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
+**1. Create server/client directories and set up the ports (in this case i used 5000 for server and 3000 for client)**
+
+**2. Install server boilerplate (own resource) and adapt it to API REST**
+
+**3. Install create-react-app in client (PORT 3000 by default. I've decided not change it.)**
+
+**4. In server, create phone.model, Base URLs and endpoints in routes folder**
+
+**5. Use Postman to test all endpoints**
+
+**6. Instal CORS and configurate it to avoid future problems with server requests.**
+
+**7. Go to client:**
+
+  - Install react-router-dom.
+  - Install axios for the requests that we will make later from client to server avoiding reload.
+  - Install bootstrap, react-bootstrap, import CSS and install MBDReact too (I like this dependency).
+  - Route <App> with <Router> to create a SPA (Single Page Application).
+  - Create service folder and the PhoneService to use later.
+  - Create components (full state components or not, depends of the app). In this case, there are of two types.
+  - Give styles with css and check that they render correctly.
+  - Route the components in App.js and check it again.
+  - Create more services and components to make a complete CRUD.
+  - Create a Modal Window to add new phone and edit (better user experience).
+  - Create a simple NavBar to have a better vision of the app and use like a home link too.
+  - Give effects to the navigation bar (it's transparent) so that when the user scrolls down he can still see the content correctly.
+  - Create updateList, refreshPhoneList and others to make that the App automatically updates with any change and the user does not have to refresh the page.
+
+**8. Stop! Go to server now and:**
+
+  - Install multer, Cloudinary and multer-storage-cloudinary.
+  - Configurate Cloudinary with your credentials and add it to .env file.
+  - Create new route to use Cloudinary.
+  - Create the Base URL to correct use of Cloudinary.
 
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+**9. Last steps on client:**
+
+  - Create the necesary service inside service folder to use it (Cloudinary).
+  - Change the input form and checkit in React Developer Tools that all is correct :)
+  - Check that it works to create and edit phones.
+
+
+## Do you want to use my API REST? Nice!
+
+Check it: [Catalog_API](https://catalog-phone-api.herokuapp.com/api/phones/phones) 
+
+| API Url | Content |
+| ------------- | ------------- |
+| https://catalog-phone-api.herokuapp.com/api/phones/phones | GET METHOD - Get an array of objects with the all phones info |
+| https://catalog-phone-api.herokuapp.com/api/phones/phoneID  | GET METHOD - Get an object with one phone info |
+| https://catalog-phone-api.herokuapp.com/api/phones/newPhone  | POST METHOD - Create new phone |
+| https://catalog-phone-api.herokuapp.com/api/phones/delete/phoneID  | DELETE METHOD - Delete one phone |
+| https://catalog-phone-api.herokuapp.com/api/phones/editPhone/phoneID  | PUT METHOD - Edit phone info |
+  
+
+And...**_That's all Folks._**
+
+## Author ✒️
+
+* **Héctor Carramiñana** - *Complete web development* - (https://github.com/Phector27)
+
+### Built with :heart:
+
+Enjoy it! Happy working💙
