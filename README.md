@@ -41,6 +41,13 @@ A pesar que en las instrucciones se especificaba tener un sólo un endpoint, he 
   | `/new` | Añadir nuevo teléfono  |
 
 
+  ### Intrucciones
+
+  - Ejecutar Servidor con "npm run dev". Se ejecuta en el puerto 5000.
+  - Ejecutar Cliente con "npm start". Se ejecuta en http://localhost3000.
+
+
+
 
 ### Tecnologías usadas
 - HTML5 
