@@ -2,6 +2,8 @@
 
 I present to you PhonePlanet📲. 
 
+![alt text](https://res.cloudinary.com/aliciarojo/image/upload/v1610925455/Screenshot_from_2021-01-18_00-12-20_k0aqha.png)
+
 ## What is
 is a website with a full CRUD in which you can add cell phones and both delete and edit it if they are your creation. You can visit it in: https://phoneplanet.herokuapp.com/ . 
 
@@ -24,9 +26,9 @@ You can view the hole list of devices, you can click on details to see a single 
 ### Add new device
 You can add a new device from scratch, all data will automatically move to MongoDB and the image file to Cloudinary.<br>
 
+![alt text](https://res.cloudinary.com/aliciarojo/image/upload/v1610925447/Screenshot_from_2021-01-18_00-13-02_rervu5.png)
+
 # DEFAULT USER FOR TESTING
 ### you can try the app without registering with the following values:
 - <strong>name:</strong> user
 - <strong>password:</strong> useruser
-
-![alt text](https://res.cloudinary.com/aliciarojo/image/upload/v1610925455/Screenshot_from_2021-01-18_00-12-20_k0aqha.png)
