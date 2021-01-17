@@ -43,3 +43,10 @@ Ahora bien, el limite de entrega es el Lunes a las 10:00 am.
 
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+
+
+# INSTRUCCIONES PARA LA EJECUCIÓN DEL REPO BY CARLOS MARTIN-SALAS LARENA
+
+## CARPETA SERVER
+
+1. Desde la carpeta `Server` ejecuta `npm i` para instalar las dependencias requeridas en el `package.son`.
