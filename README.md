@@ -57,3 +57,10 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
     - DOMAIN_LOCAL=http://localhost:3000
 2. Desde la carpeta `server\bin`, ejecuta `node seed.js` para sembrar la base de datos.
 3. Desde el directorio `server`, ejecuta `npm run dev` para levantar el servidor.
+
+
+#### CARPETA CLIENT
+
+1. Desde la carpeta `client`:
+- Ejecuta `npm i` para instalar las dependencias requeridas en el `package.json`.
+- Ejecuta `npm start` para ejecutar la aplicación. 
