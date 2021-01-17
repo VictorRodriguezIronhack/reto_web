@@ -6,6 +6,7 @@ import PhoneService from '../../../service/phones.service'
 
 // Components
 import Alert from './../../shared/Alert/Alert'
+import Loader from './../../shared/Spinner/Loader'
 
 // Styles
 import { Container, Row, Col, ButtonGroup } from 'react-bootstrap'
@@ -86,7 +87,7 @@ class PhoneDetails extends Component {
 
                             :
 
-                            <h1>Cargando...</h1>
+                            <Loader />
                         }
 
                 </Container>

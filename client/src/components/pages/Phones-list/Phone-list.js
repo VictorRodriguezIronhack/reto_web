@@ -6,6 +6,7 @@ import PhoneService from '../../../service/phones.service'
 // Components
 import PhoneCard from './Phone-card'
 import Alert from './../../shared/Alert/Alert'
+import Loader from './../../shared/Spinner/Loader'
 
 // Styles
 import { Container, Row } from 'react-bootstrap'
@@ -46,7 +47,7 @@ class PhoneList extends Component {
                                 ?
                                 this.state.phones.map(elm => <PhoneCard key={elm._id} {...elm} />)
                                 :
-                                <h3>Cargando...</h3>
+                                <Loader />
                         }
                     </Row>
                 </Container>
