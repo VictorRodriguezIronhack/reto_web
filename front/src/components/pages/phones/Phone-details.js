@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Loader from '../../shared/Loader'
-import PhonesService from '../../../services/phone.services'
+import PhonesService from '../../../services/phone.service'
 
-import mike from '../../images/mike-meyers-unsplash-yellow-phone.jpg'
 
 class PhoneDetails extends Component {
     constructor(props) {
@@ -31,7 +30,7 @@ class PhoneDetails extends Component {
                     ?
                     <Row style={{ justifyContent: 'center'}}>
                         <Col md={4}>
-                            <img src={mike} alt={`${this.state.phone.name} ${this.state.phone.manufacturer}`} style={{ height: '400px', borderRadius: '5px'}} />
+                            <img src={`/images/${this.state.phone.imageFileName}`} alt={`${this.state.phone.name} ${this.state.phone.manufacturer}`} style={{ height: '400px', borderRadius: '5px'}} />
                         </Col>
                         <Col md={6} className="phone-details">
                             <h2>{this.state.phone.manufacturer} {this.state.phone.name}</h2>

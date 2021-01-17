@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Form, Button, Nav } from 'react-bootstrap'
+import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+
+import AuthService from '../../../services/auth.service'
+
 
 class Login extends Component {
     constructor() {
@@ -8,9 +11,22 @@ class Login extends Component {
             username: '',
             password: ''
         }
+        this.authService = new AuthService()
     }
 
     handleInput = e => this.setState({ [e.target.name]: e.target.value })
+
+    handleSubmit = e => {
+        e.preventDefault()
+
+        this.authService
+            .login(this.state)
+            .then(loggedUser => {
+                this.props.setUser(loggedUser.data)
+                this.props.history.push('/')
+            })
+            .catch(err => new Error('ERROR IN LOG IN', err))
+    }
 
     render() {
         return (

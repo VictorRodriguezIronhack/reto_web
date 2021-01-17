@@ -5,19 +5,21 @@ import SearchBar from '../../shared/Search-bar'
 import PhoneCard from './Phone-card'
 import Loader from '../../shared/Loader'
 
-import PhonesService from '../../../services/phone.services'
+import PhonesService from '../../../services/phone.service'
 import PopUp from '../../shared/Pop-ups'
 import NewPhone from './New-phone'
+import EditPhone from './Edit-phone'
 
 
 class PhonesList extends Component{
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             allPhones: undefined,
             filterPhones: undefined,
             showModal: false,
-            modalTitle: undefined
+            modalTitle: undefined,
+            targetPhone: undefined
         }
 
         this.phoneService = new PhonesService()
@@ -44,6 +46,18 @@ class PhonesList extends Component{
         target === 'showToast' && this.setState({ [target]: visib, toastText: content })
     }
 
+    deletePhone = phoneId => {
+        this.phoneService
+            .deletePhone(phoneId)
+            .then(() => this.loadPhones())
+            .catch(err => new Error('ERROR DELETING PHONE', err))
+    }
+
+    editPhone = phoneId => {
+        this.setState({ targetPhone: phoneId })
+        this.handlePopups('showModal', true, 'edit phone')
+    }
+
 
     render() {
         return (
@@ -64,7 +78,7 @@ class PhonesList extends Component{
                     {this.state.filterPhones
                         ?
                         <Row style={{ justifyContent: 'center'}}>
-                            {this.state.filterPhones.map(elm => <PhoneCard phone={elm} key={elm._id}/>)}
+                            {this.state.filterPhones.map(elm => <PhoneCard phone={elm} key={elm._id} theUser={this.props.theUser} deletePhone={id => this.deletePhone(id)} editPhone={id => this.editPhone(id)} />)}
                         </Row>
                         :
                         <Row style={{ justifyContent: 'center'}}>
@@ -73,7 +87,8 @@ class PhonesList extends Component{
                     }
                 </Container>
                 <PopUp show={this.state.showModal} hide={() => this.handlePopups('showModal', false)} title={this.state.modalTitle} size="lg" >
-                    <NewPhone closeModal={() => this.handlePopups('showModal', false)} reloadPhones={this.loadPhones} />
+                    {this.state.modalTitle === 'new phone' && <NewPhone closeModal={() => this.handlePopups('showModal', false)} reloadPhones={this.loadPhones} />}
+                    {this.state.modalTitle === 'edit phone' && <EditPhone closeModal={() => this.handlePopups('showModal', false)} reloadPhones={this.loadPhones} phoneId={this.state.targetPhone} /> }
                 </PopUp>
             </>
         )

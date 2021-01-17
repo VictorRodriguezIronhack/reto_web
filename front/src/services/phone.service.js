@@ -12,7 +12,7 @@ class PhonesService {
     getOnePhone = phoneId => this.apiHandler.get(`/onePhone/${phoneId}`)
     newPhone = phoneInfo => this.apiHandler.post('/newPhone', phoneInfo)
     editPhone = (phoneId, phoneInfo) => this.apiHandler.put(`/editPhone/${phoneId}`, phoneInfo)
-    deletePhone = phoneId => this.apiHandler.delete(`/editPhone/${phoneId}`)
+    deletePhone = phoneId => this.apiHandler.delete(`/deletePhone/${phoneId}`)
 
 }
 

@@ -4,10 +4,11 @@ import { Form, Button, Container, Col } from 'react-bootstrap'
 import PhonesService from '../../../services/phone.service'
 
 
-class NewPhone extends Component {
+class EditPhone extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            _id: '',
             name: '',
             manufacturer: '',
             description: '',
@@ -21,18 +22,29 @@ class NewPhone extends Component {
         this.phoneService = new PhonesService()
     }
 
+    componentDidMount = () => this.loadPhoneInfo()
+        
+    loadPhoneInfo = () => {
+        this.phoneService
+            .getOnePhone(this.props.phoneId)
+            .then(res => this.setState({ _id: res.data._id, name: res.data.name, manufacturer: res.data.manufacturer, description: res.data.description, color: res.data.color, price: res.data.price, imageFileName: res.data.imageFileName, screen: res.data.screen, processor: res.data.processor, ram: res.data.ram }))
+            .catch(err => new Error('ERROR FINDING PROD', err))
+    }
+
     handleInput = e => this.setState({ [e.target.name]: e.target.value })
 
     handleSubmit = e => {
         e.preventDefault()
 
+        const editedProd = {name: this.state.name, manufacturer: this.state.manufacturer, description: this.state.description, color: this.state.color, price: this.state.price, imageFileName: this.state.imageFileName, screen: this.state.screen, processor: this.state.processor, ram: this.state.ram }
+
         this.phoneService
-            .newPhone(this.state)
+            .editPhone(this.state._id, editedProd)
             .then(() => {
                 this.props.reloadPhones()
                 this.props.closeModal()
             })
-            .catch(err => new Error('ERROR CREATING PHONE', err))
+            .catch(err => new Error('ERROR EDITING PHONE', err))
     }
 
     render() {
@@ -92,4 +104,4 @@ class NewPhone extends Component {
     }
 }
 
-export default NewPhone
+export default EditPhone

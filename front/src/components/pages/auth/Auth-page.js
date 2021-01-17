@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Form, Button, Nav } from 'react-bootstrap'
+import { Container, Row, Col, Nav } from 'react-bootstrap'
 import Login from './Log-in-form'
 import Signup from './Sign-up-form'
 
 class AuthPage extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             showLogIn: true,
             showSignUp: false
@@ -30,8 +30,8 @@ class AuthPage extends Component {
                     </Col>
                 </Row>
                 <Row style={{marginTop: '50px'}}>
-                    {this.state.showLogIn && <Login />}
-                    {this.state.showSignUp && <Signup />}
+                    {this.state.showLogIn && <Login setUser={this.props.setUser} {...this.props} />}
+                    {this.state.showSignUp && <Signup setUser={this.props.setUser} {...this.props} />}
                 </Row>
             </Container>
         )
