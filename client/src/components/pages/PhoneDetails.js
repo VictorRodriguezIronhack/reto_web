@@ -42,7 +42,7 @@ const PhoneDetails = ({ match, history }) => {
                     <>
                         <h2 className="phone-name"></h2>
                         <Row className="d-flex align-items-center">
-                            <Col md={3}>
+                            <Col md={3} >
                                 <Image src={product.imageFileName} alt={product.name} />
                             </Col>
                             <Col md={6}>
