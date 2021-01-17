@@ -1,14 +1,15 @@
-# Reto de The Phone Cave
+# Bienvenid@ al reto de The Phone Cave
 
 Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
 
 <img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
 
-La resolución del reto diseñado para el puesto de Javascript Developer. 
+En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
 
-### El reto
+##### El reto
 
-Escribir una aplicación de catálogo de telefonos muy simple (o no).
+Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+
 1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
  - Tenga 1 endpoint `/teléfonos`
  - Devuelve la carga adjunta "phones.json"
@@ -21,16 +22,24 @@ Escribir una aplicación de catálogo de telefonos muy simple (o no).
  - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
 3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
 
-### Visualizar la solución
+##### Los bonus
+Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
 
-1. Crea en `/back` un archivo `.env` con la siguiente información:
-    `PORT=5000`
-    `DB_LOCAL=mongodb://localhost/reto-web`
-    `DOMAIN_LOCAL=http://localhost:3000`
-2. Abre la terminal y accede al directorio `original-content`
-3. Ejecuta el comando `mongoimport --db=retoweb --collection=phones --file=phones.json --jsonArray` para crear la base de datos local con la información de los teléfonos.
-4. Divide verticalmente tu consola, vas a trabajar en dos directorios a la vez.
-5. En una de las ventanas de consola accede a `/back`. Dentro ejecuta el comando `npm i` para instalar todos las dependencias necesarias.
-7. Una vez finalizada la instalación, ejecuta el comando `npm run dev` para levantar el servidor de manera local.
-8. En la otra ventana de la consola accede a `/front`. Dentro ejecuta el comando `npm i` para instalar todos las dependencias necesarias.
-9. Una vez finalizada la instalación, ejecuta el comando `npm start` para abrir la SPA en el navegador.
+- Typescript
+- GraphQL
+- Mongo
+- Redux
+- Hooks
+- Styled Components
+- Docker
+- Eres capaz de subir a producción la página
+
+Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
+
+ - Puedes hacer una API compleja, añadir login, un carrito de la compra...
+ - Puedes maquetarlo en exclusiva para movil a modo de app...
+
+Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
+
+
+Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
