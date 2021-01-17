@@ -18,7 +18,7 @@ const CartItem = (props) => {
 
             <ListGroup.Item className="d-flex ">
                 <p className="mr-3 my-auto">Quantity</p>
-                <Form.Control as="select" defaultValue="Choose..." value={props.qty} onChange={e => props.qtyChangeHandler(props.product, e.target.value)}>
+                <Form.Control as="select" defaultValue="Choose..." value={props.stock} onChange={e => props.qtyChangeHandler(props.product, e.target.value)}>
                     {[...Array(props.stock).keys()].map(elm => (
 
                         <option key={elm + 1} value={elm + 1}>
