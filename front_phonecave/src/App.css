@@ -15,7 +15,7 @@
   width: 23%;
   margin-right: 2%;
   margin-bottom: 2%;
-  height: 22vw;
+  height: 400px;
   float: left;
   border: 2px solid #8c8f8d;
   display: flex;
@@ -30,7 +30,7 @@
 
 .App .Card img,
 .App .SinglePhone img{
-  height: 12vw;
+  height: 200px;
 }
 
 .App .Phones .Card{
@@ -70,5 +70,48 @@ h4{
 
 .App .loading i{
   margin-bottom: 8px;
+}
+
+@media(max-width: 1200px){
+  .App .Card{
+    width: 31%;
+  }
+  .App .info{
+    width: 60vw;
+    padding: 2vw 15vw;
+  }
+}
+
+@media(max-width: 1000px){
+  .App .Card{
+    width: 48%;
+    height: 500px;
+  }
+  .App .Card img{
+    height: 320px;
+}
+}
+
+@media(max-width: 768px){
+  .App .Card{
+    width: 90%;
+    margin: 2vw 5%;
+    height: 450px;
+  }
+  .App .Card img{
+    height: 300px;
+  }
+  .App .info{
+    width: 100%;
+    padding: 2vw 6vw;
+  }
+
+}
+
+@media(max-width: 350px){
+
+  .App .Card img{
+    height: 255px;
+}
 }
 
