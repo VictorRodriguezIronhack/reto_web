@@ -29,7 +29,6 @@ A pesar que en las instrucciones se especificaba tener un sólo un endpoint, he 
  
  ### Endpoints Cliente
 
-A pesar que en las instrucciones se especificaba tener un sólo un endpoint, he implementado más para liberar al Cliente de hacer procesos más costosos y que la web tenga procesos más ligeros.
 
 | Ruta        |  Acción  |
   | ------------- | ------------- | 
