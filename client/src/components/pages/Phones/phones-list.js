@@ -29,7 +29,7 @@ function PhoneList () {
     return (
         <body className="body" style={{ position: "absolute", width: "100%"}}>
             <Container>
-                <Title>Check some of our best phones</Title>
+                <Title>Which phone is best for you?</Title>
                 <Row className="phone-card">
                     {phone.map(elm => <PhoneCard key={elm._id} {...elm}></PhoneCard>)}
                 </Row>

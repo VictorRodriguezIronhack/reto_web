@@ -15,7 +15,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      loggedUser: undefined
+      loggedUser: undefined,
+      backResponse: false
     }
     this.authService = new AuthService()
   }
@@ -27,7 +28,7 @@ class App extends Component {
       .catch(err => this.setTheUser(undefined))
   }
 
-  setTheUser = user => this.setState({loggedUser: user}, () => console.log(this.state))
+  setTheUser = user => this.setState({loggedUser: user, backResponse: true}, () => console.log(this.state))
 
   render() {
 
@@ -37,8 +38,8 @@ class App extends Component {
         {this.state.loggedUser
           ?
           <>
-            <Route path="/listado" exact render={props => <PhoneList storeUser={this.setTheUser} {...props}/>}></Route>
-            <Route path="/detalles/:phone_id" render={props => <PhoneDetails storeUser={this.setTheUser} {...props} />}></Route>
+            <Route path="/listado" exact render={props => <PhoneList storeUser={this.setTheUser} logged={this.state.loggedUser} {...props}/>}></Route>
+            <Route path="/detalles/:phone_id" render={props => <PhoneDetails storeUser={this.setTheUser} logged={this.state.loggedUser} {...props} />}></Route>
           </>
           :  
           <Loader/>
