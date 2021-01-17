@@ -34,5 +34,5 @@ First of all fork and clone this repository.
 
 ### Technologies :boom:
 
-HTML5 | CSS3 | JavaScript(ES6) | React.js | Hooks | Node.js | Express.js | MongoDB | Mongoose | Ajax | React Bootstrap | Styled Components | Passport 
+HTML5 | CSS3 | JavaScript(ES6) | React.js | Hooks | Node.js | Express.js | MongoDB | Mongoose | Ajax | React Bootstrap | Styled Components | Passport |
 
