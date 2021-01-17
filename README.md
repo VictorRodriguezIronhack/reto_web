@@ -2,6 +2,8 @@
 
 The challenge was to create a Single page application whose objetive is to offer a list of phones and their details. First of allyou need to login with this `username:` Loreto and `password:` loretoalvarez.
 
+<img src="https://res.cloudinary.com/loretoavoces/image/upload/v1610916842/fotos-navidad/RETO_WEB_xuarvy.png"></img>
+
 ### The Challenge :muscle:
 
 #### Write a simple REST API.
