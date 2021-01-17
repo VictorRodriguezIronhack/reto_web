@@ -36,7 +36,7 @@ Firstly,`fork` and `clone` this repository.
  
   ##### Client
   
-  -Run `ǹpm i` command on the directory and then `ǹpm start`
+  - Run `npm i` command on the directory and then `npm start`
 
 
 #### Technologies implemented
