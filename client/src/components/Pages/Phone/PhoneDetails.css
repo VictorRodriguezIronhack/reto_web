@@ -1,0 +1,47 @@
+.title{
+    text-align: center;
+    margin: 15px 0px
+}
+.flex{
+    display: flex
+}
+.imgDetails{
+    width: 300px;
+    margin:0 auto;
+        border: 1px solid #0b9fd93f;
+
+    display:block
+}
+.leftSide{
+    padding:30px;
+    background-color: #0b9fd912;
+    border: 1px solid #0b9fd93f;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+@media(max-width:400px){
+    .flex{
+        display:block
+    }
+    .imgDetails{
+        margin:0 auto
+    }
+    .leftSide{
+        padding: 0px;
+    }
+}
+
+
+.titles{
+    text-align: right;
+}
+
+tr{
+    border-style:hidden;
+    text-decoration: none;
+}
+
+ .table td{
+    padding:0.6rem
+}

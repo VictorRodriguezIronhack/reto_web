@@ -1,0 +1,12 @@
+.nav{
+    background-color:#021859 ;
+    height: 50px;
+}
+.logo{
+    height: 35px;
+}
+@media(max-width:768px){
+.logo{
+    margin-top:-5px
+}
+}
