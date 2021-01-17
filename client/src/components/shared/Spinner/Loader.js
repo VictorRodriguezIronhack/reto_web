@@ -1,2 +1,2 @@
 import './Loader.css'
-export default () => <div className="loader"></div>
+export default () => <div className="loader">Loading...</div>
