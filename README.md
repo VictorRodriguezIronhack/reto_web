@@ -5,8 +5,14 @@ Autor: Jordi Boronat
 La app es un CRUD que permite ver todos los teléfonos, editarlos, eliminarlos y añadir nuevos. He trabajado sobretodo con la maquetación para que se quede un resultado lo más estético posible. 
 
 <img src="https://res.cloudinary.com/jordi-ironhack/image/upload/v1610908988/fotos-webuild/Captura_de_pantalla_2021-01-17_a_las_19.38.57_d5e8rz.png" alt="Overview">
+
+<hr></hr>
 <img src="https://res.cloudinary.com/jordi-ironhack/image/upload/v1610908989/fotos-webuild/Captura_de_pantalla_2021-01-17_a_las_19.39.11_ekltya.png" alt="Overview">
+<hr></hr>
+
 <img src="https://res.cloudinary.com/jordi-ironhack/image/upload/v1610908981/fotos-webuild/phone-detail_nfg4al.png" alt="Overview">
+<hr></hr>
+
 
 ### Endpoints Servidor
 
