@@ -22,7 +22,7 @@ The challenge was to create a Single Page Application whose objetive is to offer
 
 ### Setup :rocket:
 
-First of all fork and clone this repository.
+First of all `fork` and `clone` this repository.
 
 #### Server
 - Run `npm i` on the directory
