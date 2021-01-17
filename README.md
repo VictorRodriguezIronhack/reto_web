@@ -35,11 +35,12 @@ Boilerplate for a basic ExpressJS backend
 - Create a `.env` file on the /server directory to populate the database ( DB_LOCAL=mongodb://localhost/phones ) and port ( PORT=5000 )
 - Run `npm run dev` command on the /server directory
 
+
 2. Seed MongoDB Database
 
 ## Seed
 
--Run `bin/seed.js`
+- Run `bin/seed.js`
 
 
 # CLIENT
