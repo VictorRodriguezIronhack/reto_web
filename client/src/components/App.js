@@ -21,7 +21,7 @@ function App() {
         <Switch>
           <Route path='/' exact render={() => <PhoneList />} />
           <Route path='/telefonos' exact render={() => <PhoneList />} />
-          <Route path='/telefonos/:phone_id' exact render={() => <PhoneDetails />} />
+          <Route path='/telefonos/:phone_id' exact render={props => <PhoneDetails {...props} />} />
         </Switch>
       </main>
 

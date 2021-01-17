@@ -23,7 +23,7 @@ router.get('/:phone_id', (req, res) => {
     const phone_id = req.params.phone_id
 
     Phone
-        .findById(phone_id)
+        .find({ id: phone_id })
         .then(response => res.json(response))
         .catch(err => res.status(500).json(err))
 })

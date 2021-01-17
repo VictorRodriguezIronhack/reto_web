@@ -11,7 +11,7 @@ const PhoneCard = ({ name, manufacturer, description, color, price, imageFileNam
 
         <Col className="phone-card text-center" md={4} lg={3}>
 
-            <Card.Img variant="top" src={`./images/${imageFileName}`} />
+            <Card.Img variant="top" src={`./images/${imageFileName}`} alt={name}/>
 
             <Card.Body>
 
@@ -19,15 +19,15 @@ const PhoneCard = ({ name, manufacturer, description, color, price, imageFileNam
                 <Card.Subtitle as="h5" className="text-muted">{manufacturer}</Card.Subtitle>
 
                 <ButtonGroup>
-                    <Link className="btn" to={`/telefonos/${id}`}>Ver detalles</Link>
+                    <Link className="btn" to={`/telefonos/${id}`}>Details</Link>
                 </ButtonGroup>
 
             </Card.Body>
 
         </Col>
     )
-}
 
+}
 
 
 export default PhoneCard 

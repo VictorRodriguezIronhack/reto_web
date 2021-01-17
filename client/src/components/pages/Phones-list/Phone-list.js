@@ -8,7 +8,6 @@ import PhoneCard from './Phone-card'
 
 // Styles
 import { Container, Row } from 'react-bootstrap'
-import './Phone-list.css'
 
 
 class PhoneList extends Component {
@@ -34,7 +33,7 @@ class PhoneList extends Component {
         return (
             <>
                 <Container fluid>
-                    <h1 className="text-center">Lista de teléfonos</h1>
+                    <h1 className="text-center phone-list-title">Phone List</h1>
                     <Row className="justify-content-center">
                         {
                             this.state.phones
@@ -48,6 +47,7 @@ class PhoneList extends Component {
             </>
         )
     }
+    
 }
 
 
