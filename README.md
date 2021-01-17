@@ -1,4 +1,4 @@
-## Ironhack Challenge - The Phone Cave :rocket:
+## Ironhack Challenge - The Phone Cave
 
 The challenge was to create a Single page application whose objetive is to offer a list of phones and their details. First of allyou need to login with this `username:` Loreto and `password:` loretoalvarez.
 
@@ -18,7 +18,19 @@ The challenge was to create a Single page application whose objetive is to offer
 
 #### Send the code to a public github repository with a README.md that explains how to run the API and the Frontend application.
 
-#### Technologies :boom:
+### How to start :rocket:
+
+Setup: fork and clone this repository.
+
+#### Server
+- Run `npm i` on the directory
+- Run `ǹpm run dev` command. 
+
+#### Client
+- Run `npm i` on the directory.
+- Run `npm start` command. 
+
+### Technologies :boom:
 
 HTML5 | CSS3 | JavaScript(ES6) | React.js | Hooks | Node.js | Express.js | MongoDB | Mongoose | Ajax | React Bootstrap | Styled Components | Passport 
 
