@@ -1,0 +1,23 @@
+.button-area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.picture-home{
+  
+     -webkit-box-reflect: reverse;
+    background-image: url("https://res.cloudinary.com/jorgemaram/image/upload/v1610920818/Phone%20cave/background-image_id2mek.jpg");
+    background-size: cover;
+    background-position-y: -110px;
+    padding-bottom: 300px;
+    
+}
+.main-title{
+    color: aliceblue;
+    margin-top: 150px;
+    font-size: 4.5rem;
+
+}
+.container-background{
+    margin-top: 25px;
+}

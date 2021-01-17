@@ -1,45 +1,76 @@
-# Bienvenid@ al reto de The Phone Cave
+# Bienvenid@ a la web The Phone Cave
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+En **The Phone Cave** podrás encontrar los últimos modelos del mercado así como las mejores reliquias del pasado, las mejores marcas y todo al mejor precio.
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+Porque no hay nada mejor que un móvil de la prehistoria en para vivir en la cueva más paradisíaca, encontrarás los mejores modelos del pasado, incluso los que están grabados en piedra.
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
+<img src='https://res.cloudinary.com/jorgemaram/image/upload/v1610922770/Phone%20cave/BWEC5G_ptvsm7.jpg' alt='painting' height='450'>
 
-##### El reto
+## Tabla de endpoints en servidor
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+| Id | Método | Ruta | Descripción |
+| ------ | ------ | ------ | ------ |
+| 1 | post | /api/auth/signup | Envía la información de un nuevo usuario a la base de datos y se registra dicho usuario |
+| 2 | get | /api/auth/loggedIn | Muestra registro de usuario |
+| 3 | post | /api/auth/login | Permite a un usuario iniciar sesión |
+| 4 | post | /api/auth/logout | Permite a un usuario finalizar sesión |
+| 5 | get | /api/phones/getAllPhones | Muestra los diferentes teléfonos de la base de datos |
+| 6 | get | /api/phones/getOnePhone/:phone_id | Muestra los detalles de un teléfono |
+| 7 | post | /api/phones/newPhone | Envía la información de un teléfono nuevo a la base de datos |
+| 8 | put | /api/phones/editPhone/:phone_id | Envía el formulario de edición del teléfono a la base de datos |
+| 9 | delete | /api/phones/deletePhone/:phone_id | Borra un teléfono de la base de datos |
+| 10 | get | /api/user/getAllUser | Muestra los diferentes usuarios de la base de datos |
+| 11 | get | /api/user/getOneUser/:user_id | Muestra los detalles de un usuario |
+| 12 | delete | /api/user/deleteUser/:user_id | Borra los detalles de un usuario de la base de datos |
+| 13 | post | /api/files/upload | Permite cargar la imagen a través de Cloudinary de los archivos subidos para los registros |
 
-1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Redux para la administración del estado y Axios (o una biblioteca similar) para obtener datos de la API REST. (Puedes no usar Redux)
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
+## Tabla de rutas de acceso cliente
 
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+| Id | Ruta | Información vista |
+| ------ | ------ | ------ | ------ |
+| 1 | / | Muestra la home principal de la web |
+| 2 | /registro | Vista con el formulario de alta de nuevos usuarios |
+| 3 | /acceso-usuario | Vista con formulario para inicio de sesión |
+| 4 | /teléfonos | Vista de la lista de todos los teléfonos de la base de datos |
+| 5 | /teléfonos/crear | Muestra formulario de alta de un nuevo teléfono |
+| 6 | /teléfonos/editar/:phone_id | Muestra formulario de edición para un teléfono existente |
+| 7 | /teléfonos/:phone_id | Muestra vista de los detalles de un teléfono |
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
+### Instrucciones
+En primer lugar, realiza `fork` y `clone` sobre este repositorio.
 
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
+#### Cliente
+- Acceder a la carpeta `client` del repositorio y desde ahí en la terminar ejecutar los siguientes comandos:
 
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
+```bash
+$ npm install
+$ npm start
 
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
+```
+Una vez esté realizado, se ejecutará el cliente en el `puerto 3000` mediante <http://localhost:3000/> .
 
+#### Servidor
+- Acceder a la carpeta `server` del repositorio y desde ahí en la terminar ejecutar los siguientes comandos:
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+```bash
+$ npm install
+$ npm run dev
+
+```
+Una vez esté realizado, se conectará con la base de datos de Mongo Atlas. En cualquier caso, está el archivo `.json` con los teléfonos dentro del repositorio.
+
+### Manejo de la web
+
+- Algunas de las rutas están protegidas. En caso de que necesites acceder a las mismas puedes hacer inicio de sesión con el usuario `Admin` y la contraseña `admin1234` .
+
+##### Tecnologías empleadas
+
+- HTML5
+- CSS
+- JavaScript
+- React
+- MongoDB
+- Passport
+- Cloudinary
+- AXIOS
+- React Bootstrap
