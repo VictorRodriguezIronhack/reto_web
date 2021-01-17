@@ -56,3 +56,4 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
     - PORT=5000
     - DOMAIN_LOCAL=http://localhost:3000
 2. Desde la carpeta `server\bin`, ejecuta `node seed.js` para sembrar la base de datos.
+3. Desde el directorio `server`, ejecuta `npm run dev` para levantar el servidor.
