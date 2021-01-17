@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PhoneService from './../../../service/telefonos.service'
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col, Carousel} from 'react-bootstrap'
 import Loader from '../../shared/spinner/Loader'
 import './Phone-details.css'
 import {Link} from 'react-router-dom'
@@ -33,10 +33,36 @@ class PhoneDetails extends Component {
             <>
             <h1>Detalles {this.state.phone.name}</h1>
             <Row>
-                <Col md={5}>
-                    <img src={this.state.phone.imageUrl[0]} alt={this.state.phone.name} />
-                    <Link to={'/telefonos'} className="btn btn-light btn-block">Volver</Link>
+            <Col md={5}>
+            <Carousel>
+                <Carousel.Item interval={3000}>
+                    <img
+                    className="d-block w-100"
+                    src={this.state.phone.imageUrl[0]}
+                    alt="First slide"
+                    width={600} height={500} alt="300x340"
+                    />
+                </Carousel.Item>
+                <Carousel.Item interval={3000}>
+                    <img
+                    className="d-block w-100"
+                    src={this.state.phone.imageUrl[1]}
+                    alt="Third slide"
+                    width={600} height={500} alt="300x340"
+                    />
+                </Carousel.Item>
+                <Carousel.Item interval={3000}>
+                    <img
+                    className="d-block w-100"
+                    src={this.state.phone.imageUrl[2]}
+                    alt="Third slide"
+                    width={600} height={500} alt="300x340"
+                    />
+                </Carousel.Item>
+                </Carousel>
+                <Link to={'/telefonos'} className="btn btn-light btn-block">Volver</Link>
                 </Col>
+
                 <Col md={5}>
                     <p>Modelo: {this.state.phone.name}</p>
                     <p>Marca: {this.state.phone.brand}</p>

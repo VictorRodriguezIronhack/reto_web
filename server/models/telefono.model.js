@@ -10,7 +10,8 @@ const phoneSchema = new Schema ({
     imageUrl: [String],
     color: [String],
     rating: Number,
-    storage: [Number]
+    storage: [Number],
+    stock: [Number]
 }, {
     timestamps: true
 })

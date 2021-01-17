@@ -10,5 +10,6 @@ export default class PhoneService {
 
     getPhones = () => this.apiHandler.get('/getAllPhones')
     getPhone = phoneId => this.apiHandler.get(`/getOnePhone/${phoneId}`)
+    savePhone = phoneId => this.apiHandler.post(`/newPhone/`, phoneId)
 
 }

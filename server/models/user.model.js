@@ -8,7 +8,15 @@ const userSchema = new Schema ({
     role: {
         type: String,
         default: 'GUEST'
-    }
+    },
+    wishlist:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Telefono',       
+    }],
+    purchases:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Telefono',       
+    }] 
 }, {
     timestamps: true
 })
