@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PhoneService from '../../../service/phones.service'
 
 // Components
-// import PhoneCard from './Phone-card'
+import PhoneCard from './Phone-card'
 
 // Styles
 import { Container, Row } from 'react-bootstrap'
@@ -25,10 +25,7 @@ class PhoneList extends Component {
     componentDidMount = () => {
         this.phoneService
             .getPhones()
-            .then(res => {
-                console.log(res)
-                this.setState({ phones: res.data })
-            })
+            .then(res => this.setState({ phones: res.data }))
             .catch(err => console.log(err))
     }
 
@@ -42,8 +39,7 @@ class PhoneList extends Component {
                         {
                             this.state.phones
                                 ?
-                                <h2>Hay telefonos</h2>
-                                
+                                this.state.phones.map(elm => <PhoneCard key={elm._id} {...elm} />)
                                 :
                                 <h3>Cargando...</h3>
                         }
