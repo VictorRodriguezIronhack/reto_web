@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: local('Quicksand'), url(./fonts/Quicksand.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.phone-details strong{
+  margin-right: 5px;
+}
+
+.phone-list-img {  
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.phone-card {
+  width: 500px;
+  
+}
+
+main, html, body {
+  min-height: 80vh; 
+}
+
+.copyright {
+  background-color: red;
+  width: 100%;
+}
