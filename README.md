@@ -26,4 +26,7 @@ You can add a new device from scratch, all data will automatically move to Mongo
 
 # DEFAULT USER FOR TESTING
 ### you can try the app without registering with the following values:
-- <strong>name:</strong>
+- <strong>name:</strong> user
+- <strong>password:</strong> useruser
+
+![alt text](https://res.cloudinary.com/aliciarojo/image/upload/v1610925455/Screenshot_from_2021-01-18_00-12-20_k0aqha.png)
