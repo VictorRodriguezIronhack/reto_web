@@ -37,10 +37,9 @@ First of all `fork` and `clone` this repository.
 HTML5 | CSS3 | JavaScript(ES6) | React.js | Hooks | Node.js | Express.js | MongoDB | Mongoose | Ajax | React Bootstrap | Styled Components | Passport |
 
 ### Author :woman: 
-Hello, it´s me! Loreto Álvarez
-#### My Contact
-<i><a href="https://www.linkedin.com/in/loreto-alvarez-voces/">Linkedin</a></i></br>
-<i><a href = "mailto: loretoavoces@gmail.com">Send Email</a></i> <br />
+Hello, it´s me! Loreto Álvarez, Full-stack Web Developer. If you want to know more about me or my projects, just contac me on 
+<i><a href="https://www.linkedin.com/in/loreto-alvarez-voces/">Linkedin</a></i> or <i><a href = "mailto: loretoavoces@gmail.com">Sending an Email</a></i> <br />
+
 
 
 
