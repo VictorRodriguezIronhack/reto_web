@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const CartItem = (props) => {
 
+
     return (
 
         <Row className="cart-item d-flex align-items-center justify-content-around">
@@ -17,8 +18,9 @@ const CartItem = (props) => {
 
             <ListGroup.Item className="d-flex ">
                 <p className="mr-3 my-auto">Quantity</p>
-                <Form.Control as="select" defaultValue="Choose..." value={props.qty} onChange={(e) => props.qtyChangeHandler(props.product, e.target.value)}>
+                <Form.Control as="select" defaultValue="Choose..." value={props.qty} onChange={e => props.qtyChangeHandler(props.product, e.target.value)}>
                     {[...Array(props.stock).keys()].map(elm => (
+
                         <option key={elm + 1} value={elm + 1}>
                             {elm + 1}
                         </option>

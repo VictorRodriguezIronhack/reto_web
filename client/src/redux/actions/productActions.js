@@ -1,12 +1,11 @@
 import * as actionTypes from '../constants/productConst'
-import PhonesService from '../../service/phones.service'
+
 import axios from 'axios'
 
 export const getProducts = () => async (dispatch) => {
     try {
         dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST })
 
-        // const { data } = await PhonesService.getPhones();
         const { data } = await axios.get("/api/phones/getAllPhones")
 
         dispatch({
@@ -28,7 +27,6 @@ export const getProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST })
 
-        // const { data } = await PhonesService.getPhone(id);
         const { data } = await axios.get(`/api/phones/getOnePhone/${id}`)
 
         dispatch({

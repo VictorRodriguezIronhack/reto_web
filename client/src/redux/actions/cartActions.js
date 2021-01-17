@@ -1,9 +1,8 @@
 import * as actionTypes from '../constants/cartConst';
 import axios from 'axios'
-import PhonesService from '../../service/phones.service'
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-    // const { data } = await PhonesService.getPhone(id);
+
     const { data } = await axios.get(`/api/phones/getOnePhone/${id}`)
 
     dispatch({

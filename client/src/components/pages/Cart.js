@@ -29,11 +29,11 @@ const Cart = () => {
         dispatch(removeFromCart(id))
     }
 
-    const getCartCount = () => {
+    const cartCounter = () => {
         return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
     }
 
-    const getCartSubTotal = () => {
+    const cartSubTotal = () => {
         return cartItems
             .reduce((price, item) => price + item.price * item.qty, 0)
             .toFixed(2)
@@ -56,8 +56,8 @@ const Cart = () => {
             <hr />
             <Row className="d-flex justify-content-between align-items-baseline">
                 <Col className="d-flex justify-content-around ">
-                    <p><strong>Subtotal: </strong> ({getCartCount()}) items</p>
-                    <p>{getCartSubTotal()} €</p>
+                    <p><strong>Subtotal: </strong> ({cartCounter()}) items</p>
+                    <p>{cartSubTotal()} €</p>
                 </Col>
                 <Col>
                     <Button className="amount-btn btn" variant="secondary" size="sm"> Checkout</Button>

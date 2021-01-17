@@ -1,9 +1,17 @@
 import './Navigation.css'
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Image } from 'react-bootstrap'
-
+import { useSelector } from 'react-redux'
 
 const Navigation = () => {
+
+    const cart = useSelector(state => state.cart)
+    const { cartItems } = cart
+
+    const cartCounter = () => {
+        return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+    }
+
 
     return (
 
@@ -15,7 +23,7 @@ const Navigation = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Link to="/cart" className="btn-cart">
-                        <i className="fas fa-shopping-cart mr-2" />Shopping Cart<span className="cart-counter"> 0</span>
+                        <i className="fas fa-shopping-cart mr-2" />Shopping Cart<span className="cart-counter"> {cartCounter()}</span>
                     </Link>
                 </Nav>
             </Navbar.Collapse>
