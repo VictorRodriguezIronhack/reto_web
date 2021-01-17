@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import './Mobiles-details.css'
 
 import MobileService from './../../../service/mobile.service'
 
@@ -29,15 +30,13 @@ class MobileDetails extends Component {
 
             <Container>
                 <Row>
-                    <Col>
-                        <img src={this.state.mobile.imageFileName} alt={this.state.mobile.name}></img>
-                    </Col>
-                    <Col>
-                        <h1>{this.state.mobile.name}</h1>
-                        <h3>Marca: {this.state.mobile.manufacturer}</h3>
-                        <h5>Color: {this.state.mobile.color} Precio: {this.state.mobile.price}</h5>
-                        <h5>Tipo de pantalla: {this.state.mobile.screen} </h5>
-                        <h5>Procesador: {this.state.mobile.processor}</h5>
+                    <Col  className="details" lg={12} md={6} sm={2}>
+                        <h1><strong>{this.state.mobile.name}</strong></h1>
+                        <h3>Manufacturer: {this.state.mobile.manufacturer}</h3>
+                        <h5>Color: {this.state.mobile.color}</h5>
+                        <h5>Price: {this.state.mobile.price}€</h5>
+                        <h5>Screen: {this.state.mobile.screen} </h5>
+                        <h5>Processor: {this.state.mobile.processor}</h5>
                         <p>{this.state.mobile.description}</p>
                     </Col>
                 </Row>

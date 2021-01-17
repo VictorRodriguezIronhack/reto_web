@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+import './Navigation.css'
+
 import AuthService from './../../service/auth.service'
 
 class Navigation extends Component {
@@ -21,9 +23,9 @@ class Navigation extends Component {
     render() {
 
         return (
-            <Navbar bg="light" variant="light" expand="md">
+            <Navbar style={{backgroundColor:'#C7FFF3'}} variant="light" expand="md">
                 <Link to="/">
-                    <Navbar.Brand>PhoneZone_</Navbar.Brand>
+                    <Navbar.Brand style={{color:'#3A786A'}}>PhoneZone_</Navbar.Brand>
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -32,15 +34,15 @@ class Navigation extends Component {
                         {
                             this.props.loggedUser
                                 ?
-                                <Link to="/" onClick={this.logOut}>
+                                <Link className="hover" to="/" onClick={this.logOut}>
                                     <Nav.Link as="div">Cerrar Sesión</Nav.Link>
                                 </Link>
                                 :
                                 <>
-                                <Link to="/iniciosesion">
+                                <Link className="hover" to="/iniciosesion">
                                   <Nav.Link as="div">Inicio Sesión</Nav.Link>
                                 </Link>
-                                <Link to="/registro">
+                                <Link className="hover" to="/registro">
                                     <Nav.Link as="div">Registro</Nav.Link>
                                 </Link>
                                 </>

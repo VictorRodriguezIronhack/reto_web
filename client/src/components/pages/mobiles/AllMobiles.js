@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Spinner } from 'react-bootstrap'
 import MobileService from './../../../service/mobile.service'
 import MobileCard from './Mobiles-card'
 
@@ -17,10 +17,20 @@ function MobilesList() {
         <>
             <Container>
                 
-                <h1>Lista de móviles</h1>
+                <h1 style={{margin: '50px'}}>PhoneZone_ presents</h1>
                 
                 <Row>
-                    {mobile.map(elm => <MobileCard key={elm.id}{...elm}/>)}
+                    
+                    {mobile
+                        
+                        ?
+                        
+                        mobile.map(elm => <MobileCard key={elm.id}{...elm} />)
+
+                        :
+
+                        <Spinner animation="border" variant="danger"/>
+                        }
                 </Row>
             </Container>
         </>
