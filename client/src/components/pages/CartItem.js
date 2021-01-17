@@ -1,8 +1,8 @@
 import './CartItem.css'
-import { Row, Button, Card, Col } from 'react-bootstrap'
+import { Row, Button, Card, Col, Form, ListGroup } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const CartItem = () => {
+const CartItem = (props) => {
 
     return (
 
@@ -10,20 +10,24 @@ const CartItem = () => {
             <Card.Body className="d-flex align-items-center justify-content-between">
 
                 <article className="d-flex align-items-center">
-                    <img src="https://dl.airtable.com/.attachments/64b266ad865098befbda3c3577a773c9/24497852/yedjpkwxljtb75t3tezl.png" alt="Samsung Galaxy S8" />
-                    <Link to={'/phone'} className="d-flex flex-column" style={{ textDecoration: 'none' }}>
-                        <h4 style={{ fontSize: '1.2em' }}>Samsung Galaxy S8</h4>
-                        <p className="item-price">399.99 €</p>
-                        <Button className="remove-btn" size="sm" variant="secondary" >Remove</Button>
+                    <img src={props.imageFileName} alt={props.name} />
+                    <Link to={`/phone/${props.product}`} className="d-flex flex-column" style={{ textDecoration: 'none' }}>
+                        <h4 style={{ fontSize: '1.2em' }}>{props.name}</h4>
+                        <p className="item-price">{props.price} €</p>
                     </Link>
                 </article >
 
-                <article className="d-flex flex-column align-items-center">
-                    <Button className="amount-btn btn" variant="outline-secondary" size="sm"><i className="fas fa-chevron-up"></i></Button>
-                    <p className="amount my-auto">1</p>
-                    <Button className="amount-btn" variant="outline-secondary" size="sm"><i className="fas fa-chevron-down"></i></Button>
-                </article >
-
+                <ListGroup.Item className="d-flex ">
+                    <p className="mr-3 my-auto">Quantity</p>
+                    <Form.Control as="select" defaultValue="Choose..." value={props.qty} onChange={(e) => props.qtyChangeHandler(props.product, e.target.value)}>
+                        {[...Array(props.stock).keys()].map(elm => (
+                            <option key={elm + 1} value={elm + 1}>
+                                {elm + 1}
+                            </option>
+                        ))}
+                    </Form.Control>
+                </ListGroup.Item>
+                <Button className="amount-btn" variant="outline-secondary" size="sm" onClick={() => props.removeHandler(props.product)}><i className="fas fa-trash"></i></Button>
             </Card.Body>
         </Card >
 

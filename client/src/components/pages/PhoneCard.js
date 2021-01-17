@@ -6,7 +6,8 @@ const PhoneCard = ({ productId, name, manufacturer, description, color, price, i
 
     return (
 
-        <Col sm={6} md={4} lg={3} >
+
+        < Col sm={6} md={4} lg={3} >
             <Card className="phone-card mt-5">
                 <Card.Img variant="top" src={imageFileName} alt={name} />
                 <Card.Body>
@@ -19,7 +20,7 @@ const PhoneCard = ({ productId, name, manufacturer, description, color, price, i
                     <Link to={`/phone/${productId}`} className="btn btn-block btn-outline-secondary">View More</Link>
                 </Card.Body>
             </Card>
-        </Col>
+        </Col >
 
     )
 }

@@ -26,6 +26,11 @@ const PhoneDetails = ({ match, history }) => {
         }
     }, [dispatch, match, product]);
 
+    const addToCartHandler = () => {
+        dispatch(addToCart(product._id, qty));
+        history.push(`/cart`);
+    };
+
     return (
 
         <Container className="mt-5">
@@ -55,20 +60,20 @@ const PhoneDetails = ({ match, history }) => {
                                     <Card.Header>Shop this product</Card.Header>
                                     <ListGroup.Item>Price: {product.price} €</ListGroup.Item>
                                     <ListGroup.Item>Stock:
-                                        {product.stock > 0 ? ` ${product.stock} left` : "Out of Stock"}
+                                        {product.stock > 0 ? " In Stock" : "Out of Stock"}
                                     </ListGroup.Item>
                                     <ListGroup.Item className="d-flex ">
                                         <p className="mr-3 my-auto">Quantity</p>
                                         <Form.Control as="select" defaultValue="Choose..." value={qty} onChange={e => setQty(e.target.value)}>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            {[...Array(product.stock).keys()].map(elm => (
+                                                <option key={elm + 1} value={elm + 1}>
+                                                    {elm + 1}
+                                                </option>
+                                            ))}
                                         </Form.Control>
                                     </ListGroup.Item>
                                     <ListGroup.Item className="d-flex justify-content-center">
-                                        <Button className="amount-btn btn" variant="secondary" size="sm"> Add To Cart</Button>
+                                        <Button className="amount-btn btn" variant="secondary" size="sm" onClick={addToCartHandler}> Add To Cart</Button>
                                     </ListGroup.Item>
 
                                 </Card>
