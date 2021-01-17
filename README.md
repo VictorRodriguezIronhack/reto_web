@@ -52,7 +52,7 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
 1. Desde la carpeta `Server`:
 - Ejecuta `npm i` para instalar las dependencias requeridas en el `package.json`.
 - Crea un archivo `.env` y añade las siguientes lineas:
-+ DB=phonesDB
-+ PORT=5000
-+ DOMAIN_LOCAL=http://localhost:3000
+    - DB=phonesDB
+    - PORT=5000
+    - DOMAIN_LOCAL=http://localhost:3000
 2. 
