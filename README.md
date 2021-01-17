@@ -27,7 +27,7 @@ Porque no hay nada mejor que un móvil de la prehistoria en para vivir en la cue
 ## Tabla de rutas de acceso cliente
 
 | Id | Ruta | Información vista |
-| ------ | ------ | ------ | ------ |
+| ------ | ------ | ------ |
 | 1 | / | Muestra la home principal de la web |
 | 2 | /registro | Vista con el formulario de alta de nuevos usuarios |
 | 3 | /acceso-usuario | Vista con formulario para inicio de sesión |
