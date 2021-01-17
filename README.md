@@ -7,9 +7,9 @@
 
 Phone Cave is a Single Page Application whose mission is to offer the best phones at the best market price. You can check their details and perfom four different actions: **Create**, **Read**, **Update** and **Delete** (CRUD).
 
-**Website:** [Live Demo](https://phone-cave.herokuapp.com/) 
+**WEBSITE:** [Live Demo](https://phone-cave.herokuapp.com/) 
 
-**Video** [Phone Cave](https://res.cloudinary.com/dmsx3xete/video/upload/v1610906548/creative-app/phonecave_jipvfu.mov)
+**VIDEO:** [Phone Cave](https://res.cloudinary.com/dmsx3xete/video/upload/v1610906548/creative-app/phonecave_jipvfu.mov)
 
 ## Goal :heavy_check_mark:
 
