@@ -11,6 +11,7 @@ const express = require('express')
 const app = express()
 
 // Configs
+require('./configs/cors.config')(app)
 require('./configs/middleware.config')(app)
 
 // Routes index
