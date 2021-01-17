@@ -4,7 +4,7 @@ export default class FilesService {
 
     constructor() {
         this.apiHandler = axios.create({
-            baseURL: `http://localhost:5000/api/files`,
+            baseURL: `https://phoneplanet-api.herokuapp.com/api/files`,
 
             withCredentials: true
         })

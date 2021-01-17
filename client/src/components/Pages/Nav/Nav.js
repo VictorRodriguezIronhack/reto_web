@@ -34,7 +34,7 @@ class Navigation extends Component {
                 </Link>
                 <Link to="/">
                     <Navbar.Brand as="span" href="/">PhonApp</Navbar.Brand></Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle  aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <Link to="/">
@@ -43,7 +43,6 @@ class Navigation extends Component {
                         <Link to="/phones">
                             <Nav.Link as="div">Phones</Nav.Link>
                         </Link>
-                      
                         {this.props.loggedUser ?<>
                               <Link to="/nuevo-telefono">
                             <Nav.Link as="div">New phone</Nav.Link>

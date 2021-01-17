@@ -1,12 +1,29 @@
-.nav{
+/* .nav{
     background-color:#021859 ;
     height: 50px;
 }
 .logo{
     height: 35px;
 }
+.navbar-nav{
+        background-color:#021859 ;
+        width: 100%;
+margin-right:-30px;
+    }
+.collapsing{
+    margin-right:-30px;
+        text-align: center;
+
+}
+.collapsing>div>a{
+    margin-left:32%
+
+}
+.navbar-nav  a{
+margin-left:32%
+}
 @media(max-width:768px){
 .logo{
     margin-top:-5px
 }
-}
+} */

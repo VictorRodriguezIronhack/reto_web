@@ -10,7 +10,11 @@
     margin:0 auto;
         border: 1px solid #0b9fd93f;
 
-    display:block
+    display:block;
+        box-shadow: 0px 0px 20px 2px rgb(255, 255, 255);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        margin-top:20px;
+        border-radius: 8px;
 }
 .leftSide{
     padding:30px;
@@ -42,6 +46,7 @@ tr{
     text-decoration: none;
 }
 
- .table td{
+ .table td{    
+     color:white;
     padding:0.6rem
 }

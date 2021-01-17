@@ -3,6 +3,8 @@ import phoneService from './../../../Service/Phone.service'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import './PhoneDetails.css'
+import Loader from '../../Loader/Loader'
+
 
 
 class phoneDetails extends Component {
@@ -122,8 +124,7 @@ class phoneDetails extends Component {
 
                     </>
                     :
-                    <h1>Cargando</h1>
-                }
+<Loader></Loader>                }
 
             </Container>
         )

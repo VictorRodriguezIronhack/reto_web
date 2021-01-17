@@ -4,7 +4,7 @@ export default class PhoneService {
 
     constructor() {
         this.apiHandler = axios.create({
-            baseURL: 'http://localhost:5000/api/phone',
+            baseURL: 'https://phoneplanet-api.herokuapp.com/api/phone',
             withCredentials: true
         })
     }
