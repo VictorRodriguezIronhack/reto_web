@@ -8,3 +8,4 @@ module.exports = app => {
     app.use(bodyParser.urlencoded({ extended: false }))
     app.use(cookieParser())
 }
+
