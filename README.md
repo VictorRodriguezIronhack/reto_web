@@ -13,6 +13,8 @@ La app es un CRUD que permite ver todos los teléfonos, editarlos, eliminarlos y
 <img src="https://res.cloudinary.com/jordi-ironhack/image/upload/v1610908981/fotos-webuild/phone-detail_nfg4al.png" alt="Overview">
 <hr></hr>
 
+[Video Demo](https://www.youtube.com/watch?v=iPaZZSIoEUs&ab_channel=JordiBoronatAr%C3%A9valo)
+
 
 ### Endpoints Servidor
 
