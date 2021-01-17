@@ -5,7 +5,7 @@ The objective of the challenge is to create a Single Page Application with React
 `Usuario:` natalia
 `Contraseña`: natalia
 
-<img src="https://res.cloudinary.com/nataliafndz26/image/upload/v1610923525/PhoneCave_bqdudx.png" alt="drawing" width="500"/>
+<img src="https://res.cloudinary.com/nataliafndz26/image/upload/v1610923525/PhoneCave_bqdudx.png" alt="drawing" width="1000"/>
 
 
 ##### The Challenge
