@@ -7,6 +7,7 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CreateIcon from '@material-ui/icons/Create';
 import AddToHomeScreenIcon from '@material-ui/icons/AddToHomeScreen';
 import AuthService from './../../../Service/Auth.service'
+import smartphone from './smartphone.png'
 
 const Navigation = props => {
 
@@ -72,7 +73,7 @@ const Navigation = props => {
                 </div>
 
                 <Link onClick={() => handleHideClick()} to="/" style={{ margin: "0 auto", marginLeft: "calc(50% - 20px)" }}>
-                    <img src="https://www.flaticon.com/svg/vstatic/svg/2971/2971416.svg?token=exp=1610888900~hmac=48a48835f0ffe55e616241e35a3cd6fd" width="40" height="40" style={{ marginTop: "10px" }} alt="myAlt"></img>
+                    <img src={smartphone} width="40" height="40" style={{ marginTop: "10px" }} alt="myAlt"></img>
                 </Link>
 
             </div>
