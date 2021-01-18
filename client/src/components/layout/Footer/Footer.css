@@ -1,0 +1,9 @@
+.main-footer {
+   position: relative; 
+   bottom: 0px;
+   display: flex;
+   justify-content: center;
+   color: white;
+   height: 50px;
+   width: 100%;
+}
