@@ -44,11 +44,11 @@ Ahora bien, el limite de entrega es el Lunes a las 10:00 am.
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
 
-## Resuelto por: Daniel Reina Ramos
+## Resuelto 
 
-Para correr la aplicación:
+Intsrucciones para correr la aplicación:
 
-1. Dividir la terminal en dos ventanas. En una posicionarse en la carpeta server y, en la otra, en la carpeta client.
+1. Una vez clonada la repo, dividir la terminal en dos ventanas. En una posicionarse en la carpeta server y, en la otra, en la carpeta client.
 
 2. En la carpeta 'server', crear un archivo .env con el siguiente contenido:
 
@@ -61,15 +61,14 @@ Para correr la aplicación:
 3. Sembrar el seed para crear la base datos con el contenido del archivo phones.json en MongoDB. Para ello escribir en la terminal lo siguiente, en la carpeta server:
 node bin/seed.js
 
-4. A continuación, en el mismo directorio, correr 'npm i', para instalar todas las dependencias.
+4. A continuación, en el directorio client, correr 'npm i' en la terminal para instalar las dependencias. 
 
-5. Pora terminar las instalaciones en el directorio server, correr 'npm i cors' en la terminal.
+5. Una vez finalizados estos preparativos, correr con la terminal en la carpeta server: npm run start. En la carpeta client correr: npm run dev.
 
-6. Ahora nos ubicamos con la terminal en la carpeta client. Aquí vamos a instalar axios, react-router-dom, y bootstrap. En este caso hay que escribir lo siguiente en la terminal:
-npm install react-bootstrap bootstrap axios react-router-dom.
-
-7. Una vez finalizados estos preparativos, correr con la terminal en la carpeta server: npm run start. En la carpeta client correr: npm run dev.
-
-8. Debería haberse abierto la aplicación en google Chrome (si es tu navegador por defecto). En caso contrario, abrir Chrome y escribir la siguiente dirección:
+6. Debería haberse abierto la aplicación en google Chrome (si es tu navegador por defecto). En caso contrario, abrir Chrome y escribir la siguiente dirección:
 http://localhost:3000/
+
+### Desarrollador: Daniel Reina Ramos
+
+
 
