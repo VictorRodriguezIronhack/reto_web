@@ -1,5 +1,5 @@
 const User = require('../models/user.model')
-const PhonesData = require('../../phones.json')
+const PhonesData = require('../phones.json')
 
 exports.getAll = (req, res) => {
     res.json(
