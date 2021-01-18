@@ -1,0 +1,19 @@
+ p{
+  text-align: center;
+  font-family:'Quicksand', sans-serif; ;
+}
+
+span, h1{
+  text-align: center;
+  font-family:'Merriweather', serif;
+
+}
+img{
+  width:100%;
+  
+}
+
+.spinner{
+margin-top: 50px;
+}
+

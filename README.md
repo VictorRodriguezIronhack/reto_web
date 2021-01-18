@@ -43,3 +43,32 @@ Ahora bien, el limite de entrega es el Lunes a las 10:00 am.
 
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+
+## Resuelto 
+
+Intsrucciones para correr la aplicación:
+
+1. Una vez clonada la repo, dividir la terminal en dos ventanas. En una posicionarse en la carpeta server y, en la otra, en la carpeta client.
+
+2. En la carpeta 'server', crear un archivo .env con el siguiente contenido:
+
+    DOMAIN_LOCAL=http://localhost:3000
+
+    DB_LOCAL=mongodb://localhost/phones
+    
+    PORT=5000
+
+3. Sembrar el seed para crear la base datos con el contenido del archivo phones.json en MongoDB. Para ello escribir en la terminal lo siguiente, en la carpeta server:
+node bin/seed.js
+
+4. A continuación, en el directorio client, correr 'npm i' en la terminal para instalar las dependencias. 
+
+5. Una vez finalizados estos preparativos, correr con la terminal en la carpeta server: npm run start. En la carpeta client correr: npm run dev.
+
+6. Debería haberse abierto la aplicación en google Chrome (si es tu navegador por defecto). En caso contrario, abrir Chrome y escribir la siguiente dirección:
+http://localhost:3000/
+
+### Desarrollador: Daniel Reina Ramos
+
+
+
