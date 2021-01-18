@@ -38,17 +38,17 @@ Languages used:
 
 API REST endpoint:
 
-Id	Method	Path	    Description
+- Id	Method	Path	    Description
 
-1	get	    /		        Show the index
-2	get     /profile	    Show profiles
+- 1	get	    /		        Show the index
+- 2	get     /profile	    Show profiles
 
-3	post    /signup 	    Upload the user on the database
-4	post    /login  	    Manage login
-5	post    /logout		    Close session
-6   get     /loggedin
+- 3	post    /signup 	    Upload the user on the database
+- 4	post    /login  	    Manage login
+- 5	post    /logout		    Close session
+- 6   get     /loggedin
 
-7   get     /phones         Show all phones
-8   get     /onePhone       Show one phone details
-9   patch   /editPhone      Show edit form
-10  delete  /deletePhone    Delete a phone
+- 7   get     /phones         Show all phones
+- 8   get     /onePhone       Show one phone details
+- 9   patch   /editPhone      Show edit form
+- 10  delete  /deletePhone    Delete a phone
