@@ -19,7 +19,7 @@ function ControlledCarousel() {
           />
           <Carousel.Caption>
             <h3>In your free time...</h3>
-            <p><strong>PhoneZone</strong> relaxes with you</p>
+            <p><strong>PhoneCave</strong> relaxes with you</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -31,7 +31,7 @@ function ControlledCarousel() {
   
           <Carousel.Caption>
             <h3>When working...</h3>
-            <p><strong>PhoneZone</strong> is your work colleague</p>
+            <p><strong>PhoneCave</strong> is your work colleague</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -43,7 +43,7 @@ function ControlledCarousel() {
   
           <Carousel.Caption>
             <h3>When travelling...</h3>
-            <p><strong>PhoneZone</strong> explores with you</p>
+            <p><strong>PhoneCave</strong> explores with you</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

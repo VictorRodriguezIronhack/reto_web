@@ -25,7 +25,7 @@ class Navigation extends Component {
         return (
             <Navbar style={{backgroundColor:'#C7FFF3'}} variant="light" expand="md">
                 <Link to="/">
-                    <Navbar.Brand style={{color:'#3A786A'}}>PhoneZone_</Navbar.Brand>
+                    <Navbar.Brand style={{color:'#3A786A'}}>PhoneCave_</Navbar.Brand>
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

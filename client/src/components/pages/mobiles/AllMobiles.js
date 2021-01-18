@@ -17,7 +17,7 @@ function MobilesList() {
         <>
             <Container>
                 
-                <h1 style={{margin: '50px'}}>PhoneZone_ presents</h1>
+                <h1 style={{margin: '50px'}}>PhoneCave_ presents:</h1>
                 
                 <Row>
                     
