@@ -25,7 +25,8 @@ The challenge was to create a Single Page Application whose objetive is to offer
 First of all `fork` and `clone` this repository.
 
 #### Server
-- Run `npm i` on the directory
+- Run `npm i` on the directory.
+- Create an `.env` with de port and local domain.
 - Run `npm run dev` command. 
 
 #### Client
