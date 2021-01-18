@@ -4,7 +4,7 @@ import './PaymentForm.css'
 const PaymentForm = ({ show, handleModal }) => {
 
     return (
-        <Modal show={show} onHide={() => handleModal(false)}>
+        <Modal show={show} onHide={handleModal}>
             <Modal.Header closeButton>
                 <Modal.Title>Payment Information</Modal.Title>
             </Modal.Header>
