@@ -11,7 +11,7 @@ password:1234
 
 .env:
 PORT=4000
-DB= your database
+DB=mongodb+srv://davila795:nfoPMYWC1qtbtMvK@cluster0.8dgyw.mongodb.net/phonesapp
 DOMAIN_LOCAL=http://localhost:3000
 DOMAIN_REMOTE=https://phone-cave.netlify.app/
 
