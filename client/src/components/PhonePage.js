@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap'
+import Loader from '../shared/Loader'
 import PhoneServices from '../services/phones.service'
 
 const PhonePage = ({ phoneId }) => {
@@ -47,7 +48,7 @@ const PhonePage = ({ phoneId }) => {
                     </Row>
                 </Card>
                 :
-                <h2>Cargando</h2>
+                <Loader />
             }
         </Container>
     );

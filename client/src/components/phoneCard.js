@@ -1,7 +1,15 @@
 import { Card, Row, Col, Button, Container } from 'react-bootstrap'
 import React, { useState } from 'react';
+import styled from '@emotion/styled'
 import Popup from '../shared/PopUp'
 import PhonePage from './PhonePage'
+
+const StyledTitle = styled(Card.Title)`
+    &:hover{
+        cursor:pointer;
+        color:gray
+    }
+`
 
 const PhoneCard = ({ phone, loggedUser }) => {
 
@@ -9,10 +17,10 @@ const PhoneCard = ({ phone, loggedUser }) => {
 
     return (
         <Col md={4}>
-            <Card style={{ width: '10rem' }}>
+            <Card style={{ margin: '10px 0' }}>
                 <Card.Img variant="top" style={{ objectFit: 'cover', height: '160px' }} src={phone.imageFileName} />
                 <Card.Body>
-                    <Card.Title onClick={() => { setModal(true) }} >{phone.name}</Card.Title>
+                    <StyledTitle onClick={() => { setModal(true) }} >{phone.name}</StyledTitle>
                     <Card.Text>
                         {phone.manufacturer} - €{phone.price}
                     </Card.Text>

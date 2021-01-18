@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Container } from 'react-bootstrap'
 import PhoneCard from './phoneCard'
+import Loader from '../shared/Loader'
 import PhoneServices from '../services/phones.service'
 
 const PhonesList = ({ loggedUser }) => {
@@ -29,14 +30,14 @@ const PhonesList = ({ loggedUser }) => {
             <Row>
                 {phones ?
                     phones.map(phone => (
-                        <PhoneCard key={phone.id} phone={phone}  loggedUser={loggedUser}  />
+                        <PhoneCard key={phone.id} phone={phone} loggedUser={loggedUser} />
                     ))
                     :
-                    <h2>cargando</h2>
+                    <Loader />
                 }
             </Row>
 
-           
+
         </>
 
     );
