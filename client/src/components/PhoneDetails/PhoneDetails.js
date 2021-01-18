@@ -24,7 +24,7 @@ class PhoneDetails extends Component {
     }
 
     render() {
- 
+
         return (
             <>
                 <Container>
@@ -51,10 +51,12 @@ class PhoneDetails extends Component {
                             </Col>
                         </Row>
                         :
-                        <Spinner animation="border" role="status">
-                            <span className="sr-only">Loading...</span>
-                        </Spinner>
-                    }
+                        <div className='spinner'>
+                            <Spinner animation="border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </Spinner>
+                        </div>
+                                }
                 </Container>
             </>
         )

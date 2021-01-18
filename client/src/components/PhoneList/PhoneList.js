@@ -28,17 +28,23 @@ class PhonesList extends Component {
     render() {
         return (
             <Container>
+                {this.state.phones
+                    ?
+                    <>
                 <h1 id='h1'>All Phones</h1>
-                <Row>
-                    {this.state.phones
-                        ?
-                        this.state.phones.map(elm => <PhoneCard key={elm._id} {...elm} />) 
-                        :
+                <Row>                    
+                            {this.state.phones.map(elm => <PhoneCard key={elm._id} {...elm} />)} 
+                        </Row>
+                        </>
+                    :
+                    <div className='spinner'>
                         <Spinner animation="border" role="status">
                             <span className="sr-only">Loading...</span>
                         </Spinner>
+                    </div>
+                    
+                
                     }
-                </Row>
             </Container>)
     }
 }
