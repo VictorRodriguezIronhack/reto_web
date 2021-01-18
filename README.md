@@ -7,7 +7,7 @@ He desarrollado una aplicacion API REST compuesta por una parte <code>/client</c
 ## Ejecutar servidor
 
 - En la terminal en <code>/server</code> ejecuta <code>npm i</code> para instalar las dependencias. 
-- Crea un archivo <code>.env</code> dentro del archivo <code>/server</code> con el puerto y el dominio local.
+- Crea un archivo <code>.env</code> dentro del archivo <code>/server</code> con el puerto (PORT=5000) y el dominio local (htpp://localhost:3000).
 - Ejecuta en la terminal <code>npm run dev</code>.
 
 
