@@ -35,8 +35,8 @@ const WishList = ({ setUser, loggedUser, setUserUpdate }) => {
             <Row>
                 <Col>
                     {loggedUser.wishlist.length > 0 ?
-                        loggedUser.wishlist.map(phone => (
-                            <Card key={phone.id} style={{ textAlign: 'center' }}>
+                        loggedUser.wishlist.map((phone, idx) => (
+                            <Card key={idx} style={{ textAlign: 'center' }}>
                                 <Row>
                                     <Col md={6} style={{ paddingTop: '0.5rem' }}>
                                         <Card.Img variant="top" style={{ objectFit: 'cover', width: '80px' }} src={phone.imageFileName} />
