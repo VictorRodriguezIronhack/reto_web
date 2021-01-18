@@ -26,7 +26,7 @@ First of all `fork` and `clone` this repository.
 
 #### Server
 - Run `npm i` on the directory.
-- Create an `.env` with de port and local domain.
+- Create an `.env` file with de port and local domain.
 - Run `npm run dev` command. 
 
 #### Client
