@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hero {
+    min-height: 550px;
+    background: url('https://res.cloudinary.com/helping-hand-web/image/upload/v1610910554/rodion-kutsaev-0VGG7cqTwCo-unsplash_zbequy.jpg') no-repeat center/cover;
+    text-align: center;
+}
+
+.hero>div{
+    width: 100%;
+    min-height: 550px;
+    background:  rgb(231, 54, 49, 0.2);
+}
+
+.hero h1{
+    padding-top: 200px;;
+    width: 70%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: 50px;
+    color: white;
+}
+
+.underline, .underline-top{
+    background-color: #E14B55;
+    height: 25px;
+    width: 450px;
+    margin: -30px auto;
+    z-index: -10;
+}
+
+.underline-top{
+    width: 350px
+}
+
+@media (max-width: 650px) and (min-width: 520px){
+    .hero h1{
+        font-size: 2em;
+        width: 70%
+    }
+
+    .underline{
+        width: 375px
+    }
+
+    .underline-top{
+        width: 275px
+    }
+}
+
+@media (max-width: 520px) {
+    .hero h1{
+        font-size: 1.7em;
+        width: 100%
+    }
+
+    .underline{
+        width: 300px
+    }
+
+    .underline-top{
+        width: 250px
+    }
+}
