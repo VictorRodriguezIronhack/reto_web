@@ -62,23 +62,23 @@ class Signup extends Component {
 
                     <Row>
                         <Col md={{ span: 5, offset: 4 }}>
-                            <h1 style={{ textAlign: "center" }}>Registro de usuario</h1>
+                            <h1 style={{ textAlign: "center" }}>Signup as a user</h1>
                             <hr />
                             <Form onSubmit={this.handleSubmit}>
                                 <Form.Group controlId="username">
-                                    <Form.Label>Nombre de Usuario</Form.Label>
+                                    <Form.Label>Username</Form.Label>
                                     <Form.Control type="text" name="username" onChange={this.handleInputChange} />
                                 </Form.Group>
                                 <Form.Group controlId="password">
-                                    <Form.Label>Contraseña</Form.Label>
+                                    <Form.Label>Password</Form.Label>
                                     <Form.Control type="password" name="password" onChange={this.handleInputChange} />
                                 </Form.Group>
                                 <Form.Group controlId="name">
-                                    <Form.Label>Nombre</Form.Label>
+                                    <Form.Label>Name</Form.Label>
                                     <Form.Control type="text" name="name" onChange={this.handleInputChange} />
                                 </Form.Group>
                                 
-                                <Button className="btn-dark" style={{ width: "100%" }} variant='ligth' type="submit">Registrarme</Button>
+                                <Button className="btn-dark" style={{ width: "100%" }} variant='ligth' type="submit">Submit</Button>
                             </Form>
                         </Col>
                     </Row>
