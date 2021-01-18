@@ -10,39 +10,40 @@ import WishList from './components/WishList'
 function App() {
 
   const [user, setUser] = useState(undefined)
+  const [userUpdate, setUserUpdate] = useState(true)
 
   useEffect(() => {
-
-    const checkUser = async () => {
-
-      try {
-
-        const authServices = new AuthServices()
-        const loggedUser = await authServices.isLoggedIn()
-        setUser(loggedUser.data)
-        console.log(loggedUser.data)
-
-      } catch (error) {
-        setUser(undefined)
-        console.log(error.response.data.message)
-      }
+    if (userUpdate) {
+      checkUser()
     }
+    setUserUpdate(false)
+  }, [userUpdate])
 
-    checkUser()
-  }, [])
+  const checkUser = async () => {
 
+    try {
+
+      const authServices = new AuthServices()
+      const loggedUser = await authServices.isLoggedIn()
+      setUser(loggedUser.data)
+
+    } catch (error) {
+      setUser(undefined)
+      console.log(error.response.data.message)
+    }
+  }
 
 
   return (
     <Container>
-      <Header title='Reto Web' />
+      <Header title='Phone Cave' />
       <Row>
         <Col md={6}>
-          <PhonesList loggedUser={user} />
+          <PhonesList loggedUser={user} setUserUpdate={setUserUpdate} />
         </Col>
         <Col md={6}>
           {user ?
-            <WishList setUser={setUser} loggedUser={user} />
+            <WishList setUser={setUser} loggedUser={user} setUserUpdate={setUserUpdate} />
             :
             <Login setUser={setUser} />
           }

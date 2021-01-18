@@ -5,7 +5,7 @@ import { Form, Button } from 'react-bootstrap'
 
 const LoginTitle = styled.h2`
     text-align:center;
-    margin-bottom:2rem;
+    margin:2rem 0;
 `
 
 const Login = ({ setUser }) => {

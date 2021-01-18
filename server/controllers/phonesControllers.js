@@ -17,36 +17,28 @@ exports.getOne = (req, res) => {
 
 exports.addPhone = async (req, res) => {
 
-    if (req.isAuthenticated()) {
 
-        const phone = PhonesData.find(elm => elm.id === parseInt(req.params.phone_id))
 
-        try {
-            const user = await User.findByIdAndUpdate(req.params.user_id, { $push: { wishlist: phone } }, { new: true })
-            res.json(user)
+    const phone = PhonesData.find(elm => elm.id === parseInt(req.params.phone_id))
 
-        } catch (error) {
-            console.log(error)
-        }
+    try {
+        const user = await User.findByIdAndUpdate(req.params.user_id, { $push: { wishlist: phone } }, { new: true })
+        res.json(user)
+
+    } catch (error) {
+        console.log(error)
     }
-
-    res.status(403).json({ message: 'Unauthorized' })
 }
 
 exports.removePhone = async (req, res) => {
-    
-    if (req.isAuthenticated()) {
 
-        const phone = PhonesData.find(elm => elm.id === parseInt(req.params.phone_id))
+    const phone = PhonesData.find(elm => elm.id === parseInt(req.params.phone_id))
 
-        try {
-            const user = await User.findByIdAndUpdate(req.params.user_id, { $pull: { wishlist: phone } }, { new: true })
-            res.json(user)
+    try {
+        const user = await User.findByIdAndUpdate(req.params.user_id, { $pull: { wishlist: phone } }, { new: true })
+        res.json(user)
 
-        } catch (error) {
-            console.log(error)
-        }
+    } catch (error) {
+        console.log(error)
     }
-
-    res.status(403).json({ message: 'Unauthorized' })
 }

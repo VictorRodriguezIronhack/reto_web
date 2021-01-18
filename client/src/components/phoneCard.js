@@ -1,4 +1,4 @@
-import { Card, Row, Col, Button, Container } from 'react-bootstrap'
+import { Card, Col, Button } from 'react-bootstrap'
 import React, { useState } from 'react';
 import styled from '@emotion/styled'
 import Popup from '../shared/PopUp'
@@ -11,7 +11,7 @@ const StyledTitle = styled(Card.Title)`
     }
 `
 
-const PhoneCard = ({ phone, loggedUser }) => {
+const PhoneCard = ({ phone, loggedUser, addPhone }) => {
 
     const [modal, setModal] = useState(false)
 
@@ -24,7 +24,7 @@ const PhoneCard = ({ phone, loggedUser }) => {
                     <Card.Text>
                         {phone.manufacturer} - €{phone.price}
                     </Card.Text>
-                    {loggedUser && <Button variant='primary sm'>Add</Button>}
+                    {loggedUser && <Button variant='primary' size='sm' onClick={() => addPhone(loggedUser._id, phone.id)}>Add</Button>}
                 </Card.Body>
             </Card>
 

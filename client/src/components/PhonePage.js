@@ -7,23 +7,24 @@ const PhonePage = ({ phoneId }) => {
 
     const [phone, setPhone] = useState(undefined)
 
+    const phoneServices = new PhoneServices()
+
+
     useEffect(() => {
-
-        const fetchPhone = async () => {
-
-            try {
-                const phoneServices = new PhoneServices()
-                const phone = await phoneServices.getPhone(phoneId)
-                setPhone(phone.data)
-
-            } catch (error) {
-                console.log(error.response.data.message)
-            }
-        }
-
         fetchPhone()
-
     }, [])
+
+    const fetchPhone = async () => {
+
+        try {
+            const phone = await phoneServices.getPhone(phoneId)
+            setPhone(phone.data)
+
+        } catch (error) {
+            console.log(error.response.data.message)
+        }
+    }
+
 
     return (
         <Container>
