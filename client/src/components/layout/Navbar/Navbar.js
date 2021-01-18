@@ -51,7 +51,7 @@ class navbar extends Component {
                                     </Link>
                                 </>
                         }
-                        <Nav.Link as="div">Hola, {this.props.loggedUser ? this.props.loggedUser.username : 'invitado'}</Nav.Link>
+                        <Nav.Link as="div">Hello, {this.props.loggedUser ? this.props.loggedUser.username : 'guess'}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
