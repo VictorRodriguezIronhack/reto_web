@@ -1,45 +1,46 @@
-# Bienvenid@ al reto de The Phone Cave
+## Ironhack Challenge - The Phone Cave
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+The challenge was to create a Single Page Application whose objetive is to offer a list of phones and their details. First of all you need to login with this `username:` Loreto and `password:` loretoalvarez.
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+<img src="https://res.cloudinary.com/loretoavoces/image/upload/v1610918696/fotos-navidad/Captura_de_pantalla_de_2021-01-17_22-20-58_bd3x6d.png"></img>
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
+### The Challenge :muscle:
 
-##### El reto
+#### Write a simple REST API.
+ - Have 1 endpoint `/phone`
+ - Return the attached "phones.json" charge
+ - There is no need for a persistence layer (BBDD). 
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+#### Write a React application that displays the API phones.
+ - Use Axios to get REST API data.
+ - Display an initial list of all phones.
+ - When a phone model is selected from the list, a detailed view of the phone is displayed showing some more details about it.
+ - Show a spinner or placeholder type component while the API request is in progress.
+ - Make it look decent. There's no need for a super sophisticated design, but at least make it a bit sensitive so that it doesn't look terrible on a cell phone. Add images for each device.
 
-1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Redux para la administración del estado y Axios (o una biblioteca similar) para obtener datos de la API REST. (Puedes no usar Redux)
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
+#### Send the code to a public github repository with a README.md that explains how to run the API and the Frontend application.
 
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+### Setup :rocket:
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
+First of all `fork` and `clone` this repository.
 
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
+#### Server
+- Run `npm i` on the directory.
+- Create an `.env` file with de port and local domain.
+- Run `npm run dev` command. 
 
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
+#### Client
+- Run `npm i` on the directory.
+- Run `npm start` command. 
 
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
+### Technologies :boom:
+
+HTML5 | CSS3 | JavaScript(ES6) | React.js | Hooks | Node.js | Express.js | MongoDB | Mongoose | Ajax | React Bootstrap | Styled Components | Passport |
+
+### Author :woman: 
+Hello, it´s me! Loreto Álvarez, Full-stack Web Developer. If you want to know more about me or my projects, just contact me on 
+<i><a href="https://www.linkedin.com/in/loreto-alvarez-voces/">Linkedin</a></i> or <i><a href = "mailto: loretoavoces@gmail.com">Sending an Email</a></i> <br />
 
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+
+
