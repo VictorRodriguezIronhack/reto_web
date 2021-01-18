@@ -1,0 +1,28 @@
+
+.App{
+  text-align: center
+}
+
+.phone-card{
+  margin: auto;
+  width: 70%;
+}
+
+.phones-list img{
+  width: 70px
+}
+
+.phone-details{
+  text-align: justify;
+}
+
+.phone-details img{
+  width: 100%
+}
+
+.propierties{
+  background-color: #F1F0EF;
+  font-weight: 500;
+  width: 40%
+}
+
