@@ -1,45 +1,64 @@
-# Bienvenid@ al reto de The Phone Cave
+# THE PHONE CAVE
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+Autor: Jordi Boronat
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+La app es un CRUD que permite ver todos los teléfonos, editarlos, eliminarlos y añadir nuevos. He trabajado sobretodo con la maquetación para que se quede un resultado lo más estético posible. 
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
+<img src="https://res.cloudinary.com/jordi-ironhack/image/upload/v1610908988/fotos-webuild/Captura_de_pantalla_2021-01-17_a_las_19.38.57_d5e8rz.png" alt="Overview">
 
-##### El reto
+<hr></hr>
+<img src="https://res.cloudinary.com/jordi-ironhack/image/upload/v1610908989/fotos-webuild/Captura_de_pantalla_2021-01-17_a_las_19.39.11_ekltya.png" alt="Overview">
+<hr></hr>
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+<img src="https://res.cloudinary.com/jordi-ironhack/image/upload/v1610908981/fotos-webuild/phone-detail_nfg4al.png" alt="Overview">
+<hr></hr>
 
-1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Redux para la administración del estado y Axios (o una biblioteca similar) para obtener datos de la API REST. (Puedes no usar Redux)
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
-
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
-
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
+[Video Demo](https://www.youtube.com/watch?v=iPaZZSIoEUs&ab_channel=JordiBoronatAr%C3%A9valo)
 
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+### Endpoints Servidor
+
+A pesar que en las instrucciones se especificaba tener un sólo un endpoint, he implementado más para liberar al Cliente de hacer procesos más costosos y que la web tenga procesos más ligeros.
+
+| Ruta        | Método           | Acción  |
+  | ------------- | ------------- | ------------- |
+  | `/telefonos`  | GET | Acceso a todos los teléfonos |
+  | `/new` | POST | Añadir nuevo teléfono |
+  | `/telefonos/:id` | GET | Detalles de un teléfono  |
+  | `/edit/:id` | POST | Editar teléfono  |
+  | `/delete/:id` | POST | Eliminar teléfono  |
+  | `/files/upload` | POST | Subir archivo a Cloudinary  |
+ 
+ ### Endpoints Cliente
+
+
+| Ruta        |  Acción  |
+  | ------------- | ------------- | 
+  | `/`  | Página de inicio |
+  | `/telefonos` | Listado teléfonos |
+  | `/telefonos/:id` | Detalles de un teléfono  |
+  | `/editar/:id` | Editar teléfono  |
+  | `/new` | Añadir nuevo teléfono  |
+
+
+  ### Intrucciones
+
+  - Ejecutar Servidor con "npm run dev". Se ejecuta en el puerto 5000.
+  - Ejecutar Cliente con "npm start". Se ejecuta en http://localhost3000.
+
+
+
+
+### Tecnologías usadas
+- HTML5 
+- CSS3
+- JavaScript
+  - React
+  - AJAX
+  - NodeJs
+  - MondoDB
+  - Mongoose
+  - Cloudinary
+  - Multer
+  - React Bootstrap
+  - Cors 

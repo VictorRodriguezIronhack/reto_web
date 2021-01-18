@@ -1,0 +1,71 @@
+* {
+   font-family: 'Roboto', sans-serif;
+}
+
+.homepage{
+    position: relative
+}
+.homepage h1{
+    position: absolute;
+
+    z-index: 100;
+    color: white;
+    top: 200px;
+    left: 21%;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: 100;
+    border-bottom: 1px solid white;
+}
+.homepage a{
+    position: absolute;
+    font-weight: 300;
+    z-index: 100;
+    color: white;
+    top: 340px;;
+    left: 41%;
+    font-size: 30px;
+    border: 1px solid white;
+    padding: 2px 15px 5px 15px;
+    border-radius: 15px;
+    background-image: -moz-linear-gradient(45deg, #ffffff 25%, transparent 25%), 
+        -moz-linear-gradient(-45deg, #ffffff 25%, transparent 25%), 
+        -moz-linear-gradient(45deg, transparent 75%, #ffffff 75%), 
+        -moz-linear-gradient(-45deg, transparent 75%, #ffffff 75%);
+
+    background-image: -webkit-linear-gradient(45deg, #ffffff 25%, transparent 25%), 
+        -webkit-linear-gradient(-45deg, #ffffff 25%, transparent 25%), 
+        -webkit-linear-gradient(45deg, transparent 75%, #ffffff 75%), 
+        -webkit-linear-gradient(-45deg, transparent 75%, #ffffff 75%);
+    background-image: -o-linear-gradient(45deg, #ffffff 25%, transparent 25%), 
+        -o-linear-gradient(-45deg, #ffffff 25%, transparent 25%), 
+        -o-linear-gradient(45deg, transparent 75%, #ffffff 75%), 
+        -o-linear-gradient(-45deg, transparent 75%, #ffffff 75%);
+    background-image: linear-gradient(45deg, #ffffff 25%, transparent 25%), 
+        linear-gradient(-45deg, #ffffff 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #ffffff 75%), 
+        linear-gradient(-45deg, transparent 75%, #ffffff 75%);
+    -moz-background-size: 2px 2px;
+    background-size: 2px 2px;
+    -webkit-background-size: 2px 2.1px; /* override value for webkit */
+    background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+    transition: 0.2s;
+
+}
+
+.homepage a:hover{
+background-color: white;
+color: rgb(117, 117, 117);
+text-decoration: none;
+}
+
+
+.homepage-Video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}

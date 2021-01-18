@@ -1,0 +1,73 @@
+.details-btns{
+    text-align: center
+}
+
+.details-btns a{
+    margin-right: 15px;}
+    
+.phone-detail-container{
+        margin-top: 40px;
+    }
+
+.phone-name-header-col{
+    padding-top: 150px;
+}
+    
+.phone-detail-header{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+.phone-detail-header h3{
+        z-index: 100;
+        font-weight: 700;
+        font-size: 90px;
+        text-align: center;
+        
+    }
+
+.phone-detail-img-header{
+    position: absolute;
+        width: 320px;
+        top: -110px;
+        left: -50px;
+        transform: rotate(90deg);
+        z-index: -100;
+    }
+.phone-detail-img{
+
+    width: 50%;
+    display:block;  
+    margin: 0 auto;
+
+    }
+
+.manufacturer{
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin:0
+}
+
+.price {
+font-size: 20px;
+font-weight: 700;
+color: #8a8a8a
+}
+
+.description{
+    font-weight: 300;
+}
+.specs{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.specs img{
+    width: 30px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
