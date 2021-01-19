@@ -1,0 +1,21 @@
+.navbar {
+    background-color: #adb5bd;
+}
+.decoration{
+    text-decoration: none;
+}
+
+.brand-navbar{
+    font-size: 26px;
+    color: aliceblue;
+}
+
+* {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.dropdown-toggle{
+    font-size: 20px;
+    font-weight: 200;
+}

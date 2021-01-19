@@ -1,0 +1,12 @@
+.phone-card {
+    margin-bottom: 40px;
+}
+
+.phone-card img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.btn-card {
+    background-color: #adb5bd;
+}

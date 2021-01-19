@@ -1,0 +1,9 @@
+.phone-img{
+    height: 400px;
+    object-fit: cover;
+}
+
+.btn-card {
+    background-color: #adb5bd;
+    margin: 0 20px;
+}
