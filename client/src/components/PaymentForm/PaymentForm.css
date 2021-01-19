@@ -1,0 +1,12 @@
+.confirm-btn{
+    border: 1px solid #E14B55;
+    padding: 10px 40px;
+    text-align: center;
+
+    transition: all 0.3s;
+}
+
+.confirm-btn:hover{
+    background-color: #E14B55;
+    color: white
+}

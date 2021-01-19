@@ -1,45 +1,39 @@
-# Bienvenid@ al reto de The Phone Cave
+# The Phone Cave Challenge
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave.
+The challenge consisted in obtaining a web application for a telephone sales company from a <code>.json</code> file that containes the information of it's products.
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+I developed an API REST application made up of a <code>/client</code> side, where habilities with both ReactJS and CSS are demonstrated, and a <code>/server</code> side, where ExpressJS was used to obtain the data from the <code>.json</code> file to send to front.
 
-En el día de hoy hemos venido a presentarte el reto que hemos diseñado para el puesto de Javascript Developer. 
+To run the application you will have to run both sides simultaneously in the terminal:
 
-##### El reto
+## Server setup
+- In the terminal go to <code>/server</code> and run <code>npm i</code> to install the dependancies.
+- Create a file <code>.env</code> in the root directory of <code>/server</code> with the port (<code>PORT=5000</code>) and the local domain (<code>DOMAIN_LOCAL=htpp://localhost:3000</code>).
+- Run <code>npm run dev</code> in the terminal. Your server side should be up and running.
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+## Client setup
+- In the terminal go to <code>/client</code> and run <code>npm i</code> to install the dependancies.
+- One that has finished, run <code>npm start</code>.
+- This should automatically open http:localhost:3000 in your browser to visualize it.
 
-1. Escribir una sencilla API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que...
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Redux para la administración del estado y Axios (o una biblioteca similar) para obtener datos de la API REST. (Puedes no usar Redux)
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
+                              --------------------------------------------------------------
 
-##### Los bonus
-Como abras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+# Reto de The Phone Cave
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
+El reto consistia en obtener una aplicacion web de una tienda de telefonia movil a partir de un documento <code>.json</code> que contiene la informacion de los productos.
 
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
+He desarrollado una aplicacion API REST compuesta por una parte <code>/client</code>, en la que se demuestran habilidades con ReactJS y CSS, y otra parte <code>/server</code>, en la que, a traves de ExpressJS, se obtienen datos de un documento <code>.json</code> para poder devolver datos al front.
 
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
+Para poder correr la applicacion tendras que ejecutar de forma simultanea en la terminal ambas partes:
 
-Ahora bien, el limite de entrega es el Lunes a las 10:00 am.  
+## Ejecutar servidor
 
+- En la terminal en <code>/server</code> ejecuta <code>npm i</code> para instalar las dependencias. 
+- Crea un archivo <code>.env</code> dentro del archivo raiz <code>/server</code> con el puerto (<code>PORT=5000</code>) y el dominio local (<code>DOMAIN_LOCAL=htpp://localhost:3000</code>).
+- Ejecuta en la terminal <code>npm run dev</code>. Tu servidor deberia estar corriendo sin problemas.
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+## Ejecutar cliente
+
+- En la terminal en <code>/client</code> ejecuta <code>npm i</code> para instalar las dependencias 
+- Una vez que haya acabado ejecuta <code>npm start</code>.
+- Esto deberia automaticamente abrirte http:localhost:3000 en el navegador para visualizarlo.

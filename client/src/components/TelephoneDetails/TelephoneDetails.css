@@ -1,0 +1,48 @@
+.phone-det-img{
+    height: 300px;
+    width: auto
+}
+
+.phone-details h2, .phone-details .manufacturer{
+    text-align: center;
+}
+
+.phone-details h2{
+    margin-top: 100px;
+}
+
+.buy .info-btn{
+    z-index: 10;
+}
+
+.buy{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 425px){
+    .phone-details{
+        text-align: center;
+    }
+
+    .phone-details img{
+        margin: 0 auto
+    }
+
+    .buy .info-btn{
+        width: 100%
+    }
+}
+
+@media (max-width: 575px){
+    .price{
+        text-align: center;
+    }
+}
+
+@media (min-width: 576px){
+    .phone-det-img{
+    height: auto;
+    width: 130%
+    }
+}
