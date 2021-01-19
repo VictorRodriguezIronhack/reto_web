@@ -7,11 +7,13 @@
 }
 .homepage h1{
     position: absolute;
-
     z-index: 100;
     color: white;
-    top: 200px;
-    left: 21%;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    text-align: center;
     font-size: 90px;
     text-transform: uppercase;
     font-weight: 100;
@@ -23,7 +25,10 @@
     z-index: 100;
     color: white;
     top: 340px;;
-    left: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 270px;
+    text-align:center;
     font-size: 30px;
     border: 1px solid white;
     padding: 2px 15px 5px 15px;
