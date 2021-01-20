@@ -32,3 +32,17 @@ padding: 20px 50px;
 .newForm-btns button{
     margin-right: 15px;
 }
+
+.img-upload-div{
+overflow: hidden;
+width: 154px;
+margin: 0 auto;
+}
+
+@media (max-width: 574px) {
+      .newPhone-Col{
+border: none;
+padding: 20px 50px;
+margin: 0
+}
+}

@@ -11,6 +11,8 @@
     margin-top: 25px;
 }
 
+
+
 .div-phone-shadow{
     padding-bottom:15px;
     transition: 0.2s;
@@ -44,10 +46,18 @@
 .div-phone-shadow:hover{
     transform: scale(1.03);
     -webkit-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
--moz-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
+    -moz-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
+    box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
 }
 
 .phone-link:hover{
     text-decoration: none;
+}
+
+@media (max-width: 574px) {
+    .phone-list-col{
+    width: 200px;
+    margin: 50px;
+    padding: 0;
+}
 }

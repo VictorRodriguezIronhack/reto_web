@@ -14,7 +14,7 @@ const PhoneDetailCard = ({ name, price, manufacturer, description, screen, proce
                 {img ? <Image src={img} className='phone-detail-img-header' /> : null}
                 <Container>
                     <Row>
-                        <Col md={{ span: 6, offset: 5 }} className='phone-name-header-col'>
+                        <Col sm={12} md={12} lg={{ span: 6, offset: 5 }} className='phone-name-header-col'>
                             <h3>{name}</h3>
 
                         </Col>
@@ -32,19 +32,32 @@ const PhoneDetailCard = ({ name, price, manufacturer, description, screen, proce
                         <p className='manufacturer'>{manufacturer}</p>
                         <p className='price'>{price} €</p>
                         <p className='description'>{description}</p>
-                        <div className='specs'>
-                            <Image src={Screen} />
-                            <p>{screen}</p>
-                            <Image src={Chip} />
+                        <Container className="specs-container">
+                            <Row>
+                                <Col xs={6} md={6} className='specs'>
+                                    <Image src={Screen} />
+                                    <p>{screen}</p>
+                                </Col>
+                                <Col xs={6} md={6} className='specs'>
+                                    <Image src={Chip} />
 
-                            <p>{processor}</p>
-                            <Image src={Ram} />
+                                    <p>{processor}</p>
+                                </Col>
+                                <Col xs={6} md={6} className='specs'>
+                                    <Image src={Ram} />
 
-                            <p>{ram}</p>
-                            <Image src={Color} />
+                                    <p>Ram: {ram}gb</p>
+                                </Col>
+                                <Col xs={6} md={6} className='specs'>
+                                    <Image src={Color} />
 
-                            <p>{color}</p>
-                        </div>
+                                    <p>{color}</p>
+                                </Col>
+                            </Row>
+
+
+
+                        </Container>
                         <div className='details-btns'>
                             <Link to='/telefonos'><Button variant="outline-dark">Volver</Button></Link>
                             <Link to={`/editar/${_id}`}><Button variant="outline-dark">Editar</Button></Link>

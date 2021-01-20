@@ -1,25 +1,21 @@
 require('dotenv').config()
 
-// Debugger
-require('./configs/debugger.config')
-
-//DB
+// Database
 require('./configs/mongoose.config')
 
-//Cloudinary
-require('./configs/cloudinary.config')
-
-
+// Debugger
+require('./configs/debugger.config')
 
 // App
 const express = require('express')
 const app = express()
 
 // Configs
-
+require('./configs/preformatter.config')(app)
 require('./configs/middleware.config')(app)
+require('./configs/views.configs')(app)
+require('./configs/locals.config')(app)
 require('./configs/cors.config')(app)
-
 
 
 // Routes index

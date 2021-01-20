@@ -7,7 +7,7 @@ const PhoneCard = ({ name, manufacturer, price, img, _id }) => {
 
 
     return (
-        <Col sm={6} md={4} className='phone-list-col'>
+        <Col xs={8} sm={6} md={4} className='phone-list-col'>
             <Link to={`telefonos/${_id}`} className='phone-link'>
                 <div className='div-phone-shadow'>
                     <Image className='phone-list-img' src={img} alt={`${name} image`} />

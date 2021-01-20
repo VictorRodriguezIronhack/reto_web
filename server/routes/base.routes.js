@@ -4,7 +4,7 @@ const router = express.Router()
 
 const Phones = require('./../models/phone.model')
 
-
+router.get('/', (req, res) => res.json({ message: "Not a valid endpoint, try with /telefonos" }))
 
 // AllPhones
 

@@ -79,7 +79,7 @@ export default class EditForm extends Component {
 
                             <Row>
 
-                                <Col md={{ span: 8, offset: 2 }} className='newPhone-Col'>
+                                <Col sm={{ span: 8, offset: 2 }} md={{ span: 8, offset: 2 }} className='newPhone-Col'>
 
                                     <h2>Nuevo teléfono</h2>
                                     <Form onSubmit={this.handleSubmit} className='new-form'>
@@ -126,10 +126,10 @@ export default class EditForm extends Component {
 
                                         <p>Imagen</p>
                                         {!this.state.uploadingActive ?
-                                            <>
-                                                <Form.File name='img' onChange={this.handleImageUpload}>
+                                            <div className="img-upload-div">
+                                                <Form.File name='img' className="file-upload" style={{ "color": "transparent" }} onChange={this.handleImageUpload}>
                                                 </Form.File>
-                                            </>
+                                            </div>
                                             :
                                             <Spinner animation="border" role="status" />
                                         }

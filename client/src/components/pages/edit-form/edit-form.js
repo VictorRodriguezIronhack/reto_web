@@ -124,10 +124,10 @@ export default class EditForm extends Component {
 
                                         <p>Imagen:</p>
                                         {!this.state.uploadingActive ?
-                                            <>
-                                                <Form.File name='img' onChange={this.handleImageUpload}>
+                                            <div className="img-upload-div">
+                                                <Form.File name='img' className="file-upload" onChange={this.handleImageUpload}>
                                                 </Form.File>
-                                            </>
+                                            </div>
                                             :
                                             <Spinner animation="border" role="status" />
                                         }

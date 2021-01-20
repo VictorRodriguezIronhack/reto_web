@@ -41,7 +41,7 @@ class PhoneList extends Component {
           </video>
         </header>
         <Container className='phonesList-container'>
-          <Row>
+          <Row className="phone-list-row">
             {this.state.phones ?
               this.state.phones.map((elm) => <PhoneCard key={elm._id} {...elm} />)
               :

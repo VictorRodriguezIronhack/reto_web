@@ -7,6 +7,7 @@
     
 .phone-detail-container{
         margin-top: 40px;
+        margin-bottom: 100px;
     }
 
 .phone-name-header-col{
@@ -61,13 +62,40 @@ color: #8a8a8a
 }
 .specs{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 50px;
-    margin-bottom: 40px;
 }
 .specs img{
     width: 30px;
-    margin-left: 20px;
-    margin-right: 5px;
+    margin-right: 10px;
+
+}
+
+.specs-container{
+margin: 40px 0 50px 0
+}
+
+@media (max-width: 991px){
+    .phone-detail-img-header{
+    display: none
+    }
+    .phone-name-header-col{
+    padding-top: 70px;
+}
+    
+.phone-detail-header{
+        position: relative;
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+    }
+}
+@media (max-width: 415px){
+    .phone-detail-header h3{
+
+
+        font-size: 70px;
+
+        
+    }
 }
