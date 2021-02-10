@@ -28,13 +28,13 @@ module.exports = {
       processor: args.phoneInput.processor,
       ram: +args.phoneInput.ram,
       date: new Date(args.phoneInput.date),
-      creator: '5c0fbd06c816781c518e4f3e'
+      creator: req.userId
     })
     let createdPhone
     try {
       const result = await newPhone.save()
       createdPhone = transformPhone(result)
-      const creator = await User.findById('5c0fbd06c816781c518e4f3e')
+      const creator = await User.findById(req.userId)
 
       if (!creator) {
         throw new Error('User not found.');
