@@ -37,7 +37,15 @@ const phoneSchema = new Schema({
   ram: {
     type: Number,
     required: true
+  },
+  date: {
+    type: Date,
+    required: true
+  },
+  creator: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }
-}, { timestamps: true })
+})
 
 module.exports = mongoose.model('Phone', phoneSchema)

@@ -10,12 +10,18 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  createdPhones: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Phone'
+    }
+  ],
   boughtPhones: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Phone'
     }
   ]
-}, { timestamps: true })
+})
 
 module.exports = mongoose.model('User', userSchema)

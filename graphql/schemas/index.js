@@ -1,54 +1,76 @@
 const { buildSchema } = require('graphql')
 
 module.exports = buildSchema(`
-  type Phone {
-      _id: ID!
-      name: String!
-      manufacturer: String!
-      description: String!
-      color: String!
-      price: Float!
-      imageFileName: String!
-      screen: String!
-      processor: String!
-      ram: Float!
-  }
+    type Purchase {
+        _id: ID! 
+        phone: Phone!
+        user: User!
+        createdAt: String!
+        updatedAt: String!
+    }
 
-  type User {
-      _id: ID!
-      email: String!
-      password: String
-      boughtPhones: [Phone!]
-  }
+    type Phone {
+        _id: ID!
+        name: String!
+        manufacturer: String!
+        description: String!
+        color: String!
+        price: Float!
+        imageFileName: String!
+        screen: String!
+        processor: String!
+        ram: Float!
+        date: String!
+        creator: User!
+    }
 
-  input PhoneInput {
-      name: String!
-      manufacturer: String!
-      description: String!
-      color: String!
-      price: Float!
-      imageFileName: String!
-      screen: String!
-      processor: String!
-      ram: Float!
-  }
+    type User {
+        _id: ID!
+        email: String!
+        password: String
+        createdPhones: [Phone!]!
+        boughtPhones: [Phone!]
+    }
 
-  input UserInput {
-      email: String!
-      password: String!
-  }
+    type LoginData {
+        userId: ID!
+        token: String!
+        tokenExpiration: Int!
+    }
 
-  type RootQuery {
-      phones: [Phone!]!
-  }
-  
-  type RootMutation {
-      createPhone( phoneInput: PhoneInput ): Phone
-      createUser( userInput: UserInput ): User
-  }
+    input PhoneInput {
+        name: String!
+        manufacturer: String!
+        description: String!
+        color: String!
+        price: Float!
+        imageFileName: String!
+        screen: String!
+        processor: String!
+        ram: Float!
+        date: String!
+    }
 
-  schema {
-      query: RootQuery
-      mutation: RootMutation
-  }
+    input UserInput {
+        email: String!
+        password: String!
+    }
+
+    type RootQuery {
+        phones: [Phone!]!
+        purchases: [Purchase!]!
+        login(email: String!, password: String!): LoginData!
+    }
+    
+    type RootMutation {
+        createPhone( phoneInput: PhoneInput ): Phone
+        createUser( userInput: UserInput ): User
+        purchasePhone( phoneID: ID!): Purchase!
+        returnPhone( purchaseID: ID!): Phone!   
+    }
+
+    schema {
+        query: RootQuery
+        mutation: RootMutation
+    }
 `)
