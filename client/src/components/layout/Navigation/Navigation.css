@@ -1,0 +1,44 @@
+.main-navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3.5rem;
+  background: hsl(283, 100%, 34%);
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-navigation__logo h1{
+  margin: 0 2.5rem;
+  font-size: 1.5rem;
+}
+
+.main-navigation__item {
+  margin-left: 1.5rem;
+}
+
+.main-navigation__item ul {
+  margin: 0 3rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.main-navigation__item li {
+  margin: 0 1rem;
+}
+
+.main-navigation__item a {
+  text-decoration: none;
+  color: hsl(283, 100%, 9%);
+}
+
+.main-navigation__item a:hover,
+.main-navigation__item a:active,
+.main-navigation__item a.active {
+  text-decoration: none;
+  color: hsl(288, 5%, 80%);
+}
