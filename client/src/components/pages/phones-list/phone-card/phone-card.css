@@ -1,0 +1,63 @@
+.phone-list-img { 
+    height: 300px;
+    object-fit: scale-down;
+    width:100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.phone-list-col{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+.div-phone-shadow{
+    padding-bottom:15px;
+    transition: 0.2s;
+    -webkit-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.14);
+    -moz-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.14);
+    box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.14);
+    padding-top: 25px;
+}
+.div-phone-shadow h3{
+    color: black;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 35px;
+}
+.div-phone-shadow h4{
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.div-phone-shadow p{
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+
+.div-phone-shadow:hover{
+    transform: scale(1.03);
+    -webkit-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
+    -moz-box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
+    box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.33);
+}
+
+.phone-link:hover{
+    text-decoration: none;
+}
+
+@media (max-width: 574px) {
+    .phone-list-col{
+    width: 200px;
+    margin: 50px;
+    padding: 0;
+}
+}

@@ -1,0 +1,114 @@
+/* Phones List Header */
+
+.phones-list-hero{
+  height: 300px;
+  background-color: #c0c0c0;
+  position: relative
+}
+
+.phones-list-hero h2{
+  color: white;
+  text-align:center;
+  font-weight: 100;
+  font-size: 80px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 100;
+  top: 60px;
+  left: 50px;
+  width: 400px;
+  text-align: center;
+}
+
+.add-btn{
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 7px 15px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 100;
+  top: 250px;
+  left: 50px;
+  text-align: center;
+
+}
+.add-btn:hover{
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.phonesList-container{
+  padding: 120px 0 100px 0;
+}
+
+.phones-List-Video {
+  position: absolute;
+width: 100%;
+height: 400px;
+object-fit: cover;
+ top: 0;
+    left: 0;
+    z-index: 0;
+    transform: scaleX(-1)
+}
+
+@media (max-width: 638px) {
+
+  .phones-list-hero h2{
+  font-weight: 100;
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  top: 100px;
+  left: 0;
+}
+
+.add-btn{
+
+  font-size: 20px;
+  top: 280px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+}
+
+
+@media (max-width: 500px) {
+      .phones-list-hero h2{
+  font-size: 50px;
+}
+
+.add-btn{
+
+  font-size: 15px;
+  top: 240px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.phone-list-row{
+margin: 0
+}
+}
+
+@media (max-width: 389px) {
+      .phones-list-hero h2{
+  font-size: 38px;
+}
+
+.add-btn{
+
+  font-size: 15px;
+
+}
+}
