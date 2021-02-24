@@ -38,13 +38,13 @@ class App extends Component {
           <main className='main-section'>
             <Switch>
               
-              {!this.state.token && <Redirect from='/' to='/auth' exact />}
               {this.state.token && <Redirect from='/' to='/phones' exact />}
               {this.state.token && <Redirect from='/auth' to='/phones' exact />}
 
               {!this.state.token && <Route path='/auth' component={ AuthPage } />}
               <Route path='/phones' component={ PhonesPage } />
               {this.state.token && <Route path='/purchase' component={ PurchasePage } />}
+              {!this.state.token && <Redirect to='/auth' exact />}
   
             </Switch>
           </main>

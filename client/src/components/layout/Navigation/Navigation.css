@@ -25,20 +25,31 @@
   padding: 0;
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 .main-navigation__item li {
   margin: 0 1rem;
 }
 
-.main-navigation__item a {
+.main-navigation__item a,
+.main-navigation__item button {
   text-decoration: none;
   color: hsl(283, 100%, 9%);
+  margin: 0;
+  padding: .25rem .5rem;
+  font: inherit;
+  background: transparent;
+  cursor: pointer;
+  border: none;
 }
 
 .main-navigation__item a:hover,
 .main-navigation__item a:active,
-.main-navigation__item a.active {
+.main-navigation__item a.active,
+.main-navigation__item button:hover,
+.main-navigation__item button:active {
   text-decoration: none;
-  color: hsl(288, 5%, 80%);
+  background: hsl(288, 5%, 80%);
+  border-radius: 5px;
 }

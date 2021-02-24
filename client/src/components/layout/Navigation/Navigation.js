@@ -15,9 +15,14 @@ const mainNavigation = props => (
 
           <nav className='main-navigation__item'>
             <ul>
-              {!context.token && <li><NavLink to='/auth'>Auth</NavLink></li>}
+              {!context.token && <li><NavLink to='/auth'>Authenticate</NavLink></li>}
               <li><NavLink to='/phones'>Phones</NavLink></li>
-              {context.token && <li><NavLink to='/purchase'>Shoop</NavLink></li>}
+              {context.token &&
+                <>
+                  <li><NavLink to='/purchase'>Shoop</NavLink></li>
+                  <li><button onClick={context.logout}>Logout</button></li>
+                </>
+              }
             </ul>
           </nav>
         </header>
