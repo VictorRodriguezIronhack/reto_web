@@ -2,9 +2,10 @@
   width: 90%;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .26);
-  position: fixed;
-  top: 20vh;
+  position: absolute;
+  top: 5vh;
   left: 5%;
+  margin-bottom: 10px;
 }
 
 .modal__header {
