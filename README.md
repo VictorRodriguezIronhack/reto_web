@@ -23,7 +23,7 @@ Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no)
 3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
 
 ##### Los bonus
-Como habras podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+Como habrás podido comprobar ya te hemos empezado a exigir Redux, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
 
 - Typescript
 - GraphQL
