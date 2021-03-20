@@ -1,0 +1,9 @@
+.homepage {
+    display: flex;
+    justify-content: center;
+}
+
+.main-image {
+    height: 40%;
+    width: 40%;
+}

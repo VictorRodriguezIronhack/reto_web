@@ -1,0 +1,10 @@
+.gift-image-small {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.btn-gift {
+    display: flex;
+    justify-content: center;
+}
