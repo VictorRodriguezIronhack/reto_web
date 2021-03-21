@@ -1,11 +1,32 @@
 import React, { useState, useEffect } from 'react'
-// import { Modal, Spinner } from 'react-bootstrap'
+
+import styled from 'styled-components'
 
 import Modal from '../../shared/Modal'
+import Spinner from '../../shared/Spinner'
 
 import PhonesService from '../../../service/phones.service'
 
 import './PhonesList.css'
+
+const StyledPhonesListContainer = styled.div`
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 50px;
+    background: white;
+`
+
+const PhonesList = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+`
+
+const Dark = styled.div`
+    background: rgb(31, 31, 31);
+`
 
 function PhonesListPage() {
 
@@ -39,16 +60,31 @@ function PhonesListPage() {
 
     return (
         <div>
-            <h1>Lista de móviles</h1>
-            { phones.length > 0 ? phones.map(elm => <> 
-            <p key={elm.id}>{elm.name} - {elm.manufacturer}</p> <button onClick={() => {
-                getModal(elm)
-                }}>Ver detalles</button>
-            </>) : null }
+            <h1 className="list-title">THE PHONE CAGE</h1>
 
+            {
+                loading ? <Spinner /> :
+                <StyledPhonesListContainer>
+                    <PhonesList>
+                        { phones.length > 0 
+                        ?
+                        phones.map(elm => <div className="phone-card">
+                        <img src={`https://res.cloudinary.com/dqh1l02dr/image/upload/v1616347677/${elm.imageFileName}`} alt={elm.name} />
+                        <p key={elm.id}>{elm.name} - {elm.manufacturer}</p> 
+                        <Dark>
+                            <a className="btn btn-white" onClick={() => {
+                                getModal(elm)
+                                }}>Ver detalles</a>
+                        </Dark>
+                        </div>)
+                        : null }
+                    </PhonesList>
+                </StyledPhonesListContainer>
+            }
             {
                 show ? <Modal show={show} handleClose={() => hideModal()} info={modalInfo}  /> : null
             }
+
         </div>
     )
 }

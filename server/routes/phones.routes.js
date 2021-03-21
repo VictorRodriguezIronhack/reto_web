@@ -8,7 +8,7 @@ const phonesApi = require('../../phones.json')
 router.get('/list', (req, res) => {
     setTimeout(() => {
         res.json(phonesApi)
-    }, 3000)
+    }, 2000)
 })
 
 module.exports = router;

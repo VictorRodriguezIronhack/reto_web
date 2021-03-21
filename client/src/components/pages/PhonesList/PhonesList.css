@@ -1,1 +1,65 @@
+.list-title {
+    color: white;
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+.phone-card {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.phone-card p {
+    font-weight: 500;
+}
+
+img {
+    height: 150px;
+    margin-bottom: 8px;
+}
+
+.dark {
+    background: rgb(31, 31, 31);
+}
+
+.btn,
+input[type="submit"]{
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 12px 35px;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight:400;
+    letter-spacing: 3px;
+    width: 220px;
+}
+
+.btn:hover,
+input[type="submit"]:hover{
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+
+.btn-white {
+    border: solid 2px #fff;
+    background: transparent;
+    color: #fff !important;
+}
+.btn-white:hover {
+    /* border:solid 2px #fff; */
+    background: #fff;
+    color:rgb(31, 31, 31) !important;
+}
 

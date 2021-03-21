@@ -9,8 +9,9 @@ function Modal({handleClose, show, children, info}) {
         <div className={showHideClassName}>
             <section className="modal-main">
                 {children}
-                <h1>{info.manufacturer} - {info.name}</h1>
-                <p>{info.description}</p>
+                <h1 className="work">{info.manufacturer} - {info.name}</h1>
+                <hr/>
+                <p><strong>{info.description}</strong></p>
                 <p>Product details:</p>
                 <ul>
                     <li>Color: {info.color}</li>
@@ -18,9 +19,11 @@ function Modal({handleClose, show, children, info}) {
                     <li>Processor: {info.processor}</li>
                     <li>RAM: {info.ram}</li>
                 </ul>
-                <p>{info.price} €</p>
+                <p className="price">{info.price} €</p>
 
-                <button type="button" onClick={() => handleClose()}>Close</button>
+                <div className="dark modal-btn">
+                    <button className="btn btn-white" type="button" onClick={() => handleClose()}>Close</button>
+                </div>
             </section>
         </div>
     )
