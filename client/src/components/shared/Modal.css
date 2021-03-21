@@ -1,0 +1,44 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: left;
+  }
+
+  h1 {
+    color: #000000;
+  }
+  
+  .modal-main {
+    position:fixed;
+    background: white;
+    width: 80%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+  }
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+
+  .modal-btn {
+    width: 220px;
+    height: 47px;
+    margin: auto;
+  }
+
+  .price {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: right;
+  }
