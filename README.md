@@ -1,4 +1,4 @@
-# Reto de The Phone Cave
+# The Phone Cave Challenge
 
 Project based on a coding challenge. It shows a list of phones, each with a link to a detailed modal view showing additional information.
 
@@ -8,9 +8,16 @@ Project based on a coding challenge. It shows a list of phones, each with a link
 - Data served from an API Rest built using Node.js and Express.js
 
 ## Install
+
+- Server:
   ```
-  $ cd client; npm install;
-  $ cd server; npm install;
+  $ cd server
+  $ npm install
+  ```
+- Client:
+  ```
+  $ cd client
+  $ npm install
   ```
 
 ## To open project
@@ -38,6 +45,7 @@ Run client side and server side in different terminal tabs:
 ![thephonecage_details](https://user-images.githubusercontent.com/75569696/111922661-45c47900-8a9b-11eb-9359-1e99a5da5c0a.png)
 
 ## Author
-Verónica Alcalá Vera
-[LinkedIn](https://www.linkedin.com/in/veronicaalcalav/)
-[GitHub](https://github.com/valcalav) 
+
+Verónica Alcalá Vera - Full Stack Junior Web Developer
+- [LinkedIn](https://www.linkedin.com/in/veronicaalcalav/)
+- [GitHub](https://github.com/valcalav)
