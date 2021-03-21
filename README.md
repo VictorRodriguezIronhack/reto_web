@@ -22,8 +22,6 @@ Project based on a coding challenge. It shows a list of phones, each with a link
 
 ## To open project
 
-Run client side and server side in different terminal tabs:
-
 - Server:
   ```
   $ cd server
