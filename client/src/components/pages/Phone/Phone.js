@@ -16,7 +16,6 @@ const PhoneDetails = (props) => {
             .getPhones()
             .then(response => setTimeout(() => { setPhones(response.data) }, 500))
 
-        // return setPhones(fetchedPhones)
     }, [])
 
     return (
