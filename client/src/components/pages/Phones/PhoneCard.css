@@ -1,0 +1,14 @@
+.phone-card {
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.phone-card img {
+    height: 200px;
+    object-fit: scale-down;
+}
+
+.phone-card-body {
+    text-align: center;
+    height: 370px;
+}
