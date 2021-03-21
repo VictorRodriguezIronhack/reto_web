@@ -1,0 +1,33 @@
+footer {
+    background-color:whitesmoke;
+    color: black;
+    text-align: center;
+    padding: 3px;
+    position: fixed;
+    width: 100%;
+    font-size: .7em;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-top: 5px solid #60be92;
+}
+
+footer img{
+    height: 30px;
+}
+
+footer p{
+    margin-bottom: 0px;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social a{
+    padding: 0;
+}

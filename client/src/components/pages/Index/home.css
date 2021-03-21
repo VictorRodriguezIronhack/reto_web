@@ -1,0 +1,42 @@
+
+h1{
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 3em;
+    letter-spacing: .2em;
+    color:black;
+}
+
+h2{
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 3em;
+    letter-spacing: .2em;
+    color:black;
+}
+
+p{
+    display: flex;
+    justify-content: left;
+    letter-spacing: .1em;
+}
+
+a{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    letter-spacing: .15em;
+}
+
+.loader{
+    display: block;
+    margin: 300px auto;
+}
