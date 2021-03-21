@@ -27,8 +27,11 @@ const IndexPage = () => {
                         <Row style={{ marginBottom: 100 }}>
                             {phones?.map(elm =>
                                 <Col md={3} key={elm.id}>
-                                    <img style={{ width: '100%', height: 250, marginBottom: 20, display: 'block', margin: '0 auto' }} src={`https://res.cloudinary.com/df5xojjiw/image/upload/v1616327791/retoWeb/${elm.imageFileName}`} alt={elm.name} />
-                                    <Link to={`./detalles/${elm.id}`}> {elm.name} </Link>
+
+                                    <Link to={`./detalles/${elm.id}`}>
+                                        <img style={{ width: '100%', height: 250, marginBottom: 20, display: 'block', margin: '0 auto' }} src={`https://res.cloudinary.com/df5xojjiw/image/upload/v1616327791/retoWeb/${elm.imageFileName}`} alt={elm.name} />
+                                        {elm.name}
+                                    </Link>
                                 </Col>
                             )}
                         </Row>
