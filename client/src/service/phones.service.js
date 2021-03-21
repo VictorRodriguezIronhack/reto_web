@@ -10,6 +10,7 @@ class PhonesService {
     }
 
     getPhones = () => this.api.get('/')
+    getOnePhone = phone_id => this.api.get(`/getOnePhone/${phone_id}`)
 }
 
 export default PhonesService

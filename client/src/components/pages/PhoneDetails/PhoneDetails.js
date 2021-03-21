@@ -9,7 +9,7 @@ class PhoneDetails extends Component {
     constructor() {
         super()
         this.state = {
-            phone: []
+            phone: undefined
         }
 
         this.phonesService = new PhonesService()
@@ -19,19 +19,16 @@ class PhoneDetails extends Component {
         const phone_id = this.props.match.params.id
         
         this.phonesService
-            .getPhones()
-            .then(response => this.setState({phone: response.data[phone_id]}))
+            .getOnePhone(phone_id)
+            .then(response => this.setState({phone: response.data}))
             .catch(err => console.log({err}))
-
-        
     }
-
 
     
     render() {
 
         return(
-            <Container>
+            <Container className='details-container'>
                 {this.state.phone
                     ?
                     
@@ -54,10 +51,6 @@ class PhoneDetails extends Component {
                     :
                 <Spinner></Spinner>}
             </Container>
-
-
-
-
         )
     }
 }

@@ -9,7 +9,7 @@ class Phones extends Component {
     constructor() {
         super()
         this.state = {
-            phones: []
+            phones: undefined
         }
 
         this.phonesService = new PhonesService()
@@ -29,15 +29,19 @@ class Phones extends Component {
     render() {
 
         return(
-            <Container>
-                <Row>
+            <>
+                <Container>
                     {this.state.phones
                         ?
-                    this.state.phones.map(elm => <PhoneCard key={elm.id} {...elm}></PhoneCard>)
+                        
+                            <Row>
+                                {this.state.phones.map(elm => <PhoneCard key={elm._id} {...elm}></PhoneCard>)}
+                            </Row>
+                        
                         :
                     <Spinner></Spinner>}
-                </Row>
-            </Container>
+                </Container>
+            </>
         )
     }
 }
