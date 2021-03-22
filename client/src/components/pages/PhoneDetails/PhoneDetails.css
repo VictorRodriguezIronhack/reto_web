@@ -5,3 +5,8 @@
 .details-section h2 {
     margin-bottom: 50px;
 }
+
+.detail-buttons {
+    display: flex;
+    justify-content: space-between;
+}

@@ -5,3 +5,8 @@ img {
 body {
   margin-top: 50px
 }
+
+.btn {
+  border-radius: 20px;
+  margin: 20px;
+}

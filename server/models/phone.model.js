@@ -12,7 +12,10 @@ const phoneSchema = new mongoose.Schema({
         type: Number,
         require:true
     },
-    imageFileName: String,
+    image: {
+        type: String,
+        default: "https://res.cloudinary.com/abel-av/image/upload/v1616373546/reto_web/smartphone_cartoon_cjxsaq.jpg"
+    },
     screen: String,
     processor: String,
     ram: Number

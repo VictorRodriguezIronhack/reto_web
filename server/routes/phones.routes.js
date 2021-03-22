@@ -30,14 +30,6 @@ router.post('/newPhone', (req, res) => {
         .catch(err => res.status(500).json({ message: 'Error saving phone into DB', err }))
 })
 
-router.put('/editPhone/:id', (req, res) => {
-
-    Phone
-        .findByIdAndUpdate(req.params.id, req.body, {new: true})
-        .then(response => res.json(response))
-        .catch(err => res.status(500).json({ message: 'Error editing phone in DB', err }))
-})
-
 router.delete('/deletePhone/:id', (req, res) => {
 
     Phone

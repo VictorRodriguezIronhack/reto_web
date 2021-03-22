@@ -1,7 +1,8 @@
 import {Component} from 'react'
 import PhonesService from '../../../service/phones.service'
-import {Container, Row} from 'react-bootstrap'
-import PhoneCard from './PhoneCard'
+import {Container, Button, Modal} from 'react-bootstrap'
+import PhonesList from './PhonesList'
+import PhoneForm from '../PhoneForm/PhoneForm'
 import Spinner from '../../Shared/Spinner/Spinner'
 
 class Phones extends Component {
@@ -9,7 +10,8 @@ class Phones extends Component {
     constructor() {
         super()
         this.state = {
-            phones: undefined
+            phones: undefined,
+            showForm: false
         }
 
         this.phonesService = new PhonesService()
@@ -25,22 +27,36 @@ class Phones extends Component {
             .then(response => this.setState({phones: response.data}))
             .catch(err => console.log({err}))
     }
+
+    togglemodalForm(value) {
+        this.setState({ showForm: value })
+    }
     
     render() {
 
         return(
             <>
                 <Container>
+                        <h1 style={{textAlign: 'center'}}>The Phone Cave</h1>
+                        <Button onClick={() => this.togglemodalForm(true)} variant="dark" className="new-coaster-btn">New Smartphone</Button>
                     {this.state.phones
                         ?
-                        
-                            <Row>
-                                {this.state.phones.map(elm => <PhoneCard key={elm._id} {...elm}></PhoneCard>)}
-                            </Row>
+                            
+                            <PhonesList phones={this.state.phones}></PhonesList>
                         
                         :
                     <Spinner></Spinner>}
                 </Container>
+
+                <Modal show={this.state.showForm} onHide={() => this.togglemodalForm(false)}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>New Smartphone</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <PhoneForm closeModal={() => this.togglemodalForm(false)} refreshList={() => this.loadPhones()} handleAlert={this.props.handleAlert}/>
+                    </Modal.Body>
+                </Modal>
+                
             </>
         )
     }

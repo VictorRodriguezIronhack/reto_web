@@ -1,8 +1,9 @@
 import { Component } from "react"
-import { Col, Container, Row, Card } from "react-bootstrap"
+import { Col, Container, Row, Card, Button } from "react-bootstrap"
 import PhonesService from "../../../service/phones.service"
 import Spinner from '../../Shared/Spinner/Spinner'
 import './PhoneDetails.css'
+import {Link} from 'react-router-dom'
 
 class PhoneDetails extends Component {
 
@@ -24,6 +25,15 @@ class PhoneDetails extends Component {
             .catch(err => console.log({err}))
     }
 
+    deleteUserCard() {
+        const phone_id = this.props.match.params.id
+
+        this.phonesService
+            .deletePhone(phone_id)
+            .then(() => this.props.history.push('/'))
+            .catch(err => this.props.handleAlert(true, 'Error', 'Error removing recipe'))
+    }
+
     render() {
 
         return(
@@ -34,8 +44,11 @@ class PhoneDetails extends Component {
                     <Row>
                         <Col xs={12} sm={6}>
                             <h1>{this.state.phone?.name}</h1>
-                            <Card.Img variant='top' src={this.state.phone?.imageFileName} alt=''></Card.Img>
-
+                            <Card.Img variant='top' src={this.state.phone?.image} alt=''></Card.Img>
+                            <div className='detail-buttons'>
+                            <Button variant='danger' onClick={() => this.deleteUserCard()} className='btn'>Delete Phone</Button>
+                            <Link to="/" className="btn btn-dark">Back to Phones List</Link>
+                            </div>
                         </Col>
                         <Col className='details-section'>
                             <h2>{this.state.phone?.description}</h2>
