@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@500&display=swap');
+
+
+body { 
+ background-color:azure;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 1.2em;
+  font-weight: 200px; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+ body:before {
+	content:'';
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(253, 253, 253, 0.7);
+    min-height: 100%;
+    min-width: 800px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: -1;
+}
+
+
+.phone-card {
+    margin-bottom: 100px; 
+    margin-top:200px; 
+} 
+
+
+.phone-card img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.img {
+height: 400px;
+}
+
+
+.phone-card h2 {
+font-size: 1.4em;
+font-weight: 200;
+}
+
+
+.new-phone-btn{
+margin-bottom: 40px;
+margin-right: 20px;
+}

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@700&family=Alegreya+Sans+SC:wght@500;700&family=Arima+Madurai:wght@500&family=Merienda&family=Overlock:wght@700&family=Roboto:wght@100&display=swap');
+
+.navdesign {
+	color:white;
+    background-color: brown;
+    font-family:'Alegreya Sans SC', sans-serif;
+}
+
+.navWrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    background: transparent;
+}
+
+.navMargin {
+	margin-top: 106px;
+}
+

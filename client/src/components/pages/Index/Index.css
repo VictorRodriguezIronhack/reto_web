@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Roboto:wght@100&display=swap');
+
+
+h4 {
+	font-family: 'Roboto', sans-serif;
+    font-size: 4.5em;
+	border-bottom: 1px solid white;
+}
+
+
+#home:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(177, 43, 43, 0.75);
+}
+
+.btn-slide {
+  font-family: 'Roboto', sans-serif;  
+  font-size: 2em;
+  border-width: 2px;
+}
