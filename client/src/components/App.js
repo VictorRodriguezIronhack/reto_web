@@ -1,4 +1,3 @@
-import './App.css'
 import { Component } from 'react'
 import Routes from './routes/Routes'
 import Footer from './layout/Footer/Footer'
