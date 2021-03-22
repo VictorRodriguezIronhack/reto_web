@@ -21,6 +21,7 @@ $ npm start
 ## Screenshoots
 ![phones_list](https://res.cloudinary.com/abel-av/image/upload/v1616401734/reto_web/phones_list_2_kz4bhw.png)
 ![phone_details](https://res.cloudinary.com/abel-av/image/upload/v1616401734/reto_web/phone_details_qvobuk.png)
+![new_phone](https://res.cloudinary.com/abel-av/image/upload/v1616402723/reto_web/new_phone_iph7u4.png)
 
 ## Technologies
 * Node
@@ -32,7 +33,9 @@ $ npm start
 
 ## Features
 * Show phones list
+* Create new phone
 * Show phone details
+* Delete phone
 * Responsive Design
 
 ## APIs
