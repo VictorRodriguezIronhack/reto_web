@@ -2,7 +2,7 @@ import {Card, Col} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './PhoneCard.css'
 
-const PhoneCard = ({name, manufacturer, description, color, price, imageFileName, screen, processor, ram, _id}) => {
+const PhoneCard = ({name, color, price, imageFileName, _id}) => {
     return(
         <Col md={3} sm={4} xs={6}>
             <Card className='phone-card'>

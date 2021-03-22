@@ -1,11 +1,17 @@
 const mongoose = require("mongoose")
 
 const phoneSchema = new mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+        require:true
+    },
     manufacturer: String,
     description: String,
     color: String,
-    price: Number,
+    price: {
+        type: Number,
+        require:true
+    },
     imageFileName: String,
     screen: String,
     processor: String,

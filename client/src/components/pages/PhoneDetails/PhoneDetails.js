@@ -24,7 +24,6 @@ class PhoneDetails extends Component {
             .catch(err => console.log({err}))
     }
 
-    
     render() {
 
         return(
@@ -33,7 +32,7 @@ class PhoneDetails extends Component {
                     ?
                     
                     <Row>
-                        <Col>
+                        <Col xs={12} sm={6}>
                             <h1>{this.state.phone?.name}</h1>
                             <Card.Img variant='top' src={this.state.phone?.imageFileName} alt=''></Card.Img>
 
