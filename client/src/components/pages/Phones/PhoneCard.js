@@ -11,7 +11,7 @@ const PhoneCard = ({ name, imageFileName, _id }) => {
                 <Card.Img variant="top" src={imageFileName} />
                 <Card.Body>
                     <div> Take a look to:
-                    <Link to={`/details/${_id}`} className="namedesign"> <h2> {name}</h2> </Link></div>
+                    <Link to={`/details/${_id}`} className="namedesign"> <h2>{name}</h2> </Link></div>
                 </Card.Body>
             </Card>
         </Col>

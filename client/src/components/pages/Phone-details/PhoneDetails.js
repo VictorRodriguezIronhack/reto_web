@@ -61,7 +61,7 @@ class PhoneDetails extends Component {
         return (
             <div className="navMargin" style={{ maxHeight: '100%' }} >
                 <Row style={{ backgroundColor: 'rgb(204, 197, 197, 0.7)', height: '57vh' }} >
-                    <Col style={{ alignItems: "center" }} xs={6} >
+                    <Col style={{ alignItems: "center" }} md={6} >
                         <img style={{ height: "57vh", objectFit: 'cover' }} src={this.state.phone?.imageFileName} alt={this.state.phone?.name} />
                     </Col>
                     <Col className='designdetails1' style={{ fontSize: '1vw' }} >
@@ -71,18 +71,19 @@ class PhoneDetails extends Component {
                     </Col>
                 </Row>
                 <Container as="section">
+                    
                     <Col>
                         <br />
                         <h3><strong>Details</strong></h3>
                         <hr />
                         <br />
-                        <p> <strong> Name:</strong>{this.state.phone?.name}</p>
-                        <p> <strong> Manufacturer:</strong>{this.state.phone?.manufacturer}</p>
-                        <p> <strong> Color:</strong>{this.state.phone?.color}</p>
-                        <p> <strong> Price:</strong>{this.state.phone?.price}</p>
-                        <p> <strong> Screen:</strong>{this.state.phone?.screen}</p>
-                        <p> <strong> Processor:</strong>{this.state.phone?.processor}</p>
-                        <p><strong>Description:</strong></p>
+                        <p> <strong> Name: </strong>{this.state.phone?.name}</p>
+                        <p> <strong> Manufacturer: </strong>{this.state.phone?.manufacturer}</p>
+                        <p> <strong> Color: </strong>{this.state.phone?.color}</p>
+                        <p> <strong> Price: </strong>{this.state.phone?.price}</p>
+                        <p> <strong> Screen: </strong>{this.state.phone?.screen}</p>
+                        <p> <strong> Processor: </strong>{this.state.phone?.processor}</p>
+                        <p><strong>Description: </strong></p>
                         <p>{this.state.phone?.description}</p>
                             <div>
                                 <Button onClick={() => this.togglemodalForm(true)} variant="outline-secondary" size="sm" style={{ width: '30%' }}>

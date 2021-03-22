@@ -11,7 +11,6 @@ class PhoneForm extends Component {
         super(props)
         this.state = {
             phone: {
-                id: props.phone?.id || '',
                 name: props.phone?.name || '',
                 manufacturer: props.phone?.manufacturer || '',
                 description: props.phone?.description || '',
@@ -21,8 +20,8 @@ class PhoneForm extends Component {
                 screen: props.phone?.screen || '',
                 processor: props.phone?.processor || '',
                 ram: props.phone?.ram || ''
-
             },
+            
             isUploading: false
         }
 
@@ -82,10 +81,6 @@ class PhoneForm extends Component {
             <Container>
                 <Form onSubmit={(e) => this.handleSubmit(e)}>
                     <Form.Group>
-                        <Form.Label>id:</Form.Label>
-                        <Form.Control type="text" name="id" value={this.state.phone.id} onChange={e => this.handleInputChange(e)} />
-                    </Form.Group>
-                    <Form.Group>
                         <Form.Label>Name:</Form.Label>
                         <Form.Control type="text" name="name" value={this.state.phone.name} onChange={e => this.handleInputChange(e)} />
                     </Form.Group>
@@ -129,7 +124,6 @@ class PhoneForm extends Component {
     }
 
 }
-
 
 export default PhoneForm
 

@@ -25,10 +25,7 @@ class Phones extends Component {
     chargingPhones() {
         this.phoneService
             .getPhones()
-            .then(response => {
-                this.setState({ phones: response.data })
-                console.log(this.state.phones)
-        })
+            .then(response => this.setState({ phones: response.data }))
             .catch(err => console.log(err))
     }
 
