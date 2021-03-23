@@ -1,0 +1,41 @@
+{
+  "name": "express-generator",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DEBUG=express-generator:* nodemon ./bin/www",
+    "dev-windows": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.25.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "node-sass-middleware": "^0.11.0",
+    "react-dom": "^17.0.1"
+  },
+  "description": "<img src=\"https://buttercms.com/static/images/tech_banners/webp/ExpressJS.b7bdb4190ea4.webp\" alt=\"ExpressJS\" width=\"500\"/>",
+  "main": "app.js",
+  "bin": {
+    "express-generator": "seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monch87/express-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Monch87/express-generator/issues"
+  },
+  "homepage": "https://github.com/Monch87/express-generator#readme"
+}
