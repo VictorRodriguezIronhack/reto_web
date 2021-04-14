@@ -1,9 +1,14 @@
-Reto de "The Phone Cave"
+Challenge: "The Phone Cave"
 by: Montserrat Mosqueda
 
 
+### Concept
 
-## Endpoints table
+The app CRUD let you take a look to all the phones, edit them, delete them and add new ones.
+
+
+
+### Endpoints table
 
 | Id  | Method | Path                                        | Description                                                            |
 | --- | ------ | ------------------------------------------- | ---------------------------------------------------------------------- |
@@ -16,4 +21,31 @@ by: Montserrat Mosqueda
 
 
 
+  ### Instructions (for local server)
 
+1. BACKEND: Run the app in the development mode "npm run dev". Open http://localhost:5000 in order to view it in the browser.
+2. FRONTEND: Run the app in the development mode "npm start". Open http://localhost:3000 in order to view it in the browser.
+3. Run MongoDB in order to take a look the Database. 
+
+
+
+  ### Used technologies 
+
+- HTML5 
+- CSS3
+- NodeJs
+- JavaScript
+- React Bootstrap
+- React
+- Cloudinary
+- MongoDB
+- Mongoose
+- Cors 
+- SweetAlert
+
+
+
+### About me
+
+* Github: [@Monch87](https://github.com/Monch87)
+* LinkedIn: [Montserrat-Mosqueda-Morales](https://www.linkedin.com/in/montserrat-mosqueda-morales)

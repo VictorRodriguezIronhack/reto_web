@@ -1,9 +1,9 @@
 import { Component } from 'react'
-import { Row, Col, Modal } from 'react-bootstrap'
+import { Row, Col, Modal, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import PhoneForm from './../Phone-form/Phone-form'
 import PhoneService from './../../../service/phones.service'
-
+import swal from 'sweetalert'
 
 
 class PhoneDetails extends Component {
@@ -13,7 +13,9 @@ class PhoneDetails extends Component {
         this.state = {
             phone: undefined,
             showForm: false,
+            showDelete: false
         }
+
         this.phoneService = new PhoneService()
     }
 
@@ -34,11 +36,22 @@ class PhoneDetails extends Component {
         this.setState({ showForm: value })
     }
 
-    deletePhones(phone_id) {
-        this.phoneService
-            .deletePhone(phone_id)
-            .then(() => this.props.context.history.push("/phones-list"))
-            .catch(err => console.log(err))
+    deleteAlert(phone_id) {
+        swal({
+            title:'Delete',
+            text:'Are you sure you want to delete this phone? This action can not be undone.',
+            icon:'warning',
+            buttons: ['No','Yes'],
+
+        }).then(ans=>{
+            if (ans){
+                this.phoneService
+                    .deletePhone(phone_id)
+                    .then(() => this.props.history.push("/phones-list"))
+                    .catch(err => console.log(err))
+                swal({ text:'The file has been deleted successfully', icon:'success',timer:'2000'})   
+            }
+        })
     }
 
     editReview() {
@@ -69,19 +82,19 @@ class PhoneDetails extends Component {
                         <h1 style={{ fontSize: '4rem', width: "100%", textAlign: 'center', color: 'rgba(130,108,60,255)' }} > {this.state.phone?.name} </h1>
                         <h3><strong>Details</strong></h3>
                         <hr />
-                        <p style={{ fontSize: '1.3rem' }} > <strong> Name: </strong>{this.state.phone?.name}</p>
+                        <p style={{ fontSize: '1.3rem' }} ><strong> Name: </strong>{this.state.phone?.name}</p>
                         <p style={{ fontSize: '1.3rem' }} ><strong> Manufacturer: </strong>{this.state.phone?.manufacturer}</p>
-                        <p style={{ fontSize: '1.3rem' }} > <strong> Color: </strong>{this.state.phone?.color}</p>
+                        <p style={{ fontSize: '1.3rem' }} ><strong> Color: </strong>{this.state.phone?.color}</p>
                         <p style={{ fontSize: '1.3rem' }} ><strong> Price: </strong>{this.state.phone?.price}</p>
-                        <p style={{ fontSize: '1.3rem' }} > <strong> Screen: </strong>{this.state.phone?.screen}</p>
-                        <p style={{ fontSize: '1.3rem' }} > <strong> Processor: </strong>{this.state.phone?.processor}</p>
-                        <p style={{ fontSize: '1.3rem' }} > <strong> RAM: </strong>{this.state.phone?.ram}</p>
+                        <p style={{ fontSize: '1.3rem' }} ><strong> Screen: </strong>{this.state.phone?.screen}</p>
+                        <p style={{ fontSize: '1.3rem' }} ><strong> Processor: </strong>{this.state.phone?.processor}</p>
+                        <p style={{ fontSize: '1.3rem' }} ><strong> RAM: </strong>{this.state.phone?.ram}</p>
                         <p style={{ fontSize: '1.3rem' }} ><strong>Description: </strong></p>
                         <p style={{ fontSize: '1.3rem' }} >{this.state.phone?.description}</p>
                         <div alignItems='center'>
                             <hr />
                             <Link onClick={() => this.togglemodalForm(true)} className="btn btn-outline-danger" variant="outline-secondary" size="sm" style={{ width: '30%' }} to={`/details/${this.state.phone?._id}`}>Edit</Link>
-                            <Link onClick={() => this.deletePhones(this.state.phone?._id)} variant="outline-secondary" size="sm" style={{ width: '30%' }} to="/phones-list" className="btn btn-danger">Delete</Link>
+                            <Link onClick={() => this.deleteAlert(this.state.phone?._id)} variant="outline-secondary" size="sm" style={{ width: '30%' }} className="btn btn-danger">Delete</Link>
                             <hr />
                             <br />
                             <Link to="/phones-list" className="btn btn-secondary">Go back</Link>
@@ -102,10 +115,7 @@ class PhoneDetails extends Component {
             </div>
         )
     }
-
 }
 
 
 export default PhoneDetails
-
-
