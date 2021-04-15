@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Cormorant+Unicase&family=Handlee&family=Indie+Flower&family=Josefin+Slab:wght@600&family=Jura:wght@500&family=Rajdhani:wght@500&family=Syne+Mono&display=swap');
+
+
+.navdesign {
+    font-family: 'Cormorant Unicase', serif;
+	color:white;
+    background-color: brown;
+    font-size: 1.2em;
+}
+
+.navWrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    background: transparent;
+}
+
+.navMargin {
+	margin-top: 72px;
+}
+
