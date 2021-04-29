@@ -29,7 +29,8 @@ The app CRUD let you take a look to all the phones, edit them, delete them and a
 
 
 
-  ### Instructions (for local server)
+
+  ## Instructions (for local server)
 
 1. BACKEND: Run the app in the development mode "npm run dev". Open http://localhost:5000 in order to view it in the browser.
 2. FRONTEND: Run the app in the development mode "npm start". Open http://localhost:3000 in order to view it in the browser.
@@ -37,7 +38,8 @@ The app CRUD let you take a look to all the phones, edit them, delete them and a
 
 
 
-  ### Used technologies 
+
+  ## Used technologies 
 
 - HTML5 
 - CSS3
@@ -53,7 +55,7 @@ The app CRUD let you take a look to all the phones, edit them, delete them and a
 - API
 
 
-### About me :woman_technologist:
+## About me :woman_technologist:
 
 * Github: [@Monch87](https://github.com/Monch87)
 * LinkedIn: [Montserrat-Mosqueda-Morales](https://www.linkedin.com/in/montserrat-mosqueda-morales)
