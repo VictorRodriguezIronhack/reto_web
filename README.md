@@ -1,4 +1,4 @@
-### <b> Challenge: "The Phone Cave" </b> :iphone: :red_circle: :phone::telephone:
+### <b> Challenge: "The Phone Cave" </b> :iphone: :red_circle: :phone:
 
 by: Montserrat Mosqueda
 
