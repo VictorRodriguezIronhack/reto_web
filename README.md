@@ -1,8 +1,9 @@
 Challenge: "The Phone Cave"
 by: Montserrat Mosqueda
 
-http://github.com - automatic!
-[GitHub](https://media.giphy.com/media/yhZd0AOuuGKTkSS3Dk/giphy.gif)
+
+![](https://media.giphy.com/media/yhZd0AOuuGKTkSS3Dk/giphy.gif)
+
 
 
 
