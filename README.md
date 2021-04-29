@@ -1,6 +1,9 @@
 Challenge: "The Phone Cave"
 by: Montserrat Mosqueda
 
+![caption](lhttps://media.giphy.com/media/yhZd0AOuuGKTkSS3Dk/giphy.gif/ GIF)
+
+
 
 ### Concept
 
@@ -42,6 +45,7 @@ The app CRUD let you take a look to all the phones, edit them, delete them and a
 - Mongoose
 - Cors 
 - SweetAlert
+- API
 
 
 
