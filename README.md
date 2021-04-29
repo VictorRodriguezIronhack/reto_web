@@ -4,7 +4,7 @@ by: Montserrat Mosqueda
 
 
 ![vodafone1](https://user-images.githubusercontent.com/72262776/116593167-19650d80-a921-11eb-88f2-df15ce3fbe00.gif)
-
+<p />
 ![vodafone2](https://user-images.githubusercontent.com/72262776/116592324-2b927c00-a920-11eb-8cc0-8354d44bb3ab.gif)
 
 
