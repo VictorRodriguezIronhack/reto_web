@@ -2,13 +2,10 @@ Challenge: "The Phone Cave"
 by: Montserrat Mosqueda
 
 
-![Vodafone1gif](https://user-images.githubusercontent.com/72262776/116591811-91cacf00-a91f-11eb-98c3-3bba9cc387af.gif)
+![vodafone1](https://user-images.githubusercontent.com/72262776/116593167-19650d80-a921-11eb-88f2-df15ce3fbe00.gif)
 
-![Vodafone2Gif](https://user-images.githubusercontent.com/72262776/116591836-97281980-a91f-11eb-898a-4e24878880a0.gif)
 
-![vodafe1](https://user-images.githubusercontent.com/72262776/116591940-b626ab80-a91f-11eb-8acb-741881ce7f28.gif)
-
-![Vodafone2Gif](https://user-images.githubusercontent.com/72262776/116592188-fede6480-a91f-11eb-85fa-6990b3c181f0.gif)
+![vodafone2](https://user-images.githubusercontent.com/72262776/116592324-2b927c00-a920-11eb-8cc0-8354d44bb3ab.gif)
 
 
 
