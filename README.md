@@ -1,4 +1,4 @@
-### <b> Challenge: "The Phone Cave" </b> :iphone: :red_circle: :phone:
+## <b> Challenge: "The Phone Cave" </b> :iphone: :red_circle: :phone:
 
 by: Montserrat Mosqueda
 
@@ -10,7 +10,7 @@ by: Montserrat Mosqueda
 
 
 
-### Concept
+## Concept
 
 The app CRUD let you take a look to all the phones, edit them, delete them and add new ones.
 
