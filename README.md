@@ -1,4 +1,5 @@
-### Challenge: "The Phone Cave"
+### <b> Challenge: "The Phone Cave" </b>
+
 by: Montserrat Mosqueda
 
 
