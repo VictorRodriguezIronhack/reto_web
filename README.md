@@ -1,7 +1,7 @@
 Challenge: "The Phone Cave"
 by: Montserrat Mosqueda
 
-![caption](lhttps://media.giphy.com/media/yhZd0AOuuGKTkSS3Dk/giphy.gif/ GIF)
+![caption](https://media.giphy.com/media/yhZd0AOuuGKTkSS3Dk/giphy.gif/ GIF)
 
 
 
