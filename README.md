@@ -42,3 +42,25 @@ Ahora bien, el limite de entrega es el Viernes 7 a las 11:00 am.
 
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+
+--------------------------------------------------------------------------
+
+### INSTRUCCIONES PARA LA EJECUCIÓN DEL REPO BY CARLOS MARTIN-SALAS LARENA
+
+#### CARPETA SERVER
+
+1. Desde la carpeta `server`:
+- Ejecuta `npm i` para instalar las dependencias requeridas en el `package.json`.
+- Crea un archivo `.env` y añade las siguientes lineas:
+    - DB=phonesDB
+    - PORT=5000
+    - DOMAIN_LOCAL=http://localhost:3000
+2. Desde la carpeta `server\bin`, ejecuta `node seed.js` para sembrar la base de datos.
+3. Desde el directorio `server`, ejecuta `npm run dev` para levantar el servidor.
+
+
+#### CARPETA CLIENT
+
+1. Desde la carpeta `client`:
+- Ejecuta `npm i` para instalar las dependencias requeridas en el `package.json`.
+- Ejecuta `npm start` para ejecutar la aplicación. 

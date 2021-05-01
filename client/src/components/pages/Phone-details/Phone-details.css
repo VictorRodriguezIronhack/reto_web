@@ -1,0 +1,9 @@
+.phoneImg {
+    width: 400px;
+}
+
+.backButton .btn {
+    display: block;
+    margin-top: 15px;
+    background-color: rgb(207, 207, 207);
+}
