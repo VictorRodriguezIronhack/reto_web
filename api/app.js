@@ -3,6 +3,9 @@ const createError = require('http-errors');
 const mongoose = require('mongoose');
 const logger = require('morgan');
 
+require('./config/db.config');
+require('dotenv').config()
+
 const app = express();
 
 /**React App */
@@ -30,7 +33,11 @@ app.use((error, req, res, next) => {
 
     console.error(error);
 
-    const data = {}
+    const data = {
+        message: '', 
+        errors: {}
+    }
+
     data.message = error.message;
     data.errors = error.errors ?
         Object.keys(error.errors)
