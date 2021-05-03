@@ -10,7 +10,7 @@ const secure = require('../middlewares/secure.middleware');
 //PHONES
 
 router.post('/telefonos', secure.isAuthenticated, phones.create);
-router.get('/telefonos', secure.isAuthenticated, phones.list);
+router.get('/telefonos', phones.list);
 router.get('/telefonos/:phoneId', secure.isAuthenticated, phonesMid.phoneExists, phones.get);
 router.put('/telefonos/:phoneId', secure.isAuthenticated, phonesMid.phoneExists, phones.update);
 router.delete('/telefonos/:phoneId', secure.isAuthenticated, phonesMid.phoneExists, phones.delete);
@@ -24,5 +24,6 @@ router.delete('/users/:id', usersMid.userExists, secure.isAuthenticated, users.d
 router.post('/login', users.login);
 router.post('/logout', secure.isAuthenticated, users.logout);
 router.get('/activate', users.activate);
+router.put('/users/:id', secure.isAuthenticated, usersMid.userExists, users.update);
 
 module.exports = router;

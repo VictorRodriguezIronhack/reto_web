@@ -54,7 +54,6 @@ const userSchema = new Schema({
             delete ret.__v;
             delete ret.password;
             delete ret.verified;
-            ret.location = ret.location.coordinates;
             return ret
         }
     },

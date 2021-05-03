@@ -2,6 +2,7 @@
 const createError = require("http-errors");
 const User = require("../models/user.model");
 const passport = require("passport");
+const mailer = require('../config/mailer.config');
 
 module.exports.create = (req, res, next) => {
 
