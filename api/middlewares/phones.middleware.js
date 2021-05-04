@@ -14,7 +14,6 @@ module.exports.phoneExists = (req, res, next) => {
         .then((phone) => {
             if (!phone) next(createError(404, "Phone not found"));
             else {
-                console.log(phone)
                 req.foundPhone = phone;
                 next();
             }

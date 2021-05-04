@@ -92,6 +92,11 @@ const PhoneDetailsItem = () => {
                 </Row>
                 <Row>
                     <Col lg="12">
+                        {phone?.opinions && 
+                        <h3>Users Opinions</h3>
+                        }
+                    </Col>
+                    <Col lg="10">
                         {phone.opinions?.map(opinion => (
                             <OpinionItem opinion={opinion} />
                         ))}

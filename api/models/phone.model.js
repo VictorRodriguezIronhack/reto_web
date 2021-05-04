@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Opinion = require('./opinion.model');
+
 const Schema = mongoose.Schema;
 
 const phoneSchema = new Schema({
@@ -60,6 +60,7 @@ const phoneSchema = new Schema({
     {
         timestamps: true,
         toJSON: {
+            virtuals: true,
             transform: (doc, ret) => {
                 ret.id = doc._id;
                 delete ret._id;
@@ -71,7 +72,7 @@ const phoneSchema = new Schema({
 )
 
 phoneSchema.virtual('opinions', {
-    ref: Opinion.modelName,
+    ref: "Opinion",
     localField: '_id',
     foreignField: 'phone'
 });
