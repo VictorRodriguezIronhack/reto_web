@@ -7,6 +7,7 @@ import {
     Row,
     Col
 } from 'reactstrap';
+import OpinionItem from "./OpinionItem";
 
 
 const PhoneDetailsItem = () => {
@@ -24,7 +25,6 @@ const PhoneDetailsItem = () => {
                 loading: true
             }))
             const phone = await service.get(params.id)
-
             if (!isUnmounted) {
                 setState({
                     phone: phone,
@@ -40,6 +40,7 @@ const PhoneDetailsItem = () => {
     }, [params])
 
     const { phone, loading } = state;
+
     return (
         <Fragment>
             {loading && <div className="d-flex justify-content-center align-items-center"><img src="/loading.gif" alt="Loading..." /></div>}
@@ -81,8 +82,19 @@ const PhoneDetailsItem = () => {
                                     <th scope="row">Ram</th>
                                     <td>{phone.ram}</td>
                                 </tr>
+                                <tr>
+                                    <th scope="row">Price</th>
+                                    <td>{phone.price} €</td>
+                                </tr>
                             </tbody>
                         </table>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg="12">
+                        {phone.opinions?.map(opinion => (
+                            <OpinionItem opinion={opinion} />
+                        ))}
                     </Col>
                 </Row>
             </Container>

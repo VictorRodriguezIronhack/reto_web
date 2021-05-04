@@ -70,7 +70,8 @@ const Navbars = () => {
             <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
               <img
                 alt="..."
-                src="../../assets/img/brand/argon-react-white.png"
+                src="/the-phone-cave.png"
+                style={{width: "5rem", height: "4rem"}}
               />
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar_global">
@@ -107,11 +108,12 @@ const Navbars = () => {
                   <NavLink href="/telefonos">Products</NavLink>
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
+                    <img src={user.avatar} alt={user.name} className="img-fluid rounded-circle shadow mr-3" style={{width: "35px"}}/>
                       <i className="ni ni-collection d-lg-none mr-1" />
                       <span className="nav-link-inner--text">{user?.email}</span>
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem to="/profile" tag={Link}>
+                      <DropdownItem to={`/profile/${user.id}`} tag={Link}>
                         Profile
                         </DropdownItem>
                       <DropdownItem onClick={handleLogout} >

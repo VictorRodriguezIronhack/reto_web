@@ -5,6 +5,8 @@ const users = require('../controllers/user.controller');
 const phonesMid = require('../middlewares/phones.middleware');
 const usersMid = require('../middlewares/users.middleware');
 const secure = require('../middlewares/secure.middleware');
+const storageUsers = require('./storageUsers.config');
+const opinions = require('../controllers/opinion.controller');
 
 
 //PHONES
@@ -24,6 +26,7 @@ router.delete('/users/:id', usersMid.userExists, secure.isAuthenticated, users.d
 router.post('/login', users.login);
 router.post('/logout', secure.isAuthenticated, users.logout);
 router.get('/activate', users.activate);
-router.put('/users/:id', secure.isAuthenticated, usersMid.userExists, users.update);
+router.patch('/users/:id', secure.isAuthenticated, usersMid.userExists, storageUsers.single("avatar"), users.update);
+router.post('/telefonos/:phoneId/opinion', secure.isAuthenticated, phonesMid.phoneExists, opinions.create);
 
 module.exports = router;

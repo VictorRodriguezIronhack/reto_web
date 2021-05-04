@@ -16,6 +16,7 @@ module.exports.list = (req, res, next) => {
 
 module.exports.get = (req, res, next) => res.json(req.foundPhone);
 
+
 module.exports.update = (req, res, next) => {
     if (req.file) {
         req.body.image = req.file.path

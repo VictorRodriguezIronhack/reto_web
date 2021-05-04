@@ -9,6 +9,7 @@ import PrivateRoute from './guards/PrivateRoute';
 import Register from './screens/Register';
 import ActivationAccount from './components/users/ActivationAccount';
 import Details from './screens/Details';
+import Profile from './screens/Profile';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/activate" component={ActivationAccount} />
           <PrivateRoute exact path="/telefonos" component={Phones} />
           <PrivateRoute exact path="/telefonos/:id" component={Details} />
+          <PrivateRoute exact path="/profile/:id" component={Profile} />
         </Switch>
       </AuthStore>
     </Router>

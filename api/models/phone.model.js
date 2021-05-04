@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Opinion = require('./opinion.model');
 const Schema = mongoose.Schema;
 
 const phoneSchema = new Schema({
@@ -54,7 +55,7 @@ const phoneSchema = new Schema({
     ram: {
         type: Number,
         required: 'A ram size is required'
-    }
+    },
 },
     {
         timestamps: true,
@@ -69,6 +70,11 @@ const phoneSchema = new Schema({
     }
 )
 
+phoneSchema.virtual('opinions', {
+    ref: Opinion.modelName,
+    localField: '_id',
+    foreignField: 'phone'
+});
 
 const Phone = mongoose.model('Phone', phoneSchema);
 module.exports = Phone;

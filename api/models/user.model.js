@@ -29,13 +29,18 @@ const userSchema = new Schema({
             return `https://i.pravatar.cc/150?u=${this.id}`
         }
     },
+    description: {
+        type: String,
+        minlength: [15, 'Description needs at least 15 chars']
+    },
     role: {
         type: String,
         enum: ["guest", "admin"],
         default: 'guest'
     },
-    place: {
+    location: {
         type: String,
+        required: 'Location is required'
     },
     verified: {
         date: Date,

@@ -45,6 +45,13 @@ const validations = {
         }
         return message;
     },
+    location: (value) => {
+        let message;
+        if(!value) {
+            message = 'Location is required';
+        }
+        return message;
+    }
 }
 
 
@@ -57,11 +64,13 @@ const RegisterForm = () => {
             name: '',
             email: '',
             password: '',
+            location: ""
         },
         errors: {
             name: validations.name(),
             email: validations.email(),
             password: validations.password(),
+            location: validations.location()
         },
         touch: {}
     })
@@ -173,6 +182,7 @@ const RegisterForm = () => {
                         <div className="invalid-feedback">{errors.name}</div>
                             </InputGroup>
                         </FormGroup>
+
                         <FormGroup>
                             <InputGroup className="input-group-alternative mb-3">
                                 <InputGroupAddon addonType="prepend">
@@ -184,6 +194,7 @@ const RegisterForm = () => {
                         <div className="invalid-feedback">{errors.email}</div>
                             </InputGroup>
                         </FormGroup>
+
                         <FormGroup>
                             <InputGroup className="input-group-alternative">
                                 <InputGroupAddon addonType="prepend">
@@ -193,6 +204,18 @@ const RegisterForm = () => {
                                 </InputGroupAddon>
                                 <Input type="password" name="password" className={`form-control ${touch.password && errors.password ? "is-invalid" : ""}`} required placeholder="Password" onBlur={handleBlur} onChange={handleChange} value={user.password}/>
                         <div className="invalid-feedback">{errors.password}</div>
+                            </InputGroup>
+                        </FormGroup>
+
+                        <FormGroup>
+                            <InputGroup className="input-group-alternative mb-3">
+                                <InputGroupAddon addonType="prepend">
+                                    <InputGroupText>
+                                        <i className="ni ni-world" />
+                                    </InputGroupText>
+                                </InputGroupAddon>
+                                <Input type="text" name="location" className={`form-control ${touch.location && errors.location ? "is-invalid" : ""}`} required placeholder="Location" onBlur={handleBlur} onChange={handleChange} value={user.location} />
+                        <div className="invalid-feedback">{errors.location}</div>
                             </InputGroup>
                         </FormGroup>
                         <div className="text-center">

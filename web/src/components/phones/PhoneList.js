@@ -28,7 +28,7 @@ const PhoneList = () => {
         fetchPhones()
         return () => {
             isUnmounted = true;
-          }
+        }
     }, [])
 
     const { phones, loading } = state;
