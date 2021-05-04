@@ -1,5 +1,6 @@
+import { Fragment } from 'react';
 import { useEffect, useState } from 'react';
-import phonesService from '../../services/phones-service';
+import service from '../../services/phones-service';
 import PhoneItem from './PhoneItem';
 
 const PhoneList = () => {
@@ -15,7 +16,7 @@ const PhoneList = () => {
                 ...state,
                 loading: true
             }))
-            const phones = await phonesService.list()
+            const phones = await service.list()
             if (!isUnmounted) {
                 setState({
                   phones: phones,
@@ -30,8 +31,10 @@ const PhoneList = () => {
           }
     }, [])
 
-    const { phones } = state;
+    const { phones, loading } = state;
     return (
+        <Fragment>
+        {loading && <div className="d-flex justify-content-center align-items-center"><img src="loading.gif" alt="Loading..." /></div>}
         <div className="row">
             {phones.map((phone, i) => (
                 <div key={i} className="col-lg-4 col-md-6 my-3">
@@ -39,6 +42,7 @@ const PhoneList = () => {
                 </div>
             ))}
         </div>
+        </Fragment>
     )
 }
 
