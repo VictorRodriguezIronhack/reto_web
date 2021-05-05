@@ -79,6 +79,12 @@ userSchema.pre('save', function (next) {
     }
 });
 
+userSchema.virtual('opinions', {
+    ref: 'Opinion',
+    localField: '_id',
+    foreignField: 'owner'
+})
+
 
 
 userSchema.methods.checkPassword = function (passwordToCheck) {

@@ -90,7 +90,7 @@ const Navbars = () => {
                     <Link to="/">
                       <img
                         alt="..."
-                        src="../../assets/img/brand/argon-react.png"
+                        src="/the-phone-cave.png"
                       />
                     </Link>
                   </Col>

@@ -4,6 +4,7 @@ const createError = require('http-errors');
 module.exports.userExists = (req, res, next) => {
     const userId = req.params.userId || req.params.id;
     User.findById(userId)
+        .populate('opinions')
         .then(user => {
             if (!user) next(createError(404, 'User not found'))
             else {

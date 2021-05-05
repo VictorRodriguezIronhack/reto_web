@@ -1,13 +1,15 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import service from '../../services/phones-service';
+import { AuthContext } from "../../contexts/AuthStore";
 import {
     Container,
     Row,
     Col
 } from 'reactstrap';
-import OpinionItem from "./OpinionItem";
+import OpinionItem from "../opinions/OpinionItem";
+import OpinionForm from "../opinions/OpinionForm";
 
 
 const PhoneDetailsItem = () => {
@@ -39,13 +41,18 @@ const PhoneDetailsItem = () => {
         }
     }, [params])
 
+
     const { phone, loading } = state;
+    const { user } = useContext(AuthContext);
+    const userWithOpinion = phone?.opinions?.find(opinion => opinion.owner.id === user.id);
+    const phoneWithOpinion = phone?.opinions?.find(opinion => opinion)
+    console.log(phoneWithOpinion)
 
     return (
         <Fragment>
             {loading && <div className="d-flex justify-content-center align-items-center"><img src="/loading.gif" alt="Loading..." /></div>}
             <Container>
-                <Row>
+                <Row className="mb-4">
                     <Col lg="5">
                         <img src={`/${phone?.imageFileName}`} style={{ width: "100%" }} className="card-img-top" alt={phone?.name} />
                     </Col>
@@ -90,15 +97,26 @@ const PhoneDetailsItem = () => {
                         </table>
                     </Col>
                 </Row>
+                {!userWithOpinion &&
+                    <Fragment>
+                        <hr />
+                        <Row className="mb-4">
+                            <Col lg="8">
+                                <OpinionForm phone={phone} />
+                            </Col>
+                        </Row>
+                    </Fragment>
+                }
                 <Row>
-                    <Col lg="12">
-                        {phone?.opinions && 
-                        <h3>Users Opinions</h3>
-                        }
-                    </Col>
-                    <Col lg="10">
-                        {phone.opinions?.map(opinion => (
-                            <OpinionItem opinion={opinion} />
+                    {phoneWithOpinion &&
+                        <Col lg="12" className="mb-3">
+                            <h3 className="heading-title text-warning">Users Opinions</h3>
+                            <hr />
+                        </Col>
+                    }
+                    <Col lg="10" className="mb-3">
+                        {phone.opinions?.map((opinion, i) => (
+                            <OpinionItem key={i} opinion={opinion} />
                         ))}
                     </Col>
                 </Row>

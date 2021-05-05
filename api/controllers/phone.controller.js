@@ -10,6 +10,7 @@ module.exports.create = (req, res, next) => {
 
 module.exports.list = (req, res, next) => {
     Phone.find()
+        .populate('opinions')
         .then(phones => res.status(200).json(phones))
         .catch(next)
 };

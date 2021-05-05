@@ -47,7 +47,7 @@ const Profile = () => {
         }))
     }
 
-    const { profile, loading, showForm } = state;
+    const { profile, loading, showForm } = state; 
 
     return (
         <main className="profile-page">
@@ -112,14 +112,14 @@ const Profile = () => {
                                     lg="4"
                                 >
                                     <div className="card-profile-actions py-4 mt-lg-0">
-                                            <a href="#pablo" className="btn btn-just-icon btn-link btn-dribbble mr-4"><i className="fa fa-dribbble"></i></a>
-                                            <a href="#pablo" className="btn btn-just-icon btn-link btn-twitter float-right"><i className="fa fa-twitter"></i></a>
+                                            <a href="https://facebook.com" className="btn btn-just-icon btn-link btn-facebook mr-4"><i className="fa fa-facebook"></i></a>
+                                            <a href="https://twitter.com" className="btn btn-just-icon btn-link btn-twitter float-right"><i className="fa fa-twitter"></i></a>
                                     </div>
                                 </Col>
                                 <Col className="order-lg-1" lg="4">
                                     <div className="card-profile-stats d-flex justify-content-center">
                                         <div>
-                                            <span className="heading">22</span>
+                                            <span className="heading">{profile?.opinions?.length}</span>
                                             <span className="description">Opinions</span>
                                         </div>
                                     </div>
@@ -166,10 +166,10 @@ const Profile = () => {
                             <span className="btn-inner--icon">
                                 <i className="ni ni-circle-08" />
                             </span>
-                            <span className="btn-inner--text">Update Profile</span>
+                            {!showForm ? <span className="btn-inner--text">Update Profile</span> : <span className="btn-inner--text">Close</span>}
                         </Button>
                     </section>
-                    <section className="d-flex justify-content-center">
+                    <section className="d-flex justify-content-center mb-4">
                         {showForm &&
                             <UserForm />
                         }

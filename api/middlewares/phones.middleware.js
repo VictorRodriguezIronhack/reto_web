@@ -6,6 +6,7 @@ module.exports.phoneExists = (req, res, next) => {
     Phone.findById(phoneId)
         .populate({
             path: "opinions",
+            options: { sort: { 'createdAt': -1 } },
             populate: {
                 path: "owner",
                 model: "User"

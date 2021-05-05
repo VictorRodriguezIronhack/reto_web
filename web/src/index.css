@@ -15,3 +15,34 @@ code {
 .starColor {
   color: gold;
 }
+
+.star > input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+.phone-card {
+  position: relative;
+}
+
+.phone-stars {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+
+.phone-manufacturer {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+}
+
+.phone-name {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
