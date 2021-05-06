@@ -105,7 +105,7 @@ function RegisterForm() {
   return (
     <form className="my-1 mx-5 p-3" onSubmit={handleSubmit}>
 
-      <h1><i className="fas fa-user-circle text-secondary"></i></h1>
+      <h1><i className="fas fa-user-circle text-white"></i></h1>
     
       <div className="input-group mb-3 border-bottom border-secondary">
         <input

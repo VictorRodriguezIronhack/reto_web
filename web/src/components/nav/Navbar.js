@@ -17,15 +17,15 @@ function Navbar() {
 
         <nav className="navbar navbar-expand-lg navbar-light" >
             <div className="container justify-content-around">
-                <h4 className="text-secondary mt-2 pb-3 border-bottom border-secondary w-100"><i class="fas fa-mobile-alt text-secondary me-3"></i>The Phone Cave</h4>
+                <h4 className="text-white mt-2 pb-3 border-bottom border-secondary w-100"><i className="fas fa-mobile-alt text-white me-3"></i>The Phone Cave</h4>
                 <div className="navbar-nav">
 
                     {!isAuthenticated() && (
                         <Fragment>
                             <ul className="nav align-items-center" id="navbarSupportedContent">
-                                <li className="nav-link nav-item text-secondary me-3" href="/login" >| Login</li>
-                                <li className="nav-link nav-item text-secondary me-5" href="/register" tabIndex="-1" aria-disabled="true">|  Register</li>
-                                <li className="nav-item ms-5"><i className="fas fa-shopping-cart text-secondary"> 0</i></li>
+                                <a className="nav-link nav-item text-secondary me-3" href="/login" >| Login</a>
+                                <a className="nav-link nav-item text-secondary me-5" href="/register" tabIndex="-1" aria-disabled="true">|  Register</a>
+                                <a className="nav-item ms-5"><i className="fas fa-shopping-cart text-secondary"> 0</i></a>
                             </ul>
                         </Fragment>
                     )}
@@ -38,7 +38,7 @@ function Navbar() {
 
                             <li className="nav-item">
                                 Bienvenido/a {user.name}
-                                <li className="nav-item ps-5"><button type="submit" className="btn btn-link link-unstyled text-secondary" onClick={handleLogout}><h6><i class="fas fa-sign-out-alt"></i></h6></button></li>
+                                <li className="nav-item ps-5"><button type="submit" className="btn btn-link link-unstyled text-secondary" onClick={handleLogout}><h6><i className="fas fa-sign-out-alt"></i></h6></button></li>
                             </li>
                         </Fragment>
                     )}

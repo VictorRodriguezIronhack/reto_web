@@ -22,7 +22,7 @@ function PhoneDetail() {
   const history = useHistory();
   const { user } = useContext(AuthContext);
   const [phone, setState] = useState({
-    image:'',
+    image: '',
     // errors: {
     //   docImage: validations.docImage()
     // },
@@ -65,10 +65,25 @@ function PhoneDetail() {
               )
             } */}
           </div>
-          
+
           <div className="card-body">
             <div className="text-start">
               <div className="card-body">
+
+
+                {/* <p className="card-text">{name}</p>
+                    <p className="card-text">{manufacturer}</p>
+                    <p className="card-text">{description}</p>
+                    <p className="card-text">{color}</p>
+                    <p className="card-text">{price}</p>
+                    <img className="card-text" alt="image">{imageFileName}</img>
+                    <p className="card-text">{screen}</p>
+                    <p className="card-text">{processor}</p>
+                    <p className="card-text">{ram}</p> */}
+
+                {/* <Link className="stretched-link" to={`/phones/${id}`} /> */}
+
+                
 
                 {/* <p className="card-text"><small className="text-danger">Libre a partir del:
                 <i className=""></i> {moment(end).format('llll')}</small></p> */}
@@ -124,7 +139,7 @@ function PhoneDetail() {
 
               </div>
             </div>
-{/* 
+            {/* 
             {user?.id === house.idHost && (
               <div className="col my-3 text-center">
                 <div className="alert alert-secondary" role="alert">
@@ -137,7 +152,7 @@ function PhoneDetail() {
               </div>
             )} */}
 
-          {/* <Link className="btn btn-secondary mt-3" to={`/houses/${house.id}/booking`} >Ir a la reserva</Link> */}
+            {/* <Link className="btn btn-secondary mt-3" to={`/houses/${house.id}/booking`} >Ir a la reserva</Link> */}
           </div>
         </div>
 
