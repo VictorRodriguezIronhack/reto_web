@@ -1,6 +1,8 @@
+$background-dark: #000000;
+
 @import url('https://fonts.googleapis.com/css?family=Lato');
 body {
-  background-color: #000000;
+  background-color: $background-dark;
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Lato', sans-serif;
   margin: 20px;
