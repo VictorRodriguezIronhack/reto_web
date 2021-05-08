@@ -5,7 +5,7 @@ import Error from './screens/Error';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import AuthStore from './contexts/AuthStore';
-import PrivateRoute from './guards/PrivateRoute';
+// import PrivateRoute from './guards/PrivateRoute';
 import Navbar from './components/nav/Navbar';
 import Home from './components/phones/PhonesList';
 import PhonesList from './components/phones/PhonesList';
@@ -24,6 +24,7 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/phones" component={PhonesList} />
+            <Route exact path="/phones/:id" component={PhoneDetail} />
 
             <Route exact path="/404" component={() => <Error code={404} />} />
             <Route exact path="/403" component={() => <Error code={403} />} />

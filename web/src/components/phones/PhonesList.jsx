@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
 import PhoneItem from './PhoneItem';
-// import HousesFilter from './HousesFilter';
-// import child from '../../images/child-and-clown.jpg';
-// import family from '../../images/family.jpg';
 
 import phonesService from '../../services/phones-service';
 import { Fragment } from 'react';
@@ -40,11 +37,11 @@ function PhonesList({ minSearchChars }) {
         <Fragment>
             <div className="container">
                 <div className="row">
-                        {phones.map(phone => (
-                            <div className="col-md-3 mt-2">
-                                <div key={phone.id} className="col mb-4"><PhoneItem phone={phone} /></div>
-                            </div>
-                        ))}
+                    {phones.map(phone => (
+                        <div className="col-md-3 mt-1">
+                            <div key={phone.id} className="col mb-4"><PhoneItem phone={phone} /></div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </Fragment>
