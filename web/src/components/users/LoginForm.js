@@ -4,6 +4,7 @@ import service from "../../services/users-service";
 import { AuthContext } from "../../contexts/AuthStore";
 import classnames from "classnames";
 
+
 import {
     Button,
     Card,
@@ -17,6 +18,8 @@ import {
     InputGroup,
     Col
 } from "reactstrap";
+
+const socialLoginUrl= `${process.env.REACT_APP_API_BASE_URL}/authenticate/google`
 
 const LoginForm = () => {
     const location = useLocation();
@@ -76,22 +79,7 @@ const LoginForm = () => {
                         <Button
                           className="btn-neutral btn-icon"
                           color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <img
-                              alt="..."
-                              src="/icons/common/github.svg"
-                            />
-                          </span>
-                          <span className="btn-inner--text">Github</span>
-                        </Button>
-                        <Button
-                          className="btn-neutral btn-icon"
-                          color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          href={socialLoginUrl}
                         >
                           <span className="btn-inner--icon mr-1">
                             <img

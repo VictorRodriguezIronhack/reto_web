@@ -21,8 +21,14 @@ const items = [
       altText: "",
       caption: "",
       header: ""
+    },
+    {
+        src:"https://res.cloudinary.com/djbn7xax3/image/upload/v1620328604/RetoWeb/cartsmartphone_x3yxke.jpg",
+        altText: "",
+        caption: "",
+        header: ""
     }
-  ];
+];
 
 const Home = () => {
 
@@ -55,9 +61,8 @@ const Home = () => {
                                         <span>your smartphone tech Shop!</span>
                                     </h1>
                                     <p className="lead text-white">
-                                        The design system comes with four pre-built pages to
-                                        help you get started faster. You can change the text and
-                                        images and you're good to go.
+                                        Either to buy or just to inform you about the most current smartphones on the market,
+                                        The Phone Cave is your place!
                       </p>
                                     <div className="btn-wrapper">
                                         <Button

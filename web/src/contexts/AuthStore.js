@@ -6,7 +6,7 @@ const AuthContext = createContext();
 function AuthStore({ children }) {
 
     const [user, setUser] = useState(localStorage.getItem(currentUserStorageKey) ? JSON.parse(localStorage.getItem(currentUserStorageKey)) : undefined);
-
+    
     const handleUserChange = useCallback((user) => {
         if (user) localStorage.setItem(currentUserStorageKey, JSON.stringify(user));
         else localStorage.removeItem(currentUserStorageKey);

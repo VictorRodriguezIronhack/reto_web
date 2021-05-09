@@ -91,3 +91,17 @@ module.exports.logout = (req, res, next) => {
 
     res.status(204).end();
 };
+
+module.exports.loginWithGoogle = (req, res, next) => {
+    const passportController = passport.authenticate('google-auth', (error, user, validations) => {
+        if (error) {
+            next(error)
+        } else {
+            req.login(user, error => {
+                if (error) next(error)
+                else res.redirect(`${process.env.WEB_URL}/authenticate/google/cb`)
+            })
+        }
+    })
+    passportController(req, res, next);
+}

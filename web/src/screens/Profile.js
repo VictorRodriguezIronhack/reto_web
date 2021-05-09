@@ -48,7 +48,6 @@ const Profile = () => {
     }
 
     const { profile, loading, showForm } = state; 
-
     return (
         <main className="profile-page">
             <section className="section-profile-cover section-shaped my-0">
@@ -121,6 +120,10 @@ const Profile = () => {
                                         <div>
                                             <span className="heading">{profile?.opinions?.length}</span>
                                             <span className="description">Opinions</span>
+                                        </div>
+                                        <div>
+                                            <span className="heading">{profile?.purchases?.length}</span>
+                                            <span className="description">Purchases</span>
                                         </div>
                                     </div>
                                 </Col>

@@ -19,11 +19,11 @@ const OpinionStars = ({ phone, isSimplified, rate }) => {
             </div>
         } else if (rate === 2) {
             return <div>
-                <i className="fa fa-star starColor" aria-hidden="true"></i><i className="fa fa-star starColor" aria-hidden="true"></i><i className="fa fa-star starColor-o" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i>
+                <i className="fa fa-star starColor" aria-hidden="true"></i><i className="fa fa-star starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i>
             </div>
         } else if (rate === 1) {
             return <div>
-                <i className="fa fa-star starColor" aria-hidden="true"></i><i className="fa fa-star starColor-o" aria-hidden="true"></i><i className="fa fa-star starColor-o" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i>
+                <i className="fa fa-star starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i><i className="fa fa-star-o starColor" aria-hidden="true"></i>
             </div>
         }
     }

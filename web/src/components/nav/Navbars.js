@@ -1,4 +1,5 @@
 import { AuthContext } from '../../contexts/AuthStore';
+import { CartContext } from '../../contexts/CartStore';
 import { Link, useHistory } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import service from '../../services/users-service';
@@ -9,10 +10,6 @@ import Headroom from "headroom.js";
 // reactstrap components
 import {
   UncontrolledCollapse,
-  DropdownMenu,
-  DropdownItem,
-  DropdownToggle,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -20,15 +17,16 @@ import {
   Container,
   Row,
   Col,
-  NavLink
+  NavLink,
+  UncontrolledTooltip
 } from "reactstrap";
 
 
 const Navbars = () => {
 
   const { user, isAuthenticated, onUserChange } = useContext(AuthContext);
-  const history = useHistory();
-
+  const { cart, onCartChange } = useContext(CartContext);
+  const history = useHistory()
   const [state, setState] = useState({
     collapseClasses: "",
     collapseOpen: false
@@ -44,6 +42,7 @@ const Navbars = () => {
     await service.logout();
     onUserChange(undefined);
     history.push("/login");
+    onCartChange([])
   }
 
   const onExiting = () => {
@@ -71,7 +70,7 @@ const Navbars = () => {
               <img
                 alt="..."
                 src="/the-phone-cave.png"
-                style={{width: "5rem", height: "4rem"}}
+                style={{ width: "5rem", height: "4rem" }}
               />
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar_global">
@@ -106,33 +105,39 @@ const Navbars = () => {
               {isAuthenticated() &&
                 <Nav className="navbar-nav-hover align-items-lg-center ml-lg-auto" navbar>
                   <NavLink href="/telefonos">Products</NavLink>
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                    <img src={user.avatar} alt={user.name} className="img-fluid rounded-circle shadow mr-3" style={{width: "35px"}}/>
-                      <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">{user?.email}</span>
-                    </DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem to={`/profile/${user.id}`} tag={Link}>
-                        Profile
-                        </DropdownItem>
-                      <DropdownItem onClick={handleLogout} >
-                        Log out
-                        </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                  <NavLink href={`/profile/${user.id}`}>
+                    <img src={user.avatar} alt={user.name} className="img-fluid rounded-circle shadow mr-3" style={{ width: "35px" }} />
+                    <span className="nav-link-inner--text">{user?.email}</span>
+                  </NavLink>
+
+                  <NavLink href="/cart">
+                    <div className="d-flex align-items-center">
+                    <i className="ni ni-cart"></i>
+                      {cart.length !== 0 &&
+                        <p className="bg-danger text-white text-center rounded-circle my-auto" style={{width: "25px"}}>{cart?.length}</p>
+                      }
+                    </div>
+
+                  </NavLink>
+
+                  <NavLink href="#" id="logout495507257" onClick={handleLogout} >
+                    <i className="fa fa-sign-out" aria-hidden="true"></i>
+                  </NavLink>
+                  <UncontrolledTooltip delay={0} target="logout495507257">
+                    Log Out
+                </UncontrolledTooltip>
                 </Nav>
               }
               {!isAuthenticated() &&
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>
                     <NavLink href="/login">
-                        Sign In   
+                      Sign In
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="/register" >
-                        Sign Up
+                      Sign Up
                     </NavLink>
                   </NavItem>
                 </Nav>

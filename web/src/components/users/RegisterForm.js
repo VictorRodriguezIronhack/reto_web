@@ -18,6 +18,7 @@ const EMAIL_PATTERN = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"
 const PASSWORD_PATTERN = /^.{8,}$/;
 
 
+const socialLoginUrl= `${process.env.REACT_APP_API_BASE_URL}/authenticate/google`;
 
 const validations = {
     name: (value) => {
@@ -136,24 +137,9 @@ const RegisterForm = () => {
                     </div>
                     <div className="text-center">
                         <Button
-                            className="btn-neutral btn-icon mr-4"
-                            color="default"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                        >
-                            <span className="btn-inner--icon mr-1">
-                                <img
-                                    alt="..."
-                                    src="/icons/common/github.svg"
-                                />
-                            </span>
-                            <span className="btn-inner--text">Github</span>
-                        </Button>
-                        <Button
                             className="btn-neutral btn-icon ml-1"
                             color="default"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            href={socialLoginUrl}
                         >
                             <span className="btn-inner--icon mr-1">
                                 <img

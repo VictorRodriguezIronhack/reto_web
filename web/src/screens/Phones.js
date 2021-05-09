@@ -1,5 +1,10 @@
 import { useEffect } from "react";
 import PhoneList from '../components/phones/PhoneList';
+import {
+    Container,
+    Row,
+    Col
+} from 'reactstrap';
 
 const Phones = () => {
 
@@ -11,7 +16,7 @@ const Phones = () => {
     return (
         <main>
             <div className="position-relative">
-                <section className="section section-lg section-shaped pb-250">
+                <section className="section section-lg section-shaped">
                     <div className="shape shape-style-2 shape-primary">
                         <span />
                         <span />
@@ -23,6 +28,17 @@ const Phones = () => {
                         <span />
                         <span />
                     </div>
+                    <Container className="shape-container d-flex align-items-center">
+                    <div className="col px-0">
+                        <Row className="align-items-center justify-content-center">
+                            <Col className="text-center" lg="6">
+                                <h3 className="display-2 mb-0">
+                                    Our Products
+                    </h3>
+                            </Col>
+                        </Row>
+                    </div>
+                </Container>
                     <div className="separator separator-bottom separator-skew">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

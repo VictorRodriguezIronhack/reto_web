@@ -22,7 +22,11 @@ const update = (userId, user) => {
     return http.patch(`/users/${userId}`, data)
 }
 
-const activateAccount = (token) => http.get(`/activate?token=${token}`)
+const activateAccount = (token) => http.get(`/activate?token=${token}`);
+
+const createPurchase = (purchase) => http.post('/purchase', purchase);
+
+const googleProfile = () => http.get('/users/me');
 
 const service = {
     login,
@@ -31,7 +35,9 @@ const service = {
     profile,
     userProfile,
     update,
-    activateAccount
+    activateAccount,
+    createPurchase,
+    googleProfile,
 }
 
 export default service;

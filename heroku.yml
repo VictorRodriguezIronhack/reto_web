@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: Dockerfile
+  config:
+    REACT_APP_API_BASE_URL: https://thephonecave-ih.herokuapp.com/api

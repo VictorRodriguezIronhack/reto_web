@@ -36,11 +36,7 @@ const Login = () => {
                   <span className="text-white">your mobile Shop!</span>
                 </h3>
                 <p className="lead text-white">
-                  The Design System comes with four pre-built pages to help you
-                  get started faster. You can change the text and images and
-                  you're good to go. More importantly, looking at them will give
-                  you a picture of what you can built with this powerful
-                  Bootstrap 4 Design System.
+                  Welcome to the tech age.
                 </p>
                 <div className="btn-wrapper">
                   <Button

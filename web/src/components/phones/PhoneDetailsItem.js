@@ -46,8 +46,7 @@ const PhoneDetailsItem = () => {
     const { user } = useContext(AuthContext);
     const userWithOpinion = phone?.opinions?.find(opinion => opinion.owner.id === user.id);
     const phoneWithOpinion = phone?.opinions?.find(opinion => opinion)
-    console.log(phoneWithOpinion)
-
+    
     return (
         <Fragment>
             {loading && <div className="d-flex justify-content-center align-items-center"><img src="/loading.gif" alt="Loading..." /></div>}

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const EMAIL_PATTERN = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const PASSWORD_PATTERN = /^.{8,}$/;
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const admins = (process.env.ADMINS_EMAIL || '')
     .split(',')
     .map(admin => admin.trim());
@@ -31,7 +31,6 @@ const userSchema = new Schema({
     },
     description: {
         type: String,
-        minlength: [15, 'Description needs at least 15 chars']
     },
     role: {
         type: String,
@@ -48,6 +47,9 @@ const userSchema = new Schema({
             type: String,
             default: () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
         },
+    },
+    social: {
+        google: String
     }
 }, {
     timestamps: true,
@@ -81,6 +83,12 @@ userSchema.pre('save', function (next) {
 
 userSchema.virtual('opinions', {
     ref: 'Opinion',
+    localField: '_id',
+    foreignField: 'owner'
+})
+
+userSchema.virtual('purchases',  {
+    ref: 'Purchase',
     localField: '_id',
     foreignField: 'owner'
 })
