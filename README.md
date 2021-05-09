@@ -1,44 +1,35 @@
-# Bienvenid@ al reto de The Phone Cave
+# The Phone Cave
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave. El nombre y el tema es una broma pero lo que viene después tomemoslo en serio.
+En este reto se ha realizado una app para movil con un catálogo de teléfonos, en la que se ha implementado una barra de navegación con la opción de registrarse y de iniciar sesión.
+![image](https://user-images.githubusercontent.com/69985189/117585067-b63d5d00-b110-11eb-9db2-de98d0bfb9ae.png)
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+1-En la aplicación no es necesario registrarse para acceder al contenido. En la home se obtiene un listado de los productos, y los botones para acceder al registro y al inicio de sesión.
+  En cada elemento de producto tenemos la opción para acceder a la información mas detallada del producto, o añadirlo al carrito.
+  Solo se puede añadir al carrito si se está registrado.
+  El componente carrito no se ha finalizado, con lo que se puede acceder a la pagina 'carrito de la compra', pero no funciona.
+![image](https://user-images.githubusercontent.com/69985189/117585103-e38a0b00-b110-11eb-955b-417b286b968d.png)
+![image](https://user-images.githubusercontent.com/69985189/117585136-09171480-b111-11eb-81c6-026ff108d854.png)
 
-##### El reto
+2-Se ha utilizado Axios para obtener datos de la API REST.
+3-También se ha implementado un componente spinner, con un setTimeout para simular la carga de la información desde la bd.
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
-
-1. Escribir una API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que:
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Axios (o una biblioteca similar) para obtener datos de la API REST.
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
-
-##### Los bonus
-Como habrás podido comprobar esta aplicación es muy sencilla, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
-
-- Typescript
-- GraphQL
+4-Para iniciar el proyecto en tu servidor local, primero clona el proyecto desde Github. Luego, accede a la carpeta api y ejecuta los comandos:
+    -npm install
+    -npm run seeds
+    -npm run dev
+5-Para iniciar el front end, accede a la carpeta web y ejecuta:
+    -npm install
+    -npm start
+    
+    Y ya tendrás la app en tu servidor local ;)
+    
+6-De los bonus se han usado:
 - Mongo
-- Redux
 - Hooks
 - Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-- ...
+- Y se ha desplegado en Heroku
 
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, el limite de entrega es el Viernes 7 a las 11:00 am.  
+URL:
 
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+Espero que os haya gustado mi primera app para movil
