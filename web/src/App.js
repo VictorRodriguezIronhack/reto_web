@@ -5,11 +5,12 @@ import Error from './screens/Error';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import AuthStore from './contexts/AuthStore';
-// import PrivateRoute from './guards/PrivateRoute';
+import PrivateRoute from './guards/PrivateRoute';
 import Navbar from './components/nav/Navbar';
 import Home from './components/phones/PhonesList';
 import PhonesList from './components/phones/PhonesList';
 import PhoneDetail from './components/phones/PhonesDetail';
+import Cart from './components/cart/Cart';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/phones" component={PhonesList} />
             <Route exact path="/phones/:id" component={PhoneDetail} />
+            <PrivateRoute exact path="/cart" component={Cart} />
 
             <Route exact path="/404" component={() => <Error code={404} />} />
             <Route exact path="/403" component={() => <Error code={403} />} />

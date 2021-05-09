@@ -3,21 +3,37 @@ import PhoneItem from './PhoneItem';
 
 import phonesService from '../../services/phones-service';
 import { Fragment } from 'react';
+import Spinner from '../spinner/Spinner';
 
 function PhonesList({ minSearchChars }) {
 
     const [state, setState] = useState({
-        phones: []
+        phones: [],
+        loading: false
     });
     const [search/*, setSearch*/] = useState({});
 
     useEffect(() => {
         async function fetchPhones() {
+            console.log('Fetching phones...');
+            setState(state => ({
+                ...state,
+                loading: true
+            }))
             const phones = await phonesService.list(search);
             if (!isUnmounted) {
-                setState({
-                    phones: phones
-                })
+                // setState({
+                //     phones: phones,
+                //     loading: false
+                // })
+                // debido a que la bd carga muy rapido, he puesto el setTimeout para ver el efecto del spinner
+                setTimeout(()=>{
+                    setState({
+                        phones: phones,
+                        loading: false
+                    })
+                },3000);
+                
             }
         }
 
@@ -31,15 +47,16 @@ function PhonesList({ minSearchChars }) {
         }
     }, [search, minSearchChars]);
 
-    const { phones } = state;
+    const { phones, loading } = state;
 
     return (
         <Fragment>
             <div className="container">
+            <Spinner loading={loading}  />
                 <div className="row">
                     {phones.map(phone => (
-                        <div className="col-md-3 mt-1">
-                            <div key={phone.id} className="col mb-4"><PhoneItem phone={phone} /></div>
+                        <div className="col-md-3 mt-1" key={phone.id} >
+                            <div className="col mb-4"><PhoneItem phone={phone} /></div>
                         </div>
                     ))}
                 </div>
@@ -49,6 +66,7 @@ function PhonesList({ minSearchChars }) {
 }
 
 PhonesList.defaultProps = {
+    loading: false,
     minSearchChars: 4
 }
 

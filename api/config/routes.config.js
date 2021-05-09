@@ -15,8 +15,10 @@ router.get('/users/:id', secure.isAuthenticated, users.get);
 router.delete('/users/:id', secure.isAuthenticated, users.delete);
 router.patch('/users/:id', secure.isAuthenticated, users.update);
 
-// router.post('/phones', secure.isAuthenticated, phones.create);
+router.get('/users/:id/cart', secure.isAuthenticated, users.get);
+
 router.get('/phones/:id', phones.get);
+// router.post('/phones', secure.isAuthenticated, phones.create);
 // router.delete('/phones/:id', secure.isAuthenticated, phones.delete);
 // router.put('/phones/:id', secure.isAuthenticated, phones.update);
 

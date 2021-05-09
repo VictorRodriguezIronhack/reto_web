@@ -11,7 +11,8 @@ function LoginForm() {
   const [state, setState] = useState({
     user: {
       email: location.state?.email || '',
-      password: ''
+      password: '',
+      loading: false
     },
     errors: {}
   })
@@ -40,16 +41,17 @@ function LoginForm() {
       console.error(message);
       setState(state => ({
         ...state,
+        loading: true,
         errors: errors
       }))
     }
   }
 
-  const { user, errors } = state;
+  const { user, errors,loading } = state;
 
   return (
 
-      <form onSubmit={handleSubmit} className="my-1 mx-5 p-3">
+      <form onSubmit={handleSubmit} className="my-1 mx-5 p-3" loading={loading}>
 
         <h1><i className="fas fa-user-circle text-white"></i></h1>
 

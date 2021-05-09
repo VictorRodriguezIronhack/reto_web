@@ -15,7 +15,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark" >
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top" >
             <div className="container justify-content-end">
                 <a href="/home" className="title text-white mY-2 pb-3 border-bottom border-secondary w-100">
                     <h4 className="text-white" link="/home">
@@ -40,8 +40,8 @@ function Navbar() {
                         <Fragment>
                             <ul className="nav align-items-center" id="navbarSupportedContent">
                                 <li className="nav-item text-secondary me-5"><h6>Welcome {user.name}</h6></li>
-                                <li><a className="nav-item me-4" href="/#"><i className="fas fa-shopping-cart text-secondary"> 0</i></a></li>
-                                <li className="nav-item mt-2"><button type="submit" className="btn btn-link link-unstyled text-secondary" onClick={handleLogout}><h6><i className="fas fa-sign-out-alt"></i></h6></button></li>
+                                <li><a className="nav-item me-3" href="/#"><i className="fas fa-shopping-cart text-secondary"> 0</i></a></li>
+                                <li className="nav-item mt-2 me-3"><button type="submit" className="btn btn-link link-unstyled text-secondary" onClick={handleLogout}><h6><i className="fas fa-sign-out-alt"></i></h6></button></li>
                             </ul>
                         </Fragment>
                     )}
