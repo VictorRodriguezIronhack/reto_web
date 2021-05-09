@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import error404 from '../images/errors/error-404.png';
 import error403 from '../images/errors/error-403.png';
 

@@ -1,5 +1,5 @@
 import { useContext, Fragment } from 'react';
-import { /*Link, NavLink,*/ useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { logout } from '../../services/users-service';
 import { AuthContext } from '../../contexts/AuthStore';
 import './navbar.css';

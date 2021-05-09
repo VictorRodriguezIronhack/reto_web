@@ -1,5 +1,4 @@
 import { createContext, useState, useCallback } from 'react';
-
 import { currentUserStorageKey } from '../services/base-api-service';
 
 const AuthContext = createContext();

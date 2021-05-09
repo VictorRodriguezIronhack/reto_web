@@ -27,10 +27,6 @@ app.use(passport.session());
 const router = require('./config/routes.config')
 app.use('/api', router);
 
-// app.get('/*', (req, res => {
-//   res.sendFile(`$`)
-// }))
-
 
 /** Handle Errors */
 app.use((req, res, next) => {

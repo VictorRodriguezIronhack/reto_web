@@ -11,7 +11,7 @@ function PhonesList({ minSearchChars }) {
         phones: [],
         loading: false
     });
-    const [search/*, setSearch*/] = useState({});
+    const [search] = useState({});
 
     useEffect(() => {
         async function fetchPhones() {
@@ -26,7 +26,8 @@ function PhonesList({ minSearchChars }) {
                 //     phones: phones,
                 //     loading: false
                 // })
-                // debido a que la bd carga muy rapido, he puesto el setTimeout para ver el efecto del spinner
+
+  // debido a que la bd carga muy rapido, he puesto el setTimeout para ver el efecto del spinner
                 setTimeout(()=>{
                     setState({
                         phones: phones,

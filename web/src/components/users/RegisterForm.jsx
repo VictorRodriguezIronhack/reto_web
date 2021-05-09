@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router';
-
 import { register } from '../../services/users-service';
 
 const EMAIL_PATTERN = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -106,7 +105,7 @@ function RegisterForm() {
     <form className="my-1 mx-5 p-3" onSubmit={handleSubmit}>
 
       <h1><i className="fas fa-user-circle text-white"></i></h1>
-    
+
       <div className="input-group mb-3 border-bottom border-secondary">
         <input
           type="text"
@@ -129,7 +128,6 @@ function RegisterForm() {
           onChange={handleChange}
           value={user.email} />
         <div className="invalid-feedback">{errors.email}</div>
-
       </div>
 
       <div className="mb-3 border-bottom border-secondary">

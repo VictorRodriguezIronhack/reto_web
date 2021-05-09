@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// const Event = require('../models/event.model');
 const User = require('../models/user.model');
 const Phones = require('../models/phone.model');
 const phonesData = require('../data/phones.json');
@@ -15,11 +14,6 @@ mongoose.connection.once('open', () => {
     .then(() => User.create(usersData))
     .then(users => {
       console.info(`- Added ${users.length} users`)
-      // //   const eventsWithOwnerIds = eventsData.map(event => {
-      // //     event.owner = users.find(user => user.email === event.owner).id;
-      // //     return event;
-      // //   })
-      //   return Event.create(eventsWithOwnerIds)
     })
     .then(() => Phones.create(phonesData))
     .then(phones => console.info(`- Added ${phones.length} phones`))

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './spinner.css';
-
 export class Spinner extends Component {
     constructor(props) {
         super(props);
