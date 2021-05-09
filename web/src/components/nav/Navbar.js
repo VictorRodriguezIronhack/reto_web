@@ -16,15 +16,15 @@ function Navbar() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top" >
-            <div className="container justify-content-end">
-                <a href="/home" className="title text-white mY-2 pb-3 border-bottom border-secondary w-100">
+            <div className="container justify-content-center">
+                <a href="/home" className="title text-white my-2 pb-3 border-bottom border-secondary w-100">
                     <h4 className="text-white" link="/home">
                         <i className="fas fa-mobile-alt text-white me-3" link="/home"></i>
                         The Phone Cave
                     </h4>
                 </a>
                 
-                <div className="navbar-nav ">
+                <div className="navbar-nav">
 
                     {!isAuthenticated() && (
                         <Fragment>
