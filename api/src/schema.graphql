@@ -1,0 +1,22 @@
+type Query {
+        info: String!
+        feed: [Phone!]!
+        singlePhone(id: Int!): Phone
+    }
+
+type Mutation {
+    post(name: String!, manufacturer: String!, description: String!, color: String!,  price: Int!, imageFileName: String!, screen: String!, processor: String, ram: Int!): Phone!
+}
+
+type Phone {
+    id: Int!
+    name: String!
+    manufacturer: String!
+    description: String!
+    color: String!
+    price: Int!
+    imageFileName: String!
+    screen: String!
+    processor: String!
+    ram: Int!
+}

@@ -1,26 +1,22 @@
 {
-  "name": "api",
+  "name": "reto_web2",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "index.js",
   "scripts": {
-    "seeds": "node ./bin/seeds.js",
-    "start": "node ./app.js",
-    "dev": "nodemon ./app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "http-errors": "^1.8.0",
-    "mongoose": "^5.12.7",
-    "morgan": "^1.10.0",
-    "ts-node": "^9.1.1"
+    "@prisma/client": "^2.22.1",
+    "apollo-server": "^2.24.0",
+    "graphql": "^15.5.0"
   },
   "devDependencies": {
-    "@types/node": "^15.0.1",
     "nodemon": "^2.0.7",
-    "typescript": "^4.2.4"
+    "prisma": "^2.22.1"
   }
 }

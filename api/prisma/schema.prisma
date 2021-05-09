@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Phone {
+  id Int @id @default(autoincrement())
+  name String
+  manufacturer String
+  description String
+  color String
+  price Int
+  imageFileName String
+  screen String
+  processor String
+  ram Int
+}
