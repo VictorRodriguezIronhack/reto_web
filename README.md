@@ -24,15 +24,12 @@ En este reto se ha realizado una app para movil con un catálogo de teléfonos, 
     -npm install
     -npm start
     
-    Y ya tendrás la app en tu servidor local ;)
+    Y ya tendrás la app en tu servidor local
     
 6-De los bonus se han usado:
 - Mongo
 - Hooks
 - Styled Components
-- Y se ha desplegado en Heroku
-
-URL:
 
 
-Espero que os haya gustado mi primera app para movil
+Espero que os haya gustado mi primera app para movil ;)
