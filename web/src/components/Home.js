@@ -10,6 +10,9 @@ export const Titles = styled.h1`
 
 export const MainSection = styled.section`
     margin-top: 10rem;
+    @media screen and (max-width: 500px){
+        margin-top: 1rem;
+     }
 `;
 
 export const SubSection = styled.div`
@@ -21,6 +24,10 @@ export const SubSection = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     align-items: center;
+    @media screen and (max-width: 500px){
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+     }
 `;
 
 export const Button = styled.a`
@@ -46,6 +53,9 @@ export const Paragraph = styled.p`
 
 export const PhoneImage = styled.img`
     width: 35rem;
+    @media screen and (max-width: 500px){
+        display: none;
+     }
 `;
 
 function Home() {
@@ -57,10 +67,10 @@ function Home() {
                     <div className="d-flex flex-column align-items-start">
                         <Titles>The Phone Cave</Titles>
                         <Paragraph>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                            repudiandae rerum libero ipsum asperiores omnis mollitia, nostrum
-                            commodi placeat ea itaque modi corrupti corporis nam voluptas aut
-                            reprehenderit eaque culpa.
+                            The worst mobile online store the human being ever made!
+                            Enjoy the slowest devices in the market at a high-level price.
+                            We assure you that you phone will come full of troyans and other 
+                            russian viruses.
                         </Paragraph>
                         <Button href="/phones" className="btn">Explore</Button>
                     </div>

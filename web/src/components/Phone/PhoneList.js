@@ -2,6 +2,7 @@ import Phone from './Phone';
 import { useQuery, gql } from '@apollo/client';
 import styled, { keyframes } from 'styled-components';
 import '../../App.css';
+import { screen } from '@testing-library/react';
 
 
 
@@ -12,6 +13,12 @@ const PHONES_QUERY = gql`
             description
             price
             imageFileName
+            id
+            manufacturer
+            ram
+            color
+            screen
+            processor
         }
     }
 `;
