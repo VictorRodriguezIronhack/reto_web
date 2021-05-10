@@ -1,3 +1,20 @@
+https://thephonecave-ih.herokuapp.com
+
+App complete! The Phone Cave is a Smartphones Online Shop where with the given seeds file will showed a list of smartphones. 
+In addition, You can create your own user account with google-auth or local-auth and leave opinions about phones with which you have experience or have already purchased. A Shopping Cart logic was implemented and if you purchase any product you will get a confirmation email.
+
+The app uses the following technologies:
+ - Node.js
+ - Express.js
+ - React.js
+ - MongoDB
+ - HTML5
+ - CSS3
+ - Docker
+
+ Finally I would like to thank Ironhack that has helped me during 7 months to be able to make my own web applications.
+ Thank you so much!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
