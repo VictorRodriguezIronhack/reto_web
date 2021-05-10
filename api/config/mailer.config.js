@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const user = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASSWORD;
-const appUrl = 'http://localhost:3000';
+const appUrl = 'https://thephonecave-ih.herokuapp.com';
 
 const transport = nodemailer.createTransport({
     service: 'Gmail',
