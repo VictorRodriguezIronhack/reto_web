@@ -2,43 +2,18 @@
 
 Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave. El nombre y el tema es una broma pero lo que viene después tomemoslo en serio.
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+<img src="https://res.cloudinary.com/getapet/image/upload/v1620633692/The_Phone_Cave/Screenshot_lhndxk.png" alt="main" width="500"/>
 
-##### El reto
+##### Instrucciones
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+Para visualizar la web has de seguir las siguientes instrucciones, en caso de cualquier problema contacta conmigo: franciscoquesadacabello89@gmail.com
 
-1. Escribir una API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que:
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Axios (o una biblioteca similar) para obtener datos de la API REST.
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
+1. Entra, a través de tu consola en la carpeta /api del proyecto y ejecuta el siguiente comando: npm run dev
+2. Entra, a través de otra consola o pestaña en la carpeta /web del proyecto y ejecuta el siguiente comando: npm start
+3. Por último, a través del navegador, ve a la siguiente dirección: http://localhost:3000/
 
-##### Los bonus
-Como habrás podido comprobar esta aplicación es muy sencilla, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+##### Características:
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-- ...
+La web está construida usando tres librerías principales:
 
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, el limite de entrega es el Viernes 7 a las 11:00 am.  
-
-
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+<img src=https://res.cloudinary.com/getapet/image/upload/v1620634100/The_Phone_Cave/harjy98cq3nrhxgv6l3s_q1i2mw.png alt="librerias" width="500" >
