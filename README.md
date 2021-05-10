@@ -14,12 +14,14 @@ En este reto se ha realizado una app para movil con un catálogo de teléfonos, 
 
 
 2-Se ha utilizado Axios para obtener datos de la API REST.
+
 3-También se ha implementado un componente spinner, con un setTimeout para simular la carga de la información desde la bd.
 
 4-Para iniciar el proyecto en tu servidor local, primero clona el proyecto desde Github. Luego, accede a la carpeta api y ejecuta los comandos:
     -npm install
     -npm run seeds
     -npm run dev
+    
 5-Para iniciar el front end, accede a la carpeta web y ejecuta:
     -npm install
     -npm start
