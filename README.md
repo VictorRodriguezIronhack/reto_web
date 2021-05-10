@@ -1,3 +1,20 @@
+https://thephonecave-ih.herokuapp.com
+
+App complete! The Phone Cave is a Smartphones Online Shop where with the given seeds file will showed a list of smartphones. 
+In addition, You can create your own user account with google-auth or local-auth and leave opinions about phones with which you have experience or have already purchased. A Shopping Cart logic was implemented and if you purchase any product you will get a confirmation email.
+
+The app uses the following technologies:
+ - Node.js
+ - Express.js
+ - React.js
+ - MongoDB
+ - HTML5
+ - CSS3
+ - Docker
+
+ Finally I would like to thank Ironhack that has helped me during 7 months to be able to make my own web applications.
+ Thank you so much!
+
 # Bienvenid@ al reto de The Phone Cave
 
 Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave. El nombre y el tema es una broma pero lo que viene después tomemoslo en serio.
