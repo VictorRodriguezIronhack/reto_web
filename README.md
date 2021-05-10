@@ -27,24 +27,27 @@ Todos los componentes del front son componentes funcionales en los que se han us
 ##### Navegación:
 
 HOME:
+<br>
 <img src="https://res.cloudinary.com/getapet/image/upload/v1620633692/The_Phone_Cave/Screenshot_lhndxk.png" alt="home" width="500"/>
 
 - Para ir al listado de teléfonos pulsa en el botón "Explore"
 
 PHONE LIST:
+<br>
 <img src="https://res.cloudinary.com/getapet/image/upload/v1620634669/The_Phone_Cave/Screenshot_1_xr6tpt.png" alt="list" width="500"/>
 
 - Para ver el detalle de un teléfono, pulsa en su botón "Detail"
 - Si quieres volver a la home, pulsa, al principio de la página, en "Back to home"
 
 PHONE DETAIL:
+<br>
 <img src="https://res.cloudinary.com/getapet/image/upload/v1620634734/The_Phone_Cave/Screenshot_2_efhiof.png" alt="detail" width="500"/>
 
 - Para cerrar la vista de detalle, pulsa en el botón "Close"
 
 ##### Conclusión:
 
-He disfrutado mucho con este reto, la verdad. Me he quedado con la cosa de seguir metiendo más funcionalidades como por ejemplo un Dark/Light mode con styled components (Esta librería da muchísimas posibilidades). También me hubiera gustado meter un filtro en el listado de teléfonos así como por ejemplo un Login/Register.
+He disfrutado mucho con este reto, la verdad. Me he quedado con la cosa de seguir metiendo más funcionalidades como por ejemplo un Dark/Light mode con styled components (Esta librería da muchísimas posibilidades). También me hubiera gustado meter un filtro en el listado de teléfonos así como por ejemplo un Login/Register o desplegar la web.
 
 Pero esta sensación de seguir añadiendo funcionalidades y refactorizando código es la que siempre me queda cuando acabo un proyecto.
 
