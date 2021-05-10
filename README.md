@@ -1,4 +1,4 @@
-# Bienvenid@ al reto de The Phone Cave
+# Bienvenid@ a The Phone Cave
 
 Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave. El nombre y el tema es una broma pero lo que viene después tomemoslo en serio.
 
