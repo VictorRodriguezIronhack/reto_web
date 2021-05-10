@@ -19,7 +19,7 @@ function AuthCallback() {
 
   useEffect(() => {
     if (user) {
-      replace('/')
+      replace('/telefonos')
     }
   }, [user, replace])
 
