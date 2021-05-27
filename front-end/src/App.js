@@ -2,11 +2,12 @@ import React from 'react'
 import axios from 'axios'
 import {Switch, Route, Link} from 'react-router-dom'
 import Phone from './components/Phone'
-import './App.css';
+import PhoneDetails from './components/PhoneDetails'
+import './App.scss';
 
 class App extends React.Component {
 state={
-  phones:[]
+  phones:undefined
 }
   componentDidMount(){
     axios({
@@ -15,23 +16,22 @@ state={
       withCredentials: true,
     })
      .then((result) => {
-       console.log(result)
        this.setState({phones: result.data})
      }).catch((err) => {
        console.log(err)
      });
   }
   render(){
-    console.log(this.state)
-  return (
+  return this.state.phones?(
     <div className="App">
     <h1>Home</h1>
-    <Link to="/telefonos">Phones</Link>
+    <Link to="/telefonos">Display phones</Link>
     <Switch>
-    <Route path="/telefonos" exact component={()=> <Phone /> } />
+    <Route path="/telefonos" exact component={()=> <Phone phones={this.state.phones} /> } />
+    <Route path="/telefonos/:id" exact component={(routeProps)=> <PhoneDetails {...routeProps} phones={this.state.phones} /> } />
     </Switch>
     </div>
-  );
+  ):(<div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>)
   }
 }
 
