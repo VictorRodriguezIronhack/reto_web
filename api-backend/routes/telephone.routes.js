@@ -15,17 +15,5 @@ router.get('/all-phones', (req, res) => {
   
 });
 
-/* //GET PHONE DETAILS
-router.get('/details/:id', (req, res) => {
-  Telephone.findById(req.params.id)
-  .then((result)=>{ 
-    console.log(result)
-    res.send(result)
-  })
-  .catch((error)=>{
-    console.log(error)
-  })
-  
-}); */
 
 module.exports = router;
