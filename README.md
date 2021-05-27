@@ -8,6 +8,7 @@
 | :----- | :----------------- | :------------------------------- |
 | Get    | /api/telefonos     | Get all phones from the database |
 | Get    | /api/telefonos/:id | Get a specific phone with its id |
+| Post   | /api/order/new | Create an order |
 
 # Routes client
 

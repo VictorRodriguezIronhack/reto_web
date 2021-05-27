@@ -6,3 +6,8 @@
 .phone-details h1 {
     margin-top: 50px;
 }
+
+.add-cart-bar {
+    display: flex;
+    align-items: flex-end;
+}
