@@ -13,4 +13,14 @@ router.get('/telefonos', (req, res, next) => {
   });
 });
 
+router.get('/telefonos/:id', (req, res, next) => {
+  Phones.findOne({id:req.params.id})
+  .then((result) => {
+    console.log(result)
+    res.send(result)
+  }).catch((err) => {
+    console.log(err)
+  });
+});
+
 module.exports = router;

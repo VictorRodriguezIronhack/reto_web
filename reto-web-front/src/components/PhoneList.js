@@ -1,7 +1,7 @@
 import axios from "axios"
 import React from "react"
 import { Link } from "react-router-dom"
-import styled from "styled-components"
+import Spinner from "./Spinner"
 
 
 
@@ -13,40 +13,20 @@ class PhoneList extends React.Component {
     }
 
     componentDidMount(){
-        axios({
-            method: "get",
-            url: "http://localhost:5000/phones/telefonos",
-            withCredentials: true
-          })
-          .then((result) => {
-            console.log(result)
-            this.setState({phoneList:result.data, loaded:true})
-          })
+        this.setState({phoneList:this.props.phones, loaded:true})
+
     }
 
 
     render(){
-        const details = styled.div`
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            text-align:center;
-            `
-        const mappedPhones = this.state.phoneList.map((phone)=> { 
+        const mappedPhones = this.state.phoneList.map((phone, index)=> { 
             return(
-            <div className="phone">
-              <img src={`/public/images/${phone.img}`} alt={phone.name} />
-              <details>
-              <p className="name">{phone.name}</p>
-              <p className="manufacturer">{phone.manufacturer}</p>
-              <p className="description">{phone.description}</p>
-              <p className="color">{phone.color}</p>
-              <p className="price">{phone.price}</p>
-              <p className="screen">{phone.screen}</p> 
-              <p className="processor">{phone.processor}</p> 
-              <p className="ram">{phone.ram}</p>
-              </details> 
+            <div className="phone" key={index}>
+              <Link to={`/telefonos/${phone.id}`}><img src={`./images/${phone.imageFileName}`} alt={phone.name} /></Link>
+              <div>
+                <h1 className="name">{phone.name}</h1>
+                <p className="price"><b>Price: </b>{phone.price}€</p>
+              </div>
             </div>
         )
     })
@@ -57,7 +37,7 @@ class PhoneList extends React.Component {
             </div>
         )
         : (
-           <p>Loading...</p> 
+           <Spinner/> 
         )
     }
 }

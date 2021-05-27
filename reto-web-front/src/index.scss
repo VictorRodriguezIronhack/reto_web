@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Title{
+text-align: center;
+color: white;
+background-color: red;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
+}
+
+.PhoneList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+
+    img{
+      width:30vw;
+    }
+}
+

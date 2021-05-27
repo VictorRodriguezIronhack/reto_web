@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const PhonesSchema = new Schema(
   {
-    
+    id:{type: Number},
     name: {String},
     manufacturer:{String},
     description:{String},

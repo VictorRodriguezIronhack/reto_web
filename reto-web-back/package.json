@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "DEBUG=reto-web-back:* nodemon app.js",
+    "dev": "nodemon app.js",
     "dev-windows": "nodemon app.js"
   },
   "dependencies": {
