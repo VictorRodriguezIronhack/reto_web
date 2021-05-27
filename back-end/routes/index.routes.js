@@ -7,7 +7,7 @@ router.get('/telefonos', (req, res, next) => {
     Phone.find()
       .then((result) => {
         console.log(result)
-        res.send({data: result})
+        res.send(result)
       })
       .catch((error) => {
         console.log(error)

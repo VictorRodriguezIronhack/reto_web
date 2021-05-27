@@ -1,3 +1,4 @@
+//----imports
 require('dotenv').config()
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
@@ -5,6 +6,7 @@ const express = require('express')
 const chalk = require('chalk')
 const flash = require('connect-flash')
 const path = require('path')
+const cors = require('cors')
 
 
 // ---------- Mongoose ---------- //
@@ -17,6 +19,15 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+
+// -------- CORS --------
+app.use(
+  cors({
+    methods: ['GET', 'POST'],
+    credentials: true,
+    origin: ['http://localhost:3000'],
+  })
+)
 
 // ---------- ROUTES ---------- //
 app.use('/', require('./routes/index.routes'))
