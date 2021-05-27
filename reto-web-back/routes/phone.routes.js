@@ -6,8 +6,8 @@ const Phones = require('../models/Phones.model');
 router.get('/telefonos', (req, res, next) => {
   Phones.find()
   .then((result) => {
-    console.log(result.data)
-    res.send(result.data)
+    console.log(result)
+    res.send(result)
   }).catch((err) => {
     console.log(err)
   });
