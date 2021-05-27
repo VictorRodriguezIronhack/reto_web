@@ -1,10 +1,10 @@
 
-import './App.css';
+import './App.scss';
 import React from 'react'
 import {Switch, Route, Link} from 'react-router-dom'
 import axios from 'axios'
-import Telefonos from './Telefonos'
-
+import AllPhones from './Components/AllPhones'
+import PhoneDetails from './Components/PhoneDetails'
 
 class App extends React.Component {
   state = {
@@ -14,7 +14,7 @@ class App extends React.Component {
   componentDidMount(){
     axios({
       method: 'get',
-      url: `http://localhost:5000/phones/telefonos`,
+      url: `http://localhost:5000/phones/all-phones`,
       withCredentials: true,
     })
     .then((result)=>{
@@ -28,15 +28,17 @@ class App extends React.Component {
 }
 
   render(){
-    return (
+    return this.state.phoneList.length ? (
       <div className="App">
 
-        <h1>Home</h1>
-        <Link to="/telefonos">List</Link>
       <Switch>
-        <Route path="/telefonos" exact component={()=> <Telefonos phones={this.state.phoneList} />} />
+        <Route path="/" exact component={()=> <AllPhones phones={this.state.phoneList} />} />
+        <Route path="/PhoneDetails/:id" exact component={(routeProps) => ( <PhoneDetails {...routeProps}
+                allPhones={this.state.phoneList}/>)} />
       </Switch>
       </div>
+    ) : (
+      <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     )
   }
 }
