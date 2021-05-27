@@ -1,44 +1,22 @@
-# Bienvenid@ al reto de The Phone Cave
+# The Phone Cave
 
-Las nuevas técnologías estan llegando a los lugares mas reconditos del planeta, y con la misión de ofrecer los mejores telefonos al mejor precio del mercado, nace The Phone Cave. El nombre y el tema es una broma pero lo que viene después tomemoslo en serio.
+This is my version for the Phone Cave project
 
-<img src="https://futurechallenges.org/wp-content/uploads/2013/12/Container_Shop_in_Joe_Slovo_Park.jpg" alt="drawing" width="500"/>
+<img src="https://fdn.gsmarena.com/imgroot/news/19/12/top-phones-of-2019/-727/gsmarena_001.jpg" alt="phones-img" width="500"/>
 
-##### El reto
+##### Description
 
-Tu tarea es escribir una aplicación de catálogo de telefonos muy simple (o no). Los requisitos mínimos para que leamos tu código son los siguientes:
+The app is a simple collection of phones where you can click on them and be redirected to the details page of that specific phone.
+Simple as that :D
 
-1. Escribir una API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que:
- - Tenga 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API.
- - Utilice Axios (o una biblioteca similar) para obtener datos de la API REST.
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles más sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso.
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Envía el código a un repositorio público de github con un README.md que explique cómo ejecutar la API y la aplicación Frontend.
+##### Used technologies
 
-##### Los bonus
-Como habrás podido comprobar esta aplicación es muy sencilla, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
+* React
+* HTML
+* CSS
+* ExpressJS
+* NodeJS
 
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-- ...
-
-Los límites los pones TU, demuestra el motivo de que acabemos eligiendote para el puesto.
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, el limite de entrega es el Viernes 7 a las 11:00 am.  
-
-
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+##### Find me
+---
+[*Hector Martinez*](#) | [![Github](https://i.ibb.co/nrRVS23/github-metal.png)](https://github.com/Thornnk/) |  [![Linkedin](https://i.ibb.co/yprHbRz/linkedin-metal.png)](https://www.linkedin.com/in/hector-md/)
