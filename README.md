@@ -1,6 +1,6 @@
 <img src="https://www.marketingdigitalmadrid.net/images/all-phones-list.jpg" alt="Phone details" width="500"/>
 
-<img src="https://www.marketingdigitalmadrid.net/images/phone-details.jpg" alt="Phone details" width="500"/>
+<img src="https://www.marketingdigitalmadrid.net/images/phone-details-cart.jpg" alt="Phone details" width="500"/>
 
 # Endpoints server
 
