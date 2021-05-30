@@ -1,41 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PhoneService from '../services/phone-service';
 
-class Phones extends Component {
-    constructor(props){
-        super(props);
+const Phones = () => {
+    const [phones, setPhones] = useState([]);
 
-        this.state = {
-            phones: [],
-        };
-    }
-
-    getPhonesData(){
+    const getPhonesData = useCallback(() => {
         const phoneService = new PhoneService();
         phoneService.getAllPhones()
         .then((response) => {
-            this.setState({
-                phones: response.data,
-            })
+            setPhones(response.data);
         })
-    }
+    }, []);
 
-    componentDidMount() {
-        this.getPhonesData();
-    }
+    useEffect(() => {
+        getPhonesData();
+    }, [getPhonesData]);
 
-    render(){
-        return(
-            <div>
-                {this.state.phones.map((phone) => (
-                    <div>
-                        <p>{phone.name}</p>
-                        <a href={`/phones/${phone._id}`}>Details</a>
-                    </div>
-                ))}
-            </div>
-        )
-    }
+    return(
+        <div>
+            {phones.map((phone) => (
+                <div>
+                    <p>{phone.name}</p>
+                    <a href={`/phones/${phone._id}`}>Details</a>
+                </div>
+            ))}
+        </div>
+    )
 }
 
 export default Phones;
