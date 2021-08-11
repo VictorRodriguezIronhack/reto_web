@@ -14,5 +14,27 @@
     padding: 5%;
 }
 .phones-card img{
+   position: absolute;
     width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px !important;
+    border: 6px solid white;
 }
+
+.nav-link {
+    position: relative;
+    transition: 0.6s;
+}
+
+.phones-card img:hover {
+    opacity: 0.5;
+}
+
+
+.nav-link::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+

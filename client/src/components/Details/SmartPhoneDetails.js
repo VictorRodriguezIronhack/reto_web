@@ -23,8 +23,11 @@ const MobileDetails = (props) => {
         <div className="phones-details" key={result.id}>
             <img src={`http://localhost:5000/static/images/${result.imageFileName}`} alt={result.name} />
             <h4> {result.name}</h4>
+            <p>Description: {result.description}</p>
             <p>Color: {result.color}</p>
-            <p>Price: {result.price}</p>
+            <p>Processor:{result.color}</p>
+            <p>Ram: {result.ram}</p>
+            <p>Price: {result.price} €</p>
         </div>
     )
 
