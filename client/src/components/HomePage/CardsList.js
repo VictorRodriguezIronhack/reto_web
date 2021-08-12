@@ -18,8 +18,10 @@ const CardList = () => {
     }, []);
 
     return (
-        <div className="card-list">
-            <Cards phones={result} />
+        <div className="container">
+            <div className="card-list">
+                <Cards phones={result} />
+            </div>
         </div>
     )
 

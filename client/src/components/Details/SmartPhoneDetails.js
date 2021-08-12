@@ -20,14 +20,16 @@ const MobileDetails = (props) => {
     }, []);
 
     return (
-        <div className="phones-details" key={result.id}>
+        <div className="det-cont" key={result.id}>
             <img src={`http://localhost:5000/static/images/${result.imageFileName}`} alt={result.name} />
-            <h4> {result.name}</h4>
-            <p>Description: {result.description}</p>
-            <p>Color: {result.color}</p>
-            <p>Processor:{result.color}</p>
-            <p>Ram: {result.ram}</p>
-            <p>Price: {result.price} €</p>
+            <div className="phones-details">
+                <h4> {result.name}</h4>
+                <p>{result.description}</p>
+                <p><strong>Color:</strong> {result.color}</p>
+                <p><strong>Processor:</strong> {result.processor}</p>
+                <p><strong>Ram:</strong> {result.ram}</p>
+                <p><strong>Price:</strong> {result.price} €</p>
+            </div>
         </div>
     )
 

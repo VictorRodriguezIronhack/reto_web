@@ -10,14 +10,14 @@ const Cards = ({ phones }) => {
 
                     <Link className="nav-link" to={`/details/${elm.id}`} >
 
-                    <div className="phones-card" key={elm.id}>
-                        <img src={`http://localhost:5000/static/images/${elm.imageFileName}`} alt={elm.name} />
-                        <h4> {elm.name}</h4>
-                        <p>Color: {elm.color}</p>
-                        <p>Price: {elm.price}</p>
-                    </div>
+                        <div className="phones-card" key={elm.id}>
+                            <img src={`http://localhost:5000/static/images/${elm.imageFileName}`} alt={elm.name} />
+                            <h4> {elm.name}</h4>
+                            <p><strong>Color:</strong> {elm.color}</p>
+                            <p><strong>Price:</strong> {elm.price}</p>
+                        </div>
                     </Link>
-                    )
+                )
             }
         </>
     )

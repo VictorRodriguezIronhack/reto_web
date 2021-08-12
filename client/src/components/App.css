@@ -1,3 +1,9 @@
+h1{
+    margin: 2% 30%;
+}
+.home{
+    margin-left: 20px;
+}
 .card-list {
     display: flex;
     justify-content: space-between;
@@ -8,17 +14,16 @@
 .phones-card {
     display: flex;
     flex-direction: column;
-    max-width: 33%;
+    width: 25vw;
     align-items: center;
     align-content: center;
     padding: 5%;
 }
 .phones-card img{
    position: absolute;
-    width: 300px;
-    height: 100%;
+    width: 100%;
+    height:100%;
     object-fit: cover;
-    border-radius: 30px !important;
     border: 6px solid white;
 }
 
@@ -28,7 +33,7 @@
 }
 
 .phones-card img:hover {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 
@@ -38,3 +43,37 @@
     padding-bottom: 100%;
 }
 
+.nav-link h4 {
+    margin: 35% auto  0 auto;
+}
+
+.det-cont{
+    display: flex;
+    margin: auto;
+}
+
+.det-cont img{
+    min-width: 40%;
+}
+
+.det-cont h4{
+    margin-bottom: 50px;
+}
+.det-cont p{
+    width: 60%;
+}
+.phones-details {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  
+    .det-cont {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+}
