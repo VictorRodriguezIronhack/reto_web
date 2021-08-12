@@ -18,11 +18,16 @@ const CardList = () => {
     }, []);
 
     return (
-        <div className="container">
-            <div className="card-list">
-                <Cards phones={result} />
-            </div>
-        </div>
+        <>
+            {result.length < 1
+                ?
+                <h3>Loading...</h3>
+                : <div className="container">
+                    <div className="card-list">
+                        <Cards phones={result} />
+                    </div>
+                </div>}
+        </>
     )
 
 }
