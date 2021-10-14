@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PhoneService from '../../service/phone.service'
 import { Card, Button, Container, Col, Row, Spinner } from 'react-bootstrap'
-import img from '../../img/Galaxy_S7.png'
+import { Link } from 'react-router-dom'
 
 export default function Phones() {
 
@@ -37,7 +37,7 @@ export default function Phones() {
                                             <Card.Text>
                                                 {elm.description}
                                             </Card.Text>
-                                            <Button variant="primary">Ver detalles</Button>
+                                            <Button as={Link} to={`/detalles/${elm.id}`} variant="secondary">Ver detalles</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>

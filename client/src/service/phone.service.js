@@ -9,6 +9,7 @@ class PhoneService {
     }
 
     findPhones = () => this.instance.get('/')
+    findOnePhone = (id) => this.instance.get(`/${id}`)
 }
 
 export default PhoneService;
