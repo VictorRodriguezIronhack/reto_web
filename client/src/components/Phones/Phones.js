@@ -1,57 +1,66 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import phoneData from "./../../phones.json"
-import { Button, Container, Spinner } from "react-bootstrap";
+import { Button, Col, Container, Row, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import PhonesService from "./../../services/phones.service";
+import "./Phones.css"
 
+const phonesService = new PhonesService();
 
 const Phones = () => {
 
-  // ----------------------------------------------------
-  // I was trying to get the phones data with axios, without the server, as shown below.
-  //  Switching now to client/server, but I won't make it for 1PM (CEST) as requested.
-  // ----------------------------------------------------
+  const [phones, setPhones] = useState(null)
 
-    // WITHOUT SERVER --------------------------
-      const [phones, setPhones] = useState('')
+  const displayPhones = () => {
+    return phones?.map(phone => {
+      return (
+        <Col xs={12} sm={6} lg={4} key={phone.id}>
+          <img className="phones__img" src={phone.imageFileName} alt={`${phone.name} pic`}/>
+          <p>{phone.name}</p>
+          <p className="phones__description">{phone.description}</p>
+          <p>{phone.price}€</p>
+          <Link to={`/telefonos/${phone.id}`}>
+            <Button className="btn-warning rounded-pill">See details</Button>
+          </Link>
+          <hr/>
+        </Col>
+        
+      )
+    })
+  }
 
-      console.log(phoneData)
+  useEffect(() => {
 
-      const fetchPhones = () => {
+    phonesService
+        .getPhones()
+        .then(phones => setPhones(phones.data))
+        .catch((err) => console.log(err))
+  }, []);
 
-          return axios
-            .get(phoneData)
-            .then((data) => {
-              console.log(data)
-              setPhones(data)
-            })
-            .catch((err) => console.log(err));
-
-      }
-
-      useEffect(() => {
-
-          fetchPhones()
-
-      }, []);
-    // ----------------------------------
 
   return (
-    <>
-      <Container>
+    <Container>
+      <Row>
         <Link to="/">
-          <Button className="rounded-pill mt-5">Back to HomePage</Button>
+          <Button className="rounded-pill mt-5">Volver</Button>
         </Link>
-      </Container>
+      </Row>
+
 
       {phones ? (
-        <p>{phones}</p>
-      ) : (
-        <Spinner className="mt-5" animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
+
+        <Row className="mt-5">
+          {displayPhones()}
+        </Row>
+
+        ) : (
+
+          <Spinner className="mt-5" animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+
       )}
-    </>
+            
+    </Container>
   );
 };
 

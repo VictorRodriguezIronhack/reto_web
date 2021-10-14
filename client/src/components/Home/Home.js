@@ -6,8 +6,8 @@ const Home = () => {
     <Container style={{ minHeight: "100vh" }}>
       <h1 className="mt-5">Bienvenid@!</h1>
 
-      <Link to="/telèfonos">
-        <Button className="rounded-pill mt-5">Ver telèfonos</Button>
+      <Link to="/telefonos">
+        <Button className="rounded-pill mt-5">Ver teléfonos</Button>
       </Link>
     </Container>
   );
