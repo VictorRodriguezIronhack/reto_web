@@ -56,14 +56,13 @@ function Phones() {
 										<p className="card-text noMargin">Screen: {infoPhone.screen}</p>
 										<p className="card-text noMargin">Processor: {infoPhone.processor}</p>
 										<p className="card-text noMargin">Ram: {infoPhone.ram}</p>
-										<p className="card-text noMargin">ID: {infoPhone._id}</p>
 										<p className="card-text noMargin boldText">
-											Price: <span class="greenText">{infoPhone.price}€</span>
+											Price: <span className="greenText">{infoPhone.price}€</span>
 										</p>
 									</div>
 									<div className="card-footer">
 										<small className="text-muted">
-											<a class="btn btn-danger" href={/telefonos/ + infoPhone._id}>
+											<a className="btn btn-danger" href={/telefonos/ + infoPhone._id}>
 												Details
 											</a>
 										</small>

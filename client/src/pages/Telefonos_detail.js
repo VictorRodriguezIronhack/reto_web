@@ -10,8 +10,8 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 function Phones() {
 	//Coming from GET
-	const [ infoPhone, setInfoPhone ] = useState();
-	//const [ isLoading, setIsLoading ] = useState(false);
+	const [ infoPhone, setInfoPhone ] = useState([]);
+	const [ isLoading, setIsLoading ] = useState(false);
 	const { id } = useParams();
 
 	const getInfoPhone = () => {
@@ -26,7 +26,7 @@ function Phones() {
 			.then((response) => {
 				setInfoPhone(response.data);
 				console.log(response.data);
-				//setIsLoading(true);
+				setIsLoading(true);
 			})
 			.catch((error) => console.log(error));
 	};
@@ -43,23 +43,32 @@ function Phones() {
 			<div className="carousel__Div">
 				<div className="PhoneDiv__Container">
 					<div className="card-deck">
-						<div className="card marginBottom">
-							<img className="card-img-top image-Phone" src={infoPhone.imageFileName} alt="Phone" />
-							<div className="card-body">
-								<h3 className="card-title">
-									{infoPhone.name} - {infoPhone.manufacturer}
-								</h3>
-								<p className="card-text noMargin infoTextPhone">{infoPhone.description}</p>
-								<p className="card-text noMargin">Color: {infoPhone.color}</p>
-								<p className="card-text noMargin">Screen: {infoPhone.screen}</p>
-								<p className="card-text noMargin">Processor: {infoPhone.processor}</p>
-								<p className="card-text noMargin">Ram: {infoPhone.ram}</p>
-								<p className="card-text noMargin">ID: {infoPhone._id}</p>
-								<p className="card-text noMargin boldText">
-									Price: <span class="greenText">{infoPhone.price}€</span>
-								</p>
+						{isLoading ? (
+							<div className="card marginBottom">
+								<img
+									className="card-img-top image-Phone"
+									src={'../../public/' + infoPhone.imageFileName}
+									alt="Phone"
+								/>
+								<div className="card-body">
+									<h3 className="card-title">
+										{infoPhone.name} - {infoPhone.manufacturer}
+									</h3>
+									<p className="card-text noMargin infoTextPhone">{infoPhone.description}</p>
+									<p className="card-text noMargin">Color: {infoPhone.color}</p>
+									<p className="card-text noMargin">Screen: {infoPhone.screen}</p>
+									<p className="card-text noMargin">Processor: {infoPhone.processor}</p>
+									<p className="card-text noMargin">Ram: {infoPhone.ram}</p>
+									<p className="card-text noMargin boldText">
+										Price: <span className="greenText">{infoPhone.price}€</span>
+									</p>
+								</div>
 							</div>
-						</div>
+						) : (
+							<Spinner animation="border" role="status" className="margin50__bottom margin50__top">
+								<span className="visually-hidden">Loading...</span>
+							</Spinner>
+						)}
 					</div>
 				</div>
 			</div>

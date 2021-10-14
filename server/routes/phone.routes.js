@@ -17,11 +17,11 @@ module.exports = router;
 //  GET /api/telefonos/:phoneid -  Retrieves a specific phoneid by id
 router.get('/telefonos/:id', (req, res, next) => {
 	const { id } = req.params;
-	console.log(id);
+	//console.log(id);
 
 	Phone.findById(id)
 		.then((phone) => {
-			res.status(200).json(phone);
+			res.json(phone);
 			//console.log(phone);
 		})
 		.catch((err) => res.json(err));

@@ -123,8 +123,9 @@ mongoose
 		console.error('Error connecting to mongo: ', err);
 	});
 
-Phone.create(phones)
-	.then((x) => {
-		console.log(`Created phones DDBB`);
-	})
-	.catch((err) => console.error(`Following error occured: \n ${err}`));
+// Hacer una vez creada, no haga nada sinó la cree
+// Phone.create(phones)
+// 	.then((x) => {
+// 		console.log(`Created phones DDBB`);
+// 	})
+// 	.catch((err) => console.error(`Following error occured: \n ${err}`));
