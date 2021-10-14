@@ -32,4 +32,11 @@
    text-transform:uppercase;
    margin-top: 0px;
 }
+#phones p.manufacturer{
+   color: #474e5d;
+   text-transform:none;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   font-size: 0.8rem;
+}
 

@@ -1,0 +1,34 @@
+#details {
+    display: flex;
+    justify-content: center;
+}
+
+#details .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1200px;
+}
+
+#details .image,
+#details .image img {
+    min-width: 250px;
+
+}
+
+#details .text {
+    text-align: left;
+}
+#details .manufacturer {
+   color: grey;
+}
+#details h4 {
+    margin-bottom: 0.5rem;
+}
+#details .specs {
+    margin-top: 0px;
+}
+#details .price {
+    color: #b30000;
+}
+

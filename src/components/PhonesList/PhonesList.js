@@ -24,6 +24,7 @@ const PhonesList = (props) => {
                 className="list-group-item list-group-item-action"
               >
                 <img src={phone.imageFileName} alt={phone.name} />
+                <p className="manufacturer">{phone.manufacturer}</p>
                 <p>{phone.name}</p>
               </Link>
             </div>
