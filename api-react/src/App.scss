@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+.AllPhones{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+  .PhoneList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 100px;
+    width: 300px;
+      height: 400px;
+      margin: 0 auto;
+      padding: 30px 0px;
+      margin: 30px;
+      -webkit-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+      transition: 0.5s;
+      &:hover {
+        transform: scale3d(1.02, 1.02, 1);
+      }
+    img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+.PhoneDetails{
+     display: flex;
+     max-width: 800px;
+     margin: 0 auto;
+     margin-top: 10vh;
+     -webkit-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+
+img{
+  width: 300px;
+  object-fit: cover;
+}
+.phoneContent{
+text-align: left;
+padding-right: 50px;
+}
+}
+
+.lds-spinner {
+  color: grey;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 50vh;
+
+}
+.lds-spinner div {
+  display: flex;
+  justify-content: center;
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: grey;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
