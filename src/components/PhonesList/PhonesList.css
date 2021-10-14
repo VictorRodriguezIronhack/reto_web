@@ -1,0 +1,35 @@
+#phones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4rem;
+}
+
+#phones-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1200px;
+
+}
+#phones .phone-item {
+    width: 250px;
+}
+
+#phones img {
+    width: auto;
+    height: 150px;
+}
+
+#phones a{
+   text-decoration: none;
+}
+
+#phones p{
+   color: #282c34;
+   font-weight: 700;
+   text-transform:uppercase;
+   margin-top: 0px;
+}
+
