@@ -12,7 +12,7 @@ const Routes = () => {
         <Switch>
             <Route exact path='/' render={() => <Home></Home>}></Route>
             <Route exact path='/telefonos' render={() => <Phones></Phones>}></Route>
-            <Route path='/detalles/:id' render={(props) => <PhonesDetails {...props} ></PhonesDetails>} />
+            <Route path='/detalles/:id' render={(props) => <PhonesDetails {...props}></PhonesDetails>} />
         </Switch >
     )
 

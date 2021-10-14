@@ -7,12 +7,13 @@ router.get("/", (req, res, next) => {
 
 router.get('/phones', (req, res) => res.json(data))
 
-router.get('/phone/:id', (req, res) => {
+router.get('/details/:id', (req, res) => {
+
   const { id } = req.params
 
-  const onePhone = phone.filer(elm => elm.id === id)
-
+  const onePhone = data.filter(elm => elm.id == id)
   return res.json(onePhone)
+
 })
 
 
