@@ -1,0 +1,18 @@
+.phone-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .phone-item {
+    width: 32%;
+    margin: 50px 0;
+    padding: 10px;
+  }
+  
+  .phone-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
