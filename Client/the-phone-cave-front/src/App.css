@@ -1,0 +1,60 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+#list-container{
+
+    display: flex;
+    justify-content: center;
+}
+
+
+#list-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productCard{
+    border:1px solid black;
+    height: 84vh;
+    width: 28vw;
+    margin: 20px 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.productCard img {
+    height: 51vh;
+    width: auto;
+}
+
+#detailCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#detailCard img {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    height: 90vh;
+    width: auto;
+}
+#textContainer{
+    position: absolute;
+    top: 170px;
+    right: 350px;
+    height: 90vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
