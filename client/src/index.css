@@ -108,3 +108,7 @@ nav li {
 .greenText{
   color:green;
 }
+
+.navbarPhones{
+  display:flex;
+}

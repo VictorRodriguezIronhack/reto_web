@@ -63,7 +63,9 @@ function Phones() {
 									</div>
 									<div className="card-footer">
 										<small className="text-muted">
-											<button class="btn btn-danger">Details</button>
+											<a class="btn btn-danger" href={/telefonos/ + infoPhone._id}>
+												Details
+											</a>
 										</small>
 									</div>
 								</div>
