@@ -8,7 +8,8 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
     const { id } = req.params;
-    phone.json(id)
+    const onePhone = phone.filter(elm => elm.id == id)
+    return res.json(onePhone)
 })
 
 module.exports = router;
