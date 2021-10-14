@@ -1,0 +1,76 @@
+.App {
+  width: 100vw;
+  background-color: none;
+
+}
+
+.phones-container{
+  width: 1300px;
+  background-color:none;
+  margin: auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+}
+
+.phone-card{
+
+  text-align: center;
+  background: none;
+  width: 400px !important;
+  width: 600px;
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.phone-image{
+  height: 300px;
+  margin: auto;
+
+}
+
+
+
+.popup-back{
+  position: fixed;
+    background: rgba(0, 0, 0, 0.54);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.popup{
+  position: fixed;
+    background: white;
+    width: 700px;
+    height: 700px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.popup div{
+  text-align: left;
+  margin-top: 200px;
+  width:300px;
+}
+
+
+.popup button{
+  position: absolute;
+  top:20px;
+  right: 20px;
+}
+
+.phone-popup-image{
+  height: 400px;
+  margin: auto;
+
+}
+
