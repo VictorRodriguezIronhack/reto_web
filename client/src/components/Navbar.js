@@ -8,31 +8,37 @@ function Navbar() {
 	const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
 	return (
-		<nav className="navbarPhones">
-			<Link to="/">
-				<button>Home</button>
-			</Link>
-			<Link to="/telefonos">
-				<button>Phones</button>
-			</Link>
-			{isLoggedIn ? (
+		<div className="navbar_container">
+			<nav className="navbarPhones navbarDouble">
 				<div>
-					<button onClick={logOutUser}>Logout</button>
-					<span>{user.name}</span>
-				</div>
-			) : (
-				<div>
-					<Link to="/signup">
-						{' '}
-						<button>Signup</button>{' '}
+					<Link to="/">
+						<button className="navbar_a_button">Home</button>
 					</Link>
-					<Link to="/login">
-						{' '}
-						<button>Login</button>{' '}
+					<Link to="/telefonos">
+						<button className="navbar_a_button">Phones</button>
 					</Link>
 				</div>
-			)}
-		</nav>
+				<div>
+					{isLoggedIn ? (
+						<div>
+							<button onClick={logOutUser} className="navbar_a_button">
+								Logout
+							</button>
+							<span>{user.name}</span>
+						</div>
+					) : (
+						<div>
+							<Link to="/signup">
+								<button className="navbar_a_button">Signup</button>
+							</Link>
+							<Link to="/login">
+								<button className="navbar_a_button">Login</button>
+							</Link>
+						</div>
+					)}
+				</div>
+			</nav>
+		</div>
 	);
 }
 
