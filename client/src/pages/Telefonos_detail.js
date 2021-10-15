@@ -18,14 +18,11 @@ function Phones() {
 		// Get the token from the localStorage
 		const storedToken = localStorage.getItem('authToken');
 
-		// console.log('hello');
-		// console.log(id);
-
 		axios
 			.get(`${API_URL}/telefonos/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
 			.then((response) => {
 				setInfoPhone(response.data);
-				console.log(response.data);
+				//console.log(response.data);
 				setIsLoading(true);
 			})
 			.catch((error) => console.log(error));
@@ -35,13 +32,28 @@ function Phones() {
 	// by setting the empty dependency array - []
 	useEffect(() => {
 		getInfoPhone();
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
-		<div>
-			<h1>Phone Page Details</h1>
-			<div className="carousel__Div">
-				<div className="PhoneDiv__Container">
+		<div className="container_phones">
+			<nav aria-label="breadcrumb" className="navbar_breadcrumb">
+				<ol className="breadcrumb">
+					<li className="breadcrumb-item">
+						<a href="/">Home</a>
+					</li>
+					<li className="breadcrumb-item">
+						<a href="/telefonos">Phones</a>
+					</li>
+					<li className="breadcrumb-item active" aria-current="page">
+						Details
+					</li>
+				</ol>
+			</nav>
+			<h1 className="title_phones">Phone details</h1>
+			<div className="container">
+				<div className="row">
 					<div className="card-deck">
 						{isLoading ? (
 							<div className="card marginBottom">
