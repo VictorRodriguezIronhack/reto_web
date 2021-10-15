@@ -21,10 +21,12 @@ function Navbar() {
 				<div>
 					{isLoggedIn ? (
 						<div>
+							<span className="user__Name">
+								Welcome, <span className="bolder">{user.name}</span>
+							</span>
 							<button onClick={logOutUser} className="navbar_a_button">
 								Logout
 							</button>
-							<span>{user.name}</span>
 						</div>
 					) : (
 						<div>
