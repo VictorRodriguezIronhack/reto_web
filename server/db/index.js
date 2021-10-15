@@ -108,6 +108,12 @@ const phones = [
 // If no env has been set, we dynamically set it to whatever the folder name was upon the creation of the app
 
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/reto-web';
+const conn = mongoose.createConnection(MONGO_URI, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useFindAndModify: false,
+	useCreateIndex: true
+});
 
 mongoose
 	.connect(MONGO_URI, {
@@ -118,14 +124,27 @@ mongoose
 	})
 	.then((x) => {
 		console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
+		//If phones collection does not exist, we created it, if it exist we don't create it again
+		conn.db.listCollections().toArray(function(err, collectionNames) {
+			if (
+				collectionNames
+					.map(function(e) {
+						return e.name;
+					})
+					.indexOf('phones') != -1
+			) {
+				console.log('DB Phones already created');
+				// console.log(collectionNames);
+			} else {
+				Phone.create(phones);
+				console.log('DB Phones created');
+			}
+			if (err) {
+				console.log(err);
+				return;
+			}
+		});
 	})
 	.catch((err) => {
 		console.error('Error connecting to mongo: ', err);
 	});
-
-// Hacer una vez creada, no haga nada sinó la cree
-// Phone.create(phones)
-// 	.then((x) => {
-// 		console.log(`Created phones DDBB`);
-// 	})
-// 	.catch((err) => console.error(`Following error occured: \n ${err}`));
