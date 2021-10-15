@@ -2,7 +2,7 @@ import { useParams } from 'react-router'
 import { useState, useEffect } from 'react'
 import PhonesService from '../../services/phones.service'
 import { Container } from 'react-bootstrap'
-// import img from '../../components/Images/PhonesImages'
+import img from '../../components/Images/PhonesImages'
 
 const phonesService = new PhonesService()
 
@@ -11,7 +11,6 @@ const PhoneDetailsPage = () => {
 
   const [phone, setPhone] = useState(undefined)
   const { id } = useParams()
-
 
   const getPhone = () => {
 
@@ -29,16 +28,16 @@ const PhoneDetailsPage = () => {
   return (
     <Container>
       {phone ?
-        <section>
+        <section style={{ display: 'flex', flexDirection: 'column'}}>
           <h1>{phone.name}</h1>
-          {/* <img src={} /> */}
-          <p><b>Manufacturer:</b>{phone.manufacturer}</p>
-          <p><b>Description:</b>{phone.description}</p>
-          <p><b>Color:</b>{phone.color}</p>
-          <p><b>Price:</b>${phone.price}</p>
-          <p><b>Screen:</b>{phone.screen}</p>
-          <p><b>Processor:</b>{phone.processor}</p>
-          <p><b>RAM:</b>{phone.ram}</p>
+          <img src={img[phone.imageFileName]} />
+          <p><b>Manufacturer:</b> {phone.manufacturer}</p>
+          <p><b>Description:</b> {phone.description}</p>
+          <p><b>Color:</b> {phone.color}</p>
+          <p><b>Price:</b> ${phone.price}</p>
+          <p><b>Screen:</b> {phone.screen}</p>
+          <p><b>Processor:</b> {phone.processor}</p>
+          <p><b>RAM:</b> {phone.ram}</p>
         </section>
         :
         <p>Not available.</p>
