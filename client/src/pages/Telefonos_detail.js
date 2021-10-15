@@ -59,7 +59,7 @@ function Phones() {
 							<div className="card marginBottom">
 								<img
 									className="card-img-top image-Phone"
-									src={'../../public/' + infoPhone.imageFileName}
+									src={'../../' + infoPhone.imageFileName}
 									alt="Phone"
 								/>
 								<div className="card-body">
