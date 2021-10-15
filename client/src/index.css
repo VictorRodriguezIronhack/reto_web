@@ -23,10 +23,10 @@ label {
 
 .SignupPage,
 .LoginPage {
-  background: #f9eec3;
+
   border: 1px solid grey;
   box-shadow: 0px 2px 3px grey;
-  width: 400px;
+  width: 50vw;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -150,4 +150,16 @@ label {
 .error-message{
   color:red;
   margin-top:10px;
+}
+
+.user__Name{
+  color:white;
+  padding:10px;
+  background-color: none;
+  background: none;
+  border:none;
+}
+
+.bolder{
+  font-weight: bold;
 }
