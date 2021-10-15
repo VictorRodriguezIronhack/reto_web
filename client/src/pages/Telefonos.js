@@ -31,16 +31,29 @@ function Phones() {
 	// by setting the empty dependency array - []
 	useEffect(() => {
 		getAllInfoPhones();
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
-		<div>
-			<h1>Phone Page</h1>
-			<div className="carousel__Div">
-				{isLoading ? (
-					infoPhones.map((infoPhone) => (
-						<div className="PhoneDiv__Container" key={infoPhone.idPhone}>
-							<div className="card-deck">
+		<div className="container_phones">
+			<nav aria-label="breadcrumb" className="navbar_breadcrumb">
+				<ol className="breadcrumb">
+					<li className="breadcrumb-item">
+						<a href="/">Home</a>
+					</li>
+					<li className="breadcrumb-item active" aria-current="page">
+						Phones
+					</li>
+				</ol>
+			</nav>
+			<h1 className="title_phones">Our phones</h1>
+
+			<div className="container">
+				<div className="row">
+					{isLoading ? (
+						infoPhones.map((infoPhone) => (
+							<div className="col-sm" key={infoPhone._id}>
 								<div className="card marginBottom">
 									<img
 										className="card-img-top image-Phone"
@@ -52,11 +65,7 @@ function Phones() {
 											{infoPhone.name} - {infoPhone.manufacturer}
 										</h3>
 										<p className="card-text noMargin infoTextPhone">{infoPhone.description}</p>
-										<p className="card-text noMargin">Color: {infoPhone.color}</p>
-										<p className="card-text noMargin">Screen: {infoPhone.screen}</p>
-										<p className="card-text noMargin">Processor: {infoPhone.processor}</p>
-										<p className="card-text noMargin">Ram: {infoPhone.ram}</p>
-										<p className="card-text noMargin boldText">
+										<p>
 											Price: <span className="greenText">{infoPhone.price}€</span>
 										</p>
 									</div>
@@ -69,13 +78,15 @@ function Phones() {
 									</div>
 								</div>
 							</div>
+						))
+					) : (
+						<div>
+							<Spinner animation="border" role="status" className="margin50__bottom margin50__top">
+								<span className="visually-hidden">Loading...</span>
+							</Spinner>
 						</div>
-					))
-				) : (
-					<Spinner animation="border" role="status" className="margin50__bottom margin50__top">
-						<span className="visually-hidden">Loading...</span>
-					</Spinner>
-				)}
+					)}
+				</div>
 			</div>
 		</div>
 	);
