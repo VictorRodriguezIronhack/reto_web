@@ -1,55 +1,51 @@
-import React, { Component } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { React, useState, useEffect } from 'react'
+import { Badge, Col, Container, Row, Spinner } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import PhoneService from '../../../services/phone.service'
 import './TelephoneDetails.css'
 
-export default class TelephoneDetails extends Component {
+export default function TelephoneDetails(props) {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            phone: []
-        }
-        this.phoneService = new PhoneService()
-    }
+    const phoneService = new PhoneService()
+    const [phone, setphone] = useState([])
 
-    componentDidMount() {
-        this.phoneService.findOnePhone(this.props.match.params.id)
-            .then(res => {
-                console.log(res)
-                this.setState({
-                    phone: res.data
-                })
+    const onePhone = () => {
+        phoneService.findOnePhone(props.match.params.id)
+            .then(phone => {
+                console.log(phone)
+                setphone(phone.data)
             })
             .catch(err => console.error(err))
     }
 
+    useEffect(() => {
+        onePhone()
+    }, [])
 
-    render() {
-        return (
-            this.state.phone ?
-                <Container className='details'>
-                    {this.state.phone.map(elm => {
-                        return (
-                            <Row>
-                                <Col >
-                                    <img className='image-details' src={elm.imageFileName} alt={elm.name} />
-                                </Col>
-                                <Col>
-                                    <p>{elm.name}</p>
-                                    <p>{elm.description}</p>
-                                    <p>{elm.manufacturer}</p>
-                                    <p>{elm.color}</p>
-                                    <p>{elm.processor}</p>
-                                    <p>{elm.screen}</p>
-                                    <p>{elm.price} €</p>
-                                </Col>
-                            </Row>
-                        )
-                    })}
-                </Container>
-                :
-                <div>...Cargando</div>
-        )
-    }
+    return (
+        phone ?
+            <Container className='details'>
+                {phone.map(elm => {
+                    return (
+                        <Row>
+                            <Col >
+                                <img className='image-details' src={elm.imageFileName} alt={elm.name} />
+                            </Col>
+                            <Col>
+                                <p>{elm.name}</p>
+                                <p>{elm.description}</p>
+                                <p>{elm.manufacturer}</p>
+                                <p>{elm.color}</p>
+                                <p>{elm.processor}</p>
+                                <p>{elm.screen}</p>
+                                <p>{elm.price} €</p>
+                                <Link to={'/telefonos'}><Badge pill bg="primary"> Volver </Badge></Link>
+                            </Col>
+                        </Row>
+                    )
+                })}
+            </Container>
+            :
+            <Spinner className='spinner' animation="border" />
+    )
 }

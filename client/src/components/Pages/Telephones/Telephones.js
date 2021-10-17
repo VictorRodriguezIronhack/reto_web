@@ -1,64 +1,56 @@
-import React, { Component } from 'react'
-import { Badge, Card, Col, Container, ListGroup, ListGroupItem, Row } from 'react-bootstrap'
+import { React, useState, useEffect } from 'react'
+import { Badge, Card, Col, Container, ListGroup, ListGroupItem, Row, Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import PhoneService from '../../../services/phone.service'
 import './Telephones.css'
 
-export default class Telephones extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            telephones: undefined
-        }
-        this.phoneService = new PhoneService()
-    }
+export default function Telephones() {
 
-    componentDidMount() {
-        this.phoneService.findAll()
-            .then(phone => {
-                console.log(phone.data)
-                this.setState({
-                    telephones: phone.data
-                })
+    const phoneService = new PhoneService()
+    const [telephones, setTelephones] = useState(undefined)
+
+    const phones = () => {
+        phoneService.findAll()
+            .then(telephones => {
+                setTelephones(telephones.data)
             })
             .catch(err => console.error(err))
     }
 
-    render() {
-        return (
+    useEffect(() => {
+        phones()
+    }, [])
 
-            this.state.telephones ?
-                <Container>
-                    <Row>
-                        {this.state.telephones.map(elm => {
+    return (
+        telephones ?
+            <Container>
+                <Row>
+                    {
+                        telephones?.map(elm => {
                             return (
                                 <Col xs={3} md={4}>
-                                    <Card className='card' style={{ width: '18rem' }} key={elm._id}>
-                                        <img classNAme='card-image' variant="top" src={elm.imageFileName} alt={elm.name} />
-                                        <Card.Body>
-                                            <Card.Title>{elm.name}</Card.Title>
-                                            <Card.Text>
-                                                {elm.description}
-                                            </Card.Text>
-                                        </Card.Body>
-                                        <ListGroup className="list-group-flush">
-                                            <ListGroupItem>{elm.manufacturer}</ListGroupItem>
-                                            <ListGroupItem>{elm.color}</ListGroupItem>
-                                            <ListGroupItem>{elm.price} €</ListGroupItem>
-                                        </ListGroup>
-                                        <Card.Body>
-                                            <Link to={`/detalles-telefono/${elm.id}`}><Badge pill bg="warning"> Detalles </Badge></Link>
-                                        </Card.Body>
-                                    </Card>
+                                    <div className="card-deck">
+                                        <Card className='card' style={{ width: '18rem' }, { height: '450px' }} key={elm._id}>
+                                            <div className="card-header p-0">
+                                                <img className='card-image' src={elm.imageFileName} width="100%" alt={elm.name} />
+                                            </div>
+                                            <div className="card-body text-center">
+                                                <h4>{elm.name}</h4>
+                                                <p>{elm.manufacturer}</p>
+                                                <p>{elm.color}</p>
+                                            </div>
+                                            <div className="card-footer">
+                                                <Link to={`/detalles-telefono/${elm.id}`}><Badge pill bg="warning"> Detalles </Badge></Link>
+                                            </div>
+                                        </Card>
+                                    </div>
                                 </Col>
                             )
                         })}
-                    </Row >
-                </Container >
-                :
-                <div>...Cargando</div>
-
-        )
-    }
+                </Row>
+            </Container >
+            :
+            <Spinner className='spinner' animation="border" />
+    )
 }
