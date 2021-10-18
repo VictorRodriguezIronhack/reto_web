@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-import { Badge, Card, Col, Container, ListGroup, ListGroupItem, Row, Spinner } from 'react-bootstrap'
+import { Badge, Card, Col, Container, Row, Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import PhoneService from '../../../services/phone.service'
 import './Telephones.css'
@@ -29,7 +29,7 @@ export default function Telephones() {
                     {
                         telephones?.map(elm => {
                             return (
-                                <Col xs={3} md={4}>
+                                <Col xs={12} sm={6} lg={4}>
                                     <div className="card-deck">
                                         <Card className='card' style={{ width: '18rem' }, { height: '450px' }} key={elm._id}>
                                             <div className="card-header p-0">
