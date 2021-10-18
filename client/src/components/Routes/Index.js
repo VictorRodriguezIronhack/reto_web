@@ -7,7 +7,7 @@ const Routes = () => {
     return (
 
         <Switch>
-            <Route exact path='/home' render={() => <HomePage />} />
+            <Route exact path='/' render={() => <HomePage />} />
             <Route exact path='/telefonos' render={(props) => <Telephones {...props} />} />
             <Route excat path='/detalles-telefono/:id' render={(props) => <TelephoneDetails {...props} />} />
         </Switch>
