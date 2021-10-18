@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+//CSS
+import './SignupPage.css';
+
+//Upload service - cloudinary
+import UploadService from '../../services/upload.service';
+import { Button, Spinner } from 'react-bootstrap';
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 function SignupPage(props) {
@@ -10,6 +17,10 @@ function SignupPage(props) {
 	const [ name, setName ] = useState('');
 	const [ errorMessage, setErrorMessage ] = useState(undefined);
 
+	//Cloudinary
+	const [ image, setImage ] = useState('');
+	const [ isLoading, setIsLoading ] = useState(false);
+
 	const handleEmail = (e) => setEmail(e.target.value);
 	const handlePassword = (e) => setPassword(e.target.value);
 	const handleName = (e) => setName(e.target.value);
@@ -17,7 +28,7 @@ function SignupPage(props) {
 	const handleSignupSubmit = (e) => {
 		e.preventDefault();
 		// Create an object representing the request body
-		const requestBody = { email, password, name };
+		const requestBody = { email, password, name, image };
 
 		// Make an axios request to the API
 		// If POST request is successful redirect to login page
@@ -29,6 +40,23 @@ function SignupPage(props) {
 				const errorDescription = error.response.data.message;
 				setErrorMessage(errorDescription);
 			});
+	};
+
+	const handleInputFile = (e) => {
+		setIsLoading(true);
+
+		const upload = new UploadService();
+
+		let formData = new FormData();
+		formData.append('file', e.target.files[0]);
+
+		upload
+			.fileUpload(formData)
+			.then((response) => {
+				setIsLoading(false);
+				setImage(response.data.imageUrl);
+			})
+			.catch((err) => console.log(err));
 	};
 
 	return (
@@ -52,9 +80,25 @@ function SignupPage(props) {
 					<label>Name</label>
 					<input type="text" name="name" value={name} onChange={handleName} className="form-control" />
 
-					<button type="submit" className="btn btn-success btn-signup-login">
-						Sign Up
-					</button>
+					<label>Avatar:</label>
+					<input type="file" name="file" onChange={handleInputFile} className="form-control" />
+					<div>
+						<div className="margin-topSmall">
+							{image ? (
+								<img src={image} alt="avatar" style={{ width: '40px' }} className="imageSignup" />
+							) : null}
+						</div>
+						{isLoading ? (
+							<Button variant="primary" disabled>
+								<Spinner as="span" animation="grow" size="sm" role="status" aria-hidden="true" />
+								Loading...
+							</Button>
+						) : (
+							<button type="submit" className="btn btn-success btn-signup-login">
+								Sign Up
+							</button>
+						)}
+					</div>
 				</div>
 			</form>
 

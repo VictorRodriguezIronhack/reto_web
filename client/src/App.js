@@ -1,16 +1,16 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+// import HomePage from './pages/HomePage';
 
 //Pagina telefonos
 import Phone from './pages/Telefonos';
 import PhoneDetails from './pages/Telefonos_detail';
 
-import SignupPage from './pages/SignupPage';
+import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage';
-// import PrivateRoute from './components/PrivateRoute'; // <== IMPORT
-import AnonRoute from './components/AnonRoute'; // <== IMPORT
+// import PrivateRoute from './components/PrivateRoute/PrivateRoute'; // <== IMPORT
+import AnonRoute from './components/AnonRoute/AnonRoute'; // <== IMPORT
 
 function App() {
 	return (
@@ -18,7 +18,10 @@ function App() {
 			<Navbar />
 
 			<Switch>
-				<Route exact path="/" component={HomePage} />
+				{/* <Route exact path="/" component={HomePage} /> */}
+				<Route exact path="/">
+					<Redirect to="/telefonos" />
+				</Route>
 				<Route exact path="/telefonos" component={Phone} />
 				<Route exact path="/telefonos/:id" component={PhoneDetails} />
 

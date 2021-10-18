@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 import { useContext } from 'react'; // <== IMPORT
-import { AuthContext } from './../context/auth.context'; // <== IMPORT
+import { AuthContext } from '../../context/auth.context'; // <== IMPORT
 
-function Navbar() {
+//Component CSS
+import './Navbar.css';
+
+function NavbarMenu() {
 	// Subscribe to the AuthContext to gain access to
 	// the values from AuthContext.Provider `value` prop
 	const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
@@ -11,19 +15,30 @@ function Navbar() {
 		<div className="navbar_container">
 			<nav className="navbarPhones navbarDouble">
 				<div>
-					<Link to="/">
+					{/* <Link to="/">
 						<button className="navbar_a_button">Home</button>
-					</Link>
+					</Link> */}
 					<Link to="/telefonos">
 						<button className="navbar_a_button">Phones</button>
 					</Link>
 				</div>
 				<div>
 					{isLoggedIn ? (
-						<div>
+						<div className="max__WidthNavbar">
 							<span className="user__Name">
 								Welcome, <span className="bolder">{user.name}</span>
 							</span>
+							{user.image ? (
+								<Nav.Link className="noPointer">
+									<img
+										src={user.image}
+										className="imgAvatar"
+										alt="avatar"
+										// onClick={toUserProfile}
+										style={{ pointerEvents: 'all' }}
+									/>
+								</Nav.Link>
+							) : null}
 							<button onClick={logOutUser} className="navbar_a_button">
 								Logout
 							</button>
@@ -44,4 +59,4 @@ function Navbar() {
 	);
 }
 
-export default Navbar;
+export default NavbarMenu;

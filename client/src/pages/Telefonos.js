@@ -1,5 +1,6 @@
 //Componentes
-import { Spinner } from 'react-bootstrap';
+import { Spinner, Container } from 'react-bootstrap';
+
 //Axios usage
 import axios from 'axios';
 //use Effect needed
@@ -40,11 +41,11 @@ function Phones() {
 			<nav aria-label="breadcrumb" className="navbar_breadcrumb">
 				<ol className="breadcrumb">
 					<li className="breadcrumb-item">
-						<a href="/">Home</a>
+						<a href="/telefonos">Phones</a>
 					</li>
-					<li className="breadcrumb-item active" aria-current="page">
+					{/* <li className="breadcrumb-item active" aria-current="page">
 						Phones
-					</li>
+					</li> */}
 				</ol>
 			</nav>
 			<h1 className="title_phones">Our phones</h1>
@@ -61,7 +62,7 @@ function Phones() {
 										alt="Phone"
 									/>
 									<div className="card-body">
-										<h3 className="card-title">
+										<h3 className="card-title title-roboto">
 											{infoPhone.name} - {infoPhone.manufacturer}
 										</h3>
 										<p className="card-text noMargin infoTextPhone">{infoPhone.description}</p>
@@ -81,9 +82,11 @@ function Phones() {
 						))
 					) : (
 						<div>
-							<Spinner animation="border" role="status" className="margin50__bottom margin50__top">
-								<span className="visually-hidden">Loading...</span>
-							</Spinner>
+							<Container>
+								<Spinner animation="border" role="status" className="margin50__bottom margin50__top">
+									<span className="visually-hidden">Loading...</span>
+								</Spinner>
+							</Container>
 						</div>
 					)}
 				</div>

@@ -41,11 +41,11 @@ function Phones() {
 			<nav aria-label="breadcrumb" className="navbar_breadcrumb">
 				<ol className="breadcrumb">
 					<li className="breadcrumb-item">
-						<a href="/">Home</a>
-					</li>
-					<li className="breadcrumb-item">
 						<a href="/telefonos">Phones</a>
 					</li>
+					{/* <li className="breadcrumb-item">
+						<a href="/telefonos">Phones</a>
+					</li> */}
 					<li className="breadcrumb-item active" aria-current="page">
 						Details
 					</li>
@@ -63,7 +63,7 @@ function Phones() {
 									alt="Phone"
 								/>
 								<div className="card-body">
-									<h3 className="card-title">
+									<h3 className="card-title title-roboto">
 										{infoPhone.name} - {infoPhone.manufacturer}
 									</h3>
 									<p className="card-text noMargin infoTextPhone">{infoPhone.description}</p>
