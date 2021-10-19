@@ -1,8 +1,21 @@
 <div align="center">
 <h1>Reto web - The phone cave</h1> 
 </div>
+
+# What did we do?
+- Created two models, one for users & one for phones (we used a DDBB)
+- MERN stack for the whole APP
+- Axios conection with the API
+- Bootstrap & React bootstrap for design
+- Node, mongoose and express as a backend
+- React as a frontend
+  - Components
+  - Hooks
+- Deployment using Heroku both client and server
+- BBDD with MongoDB Atlas
+
 <details>
-  <summary>Instrucciones de la prueba</summary>
+  <summary>Test instructions</summary>
 
 # Bienvenid@ al reto de The Phone Cave
 
@@ -55,10 +68,14 @@ Ahora bien, hablemos de el limite de entrega:
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno, si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
  </details>
 
+## You can play it from -> https://reto-web-phones-cli.herokuapp.com/telefonos
+---
+
 ## Server
 Install all dependencies with
 ``` npm i ```
-### Dependencies
+
+### :one: - Dependencies
 ```
 {
     "bcryptjs": "^2.4.3",
@@ -75,13 +92,18 @@ Install all dependencies with
     "multer-storage-cloudinary": "^4.0.0"
 }
 ```
-### Scripts
+
+### :two: - Scripts
 Run the server => node server.js || nodemon server.js </br>
 ``` npm start ```
 ``` npm run dev ```
 
+---
+
 ## Client
-### Dependencies
+Install all dependencies with
+``` npm i ```
+### :one: - Dependencies
 ```
 {
     "@testing-library/jest-dom": "^5.11.4",
@@ -97,6 +119,6 @@ Run the server => node server.js || nodemon server.js </br>
     "web-vitals": "^1.0.1"
   }
   ```
-### Scripts
+### :two: - Scripts
 Run the client => react-scripts start </br>
 ``` npm start ```
