@@ -2,14 +2,12 @@ require("dotenv/config");
 
 require("./db");
 
-
 const express = require("express");
-
-const hbs = require("hbs");
 
 const app = express();
 
 require("./config")(app);
+require("./config/session.config")(app)
 require("./config/cors.config")(app);
 
 const projectName = "server";

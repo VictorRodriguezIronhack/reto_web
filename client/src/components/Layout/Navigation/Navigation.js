@@ -1,8 +1,17 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import AuthService from '../../../services/auth.service'
+import './Navigation.css'
 
+const authService = new AuthService()
 
-export default function () {
+export default function (props) {
+
+    const logout = () => {
+        authService.logout()
+            .then(() => props.storeUser(null))
+            .catch(err => console.error(err))
+    }
     return (
         <div>
             <Navbar bg="dark" variant="dark">
@@ -14,6 +23,24 @@ export default function () {
                     <Nav className="me-auto">
                         <Nav.Link href='/telefonos'>Telefonos</Nav.Link >
                     </Nav>
+
+                    {props.loggedUser &&
+                        <>
+                            <span className='logout' onClick={logout}>Logout</span>
+                            <Nav.Link href="/perfil"> Mi perfil</Nav.Link>
+                        </>
+                    }
+
+                    {!props.loggedUser &&
+                        <>
+                            <Nav>
+                                <Nav.Link href='/registro'>Registro</Nav.Link >
+                            </Nav>
+                            <Nav>
+                                <Nav.Link href='/iniciar-sesion'>Iniciar sesión</Nav.Link >
+                            </Nav>
+                        </>
+                    }
                 </Container>
             </Navbar>
         </div>
