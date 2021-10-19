@@ -27,19 +27,19 @@ function Phones() {
   }, []);
 
   return (
-    <div className="col-4 scroll">
+    <div className="container">
       {phoneList?.length === 0 ? (
         <h1>Loading...</h1>
       ) : (
-        <>
-          <h1>PHONES:</h1>
+        <div className="info">
+          <h2>Our Stock</h2>
+          <p>Check your favorite model's details</p>
           {phoneList?.map((phone) => (
             <>
               <Phone phone={phone} />
             </>
           ))}
-
-        </>
+        </div>
       )}
     </div>
   );
