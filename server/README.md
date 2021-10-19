@@ -39,7 +39,7 @@ For the CLIENT side, check it <a href="https://github.com/AitorSantaeugenia/reto
 
 ```js
 {
-  idPhone: { type: Number, unique: true },
+      idPhone: { type: Number, unique: true },
 	name: String,
 	manufacturer: String,
 	description: String,
@@ -52,7 +52,7 @@ For the CLIENT side, check it <a href="https://github.com/AitorSantaeugenia/reto
 }
 ```
 
-##### User Model
+##### User
 
 ```js
 {
