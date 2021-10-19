@@ -1,6 +1,16 @@
-### API Documentation
 
-We will start our project by first documenting all of the routes and data models for our API. Following best practices we will use _verbs_ to specify the type of operation being done and _nouns_ when naming endpoints.
+<div align="center">
+<h1>Reto web - The phone cave</h1> 
+</div>
+
+For the CLIENT side, check it <a href="https://github.com/AitorSantaeugenia/reto_web/tree/main/client">here</a>
+
+### SERVER side
+
+- NodeJS | ExpressJS and MongoDB
+- Routes and models created. 
+
+---
 
 #### Routes
 
@@ -8,22 +18,8 @@ We will start our project by first documenting all of the routes and data models
 
 | HTTP verb | URL                        | Request body | Action                        |
 | --------- | -------------------------- | ------------ | ----------------------------- |
-| GET       | `/api/projects`            | (empty)      | Returns all the projects      |
-| POST      | `/api/projects`            | JSON         | Adds a new project            |
-| GET       | `/api/projects/:projectId` | (empty)      | Returns the specified project |
-| PUT       | `/api/projects/:projectId` | JSON         | Edits the specified project   |
-| DELETE    | `/api/projects/:projectId` | (empty)      | Deletes the specified project |
-
-##### Task routes
-
-| HTTP verb | URL                  | Request body | Action                     |
-| --------- | -------------------- | ------------ | -------------------------- |
-| POST      | `/api/tasks`         | JSON         | Adds a new task            |
-| GET       | `/api/tasks/:taskId` | (empty)      | Returns the specified task |
-| PUT       | `/api/tasks/:taskId` | JSON         | Edits the specified task   |
-| DELETE    | `/api/tasks/:taskId` | (empty)      | Deletes the specified task |
-
-
+| GET       | `/api/telefonos`           | (empty)      | Returns all the phones        |
+| GET       | `/api/telefonos/:phoneID`  | (empty)      | Returns the specified phone   |
 
 ##### Auth routes
 
@@ -39,23 +35,20 @@ We will start our project by first documenting all of the routes and data models
 
 #### Models
 
-##### Project Model
+##### Phone
 
 ```js
 {
-  title: String,
-  description: String,
-  tasks: [ { type: Schema.Types.ObjectId, ref: 'Task' } ]
-}
-```
-
-##### Task Model
-
-```js
-{
-  title: String,
-  description: String,
-  project: { type: Schema.Types.ObjectId, ref: 'Project' }
+  idPhone: { type: Number, unique: true },
+	name: String,
+	manufacturer: String,
+	description: String,
+	color: String,
+	price: Number,
+	imageFileName: String,
+	screen: String,
+	processor: String,
+	ram: Number
 }
 ```
 
@@ -63,9 +56,10 @@ We will start our project by first documenting all of the routes and data models
 
 ```js
 {
-  email: { type: String, unique: true, required: true },
-  password: { type: String, required: true },
-  name: { type: String, required: true },
+	email: { type: String, unique: true, required: true },
+	password: { type: String, required: true },
+	name: { type: String, required: true },
+	image: String
 }
 ```
 

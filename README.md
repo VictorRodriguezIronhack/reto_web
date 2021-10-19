@@ -13,6 +13,8 @@
   - Hooks
 - Deployment using Heroku both client and server
 - BBDD with MongoDB Atlas
+- JWT for Signup & Login
+- Profile picture using Cloudinary
 
 <details>
   <summary>Test instructions</summary>
@@ -68,7 +70,7 @@ Ahora bien, hablemos de el limite de entrega:
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno, si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
  </details>
 
-## You can play it at <a href="https://reto-web-phones-cli.herokuapp.com/telefonos">heroku</a>
+## You can play with it at <a href="https://reto-web-phones-cli.herokuapp.com/telefonos">heroku</a>
 ---
 
 ## Server
