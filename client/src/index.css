@@ -137,3 +137,19 @@ label {
 .bolder{
   font-weight: bold;
 }
+
+.button_phones{
+  color:White;
+  text-decoration: none;
+}
+
+.button_phones:hover{
+  color:White;
+  text-decoration: none;
+}
+
+.navlink__a{
+    display: inherit;
+    padding:0 !important; 
+}
+

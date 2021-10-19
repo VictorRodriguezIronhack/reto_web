@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import { useContext } from 'react'; // <== IMPORT
 import { AuthContext } from '../../context/auth.context'; // <== IMPORT
+//history
+import { useHistory } from 'react-router-dom';
 
 //Component CSS
 import './Navbar.css';
@@ -11,6 +12,21 @@ function NavbarMenu() {
 	// the values from AuthContext.Provider `value` prop
 	const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
+	//use history without redirects
+	const history = useHistory();
+
+	const toPhones = (e) => {
+		history.push('/telefonos');
+	};
+
+	const toSignup = (e) => {
+		history.push('/signup');
+	};
+
+	const toLogin = (e) => {
+		history.push('/login');
+	};
+
 	return (
 		<div className="navbar_container">
 			<nav className="navbarPhones navbarDouble">
@@ -18,9 +34,9 @@ function NavbarMenu() {
 					{/* <Link to="/">
 						<button className="navbar_a_button">Home</button>
 					</Link> */}
-					<Link to="/telefonos">
-						<button className="navbar_a_button">Phones</button>
-					</Link>
+					<Nav.Link className="navbar_a_button" onClick={(e) => toPhones(e)}>
+						Phones
+					</Nav.Link>
 				</div>
 				<div>
 					{isLoggedIn ? (
@@ -39,18 +55,18 @@ function NavbarMenu() {
 									/>
 								</Nav.Link>
 							) : null}
-							<button onClick={logOutUser} className="navbar_a_button">
+							<Nav.Link className="navbar_a_button" onClick={logOutUser}>
 								Logout
-							</button>
+							</Nav.Link>
 						</div>
 					) : (
-						<div>
-							<Link to="/signup">
-								<button className="navbar_a_button">Signup</button>
-							</Link>
-							<Link to="/login">
-								<button className="navbar_a_button">Login</button>
-							</Link>
+						<div className="divLogin-Signup">
+							<Nav.Link className="navbar_a_button" onClick={toSignup}>
+								Signup
+							</Nav.Link>
+							<Nav.Link className="navbar_a_button" onClick={toLogin}>
+								Login
+							</Nav.Link>
 						</div>
 					)}
 				</div>

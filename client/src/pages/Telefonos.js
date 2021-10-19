@@ -1,10 +1,13 @@
 //Componentes
-import { Spinner, Container } from 'react-bootstrap';
+import { Spinner, Container, Nav } from 'react-bootstrap';
 
 //Axios usage
 import axios from 'axios';
 //use Effect needed
 import { useEffect, useState } from 'react';
+
+//history
+import { useHistory } from 'react-router-dom';
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -12,6 +15,13 @@ function Phones() {
 	//Coming from GET
 	const [ infoPhones, setInfoPhones ] = useState([]);
 	const [ isLoading, setIsLoading ] = useState(false);
+
+	//use history without redirects
+	const history = useHistory();
+
+	const toPhoneDetail = (id, e) => {
+		history.push('/telefonos/' + id);
+	};
 
 	const getAllInfoPhones = () => {
 		// Get the token from the localStorage
@@ -40,9 +50,7 @@ function Phones() {
 		<div className="container_phones">
 			<nav aria-label="breadcrumb" className="navbar_breadcrumb">
 				<ol className="breadcrumb">
-					<li className="breadcrumb-item">
-						<a href="/telefonos">Phones</a>
-					</li>
+					<li className="breadcrumb-item active">Phones</li>
 					{/* <li className="breadcrumb-item active" aria-current="page">
 						Phones
 					</li> */}
@@ -72,9 +80,13 @@ function Phones() {
 									</div>
 									<div className="card-footer">
 										<small className="text-muted">
-											<a className="btn btn-danger" href={/telefonos/ + infoPhone._id}>
+											<Nav.Link
+												id={infoPhone._id}
+												onClick={(e) => toPhoneDetail(infoPhone._id, e)}
+												className="btn btn-danger button_phones"
+											>
 												Details
-											</a>
+											</Nav.Link>
 										</small>
 									</div>
 								</div>

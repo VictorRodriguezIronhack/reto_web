@@ -1,10 +1,12 @@
 //Componentes
-import { Spinner } from 'react-bootstrap';
+import { Spinner, Nav } from 'react-bootstrap';
 //Axios usage
 import axios from 'axios';
 //use Effect needed
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+//history
+import { useHistory } from 'react-router-dom';
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -13,6 +15,13 @@ function Phones() {
 	const [ infoPhone, setInfoPhone ] = useState([]);
 	const [ isLoading, setIsLoading ] = useState(false);
 	const { id } = useParams();
+
+	//use history without redirects
+	const history = useHistory();
+
+	const toPhones = (e) => {
+		history.push('/telefonos');
+	};
 
 	const getInfoPhone = () => {
 		// Get the token from the localStorage
@@ -41,7 +50,9 @@ function Phones() {
 			<nav aria-label="breadcrumb" className="navbar_breadcrumb">
 				<ol className="breadcrumb">
 					<li className="breadcrumb-item">
-						<a href="/telefonos">Phones</a>
+						<Nav.Link onClick={(e) => toPhones(e)} className="navlink__a">
+							Phones
+						</Nav.Link>
 					</li>
 					{/* <li className="breadcrumb-item">
 						<a href="/telefonos">Phones</a>

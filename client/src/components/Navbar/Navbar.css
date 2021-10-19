@@ -41,6 +41,13 @@
 	max-width:100%;
 	min-width:100%;
 	display: flex;
-justify-content:center;
-align-items: center;
+	justify-content:center;
+	align-items: center;
   }
+
+  .divLogin-Signup{
+	display:flex !important;
+	max-width:300px;
+	min-width:300px;
+	justify-content: right;
+}

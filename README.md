@@ -1,3 +1,9 @@
+<div align="center">
+<h1>Reto web - The phone cave</h1> 
+</div>
+<details>
+  <summary>Instrucciones de la prueba</summary>
+
 # Bienvenid@ al reto de The Phone Cave
 
 En The Phone Cave estamos buscando a esa persona que nos ayude a convertir nuestra tienda cueva en casa y para ello os presentamos este reto.
@@ -47,3 +53,50 @@ Ahora bien, hablemos de el limite de entrega:
 
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno, si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+ </details>
+
+## Server
+Install all dependencies with
+``` npm i ```
+### Dependencies
+```
+{
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.27.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "multer-storage-cloudinary": "^4.0.0"
+}
+```
+### Scripts
+Run the server => node server.js || nodemon server.js </br>
+``` npm start ```
+``` npm run dev ```
+
+## Client
+### Dependencies
+```
+{
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-rc.0",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  }
+  ```
+### Scripts
+Run the client => react-scripts start </br>
+``` npm start ```
