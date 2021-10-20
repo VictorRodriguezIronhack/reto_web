@@ -11,7 +11,11 @@ function Phone({ phone }) {
 
   return (
     <>
-      <article className={isClicked ? "question2" : "question"}>
+      <article
+        onClick={handleClick}
+        className={isClicked ? "question2" : "question"}
+        style={{ cursor: "pointer" }}
+      >
         {!isClicked ? (
           <>
             <img
@@ -35,15 +39,16 @@ function Phone({ phone }) {
             <ul>
               <h3>{phone.name}</h3>
               <p>{phone.manufacturer}</p>
+              <p>{phone.description}</p>
               <li>color: {phone.color}</li>
               <li>${phone.price}</li>
               <li>Display: {phone.screen}</li>
               <li>Processor: {phone.processor}</li>
               <li>Ram: {phone.ram}</li>
             </ul>
-              <button className="btn" onClick={handleClick}>
-                {isClicked ? <AiOutlineMinus /> : <AiOutlinePlus />}
-              </button>
+            <button className="btn" onClick={handleClick}>
+              {isClicked ? <AiOutlineMinus /> : <AiOutlinePlus />}
+            </button>
           </div>
         ) : null}
       </article>{" "}

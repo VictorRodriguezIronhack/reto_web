@@ -1,16 +1,17 @@
 import "../App.css";
-import Button from "react-router-dom"
-
 
 function HomePage() {
- 
   return (
-    <div className="App">
+    <>
+    <div className="container2">
       <header className="App-header">
-       <h1>Welcome</h1> 
-       <a href="/phones">List</a>
+        <h1>Phoney</h1>
+        <a className="link" href="/phones">
+          Check our Products!
+        </a>
       </header>
     </div>
+    </>
   );
 }
 

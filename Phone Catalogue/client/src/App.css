@@ -61,8 +61,8 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--clr-purple);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -122,7 +122,11 @@ p {
     line-height: 1;
   }
 }
+
 /*  global classes */
+/* Navbar */
+
+
 
 /* section */
 .section {
@@ -151,22 +155,22 @@ main {
   align-items: center;
 }
 
-.container {
+.container2 {
   width: 90vw;
   margin: 5rem auto;
   background: var(--clr-white);
   border-radius: var(--radius);
   padding: 2.5rem 2rem;
   max-width: var(--fixed-width);
-  display:inline;
+  display: inline;
   gap: 1rem 2rem;
 }
-.container h3 {
+.container2 h3 {
   line-height: 1.2;
   font-weight: 500;
 }
 @media screen and (min-width: 992px) {
-  .container {
+  .container2 {
     display: list-item;
     grid-template-columns: 250px 1fr;
   }
@@ -181,7 +185,7 @@ main {
   justify-content: space-around;
   align-items: center;
 }
-.question2{
+.question2 {
   padding: 1rem 1.5rem;
   border: 2px solid var(--clr-grey-special);
   margin-bottom: 1rem;
@@ -193,9 +197,24 @@ main {
   align-items: center;
 }
 
-
-#details{
-width: 80%;
+.link {
+  text-decoration: none;
+  color: hsl(205, 100%, 96%);
+  background-color: hsl(205, 86%, 17%);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  line-height: 100px;
+}
+.App-header {
+  text-align: center;
+}
+.espec div button{
+  text-align: left;
+  text-transform: capitalize;
+}
+#details {
+  width: 80%;
   /* padding: 1rem 1.5rem; */
   margin-bottom: 1rem;
   display: flex;
@@ -204,24 +223,25 @@ width: 80%;
   transition: all 0.5s ease-out;
   overflow: hidden;
 }
-#details ul{
-  text-align: right;
+#details ul {
+  text-align: left;
   text-transform: capitalize;
   font-size: 12px;
 }
 
 .ModalOpen {
-    animation: openModal 0.4s ease-out forwards;
+  animation: openModal 0.4s ease-out forwards;
 }
 
 @keyframes openModal {
-    0% { 
-    transform: translateX(-15%); 
-  transform: translate3d(45%);}
-    100% { transform: translateY(0);   }
+  0% {
+    transform: translateX(-15%);
+    transform: translate3d(45%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-
-
 
 .question h4 {
   text-transform: none;
