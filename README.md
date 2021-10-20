@@ -77,7 +77,6 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
 
 <details>
   <summary>Server details</summary>
-</br>
 
 ---
 
@@ -174,7 +173,6 @@ Run the server => node server.js || nodemon server.js </br>
 
 <details>
   <summary>Client details</summary>
-</br>
 
 ---
 
