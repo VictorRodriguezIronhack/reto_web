@@ -78,6 +78,9 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
 <details>
   <summary>Server details</summary>
 </br>
+
+---
+
 Check the server <a href="https://github.com/AitorSantaeugenia/reto_web/tree/main/server">here</a>
   
 - NodeJS | ExpressJS and MongoDB
@@ -133,6 +136,9 @@ Check the server <a href="https://github.com/AitorSantaeugenia/reto_web/tree/mai
 	image: String
 }
 ```
+
+---
+
 </details>
 
 
@@ -170,12 +176,16 @@ Run the server => node server.js || nodemon server.js </br>
   <summary>Client details</summary>
 </br>
 
+---
+
 Check the client <a href="https://github.com/AitorSantaeugenia/reto_web/tree/main/client">here</a>
 
 - ReactJS as a frontend
     - Hooks
     - Components 
 - Bootstrap and react-bootstrap for the design
+
+---
 
 </details>
 
