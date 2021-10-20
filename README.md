@@ -74,6 +74,68 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
 ---
 
 ## Server
+
+<details>
+  <summary>Server details</summary>
+</br>
+Check the server info <a href="https://github.com/AitorSantaeugenia/reto_web/tree/main/server">here</a>
+  
+- NodeJS | ExpressJS and MongoDB
+- Routes and models created. 
+
+#### Routes
+
+##### Project routes
+
+| HTTP verb | URL                        | Request body | Action                        |
+| --------- | -------------------------- | ------------ | ----------------------------- |
+| GET       | `/api/telefonos`           | (empty)      | Returns all the phones        |
+| GET       | `/api/telefonos/:phoneID`  | (empty)      | Returns the specified phone   |
+
+##### Auth routes
+
+| HTTP verb | URL            | Request Headers                 | Request Body              |
+| --------- | -------------- | ------------------------------- | ------------------------- |
+| POST      | `/auth/signup` | --                              | { email, password, name } |
+| POST      | `/auth/login`  | --                              | { email, password }       |
+| GET       | `/auth/verify` | Authorization: Bearer \< JWT \> | --                        |
+
+
+
+<hr>
+
+#### Models
+
+##### Phone
+
+```js
+{
+        idPhone: { type: Number, unique: true },
+	name: String,
+	manufacturer: String,
+	description: String,
+	color: String,
+	price: Number,
+	imageFileName: String,
+	screen: String,
+	processor: String,
+	ram: Number
+}
+```
+
+##### User
+
+```js
+{
+	email: { type: String, unique: true, required: true },
+	password: { type: String, required: true },
+	name: { type: String, required: true },
+	image: String
+}
+```
+</details>
+
+
 Install all dependencies with
 ``` npm i ```
 
@@ -103,6 +165,18 @@ Run the server => node server.js || nodemon server.js </br>
 ---
 
 ## Client
+
+<details>
+  <summary>Client details</summary>
+</br>
+
+- ReactJS as a frontend
+    - Hooks
+    - Components 
+- Bootstrap and react-bootstrap for the design
+
+</details>
+
 Install all dependencies with
 ``` npm i ```
 ### :one: - Dependencies

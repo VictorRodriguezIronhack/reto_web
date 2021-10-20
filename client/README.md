@@ -7,4 +7,6 @@ For the SERVER side, check it <a href="https://github.com/AitorSantaeugenia/reto
 ### CLIENT side
 
 - ReactJS as a frontend
+    - Hooks
+    - Components 
 - Bootstrap and react-bootstrap for the design
