@@ -140,7 +140,7 @@ Install all dependencies with
 ``` npm i ```
 
 ### :one: - Dependencies
-```
+```js
 {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.27.1",
@@ -182,7 +182,7 @@ Check the client <a href="https://github.com/AitorSantaeugenia/reto_web/tree/mai
 Install all dependencies with
 ``` npm i ```
 ### :one: - Dependencies
-```
+```js
 {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
