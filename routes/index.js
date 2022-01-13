@@ -1,9 +1,9 @@
-import express from 'express';
+const  express  = require("express");
 const router = express.Router();
-const  phonsesJson = 
+const  phonsesJson =  require('../phones.json')
  router.get('/', (req, res)=>{
-
+   console.log(phonsesJson)
+   res.json({messgae :"OK", data :phonsesJson })
  })
 
-
-export default router;
+module.exports= router;
