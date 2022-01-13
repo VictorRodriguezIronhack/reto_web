@@ -1,49 +1,100 @@
-# Bienvenid@ al reto de The Phone Cave
+# Título del Proyecto
 
-En The Phone Cave estamos buscando a esa persona que nos ayude a convertir nuestra tienda cueva en casa y para ello os presentamos este reto.
+_Acá va un párrafo que describa lo que es el proyecto_
 
-##### El reto (3 primeras horas)
+## Comenzando 🚀
 
-Tu tarea es escribir una aplicación de catálogo de telefonos. Los requisitos mínimos para que aceptar tu código son los siguientes:
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-1. Escribir una API REST en el lenguaje que te resulte más cómodo (NodeJS, Rails, Java) que cumpla con lo siguientes objetivos:
- - 1 endpoint `/teléfonos`
- - Devuelve la carga adjunta "phones.json"
- - No hay necesidad de una capa de persistencia (BBDD). 
-2. Escribir una aplicación de React que muestre los teléfonos de la API:
- - Utilice Axios (o una biblioteca similar) para obtener datos de la API REST.
- - Mostrar una lista inicial con todos los teléfonos
- - Cuando se selecciona un modelo de teléfono de la lista, se muestra una vista detallada del teléfono que muestra algunos detalles sobre el mismo.
- - Mostrar un componente tipo spinner o de marcador de posición mientras la solicitud de la API está en curso. (simular si no existen tiempos de carga)
- - Haz que se vea decente. No hay necesidad de un diseño súper sofisticado, pero como mínimo, hazlo algo sensible para que no se vea terrible en un teléfono móvil. Añade imágenes para cada dispositivo.
-3. Entrega tu resultado vía PR.
-
-##### Los bonus (7 próximos días)
-Como habrás podido comprobar esta aplicación es muy sencilla, pero no te vamos a mentir nos gustaria verte desplegar todo tu arsenal de armas, así pues si sabes:
-
-- Typescript
-- GraphQL
-- Mongo
-- Redux
-- Hooks
-- Styled Components
-- Docker
-- Eres capaz de subir a producción la página
-- ...
-
-Los límites los pones TU:
-
- - Puedes hacer una API compleja, añadir login, un carrito de la compra...
- - Puedes maquetarlo en exclusiva para movil a modo de app...
-
-Ahora bien, hablemos de el limite de entrega:
-
-- Queremos ver una PR tres horas despues de que haya comenzado el reto. En ella deben de estar los objetivos básicos descritos en el punto El Reto.
-- Una vez enviada esa PR tendrás una semana para completar los bonus de la app y convertirla en tu proyecto soñado.
+Mira **Deployment** para conocer como desplegar el proyecto.
 
 
-- En el supuesto de que transcurridas las tres horas no tengas los objetivos del MVP listos envia la PR indistintamente. Se trata de un reto de velocidad.
-- No se aceptaran PR en el día 7 si no se hizo la PR a las tres horas. Un reto complementa al anterior aunque se evaluen por separado.
+### Pre-requisitos 📋
 
+_Que cosas necesitas para instalar el software y como instalarlas_
 
-Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno, si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+```
+Da un ejemplo
+```
+
+### Instalación 🔧
+
+_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+
+_Dí cómo será ese paso_
+
+```
+Da un ejemplo
+```
+
+_Y repite_
+
+```
+hasta finalizar
+```
+
+_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+
+## Ejecutando las pruebas ⚙️
+
+_Explica como ejecutar las pruebas automatizadas para este sistema_
+
+### Analice las pruebas end-to-end 🔩
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+### Y las pruebas de estilo de codificación ⌨️
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+## Despliegue 📦
+
+_Agrega notas adicionales sobre como hacer deploy_
+
+## Construido con 🛠️
+
+_Menciona las herramientas que utilizaste para crear tu proyecto_
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+* [Maven](https://maven.apache.org/) - Manejador de dependencias
+* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+
+## Contribuyendo 🖇️
+
+Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+
+## Wiki 📖
+
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+
+## Versionado 📌
+
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+
+## Autores ✒️
+
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+
+* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
+* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* etc.
