@@ -1,0 +1,26 @@
+{
+  "name": "reto_web",
+  "version": "1.0.0",
+  "description": "En The Phone Cave estamos buscando a esa persona que nos ayude a convertir nuestra tienda cueva en casa y para ello os presentamos este reto.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaselJam/reto_web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaselJam/reto_web/issues"
+  },
+  "homepage": "https://github.com/RaselJam/reto_web#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
