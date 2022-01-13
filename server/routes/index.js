@@ -1,4 +1,4 @@
 module.exports = app => {
-	app.use("/api/teléfonos", require("./phones.routes"));
+	app.use("/api/telefonos", require("./phones.routes"));
 
 }
