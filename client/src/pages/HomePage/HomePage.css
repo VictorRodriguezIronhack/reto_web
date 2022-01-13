@@ -1,0 +1,23 @@
+#HomePageBackGround {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    opacity: 20%;
+    background-repeat: repeat;
+}
+
+#HomePageBackGround img {
+    position: absolute;
+    width: 200%; 
+    height: 200%;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+}
