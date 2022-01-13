@@ -10,7 +10,7 @@
 
 `npm run dev`
 
-### .env variables needed
+### .env variables
 
 - PORT=5005
 - ORIGIN=http://localhost:3000
@@ -25,6 +25,6 @@
 
 `npm run start`
 
-### .env variables needed
+### .env variables
 
 - REACT_APP_API_URL=http://localhost:5005/api
