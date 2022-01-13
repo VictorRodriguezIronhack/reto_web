@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Spinner } from "react-bootstrap";
 import PhonesContainer from "../../components/PhonesContainer/PhonesContainer";
 import { getPhones } from "../../services/phones";
 import Phone from "../Phone/Phone";
@@ -20,6 +20,11 @@ const Home = () => {
   }, []);
   return (
     <Container>
+      {isLoading && (
+        <div className="mt-5">
+          <Spinner animation="border"></Spinner>
+        </div>
+      )}
       {!isLoading && (
         <>
           <PhonesContainer phones={phones} />
