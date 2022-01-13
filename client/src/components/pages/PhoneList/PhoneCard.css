@@ -1,0 +1,19 @@
+.phone-card {
+    margin-bottom: 40px;
+}
+
+.phone-card h3 {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.phone-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-button {
+    display: flex;
+    justify-content: space-around;
+}
