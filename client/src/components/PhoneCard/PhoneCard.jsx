@@ -1,6 +1,8 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+import "./PhoneCard.css";
+
 const PhoneCard = ({ phone }) => {
   return (
     <Link
@@ -8,8 +10,9 @@ const PhoneCard = ({ phone }) => {
       to={`/phone/${phone.id}`}
       state={{ phone: phone }}
     >
-      <Card className="h-100">
+      <Card className="h-100 shadow ">
         <Card.Img
+          className="card-image"
           variant="top"
           src={require(`../../assets/images/${phone.imageFileName}`)}
         />
