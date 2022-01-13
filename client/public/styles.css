@@ -1,0 +1,11 @@
+body {
+    background-color: #282c34;
+}
+ul {
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: space-around;
+    list-style: none;
+    
+
+}
