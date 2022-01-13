@@ -1,0 +1,14 @@
+.PhoneView {
+  margin-top: 1em;
+  text-align: left;
+}
+
+.PhoneView .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PhoneView img {
+    max-width: 100%;
+}

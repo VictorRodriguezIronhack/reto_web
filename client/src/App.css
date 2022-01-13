@@ -1,0 +1,7 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+  padding: 1em;
+  width: 100vw;
+}
