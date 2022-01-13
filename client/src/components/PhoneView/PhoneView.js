@@ -1,28 +1,43 @@
 import React from 'react';
-import { Card, Col } from 'antd';
+import { Col, Row } from 'antd';
 import './PhoneView.css';
 
 const PhoneView = (props) => {
   const phone = props.phone;
   return (
-    <div className="PhoneView">
-      <Col>
-        <Card style={{ width: 230, height: 300, margin: 10 }}>
-          <img src={phone.image_url} height={60} alt="phone" />
+    <div className='PhoneView'>
+      <Row >
+        <Col  span={12} >
+          <img src={`/image/${phone.imageFileName}`} alt="phone" />
+        </Col>
+        <Col  span={12} >
           <div className="box">
             <h3>{phone.name}</h3>
-            <span>{phone.attenuation_level}</span>
+            <span>{phone.manufacturer}</span>
           </div>
 
           <div className="box">
-            <h5>{phone.tagline}</h5>
-            <span>{phone.first_brewed}</span>
+            <h5>{phone.price}€</h5>
+            <span>Color: {phone.color}</span>
           </div>
 
           <p>{phone.description}</p>
-          <p>Created by: {phone.contributed_by}</p>
-        </Card>
-      </Col>
+          <ul>
+            <li>
+              <b>Screen: </b>
+              {phone.screen}
+            </li>
+            <li>
+              <b>Processor: </b>
+              {phone.processor}
+            </li>
+            <li>
+              <b>Ram: </b>
+              {phone.ram}
+            </li>
+          </ul>
+        </Col>
+      </Row>
     </div>
   );
 };

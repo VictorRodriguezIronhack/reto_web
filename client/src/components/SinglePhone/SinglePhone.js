@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import Header from '../Header/Header';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import PhoneView from '../PhoneView/PhoneView';
+import BackButton from '../BackButton/BackButton';
+import "./SinglePhone.css";
 
 
 const SinglePhone = () => {
@@ -12,15 +13,15 @@ const SinglePhone = () => {
 
   useEffect(() => {
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/${params.id}`)
+      .get(`http://localhost:5005/api/phones/${params.id}`)
       .then((response) => {
         setPhone(response.data);
       });
   }, []);
 
   return (
-    <div>
-      <Header />
+    <div className='SinglePhone'>
+      <BackButton />
       <PhoneView phone={phone}/>
     </div>
   );
