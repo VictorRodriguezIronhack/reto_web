@@ -1,0 +1,16 @@
+{
+  "name": "API-REST-DEV",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "json-server --watch phones.json",
+    "serverJS" : "json-server -p 4000 phones.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}
