@@ -1,10 +1,10 @@
 
 const mongoose = require("mongoose");
 
-const MONGO_URL = process.env.MONGO_URL
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost/phonecave"
 
 mongoose
-  .connect(MONGO_URL)
+  .connect(MONGO_URI)
   .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`

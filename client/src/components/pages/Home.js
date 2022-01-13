@@ -19,12 +19,12 @@ const Home = () => {
         ram: undefined,
     });
 
-    const PhoneService = new PhoneService();
+    const phoneService = new PhoneService();
 
     useEffect(() => refreshPhones(), []);
 
     const refreshPhones = () => {
-        PhoneService.getAllPhones()
+        phoneService.getAllPhones()
             .then(response => {
                 const phones = response.data;
                 setPhones(phones);
@@ -56,4 +56,6 @@ const Home = () => {
     </>
     );
     
-}
+};
+
+export default Home;
