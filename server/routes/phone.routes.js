@@ -4,7 +4,7 @@ const Phone = require("../models/Phone.model");
 router.get("/", (req, res) => {
     Phone.find()
         .then(allPhones => res.json(allPhones))
-        .then(console.log("holi------"))
+        .then(console.log(">>>>>>>>>>>>>>>>>>>>>>PHONES"))
         .catch(err => res.json({err, errMessage: "Phones not found"}));
 });
 
