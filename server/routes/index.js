@@ -1,5 +1,5 @@
 const router = require('express').Router()
 
-router.use('/telefonos', require('.phones.routes'))
+router.use('/telefonos', require('./phone.routes'))
 
 module.exports = router

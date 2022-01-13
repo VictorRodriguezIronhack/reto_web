@@ -10,3 +10,5 @@ router.get('/:id', (req, res) => {
   const phone = data.filter((elm) => elm.id == id)
   res.status(200).json(phone)
 })
+
+module.exports = router
