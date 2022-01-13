@@ -1,3 +1,24 @@
+<div align="center">
+<h1>Reto web - The phone cave</h1> 
+</div>
+
+# What did we do?
+- Created two models, one for users & one for phones (we used a DDBB)
+- MERN stack for the whole APP
+- Axios conection with the API
+- Bootstrap & React bootstrap for design
+- Node, mongoose and express as a backend
+- React as a frontend
+  - Components
+  - Hooks
+- Deployment using Heroku both client and server
+- BBDD with MongoDB Atlas
+- JWT for Signup & Login
+- Profile picture using Cloudinary
+
+<details>
+  <summary>Test instructions</summary>
+
 # Bienvenid@ al reto de The Phone Cave
 
 En The Phone Cave estamos buscando a esa persona que nos ayude a convertir nuestra tienda cueva en casa y para ello os presentamos este reto.
@@ -47,3 +68,143 @@ Ahora bien, hablemos de el limite de entrega:
 
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno, si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+ </details>
+
+## You can play with it at <a href="https://reto-web-phones-cli.herokuapp.com/telefonos">heroku</a>
+---
+
+## Server
+
+<details>
+  <summary>Server details</summary>
+
+---
+
+Check the server <a href="https://github.com/AitorSantaeugenia/reto_web/tree/main/server">here</a>
+  
+- NodeJS | ExpressJS and MongoDB
+- Routes and models created. 
+
+#### Routes
+
+##### Project routes
+
+| HTTP verb | URL                        | Request body | Action                        |
+| --------- | -------------------------- | ------------ | ----------------------------- |
+| GET       | `/api/telefonos`           | (empty)      | Returns all the phones        |
+| GET       | `/api/telefonos/:phoneID`  | (empty)      | Returns the specified phone   |
+
+##### Auth routes
+
+| HTTP verb | URL            | Request Headers                 | Request Body              |
+| --------- | -------------- | ------------------------------- | ------------------------- |
+| POST      | `/auth/signup` | --                              | { email, password, name } |
+| POST      | `/auth/login`  | --                              | { email, password }       |
+| GET       | `/auth/verify` | Authorization: Bearer \< JWT \> | --                        |
+
+
+
+<hr>
+
+#### Models
+
+##### Phone
+
+```js
+{
+        idPhone: { type: Number, unique: true },
+	name: String,
+	manufacturer: String,
+	description: String,
+	color: String,
+	price: Number,
+	imageFileName: String,
+	screen: String,
+	processor: String,
+	ram: Number
+}
+```
+
+##### User
+
+```js
+{
+	email: { type: String, unique: true, required: true },
+	password: { type: String, required: true },
+	name: { type: String, required: true },
+	image: String
+}
+```
+
+---
+
+</details>
+
+
+Install all dependencies with
+``` npm i ```
+
+### :one: - Dependencies
+```js
+{
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.27.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "multer-storage-cloudinary": "^4.0.0"
+}
+```
+
+### :two: - Scripts
+Run the server => node server.js || nodemon server.js </br>
+``` npm start ```
+``` npm run dev ```
+
+---
+
+## Client
+
+<details>
+  <summary>Client details</summary>
+
+---
+
+Check the client <a href="https://github.com/AitorSantaeugenia/reto_web/tree/main/client">here</a>
+
+- ReactJS as a frontend
+    - Hooks
+    - Components 
+- Bootstrap and react-bootstrap for the design
+
+---
+
+</details>
+
+Install all dependencies with
+``` npm i ```
+### :one: - Dependencies
+```js
+{
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-rc.0",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  }
+  ```
+### :two: - Scripts
+Run the client => react-scripts start </br>
+``` npm start ```

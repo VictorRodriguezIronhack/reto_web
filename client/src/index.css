@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background-color:rgb(236, 234, 234);
+}
+
+a {
+  list-style: none;
+  color: black;
+}
+
+button,
+select {
+  padding: 5px 10px;
+  min-width: 50px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+label {
+  width: 100%;
+  display: block;
+}
+
+.SignupPage,
+.LoginPage {
+
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 50vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top:40px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.SignupPage,
+.LoginPage {
+  background-color: rgb(236, 234, 234);
+}
+
+.SignupPage form,
+.LoginPage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-Phone{
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 450px;
+  max-height: 450px;
+  margin:0 auto;
+}
+
+.noMargin{
+  margin-bottom:10px;
+}
+
+.PhoneDiv__Container{
+  min-width: 80vw;
+  max-width: 80vw;
+  margin:0 auto;
+  margin-bottom:20px;
+}
+
+.infoTextPhone{
+  font-style:italic;
+  color:grey;
+}
+
+.hidden{
+  display:none;
+}
+
+.boldText{
+  font-weight: bold;
+  font-size:20px;
+}
+
+.greenText{
+  color:green;
+}
+
+.navbarPhones{
+  display:flex;
+  margin:0;
+}
+
+.card{
+  min-height: 800px;
+  max-height: 800px;
+  margin-bottom:20px;
+}
+
+.container_phones{
+  background-color:rgb(236, 234, 234);
+}
+
+.title_phones{
+  padding:20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title-roboto{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+
+.navbar_breadcrumb{
+  padding:20px 0 0 20px;
+}
+
+.colorBlue{
+  color:blue;
+}
+
+.btn-signup-login{
+  margin-top:20px;
+}
+
+.error-message{
+  color:red;
+  margin-top:10px;
+}
+
+.user__Name{
+  color:white;
+  padding:10px;
+  background-color: none;
+  background: none;
+  border:none;
+}
+
+.bolder{
+  font-weight: bold;
+}
+
+.button_phones{
+  color:White;
+  text-decoration: none;
+}
+
+.button_phones:hover{
+  color:White;
+  text-decoration: none;
+}
+
+.navlink__a{
+    display: inherit;
+    padding:0 !important; 
+}
+
