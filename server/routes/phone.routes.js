@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const { id } = req.params
-  const phone = data.filter((elm) => elm.id == id)
+  const [phone] = data.filter((elm) => elm.id == id)
   res.status(200).json(phone)
 })
 

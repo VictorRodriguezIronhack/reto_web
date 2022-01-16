@@ -9,4 +9,5 @@ export default class PhoneService {
   }
 
   getAllPhones = () => this.app.get('/')
+  getOnePhone = (id) => this.app.get(`/${id}`)
 }
