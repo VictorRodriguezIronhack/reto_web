@@ -1,45 +1,44 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import PhoneService from '../services/phones.services'
+import "../Components/phones.css"
 
+const ListPhones = () => {
 
-
-class ListPhones extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-        phones: [],
-    }
-    this.service = new PhoneService()
-    
-  }
-
-componentDidMount() {
+  const phoneService = new PhoneService()
+  // const [loading, setLoading] = useState(true);
+  const [phones, setphones] = useState(undefined)
   
-  this.service.getAlls()
-    .then(response => {
-
-      console.log(response.data)
-      const phones = response.data
-
-      this.setState({ phones: phones })
+  // const spinner = () =>{
+  //   after 0,5 sec setLoading false
+  // }
+  const allphones = () => {
+    phoneService
+    .getAlls()
+    .then((phones) => {setphones(phones.data);
     })
-    .catch(err => console.log(err))
-    
-}
+    .catch((err) => console.error(err))
+  };
 
-  render() {
+  useEffect(() => {
+    // setLoading(false)
+    allphones() 
+  }, []);
 
     return (
       <div>
-         <h1>Todos los teléfonos</h1>
-          
-          {this.state.phones?.map(elm=>
-          <div> {elm.name} </div>)}
+         <h1>The Phone Cave</h1>
+         <div class="loader">Loading...</div>
+          {phones?.map(elm=>
+          <div key={elm.name}>
+          <h3>{elm.name} </h3>
+          <img src={`/${elm.imageFileName}`} alt={elm.name}/>
+          <Link to={`/details/${elm.id}`} > Detalles</Link>
+          </div>
+          )}
           
       </div>
     )
-  }
 }
 
 export default ListPhones
