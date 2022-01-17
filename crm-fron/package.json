@@ -1,0 +1,30 @@
+{
+  "name": "crm-fron",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.6",
+    "@reduxjs/toolkit": "^1.7.1",
+    "apollo-link-context": "^1.0.20",
+    "formik": "^2.2.9",
+    "graphql": "^16.2.0",
+    "next": "^12.0.7",
+    "node-fetch": "^2.6.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.6",
+    "recharts": "^2.1.8",
+    "redux": "^4.1.2",
+    "sweetalert2": "^11.3.3",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7"
+  }
+}

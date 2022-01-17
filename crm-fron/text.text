@@ -1,0 +1,8 @@
+npm install normalize.css    or     https://cdnjs.com/libraries/normalize
+npx tailwindcss init      or   https://tailwindcss.com/docs/installation/play-cdn  
+npm i formik yup
+npm i @apollo/client node-fetch  =>  note-fetch  version 2.6.0 or  npm i cross-fetch  
+npm i graphql
+npm i apollo-link-context
+npm i sweetalert2
+npm i recharts
