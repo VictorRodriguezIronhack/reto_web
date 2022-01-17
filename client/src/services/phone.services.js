@@ -9,6 +9,7 @@ class PhoneService {
   }
 
   getAllPhones = () => this.app.get("/");
+  getDetails = (id) => this.app.get(`/details/${id}`);
 }
 
 export default PhoneService;

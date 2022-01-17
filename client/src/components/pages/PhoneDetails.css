@@ -1,0 +1,23 @@
+.container {
+  padding: 20px;
+}
+
+.container-details {
+  padding: 20px;
+  border: 1px solid slateblue;
+  display: flex;
+}
+
+.image-details {
+  width: 90%;
+}
+
+.button-details {
+  border: 2px solid slateblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.button-details a {
+  text-decoration: none;
+}
