@@ -41,7 +41,7 @@ const Header = () => {
             height="100"
             alt="ironhack logo"
           />
-          <h1 className="text-4xl font-bold italic ironhack"> Reto Web curos oct 2020</h1>
+          <h1 className="text-4xl font-bold italic ironhack"> Reto Web curos oct 2021</h1>
         </div>
           <div className=" flex flex-col ">
           <p className="mx-auto font-bold lg:mb-0 pb-3 ">

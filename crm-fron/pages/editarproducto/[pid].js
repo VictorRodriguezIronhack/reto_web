@@ -72,7 +72,6 @@ const EditarProducto = () => {
       .positive("No se aceptan números negativos"),
   });
 
-  
   if (loading) return "Cargando...";
 
   if (!data) {
@@ -80,7 +79,6 @@ const EditarProducto = () => {
   }
 
   const actualizarInfoProducto = async (valores) => {
-    
     const {
       name,
       manufacturer,
@@ -92,11 +90,11 @@ const EditarProducto = () => {
       processor,
       ram,
     } = valores;
-   
+
     try {
       const { data } = await actualizarProducto({
         variables: {
-          id :pid,
+          id: pid,
           input: {
             name,
             manufacturer,
@@ -110,7 +108,7 @@ const EditarProducto = () => {
           },
         },
       });
-      console.log("response on eddit :",data);
+      console.log("response on eddit :", data);
 
       // Redirgir hacia productos
       router.push("/");
@@ -125,7 +123,7 @@ const EditarProducto = () => {
   const { obtenerProducto } = data;
 
   return (
-    <Layout>
+    <>
       <h1 className="text-2xl text-gray-800 font-light">Editar Producto</h1>
 
       <div className="flex justify-center mt-5">
@@ -135,7 +133,7 @@ const EditarProducto = () => {
             initialValues={obtenerProducto}
             validationSchema={schemaValidacion}
             onSubmit={(valores) => {
-               actualizarInfoProducto(valores);
+              actualizarInfoProducto(valores);
             }}>
             {(props) => {
               return (
@@ -378,7 +376,7 @@ const EditarProducto = () => {
           </Formik>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

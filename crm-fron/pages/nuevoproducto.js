@@ -134,7 +134,7 @@ const NuevoProducto = () => {
   });
 
   return (
-    <Layout>
+   <>
       <h1 className="text-2xl text-gray-800 font-light">Crear Nuevo Producto</h1>
 
       <div className="flex justify-center mt-5">
@@ -375,7 +375,7 @@ const NuevoProducto = () => {
           </form>
         </div>
       </div>
-    </Layout>
+      </>
   );
 };
 

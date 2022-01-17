@@ -29,12 +29,11 @@ const reducer = (state =  initialState , action) => {
   if (action.type ==="REMOVE_FROM_CART") {
     let cart = [...state.cart];
     let total = state.total;
-    console.log('---action.payload.id---:',action.payload.id)
     let alreadyIn = cart.find((elm) => elm.id === action.payload.id);
     console.log({alreadyIn})
     if (alreadyIn) {
      alreadyIn.quantity--;
-     if(alreadyIn.quantity==0) cart=cart.filter(elm!==alreadyIn.id)
+     if(alreadyIn.quantity==0) cart=cart.filter(elm=>elm!==alreadyIn.id)
      }
     total--;
     return {cart, total}
