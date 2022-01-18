@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ironlauncher": "^0.35.1",
+    "server": "^1.0.37"
+  }
+}
