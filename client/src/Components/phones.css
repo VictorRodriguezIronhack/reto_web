@@ -1,8 +1,45 @@
-.card {
-    width: 30%;
+.list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    padding: 2%;
+    margin: 0;
+}
+
+.card {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  background-color: bisque;
+  border-radius: 5%;
+  margin: 1%;
+}
+
+.cardh3{
+   margin-bottom: 1%;
+   font-size: 120%;
+   color: tomato;
+}
+
+.card img {
+ width: 88%;
+ margin: 6%;
+ border-radius: 5%;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  background-color:salmon;
+  border-radius: 5%;
+  padding: 4%;
+  margin: 0;
+}
+
+.link:hover{
+  background-color:turquoise;
 }
 
 .loader {
@@ -75,3 +112,68 @@
     }
   }
   
+  .details {
+    margin: 2%;
+    margin-bottom: 5%;
+  }
+
+  .phoneDetails {
+    margin: 2%;
+    margin-bottom: 5%;
+    padding: 2%;
+    background-color: bisque;
+    border-radius: 5%;
+  }
+
+  .phoneDetails h1{
+    color: tomato;
+  }
+
+  .phoneDetails img {
+    width: 40%;
+    border-radius: 5%;
+  }
+
+  .descriptionPhone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .descriptionPhone p {
+    width: 70%;
+    margin-top: 0;
+  }
+
+  .phoneDetailsh3 {
+    font-weight: 500;
+    color:salmon;
+
+  }
+
+  .moredetails{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5%;
+  }
+
+  .moredetailsh3 {
+    font-weight: 400;
+    background-color: salmon;
+    color: white;
+    padding: 15px;
+    border-radius: 5%;
+  }
+
+  .homeButton {
+    text-decoration: none;
+    background-color:silver;
+    margin-bottom: 30px;
+    padding:  2% 5%;
+    color: white;
+    border-radius: 5%;
+    
+  }
