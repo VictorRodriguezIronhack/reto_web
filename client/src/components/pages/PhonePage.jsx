@@ -19,12 +19,14 @@ const PhonePage = () => {
   }
   return (
     <div className="pt-2">
-      <h2>A list of all our phones</h2>
-      <ul>
+      <h2 className="font-bold text-center text-gray-100 text-2xl py-6">
+        A list of all our phones
+      </h2>
+      <div className="grid lg:grid-cols-3 px-10">
         {phones?.map((elm) => (
           <PhoneList elm={elm} key={elm.id} />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
