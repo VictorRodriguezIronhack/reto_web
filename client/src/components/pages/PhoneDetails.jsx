@@ -33,7 +33,7 @@ const PhoneDetails = () => {
   }
 
   return (
-    <div>
+    <div className="pt-2">
       <p>Name: {phoneInfo.name}</p>
       <p>Manufacturer: {phoneInfo.manufacturer}</p>
       <p>Description: {phoneInfo.description}</p>

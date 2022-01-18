@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const PhoneList = ({ elm }) => {
   return (
     <li>
-      <Link to={`/${elm.id}`}>
+      <Link to={`/details/${elm.id}`}>
         <h5>
           {elm.manufacturer} {elm.name}
         </h5>

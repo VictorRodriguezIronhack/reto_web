@@ -18,7 +18,7 @@ const PhonePage = () => {
       .catch((err) => console.error(err))
   }
   return (
-    <div>
+    <div className="pt-2">
       <h2>A list of all our phones</h2>
       <ul>
         {phones?.map((elm) => (

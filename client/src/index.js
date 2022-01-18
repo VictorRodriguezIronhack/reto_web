@@ -6,7 +6,9 @@ import App from './components/app/App'
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <div className="bg-gray-100 min-h-screen bg-[url('./images/phoneCave.jpg')]">
+      <App />
+    </div>
   </BrowserRouter>,
   document.getElementById('root')
 )
