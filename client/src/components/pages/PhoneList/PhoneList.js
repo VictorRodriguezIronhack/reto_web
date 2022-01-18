@@ -10,7 +10,7 @@ function PhoneList(props) {
             <Row>
                 {props.phones.map(elm => {
                     return (
-                        <Col key={elm._id}>
+                        <Col key={elm.id}>
                             <PhoneCard  {...elm} />
                         </Col>
                     )
