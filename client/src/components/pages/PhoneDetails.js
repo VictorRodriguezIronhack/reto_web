@@ -43,7 +43,7 @@ const PhoneDetails = (props) => {
             <p>Processor: {details.processor}</p>
             <p>Ram: {details.ram}</p>
             <button className="button-details">
-              <a href="/">Back All Phones</a>
+              <a href="/allphones">Back All Phones</a>
             </button>
           </div>
         </div>
