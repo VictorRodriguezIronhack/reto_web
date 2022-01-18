@@ -1,3 +1,3 @@
 export const HOMEPAGE = '/'
 export const PHONESPAGE = '/phones'
-export const PHONEDETAILS = '/:id'
+export const PHONEDETAILS = '/details/:id'
