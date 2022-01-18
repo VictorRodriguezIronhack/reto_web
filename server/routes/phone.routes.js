@@ -1,14 +1,19 @@
 const router = require('express').Router()
-const data = require('../phones.json')
+const Phone = require('../models/Phone.model')
 
 router.get('/', (req, res) => {
-  res.status(200).json(data)
+  Phone.find()
+    .sort({ price: -1 })
+    .then((allPhones) => res.status(200).json(allPhones))
+    .catch((err) => res.status(500).json({ err, message: err.message }))
 })
 
 router.get('/details/:id', (req, res) => {
   const { id } = req.params
-  const [phone] = data.filter((elm) => elm.id == id)
-  res.status(200).json(phone)
+
+  Phone.find({ id: id })
+    .then((thePhone) => res.status(200).json(thePhone))
+    .catch((err) => res.status(500).json({ err, message: err.message }))
 })
 
 module.exports = router
