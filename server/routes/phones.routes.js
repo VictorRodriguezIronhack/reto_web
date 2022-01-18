@@ -1,14 +1,15 @@
 const express = require("express");
-const router = express.Router();
-const phone = require("../phones.json");
+const router = require("express").Router()
+const Phones = require("../phones.json");
 
-router.get("/", (req, res) => {
-  res.json(phone);
+router.get("/telefonos", (req, res) => {
+  res.json(Phones);
 });
 
-router.get("/:id", (req, res) => {
+router.get("/details/:id", (req, res) => {
   const { id } = req.params;
-  phone.json(id);
+  const [details] = Phones.filter((elm) => elm.id == id)
+  res.status(200).json(details)
 });
 
 module.exports = router;

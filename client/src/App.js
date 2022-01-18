@@ -1,17 +1,17 @@
-import Navbar from "./components/layout/navbar";
-import { Component } from "react";
-import "./App.css";
-import PhoneDetails from "./components/pages/PhoneDetails";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Home from "./components/pages/Home";
 
-class App extends Component {
-  render = () => {
-    return (
-      <>
-        <Navbar />
-        <PhoneDetails />
-      </>
-    );
-  };
+
+function App() {
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const phoneRoute = require("./phone.routes");
 
-router.use("/phone", phoneRoute);
+router.use("/telefonos", phoneRoute);
 
 module.exports = router;
 
