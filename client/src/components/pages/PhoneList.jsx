@@ -14,7 +14,7 @@ const PhoneList = ({ elm }) => {
           {elm.manufacturer} {elm.name}
         </h5>
       </div>
-      <div className="bg-indigo-100 h-auto p-2 m-2">
+      <div className="bg-indigo-100 rounded-2xl h-auto p-2 m-2">
         <p className="text-2xl font-bold text-indigo-900 text-center content-center">
           {elm.price} €
         </p>
@@ -23,7 +23,7 @@ const PhoneList = ({ elm }) => {
         <Link to={`/details/${elm.id}`}>
           <button
             type="button"
-            className="bg-transparent hover:bg-indigo-200 text-indigo-900 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded"
+            className="bg-transparent hover:bg-indigo-200 text-indigo-900 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded-full"
           >
             See details!{console.log(elm.imageFileName)}
           </button>
