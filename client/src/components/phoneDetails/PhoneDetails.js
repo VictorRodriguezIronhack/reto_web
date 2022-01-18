@@ -1,7 +1,22 @@
 import './PhoneDetails.css';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import usePhoneByID from '../../hooks/usePhoneById';
 
-function PhoneDetails({phone}){
+function PhoneDetails(){
+
+	const {id} = useParams();
 	
+	const {phoneById} = usePhoneByID(id);
+	
+	const [phone, setPhone] = useState([]);
+
+	useEffect(() => {
+		setPhone(phoneById);
+		console.log(phoneById);
+	}, [phoneById]);
+
+
 	const { name, manufacturer, description, price, color, screen, processor, imageFileName, ram} = phone;
 	
 	return(

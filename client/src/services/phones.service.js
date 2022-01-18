@@ -10,6 +10,7 @@ class PhonesService{
 	}
 
 	getAllPhones = () => this.axiosApp.get('/');
+	getPhoneById = (id) => this.axiosApp.get(`/${id}`);
 }
 
 export default PhonesService;
