@@ -1,0 +1,42 @@
+.container-listphones {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  /* border: 1px solid slateblue; */
+  margin: 10px;
+  border-radius: 10px;
+  background: rgb(200, 194, 240);
+  box-shadow: -20px 20px 60px #c7cdc7, 20px -20px 60px #ffffff;
+}
+
+.title-list {
+  text-align: center;
+  color: slateblue;
+  font-size: 3em;
+}
+
+.button-details-cont {
+  padding: 0.5em 1em;
+  background: #efefef;
+  border: none;
+  border-radius: 0.5rem;
+  color: #444;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.link-style {
+  text-decoration: none;
+}
