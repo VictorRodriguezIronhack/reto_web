@@ -25,7 +25,7 @@ const PhoneList = ({ elm }) => {
             type="button"
             className="bg-transparent hover:bg-indigo-200 text-indigo-900 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded-full"
           >
-            See details!{console.log(elm.imageFileName)}
+            See details!
           </button>
         </Link>
       </div>

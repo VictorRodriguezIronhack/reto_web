@@ -7,6 +7,7 @@ const phonesService = new PhoneService()
 const PhoneDetails = () => {
   const { id } = useParams()
   const [phoneInfo, setPhoneInfo] = useState({
+    id: '',
     name: '',
     manufacturer: '',
     description: '',
@@ -32,21 +33,21 @@ const PhoneDetails = () => {
       .catch((err) => console.error(err))
   }
 
-  return (
+  return phoneInfo[0] ? (
     <section className="text-gray-700 body-font overflow-hidden">
       <div className="container p-3 mx-auto rounded">
         <div className="lg:w-4/5 mx-auto flex flex-wrap bg-white">
           <img
             alt="ecommerce"
             className="lg:w-1/2 w-full px-4 object-cover object-center rounded border border-gray-200"
-            src={`/assets/images/${phoneInfo.imageFileName}`}
+            src={`/assets/images/${phoneInfo[0].imageFileName}`}
           />
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
-              {phoneInfo.manufacturer}
+              {phoneInfo[0].manufacturer}
             </h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-              {phoneInfo.name}
+              {phoneInfo[0].name}
             </h1>
             <div className="flex mb-4">
               <span className="flex items-center">
@@ -108,33 +109,33 @@ const PhoneDetails = () => {
                 <span className="text-gray-600 ml-3">4 Reviews</span>
               </span>
             </div>
-            <p className="leading-relaxed">{phoneInfo.description}</p>
+            <p className="leading-relaxed">{phoneInfo[0].description}</p>
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
               <div className="flex">
                 <span className="mr-3">Color: </span>
                 <button
-                  className={`border-2 border-gray-300 ml-1 bg-${phoneInfo.color} rounded-full w-6 h-6 focus:outline-none`}
+                  className={`border-2 border-gray-300 ml-1 bg-${phoneInfo[0].color} rounded-full w-6 h-6 focus:outline-none`}
                 ></button>
               </div>
               <div className="flex ml-6 items-center">
                 <span className="mr-3 text-sm text-gray-400 font-semibold">
-                  {phoneInfo.screen}
+                  {phoneInfo[0].screen}
                 </span>
               </div>
               <div className="flex ml-6 items-center">
                 <span className="mr-3 text-sm text-gray-400 font-semibold">
-                  {phoneInfo.processor}
+                  {phoneInfo[0].processor}
                 </span>
               </div>
               <div className="flex ml-6 items-center">
                 <span className="mr-3 text-sm text-gray-400 font-semibold">
-                  {phoneInfo.ram} RAM
+                  {phoneInfo[0].ram} RAM
                 </span>
               </div>
             </div>
             <div className="flex">
               <span className="title-font font-medium text-4xl text-indigo-600">
-                {phoneInfo.price} €
+                {phoneInfo[0].price} €
               </span>
               <button className="flex ml-40 bg-transparent hover:bg-indigo-200 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded-full">
                 Button
@@ -156,7 +157,7 @@ const PhoneDetails = () => {
         </div>
       </div>
     </section>
-  )
+  ) : null
 }
 
 export default PhoneDetails
