@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import Moviles from "./components/Moviles";
+import MovilesDetails from "./components/MovilesDetails"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/VictorRodriguezIronhack/reto_web"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          The Phone Cave Technical Interview
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path = "/" element = {<Moviles />} />
+          <Route path = "/details/:id" element = {<MovilesDetails/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

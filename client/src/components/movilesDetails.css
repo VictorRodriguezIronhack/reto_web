@@ -1,0 +1,145 @@
+:root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 24px;
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+.principal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 110px;
+    
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--hospital-green);
+    border-radius: 15px;
+    height: 60px;
+    width: 200px;
+}
+   
+.principal-title {
+    color: var(--white);
+    font-size: var(--sm);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description-container {
+  text-align: center;
+  text-overflow: clip;
+}
+
+.details p {
+    color: var(--dark);
+    font-size: var(--md);
+    text-align: center;
+}
+
+
+
+
+
+.details div {
+    text-align: center;
+    width: 200px;
+    text-align: justify;
+   
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ff0000;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #ff0000;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+    
+
+    
+
+
+
+   
+   
+    
+    
+
+
+
+
+

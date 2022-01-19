@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.17.2",
-    "ironlauncher": "^0.35.1"
-  }
-}

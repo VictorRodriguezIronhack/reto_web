@@ -1,15 +1,16 @@
-const express = require("express");
-const router = express.Router();
-const Phones = require("../models/Phones-models");
+const router = require("express").Router();
+const Phones =require("../phones.json")
 
-router.get("/telefonos", (req, res, next) => {
-    Phones.find()
-    .then((result)=>{
-        res.send(result);
-    })
-    .catch((err)=>{
-        console.log(err);
-    });
+router.get("/", (req, res, next) => {
+    res.json(Phones);
 });
 
-module.exports=router;
+router.get("/details/:id", (req, res, next) => {
+    const {id} = req.params;
+    const [details] = Phones.filter((elm) => elm.id == id);
+    res.json(details);
+});
+
+
+module.exports = router;
+
