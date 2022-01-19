@@ -13,7 +13,7 @@ const PhonePage = () => {
     setLoading(true)
     setTimeout(() => {
       getPhonesList()
-    }, 3000)
+    }, 2000)
   }, [])
 
   const getPhonesList = () => {

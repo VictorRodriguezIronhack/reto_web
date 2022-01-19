@@ -122,7 +122,10 @@ const PhoneDetails = () => {
                 <p className="leading-relaxed">{phoneInfo.description}</p>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                   <div className="flex">
-                    <span className="mr-3">Color: </span>
+                    <span className="mr-3">
+                      Color:{' '}
+                      {console.info('Color of the phone --> ', phoneInfo.color)}
+                    </span>
                     <button
                       className={`border-2 border-gray-300 ml-1 bg-${phoneInfo.color} rounded-full w-6 h-6 focus:outline-none`}
                     ></button>
