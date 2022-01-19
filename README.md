@@ -27,4 +27,4 @@
 
 ### .env variables
 
-- REACT_APP_API_URL=http://localhost:5005/api
+- REACT_APP_BASE_URL=http://localhost:5005/api
