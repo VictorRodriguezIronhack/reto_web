@@ -61,12 +61,13 @@ const Navbar = ({ count }) => {
             </div>
           </div>
         </div>
-        <Link to="/cart" className="absolute top-0 inset-x-1/2 pt-1">
+        <Link to="/cart" className="absolute top-0 inset-x-1/2 pt-1.5">
           <p
             style={{
               color: 'black',
               marginLeft: '2rem',
               height: '3px',
+              fontWeight: 'bold',
             }}
           >
             {count}
