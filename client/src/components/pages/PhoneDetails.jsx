@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import PhoneService from '../../services/phones.service'
 import Spinner from '../shared/Spinner'
+import CartContext from '../context/CartContext'
 
 const phonesService = new PhoneService()
 
 const PhoneDetails = () => {
+  const { addPhone } = useContext(CartContext)
   const { id } = useParams()
   const [phoneInfo, setPhoneInfo] = useState({
     id: '',
@@ -52,7 +54,7 @@ const PhoneDetails = () => {
                 className="lg:w-1/2 w-full px-4 object-cover object-center rounded border border-gray-200"
                 src={`/assets/images/${phoneInfo.imageFileName}`}
               />
-              <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-1">
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">
                   {phoneInfo.manufacturer}
                 </h2>
@@ -122,13 +124,10 @@ const PhoneDetails = () => {
                 <p className="leading-relaxed">{phoneInfo.description}</p>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                   <div className="flex">
-                    <span className="mr-3">
-                      Color:{' '}
-                      {console.info('Color of the phone --> ', phoneInfo.color)}
-                    </span>
-                    <button
-                      className={`border-2 border-gray-300 ml-1 bg-${phoneInfo.color} rounded-full w-6 h-6 focus:outline-none`}
-                    ></button>
+                    <span className="mr-3">Color: </span>
+                    <div
+                      className={`border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none`}
+                    ></div>
                   </div>
                   <div className="flex ml-6 items-center">
                     <span className="mr-3 text-sm text-gray-400 font-semibold">
@@ -150,10 +149,13 @@ const PhoneDetails = () => {
                   <span className="title-font font-medium text-4xl text-indigo-600">
                     {phoneInfo.price} €
                   </span>
-                  <button className="flex ml-40 bg-transparent hover:bg-indigo-200 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded-full">
-                    Button
+                  <button
+                    className="flex ml-40 bg-transparent hover:bg-indigo-200 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded-full"
+                    onClick={() => addPhone(phoneInfo)}
+                  >
+                    Add to Cart
                   </button>
-                  <button className="rounded-full w-10 h-10 bg-gray-200 hover:bg-red-500 p-0 border-0 inline-flex items-center justify-center text-red-500 hover:text-white ml-4">
+                  <button className="rounded-full w-10 h-10 bg-gray-200 hover:bg-red-500 p-0 border-0 inline-flex items-center justify-center text-red-500 hover:text-white ml-4 active:bg-red-500 active:text-white focus:outline-none focus:ring focus:bg-red-500 focus:text-white focus:ring-white">
                     <svg
                       fill="currentColor"
                       strokeLinecap="round"

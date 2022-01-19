@@ -6,10 +6,6 @@ const ShoppingCart = () => {
   const [total, setTotal] = useState(undefined)
 
   const cartFilled = shoppingCart?.length !== 0
-  useEffect(() => {
-    cartFilled && totalPrice()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [shoppingCart.length])
 
   const totalPrice = () => {
     let sum = shoppingCart?.reduce((sum, li) => ({
@@ -23,6 +19,11 @@ const ShoppingCart = () => {
     shoppingCart.splice(index, 1)
     setCountCart(shoppingCart.length)
   }
+
+  useEffect(() => {
+    cartFilled && totalPrice()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [shoppingCart.length])
 
   return (
     <>
@@ -94,7 +95,7 @@ const ShoppingCart = () => {
                     <td className="px-6 py-2 text-xs text-gray-500"></td>
                     <td className="px-6 py-2 text-xs text-gray-500"></td>
                     <td className="px-6 py-2 font-bold text-indigo-900">
-                      {total?.price?.toFixed(2)} €
+                      {cartFilled ? total?.price?.toFixed(2) : 0} €
                     </td>
                   </tr>
                 </tbody>
