@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
 import CartContext from '../context/CartContext'
-import deleteIcon from '../../images/delete.svg'
 
 const ShoppingCart = () => {
   const { shoppingCart, setCountCart } = useContext(CartContext)
