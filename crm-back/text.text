@@ -1,0 +1,6 @@
+npm init
+npm i apollo-server
+npm i -D nodemon
+npm i mongoose dotenv
+npm i bcryptjs
+npm i jsonwebtoken
