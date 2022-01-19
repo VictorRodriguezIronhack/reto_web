@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "REACT_APP_API_URL=http://localhost:5005/api craco start",
-    "build": "craco build",
+    "build": "REACT_APP_API_URL=https://my-phone-cave.herokuapp.com/api craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
