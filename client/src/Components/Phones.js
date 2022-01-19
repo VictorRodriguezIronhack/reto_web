@@ -6,7 +6,7 @@ import "../Components/phones.css"
 const ListPhones = () => {
 
   const phoneService = new PhoneService()
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [phones, setphones] = useState(undefined)
   
   const allphones = () => {
@@ -35,10 +35,12 @@ const ListPhones = () => {
                 <img src={`/${elm.imageFileName}`} alt={elm.name}/>
                 <Link className='link' to={`/details/${elm.id}`} > Detalles</Link>
               </div>
+            
             ) : (   
             <div class="loader">Loading...</div>
             )}
           </div>
+          <Link className='homeButton' to={"/"} >Home</Link>
       </div>
     )
 }

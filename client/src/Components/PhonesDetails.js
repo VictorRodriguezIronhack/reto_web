@@ -52,7 +52,9 @@ const DetailsPhone = (props) => {
           ):
           (<div class="loader">Loading...</div>)}
 
-          <Link className='homeButton' to={"/"} >Home</Link>
+          <Link className='homeButton link' to={"/"} >Home</Link>
+          <Link className='homeButton link' to={"/phones"} >List phones</Link>
+
       </div>
     )
 }
