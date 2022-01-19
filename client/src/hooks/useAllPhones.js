@@ -6,22 +6,31 @@ const myPhonesService = new PhonesService();
 
 function useAllPhones() {
 
-	const [allPhones, setAllPhones] = useState([]);
-
-	const [loading, setLoading] = useState(true);
+	const [allPhones, setAllPhones] = useState({
+		phones: [],
+		loading: true
+	});
 
 
 	useEffect(() => {
 		async function getPhones() {
-			const phones = await myPhonesService.getAllPhones();
-			setAllPhones(phones.data);
-			setLoading(false);
+
+			try{
+				const phones = await myPhonesService.getAllPhones();
+				setAllPhones({
+					phones: phones.data,
+					loading: false
+				});
+			}
+			catch(err){
+				console.log(err);
+			}
 		}
 		getPhones();
 	}, [])
 
 	return (
-		{ allPhones, loading }
+		{allPhones, setAllPhones} 
 	);
 }
 

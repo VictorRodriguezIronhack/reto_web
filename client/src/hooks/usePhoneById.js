@@ -14,7 +14,7 @@ function usePhonebyID(id) {
 			setphoneById(phones.data);
 		}
 		getPhone();
-	}, [])
+	}, [id])
 
 	return (
 		{phoneById}

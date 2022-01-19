@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-function DetailsLink({phone, children}){
+function DetailsLink({id , children}){
 	return(
-		<Link to={`${phone._id}`} >	
+		<Link to={`${id}`} >	
 			{children}
 		</Link>
 	);

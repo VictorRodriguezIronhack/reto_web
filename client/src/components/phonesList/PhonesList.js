@@ -1,24 +1,30 @@
 import './PhonesList.css';
 import PhonesListItem from '../phonesListItem/PhonesListItem';
 import DetailsLink from '../detailsLink/DetailsLink';
-import useAllPhones from '../../hooks/useAllPhones';
-import { useState, useEffect } from "react";
+import { AllPhonesContext } from '../../contexts/AllPhonesContext';
+import { useState, useEffect, useContext } from "react";
 
 function PhonesList() {
 
-	const {allPhones, loading} = useAllPhones();
+	const {allPhones, setAllPhones} = useContext(AllPhonesContext);
 
 	const [listPhones, setListPhones] = useState([]);
 	
+	useEffect(() => {
 
+		function getPhones() {
+			setListPhones(allPhones.phones);
+		}
+		getPhones();
+		
+	} , [allPhones.phones]);
 
-	useEffect (() => {
-		setListPhones(allPhones);
-	} , [allPhones]);
+	console.log(listPhones);
+
 
 	return(
 		<div className="phones-list-container">
-			{listPhones?.map(phone => <DetailsLink phone={phone} key={phone._id}>
+			{listPhones?.map(phone => <DetailsLink id={phone._id} key={phone._id}>
 				<PhonesListItem key= {phone._id} phone={phone} />
 			</DetailsLink>)}
 		</div>

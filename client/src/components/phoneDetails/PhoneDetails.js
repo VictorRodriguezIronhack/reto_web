@@ -13,7 +13,6 @@ function PhoneDetails(){
 
 	useEffect(() => {
 		setPhone(phoneById);
-		console.log(phoneById);
 	}, [phoneById]);
 
 
