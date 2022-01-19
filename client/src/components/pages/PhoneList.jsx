@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { ReactComponent as ShoppingCart } from '../../images/shopping-cart.svg'
+import CartContext from '../context/CartContext'
 
 const PhoneList = ({ elm }) => {
+  const { addPhone } = useContext(CartContext)
+
   return (
     <div className="col-span-1 flex flex-col bg-white border-2 rounded p-4 m-2">
       <img
@@ -28,6 +32,18 @@ const PhoneList = ({ elm }) => {
             See details!
           </button>
         </Link>
+      </div>
+      <div className="text-center p-2">
+        <button
+          type="button"
+          className="bg-transparent hover:bg-indigo-200 text-indigo-900 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded-full"
+          onClick={() => addPhone(elm)}
+        >
+          <ShoppingCart
+            fill="black"
+            style={{ width: '20px', height: '20px' }}
+          />
+        </button>
       </div>
     </div>
   )
