@@ -1,12 +1,13 @@
 import './PhonesList.css';
 import PhonesListItem from '../phonesListItem/PhonesListItem';
-import DetailsLink from '../detailsLink/DetailsLink';
+
 import { AllPhonesContext } from '../../contexts/AllPhonesContext';
 import { useState, useEffect, useContext } from "react";
+import ProductListContainer from '../../elements/ProductListContainer';
 
 function PhonesList() {
 
-	const {allPhones, setAllPhones} = useContext(AllPhonesContext);
+	const {allPhones} = useContext(AllPhonesContext);
 
 	const [listPhones, setListPhones] = useState([]);
 	
@@ -23,11 +24,9 @@ function PhonesList() {
 
 
 	return(
-		<div className="phones-list-container">
-			{listPhones?.map(phone => <DetailsLink id={phone._id} key={phone._id}>
-				<PhonesListItem key= {phone._id} phone={phone} />
-			</DetailsLink>)}
-		</div>
+		<ProductListContainer>
+			{listPhones?.map(phone => <PhonesListItem key= {phone._id} phone={phone} />)}
+		</ProductListContainer>
 	)
 }
 
