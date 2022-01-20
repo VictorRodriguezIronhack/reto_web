@@ -12,7 +12,7 @@ function DropDown({ icon, children }) {
 
 	return(
 		<>
-			<button onClick={toggleShow}>{icon}</button>
+			<span onClick={toggleShow}>{icon}</span>
 			{show && <DropDownContainerShow>{children}</DropDownContainerShow>}
 			{!show && <DropDownContainerHide>{children}</DropDownContainerHide>}
 		</>

@@ -5,7 +5,7 @@ const ProductListContainer = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 1.5rem;
-	padding: 0 2rem;
+	padding: 1rem 3rem;
 `;
 
 export default ProductListContainer;
