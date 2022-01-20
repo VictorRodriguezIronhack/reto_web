@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-  cursor: pointer;
+	visibility: ${props => (props.hide ? "hidden" : "visible")};
+	font-size: 1em;
+	margin: 1em;
+	padding: 0.25em 1em;
+	background-color: palevioletred;
+	color: #f7f7f7;
+	cursor: pointer;
+	outline: none;
+	border: none;
 `;
 
 export const ButtonSmall = styled(Button)`

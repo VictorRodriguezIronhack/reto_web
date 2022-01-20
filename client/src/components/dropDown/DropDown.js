@@ -2,7 +2,7 @@
 import { useState } from "react";
 import {DropDownContainerHide, DropDownContainerShow} from "../../elements/DropDownContainer";
 
-function DropDown({ icon, children }) {
+function DropDown({ icon, bubble, children }) {
 
 	const [show, setShow] = useState(false);
 
@@ -10,9 +10,11 @@ function DropDown({ icon, children }) {
 		setShow(!show);
 	}
 
-	return(
+	return( 
 		<>
-			<span onClick={toggleShow}>{icon}</span>
+			<span onClick={toggleShow}>{icon}
+			{bubble}
+			</span>
 			{show && <DropDownContainerShow>{children}</DropDownContainerShow>}
 			{!show && <DropDownContainerHide>{children}</DropDownContainerHide>}
 		</>

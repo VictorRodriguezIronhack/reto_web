@@ -13,8 +13,10 @@ function AddToCart({phone}){
 	}
 
 	return(
-
-		!alreadyInCart && <Button onClick={()=>addToCart(phone)}>
+		! alreadyInCart ? <Button onClick={() => addToCart(phone)}>
+			Add to cart
+		</Button> : 
+		<Button hide>
 			Add to cart
 		</Button>
 	);

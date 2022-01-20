@@ -12,19 +12,16 @@ function Cart(){
 		setCart(cart.filter(item => item._id !== id));
 	}
 
-	const totalProducts = cart.length
 	const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
 
 	return(
 		<CartContainer >
 					{ !cart.length ? "Cart is empty" :
 					<>
-						<div>
-							<span>{totalProducts} products</span>
-							<span>{totalPrice}€</span>
-						</div>
 						{cart.map(phone => <CartItem key={phone._id} phone={phone} removeItem={removeItem}/>)}
-					</>}
+						<span style={{fontWeight: "600"}}>Total: {totalPrice}€</span>
+					</>
+					}
 		</CartContainer>
 	);
 }

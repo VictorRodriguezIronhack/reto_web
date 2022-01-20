@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import AllPhones from './pages/allPhones/AllPhones';
-import PhoneDetails from './components/phoneDetails/PhoneDetails';
+import PhoneDetails from './pages/phoneDetails/PhoneDetails';
 import useAllPhones  from './hooks/useAllPhones';
 import { AllPhonesContext } from './contexts/AllPhonesContext';
 import { CartContext } from './contexts/CartContext';

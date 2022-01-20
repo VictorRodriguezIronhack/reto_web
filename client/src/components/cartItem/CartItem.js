@@ -1,16 +1,14 @@
-import { ProductCardCart } from "../../elements/ProductCard";
-import { ButtonSmall } from "../../elements/Button";
+import { CardCart, RemoveIcon } from "../../elements/CartContainer";
+
 
 function CartItem({phone, removeItem}){
 	
 	return(
-			<ProductCardCart>
-					<span>{phone.name}</span>
-					<span>{phone.price}€</span>
-					<ButtonSmall onClick={()=>removeItem(phone._id)}>
-						Remove
-					</ButtonSmall>
-			</ProductCardCart>
+			<CardCart>
+					<div>{phone.name}</div>
+					<div>{phone.price}€</div>
+					<RemoveIcon onClick={()=>removeItem(phone._id)}/>
+			</CardCart>
 	)
 }
 
