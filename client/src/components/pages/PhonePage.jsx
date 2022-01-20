@@ -10,6 +10,7 @@ const PhonePage = () => {
   const [phones, setPhones] = useState([])
   const [phonesCopy, setCopy] = useState([])
   const [loading, setLoading] = useState(false)
+  const [sortBy, setSortBy] = useState(false)
 
   useEffect(() => {
     setLoading(true)
@@ -56,9 +57,29 @@ const PhonePage = () => {
     setPhones(filteredProducts)
   }
 
+  const sortProducts = (value) => {
+    if (value === 'asc') {
+      let sortedProducts = phonesCopy.sort(
+        (a, b) => parseFloat(a.price) - parseFloat(b.price)
+      )
+      setPhones(sortedProducts)
+      setSortBy(!sortBy)
+    } else {
+      let sortedProducts = phonesCopy.sort(
+        (a, b) => parseFloat(b.price) - parseFloat(a.price)
+      )
+      setPhones(sortedProducts)
+      setSortBy(!sortBy)
+    }
+  }
+
   return (
     <div className="pt-2">
-      <SearchBar phones={phones} searchProduct={searchProduct} />
+      <SearchBar
+        phones={phones}
+        searchProduct={searchProduct}
+        sortProducts={sortProducts}
+      />
       <div>{loading && <Spinner />}</div>
       <div className="grid lg:grid-cols-3 px-10">
         {phones?.map((elm) => (
