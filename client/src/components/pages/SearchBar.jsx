@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const [searchText, setSearchText] = useState('')
+
+  const handleSearch = (e) => {
+    setSearchText(e.currentTarget.value.toLowerCase())
+  }
+
+  useEffect(() => {
+    props.searchProduct(searchText)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchText])
+
   return (
-    <div className="flex items-center justify-center max-w-md mx-auto shadow rounded border-0 p-3">
+    <div className="flex items-center justify-center max-w-lg mx-auto shadow rounded border-0 p-3">
       <input
-        className="border-2 border-gray-300 bg-white h-10 px-5 pr-80 rounded-lg text-sm focus:outline-none"
+        className="border-2 border-gray-300 bg-white h-10 px-5 w-full rounded-lg text-sm focus:outline-none"
         type="search"
         name="search"
         placeholder="Search a phone..."
+        onChange={handleSearch}
       />
-      <button type="submit" className="sticky top-0 ml-1">
+      <button className="sticky top-0 ml-1" onClick={handleSearch}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
