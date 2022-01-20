@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PhoneService from '../../services/phones.service'
 import PhoneList from './PhoneList'
 import Spinner from '../shared/Spinner'
+import SearchBar from './SearchBar'
 
 const phonesService = new PhoneService()
 
@@ -26,9 +27,7 @@ const PhonePage = () => {
 
   return (
     <div className="pt-2">
-      <h2 className="font-bold text-center text-gray-100 text-2xl py-6">
-        A list of all our phones
-      </h2>
+      <SearchBar phones={phones} />
       <div>{loading && <Spinner />}</div>
       <div className="grid lg:grid-cols-3 px-10">
         {phones?.map((elm) => (
