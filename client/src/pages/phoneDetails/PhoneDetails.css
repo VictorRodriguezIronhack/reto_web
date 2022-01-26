@@ -1,0 +1,22 @@
+.phone-details-container{
+	padding: 10px 50px;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	width: 200px;
+	height: 220px;
+}
+
+.phone-details-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 50px;
+}
