@@ -1,0 +1,15 @@
+.phone {
+  display: flex;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+.phone p {
+  margin: 10px 20px;
+}
+
+.detailsPhone {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
