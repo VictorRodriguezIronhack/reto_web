@@ -15,16 +15,22 @@ const HomePage = () => {
 
     return (
         <>
-            {getPhone.map((eachPhone, idx) => {
-                return (
-                    <div key={idx} className="phone">
-                        <p>{eachPhone.name}</p>
-                        <p>{eachPhone.manufacturer}</p>
-                        <p>€{eachPhone.price}</p>
-                        <Link to={`/${eachPhone.id}`}>Detalles</Link>
-                    </div>
-                )
-            })}
+            {
+                getPhone.length > 0
+                    ?
+                    getPhone.map((eachPhone, idx) => {
+                        return (
+                            <div key={idx} className="phone">
+                                <p>{eachPhone.name}</p>
+                                <p>{eachPhone.manufacturer}</p>
+                                <p>€{eachPhone.price}</p>
+                                <Link to={`/${eachPhone.id}`}>Detalles</Link>
+                            </div>
+                        )
+                    })
+                    :
+                    <Spinner animation="border" />
+            }
         </>
     )
 }
