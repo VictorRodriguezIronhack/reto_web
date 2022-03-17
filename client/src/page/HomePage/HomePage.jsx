@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 import telephoneService from "../../services/telephone.service"
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner"
 
 const HomePage = () => {
 
@@ -21,15 +22,15 @@ const HomePage = () => {
                     getPhone.map((eachPhone, idx) => {
                         return (
                             <div key={idx} className="phone">
-                                <p>{eachPhone.name}</p>
+                                <h3>{eachPhone.name}</h3>
                                 <p>{eachPhone.manufacturer}</p>
-                                <p>€{eachPhone.price}</p>
+                                <p>{eachPhone.price}€</p>
                                 <Link to={`/${eachPhone.id}`}>Detalles</Link>
                             </div>
                         )
                     })
                     :
-                    <Spinner animation="border" />
+                    <LoadingSpinner />
             }
         </>
     )
