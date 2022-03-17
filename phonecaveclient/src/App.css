@@ -1,0 +1,32 @@
+.imgPhones {
+  width: 20vw
+}
+
+.imgDetails {
+  width: 30vw
+}
+
+
+.spinner {
+ display: flex;
+margin-left: 50vw;
+ margin-top: 50vh;
+}
+
+.spinnerDetails {
+
+ margin-top: 50vh;
+}
+
+.phoneList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.phoneDetails {
+  display: flex;
+ align-items: center;
+  flex-direction: column;
+}
