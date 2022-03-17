@@ -1,7 +1,7 @@
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import { useEffect, useState } from "react"
-import Link from "react-router-dom";
+import{ Link} from "react-router-dom";
 
 
 
@@ -30,14 +30,17 @@ function Telephones({telephones, setTelephoneDetails}) {
            
             <div className="phoneList">
             {endSpinner ? telephones && telephones.map((tel) => {
-                return <>
-                    <Link to={{
+          
+                  
+                  return  <Link to={{
                     pathname: `/${tel.id}`,
                 }}
-                    onClick={() => setTelephoneDetails(tel)} >
+                            onClick={() => setTelephoneDetails(tel)}
+                        key={tel.id} >
                     <p>{tel.name}</p>
                     <img className="imgPhones" src={require(`./phoneImgs/${tel.imageFileName}`)} />
-                </Link></>
+                        </Link>
+                
             }) :
                     <Box className="spinner" sx={{ display: 'flex' }}>
                 <CircularProgress />
