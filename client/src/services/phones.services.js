@@ -1,5 +1,5 @@
 import axios from "axios"
-import phones from "./../phonesApi"
+
 
 class PhonesService {
     constructor(){
@@ -10,6 +10,11 @@ class PhonesService {
 
     getAll = () => {
         return this.api.get('/telefonos')
+    }
+
+    getOne = (id) => {
+        
+        return this.api.get(`/telefonos/${id}`)
     }
 }
 
