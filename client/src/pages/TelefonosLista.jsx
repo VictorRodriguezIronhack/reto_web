@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import telefonosService from "../services/telefonos.service";
 
 const TelefonosLista = () => {
@@ -20,6 +21,9 @@ const TelefonosLista = () => {
                     <p>{telefonos.manufacturer}</p>
                     <p>{telefonos.price}</p>
                     <hr />
+                    <Link to={`/detalles/${telefonos.id}`}>
+                        Detalles
+                    </Link>
                 </div>
             })}
         </>
