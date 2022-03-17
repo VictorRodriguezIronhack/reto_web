@@ -1,0 +1,52 @@
+.volver-button {
+    text-transform: capitalize;
+    flex-direction: row;
+    display: flex;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0.1);
+
+}
+
+.arrow {
+    margin-top: 2px;
+    transform: rotate(180deg);
+    margin-right: 2px;
+}
+
+.phone-details-card {
+    position: relative;
+    box-shadow: 0px 0px 3px white;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .03);
+}
+
+.price {
+    color: green;
+}
+
+.spec {
+    border: .5px solid white;
+    border-radius: 5px;
+    background-color: rgba(117, 145, 206, 0.08);
+    padding: 5px;
+}
+
+.phone-image {
+    max-width: 15%;
+    margin-right: 10px;
+    border: 3px solid gray;
+    margin-top: 10px;
+}
+
+.phone-title {
+    width: 100%;
+    margin: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 1px;
+    margin-bottom: 4px;
+    padding-bottom: 10px;
+}
+
+.header-text {
+    margin: 0 20px;
+}
