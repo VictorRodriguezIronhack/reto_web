@@ -9,9 +9,7 @@ const IndexPage = () => {
 
     useEffect(() => {
         setLoading(true)
-        setTimeout(() => {
-            getPhones()
-        }, 2000)
+        getPhones()
     }, [])
 
     const [needsDetails, setNeedsDetails] = useState(false)
@@ -20,7 +18,7 @@ const IndexPage = () => {
     const [phones, setPhones] = useState([])
 
     const getPhones = () => {
-        axios.get("http://localhost:5005/api/telefonos")
+        axios.get(`${process.env.REACT_APP_API_URL}/telefonos`)
             .then(({ data }) => {
                 setPhones(data)
                 setLoading(false)
