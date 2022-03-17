@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+main {
+  margin-bottom: 150px;
+  min-height: calc(100vh - 350px);
+}
+
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
