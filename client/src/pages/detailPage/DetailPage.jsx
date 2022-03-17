@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap"
 import { Link, useParams } from "react-router-dom"
 import phonesService from "../../services/phones.services"
 
+import "./DetailPage.css"
 
 const DetailPage = () => {
 
@@ -39,7 +40,7 @@ const DetailPage = () => {
                     }
                 </Col>
                 <Col md={6} className='phoneCol mt-5'>
-                    <article>
+                    <article className="phoneSpecs">
                         <p>{phone.manufacturer}</p>
                         <p>{phone.description}</p>
                         <p>Procesador: {phone.processor} RAM: {phone.ram}gb</p>

@@ -26,7 +26,7 @@ const IndexPage = () => {
    
     return (
         <>
-        <h1>The Phone Cave</h1>
+        <h1 className="title">The Phone Cave</h1>
         <Row>
             {
                phones.map((phone)=>{
