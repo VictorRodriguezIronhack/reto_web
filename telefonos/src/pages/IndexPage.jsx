@@ -19,7 +19,7 @@ const IndexPage = () => {
 
     const getPhones = () => {
         setTimeout(() => {
-            axios.get(`${process.env.REACT_APP_API_URL}/telefonos`)
+            axios.get(`${process.env.REACT_APP_API_URL || "http://localhost:5005/api"}/telefonos`)
                 .then(({ data }) => {
                     setPhones(data)
                     setLoading(false)
