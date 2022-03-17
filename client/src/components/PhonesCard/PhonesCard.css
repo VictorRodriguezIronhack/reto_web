@@ -1,0 +1,23 @@
+.PhonesList {
+    margin-left: 30px;
+}
+
+
+.PhoneCard {
+    margin-bottom: 30px;
+    width: 400px;
+}
+
+.PhoneCard img {
+    width: 200px;
+    margin: auto;
+    object-fit: cover;
+}
+
+.phoneName {
+    text-align: center;
+}
+
+.cardLink {
+    text-decoration: none;
+}

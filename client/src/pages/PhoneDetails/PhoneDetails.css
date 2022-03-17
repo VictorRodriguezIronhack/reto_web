@@ -1,0 +1,16 @@
+.detalles {
+    text-align: left;
+    width: 600px;
+    margin: 10% auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 2px 10px 3px rgb(172, 172, 172);
+}
+
+.detalles h1 {
+    text-align: center;
+}
+
+.detalles img {
+    width: 200px;
+}
