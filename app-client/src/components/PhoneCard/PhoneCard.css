@@ -1,0 +1,10 @@
+.phoneCard {
+    margin-bottom: 20px;
+    border-radius: 5%
+
+}
+
+.phoneCard img {
+    height: 300px;
+    object-fit: contain;
+}
