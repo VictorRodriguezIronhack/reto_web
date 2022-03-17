@@ -10,7 +10,10 @@ const HomePage = () => {
     const [phones, setPhones] = useState([])
 
     useEffect(() => {
-        loadPhones()
+        setTimeout(() => {
+            loadPhones()
+        }, 2000)
+
     }, [])
 
     const loadPhones = () => {
