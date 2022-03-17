@@ -5,10 +5,11 @@ import "./PhoneCard.css"
 
 function PhoneCard({phone}) {
 
-    const { id, name } = phone
+    const { id, name, manufacturer, description, color, price, imageFileName, screen, processor, ram } = phone
 
     return (
         <Card className="PhoneCard">
+            <Card.Img variant="top" src={require(`../../images/${imageFileName}`)} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Link to={`/telefonos/${id}`} state={{ phone }} className="cardLink">

@@ -60,6 +60,6 @@ Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides 
 #Client
 #React-Routes
 |  Routes       |    URI path  		 		  |    Description          |   
-| ------------- | ----------------------------|-------------------------|------------
+| ------------- | ----------------------------|-------------------------|
 |     route     | /         				  | listado de telefono     |    
 |     route     | /telefonos/:telefono_id  	  | detalle de telefono     |        

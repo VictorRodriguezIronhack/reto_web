@@ -20,19 +20,19 @@ function PhonesPage() {
     }, [])
 
     return (
-        <>
-            <Row>
-                {
-                    phones.map(phone => {
-                        return (
-                            <Col md={4} key={phone.id}>
-                                <PhoneCard phone={phone}/>
-                            </Col>                 
-                        )
-                    })
-                }
-            </Row>
-            
+        <>  
+            <h1>List of Phones</h1>
+                <Row>
+                    {
+                        phones.map(phone => {
+                            return (
+                                <Col md={4} key={phone.id}>
+                                    <PhoneCard phone={phone}/>
+                                </Col>                 
+                            )
+                        })
+                    }
+                </Row>    
         </>
     )
 }
