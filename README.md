@@ -1,6 +1,6 @@
 ### Como utilizar la aplicación:
 
-- Clona el repositorio con > git clone 'nombre del repositorio' <
+- Clona el repositorio con > git clone 'link del repositorio' <
 - Debes tener dos carpetas principales: 'client' y 'server'
 - En la carpeta 'server' y en la carpeta 'client' debes escribir el comando > npm i < para instalar todas las dependencias necesarias.
 - Deberás abrir dos terminales, una para la carpeta client y otra para la carpeta server

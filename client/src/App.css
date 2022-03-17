@@ -9,13 +9,24 @@
 }
 
 .detailsPhone {
-  width: 150px;
-  height: 200px;
+  width: 350px;
+  height: 400px;
   object-fit: cover;
 }
 
-.spinner {
-  background-color: black;
-  height: 100px;
-  width: 100px;
+.phoneDetails {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.phoneDetails p span {
+  font-weight: 600;
+}
+
+.phoneDetailsText {
+  display: flex;
+}
+
+.sideText {
+  margin-left: 1rem;
 }
