@@ -47,3 +47,19 @@ Ahora bien, hablemos de el limite de entrega:
 
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno, si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+
+#INSTRUCCIONES
+
+1. Clonar el proyecto
+2. En la carpeta server ejecutar npm install 
+3. En esa misma carpeta server ejecutar npm run dev
+4. En la carpeta client, ejecutr npm install
+5. En esa misma carpeta Client, ejecutar npm run start
+6. Navegar a : localhost:3000
+
+#Client
+#React-Routes
+|  Routes       |    URI path  		 		  |    Description          |   
+| ------------- | ----------------------------|-------------------------|
+|     route     | /         				  | listado de telefono     |    
+|     route     | /telefonos/:telefono_id  	  | detalle de telefono     |        

@@ -1,0 +1,29 @@
+.PhoneCard {
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    box-shadow: 1px 2px 10px 3px gray;
+}
+
+.card-title {
+     font-size: 40px;
+}
+
+.PhoneCard img {
+    height: 700px;
+    object-fit: cover;
+}
+
+.cardLink {
+    text-decoration: none;
+}
+
+.cardButton {
+    color: white;
+    background-color: blue;
+    border: none;
+}
+
+.cardButton:hover {
+    background-color: orange;
+}

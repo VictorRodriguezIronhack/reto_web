@@ -1,0 +1,8 @@
+.navlink {
+    text-decoration: none;
+    color: white;
+}
+
+.navlink:hover {
+    color: white
+}
