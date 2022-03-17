@@ -1,0 +1,32 @@
+.phone {
+  display: flex;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+.phone p {
+  margin: 10px 20px;
+}
+
+.detailsPhone {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.phoneDetails {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.phoneDetails p span {
+  font-weight: 600;
+}
+
+.phoneDetailsText {
+  display: flex;
+}
+
+.sideText {
+  margin-left: 1rem;
+}
