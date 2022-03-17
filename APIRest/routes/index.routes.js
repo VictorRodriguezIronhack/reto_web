@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const phones = require("./../seeds/phones.json")
+const phones = require("./../db/bin/phones.json")
 
 router.get("/", (req, res, next) => {
   res.json("All good in here");

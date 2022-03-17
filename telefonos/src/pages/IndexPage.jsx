@@ -18,13 +18,14 @@ const IndexPage = () => {
     const [phones, setPhones] = useState([])
 
     const getPhones = () => {
-        axios.get(`${process.env.REACT_APP_API_URL}/telefonos`)
-            .then(({ data }) => {
-                setPhones(data)
-                setLoading(false)
-                console.log(data)
-            })
-            .catch(err => console.log(err))
+        setTimeout(() => {
+            axios.get(`${process.env.REACT_APP_API_URL}/telefonos`)
+                .then(({ data }) => {
+                    setPhones(data)
+                    setLoading(false)
+                })
+                .catch(err => console.log(err))
+        }, 1000)
     }
 
     return (
