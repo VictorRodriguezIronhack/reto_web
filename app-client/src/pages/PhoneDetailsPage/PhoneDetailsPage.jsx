@@ -26,13 +26,16 @@ const PhoneDetailsPage = () => {
         <>
             < Container >
                 <h2>{phoneDetails.name}</h2>
-                <hr />
+
                 <Card>
 
 
                     <Row className='detailsCard'>
                         <Col md={3}>
-                            <img style={{ width: '150%', paddingRight: '80px' }} src={phoneDetails.imageFileName} alt={phoneDetails.name} />
+                            <img style={{ width: '180%', paddingRight: '100px' }} src={phoneDetails.imageFileName} alt={phoneDetails.name} />
+                            <Link to="/">
+                                <Button variant="dark">Volver</Button>
+                            </Link>
                         </Col>
 
                         <Col md={8}>
@@ -40,7 +43,7 @@ const PhoneDetailsPage = () => {
 
                             <p>Nombre: {phoneDetails.name}</p>
                             <p>Descripción: {phoneDetails.description}</p>
-                            <p>Precio: {phoneDetails.price}</p>
+                            <p>Precio: {phoneDetails.price}€</p>
 
                             <h3>Especificaciones</h3>
 
@@ -48,10 +51,9 @@ const PhoneDetailsPage = () => {
                             <p>Pantalla: {phoneDetails.screen}</p>
                             <p>Procesador: {phoneDetails.processor}</p>
                             <p>Ram: {phoneDetails.ram} gb RAM</p>
+
                         </Col>
-                        <Link to="/">
-                            <Button variant="dark">Volver</Button>
-                        </Link>
+
 
                     </Row>
                 </Card>

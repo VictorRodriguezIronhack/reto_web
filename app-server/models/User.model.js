@@ -1,16 +1,57 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require("mongoose")
 
-// TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
   {
     username: {
       type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
+      required: true,
+      minlength: 2,
+      maxlength: 20,
+      trim: true
     },
-    password: String,
+    userlastname: {
+      type: String,
+      required: true,
+      minlength: 2,
+      maxlength: 20,
+      trim: true
+    },
+
+    email: {
+      type: String,
+      required: true,
+    },
+    phone: {
+      type: Number,
+      required: true,
+    },
+
+    password: {
+      type: String,
+      required: true,
+    },
+
+    role: {
+      type: String,
+      enum: ['ADMIN', 'USER'],
+      default: 'USER',
+      required: true,
+    },
+
+    productsCart: [
+      {
+        product: {
+          type: Schema.Types.ObjectId,
+          ref: 'Product'
+        },
+        quantity: {
+          type: Number,
+          default: 1
+        }
+      }
+    ]
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: true,
   }
 );

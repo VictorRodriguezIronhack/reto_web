@@ -12,7 +12,7 @@ const HomePage = () => {
     useEffect(() => {
         setTimeout(() => {
             loadPhones()
-        }, 2000)
+        }, 1000)
 
     }, [])
 

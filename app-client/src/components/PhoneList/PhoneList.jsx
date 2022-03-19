@@ -7,7 +7,7 @@ const PhoneList = ({ phones }) => {
     return (
         <Row>
             {phones.map(phone => {
-                return <Col md={4} key={phone.id}> <PhoneCard {...phone} /> </Col>
+                return <Col xs={12} md={4} key={phone.id}> <PhoneCard {...phone} /> </Col>
             })}
         </Row>
     )

@@ -8,17 +8,19 @@ const PhoneCard = ({ name, manufacturer, imageFileName, price, _id }) => {
 
         <>
             <Card className='phoneCard'>
-                <Card.Img variant="top" src={imageFileName} />
+                <Link to={`/telefonos/${_id}`}>
+                    <Card.Img variant="top" src={imageFileName} />
+                </Link>
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Title>By {manufacturer}</Card.Title>
                     <Card.Text>Precio: {price}€</Card.Text>
-                    <Link to={`/telefonos/${_id}`}>
-                        <div className="d-grid gap-2">
-                            <Button variant="dark">Ver detalles</Button>
-                        </div>
-                    </Link>
                 </Card.Body>
+                <Link to={`/telefonos/${_id}`}>
+                    <div className="d-grid gap-2 col-9 mx-auto">
+                        <Button variant="dark">Ver detalles</Button>
+                    </div>
+                </Link>
             </Card >
 
         </>
