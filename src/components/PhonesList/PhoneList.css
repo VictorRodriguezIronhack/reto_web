@@ -1,0 +1,9 @@
+.eachimage {
+    height: 700px;
+    padding: 0;
+}
+.eachphone{
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+}
