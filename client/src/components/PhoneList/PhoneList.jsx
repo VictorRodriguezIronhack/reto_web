@@ -5,12 +5,12 @@ import PhoneCard from "../PhoneCard/PhoneCard";
 import "./PhoneList.css";
 
 function PhoneList() {
-  const [telephone, setTelephone] = useState([]);
+  const [phones, setPhones] = useState([]);
 
   const loadTelephones = () => {
     telephoneService
       .getTelephones()
-      .then(({ data }) => setTelephone(data))
+      .then(({ data }) => setPhones(data))
       .catch((err) => console.log(err));
   };
 
@@ -19,20 +19,18 @@ function PhoneList() {
   }, []);
 
   return (
-    <>
-      <Row>
-        {telephone?.map((phone) => (
-          <Col md={3}>
-            <PhoneCard
-              manufacturer={phone.manufacturer}
-              name={phone.name}
-              imageFileName={phone.imageFileName}
-              id={phone.id}
-            />
-          </Col>
-        ))}
-      </Row>
-    </>
+    <Row>
+      {phones?.map(phone => (
+        <Col md={3} key={phone.id}>
+          <PhoneCard
+            manufacturer={phone.manufacturer}
+            name={phone.name}
+            imageFileName={phone.imageFileName}
+            id={phone.id}
+          />
+        </Col>
+      ))}
+    </Row>
   );
 }
 
