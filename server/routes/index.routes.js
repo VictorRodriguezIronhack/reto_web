@@ -7,7 +7,11 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/telefonos", (req, res, next) => {
-  res.json(data);
+  //console.table(data)
+  console.log('im here!');
+  res.setHeader("Content-Type", "application/json");
+  res.status(200).json(data);
+  console.log('done!');
 });
 
 module.exports = router;
