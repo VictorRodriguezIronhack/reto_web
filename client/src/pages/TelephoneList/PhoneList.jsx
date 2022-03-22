@@ -1,10 +1,10 @@
-import { Card, Col, Button, Row } from "react-bootstrap";
-import "./TelephoneList.css";
+import { Modal, Col, Button, Row } from "react-bootstrap";
+import "./PhoneList.css";
 import { React, useEffect, useState } from "react";
 import telephoneService from "../../services/telephones.services";
-import PhoneCard from "../../components/PhoneCard";
+import PhoneCard from "../../components/PhoneCard/PhoneCard";
 
-function TelephoneList() {
+function PhoneList() {
   const [telephone, setTelephone] = useState([]);
 
   const loadTelephones = () => {
@@ -36,4 +36,4 @@ function TelephoneList() {
   );
 }
 
-export default TelephoneList;
+export default PhoneList;

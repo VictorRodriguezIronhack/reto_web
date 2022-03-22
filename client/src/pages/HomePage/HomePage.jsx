@@ -1,8 +1,8 @@
 import { React, useEffect, useState } from "react";
 import telephoneService from "../../services/telephones.services";
-import { Container, Row } from "react-bootstrap";
-import TelephoneList from "../TelephoneList/TelephoneList";
 import "./HomePage.css"
+import { Container, Row } from "react-bootstrap";
+import PhoneList from "../TelephoneList/PhoneList";
 
 function HomePage() {
   
@@ -11,10 +11,10 @@ function HomePage() {
     <>
       <Container>
         <Row>
-          <h1>The phone shop</h1>
+          <h2>The phone shop</h2>
           <h3>Available phones 📱</h3>
         </Row>
-        <TelephoneList />
+        <PhoneList />
       </Container>
     </>
   );
