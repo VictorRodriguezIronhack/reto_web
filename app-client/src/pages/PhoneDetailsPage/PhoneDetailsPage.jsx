@@ -47,7 +47,7 @@ const PhoneDetailsPage = () => {
 
                             <h3>Especificaciones</h3>
 
-                            <p>Color: {phoneDetails.color} metros</p>
+                            <p>Color: {phoneDetails.color}</p>
                             <p>Pantalla: {phoneDetails.screen}</p>
                             <p>Procesador: {phoneDetails.processor}</p>
                             <p>Ram: {phoneDetails.ram} gb RAM</p>

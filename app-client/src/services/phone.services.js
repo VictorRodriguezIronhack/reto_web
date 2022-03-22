@@ -14,6 +14,10 @@ class PhonesService {
         return this.api.get(`/telefonos/${phone_id}`)
     }
 
+    createPhone = phone => {
+        return this.api.post(`telefonos/create`, phone)
+    }
+
 }
 const phonesService = new PhonesService()
 

@@ -22,7 +22,6 @@ router.get('/:phone_id', (req, res) => {
         .catch(err => res.status(500).json(err))
 })
 
-
 //CREATE PHONE
 
 router.post('/create', (req, res) => {
