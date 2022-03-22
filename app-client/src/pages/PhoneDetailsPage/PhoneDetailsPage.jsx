@@ -24,13 +24,13 @@ const PhoneDetailsPage = () => {
     return (
 
         <>
-            < Container >
+            < Container className='detailsCard'>
                 <h2>{phoneDetails.name}</h2>
 
-                <Card>
+                <Card >
 
 
-                    <Row className='detailsCard'>
+                    <Row className='detailsBox'>
                         <Col md={3}>
                             <img style={{ width: '180%', paddingRight: '100px' }} src={phoneDetails.imageFileName} alt={phoneDetails.name} />
                             <Link to="/">
