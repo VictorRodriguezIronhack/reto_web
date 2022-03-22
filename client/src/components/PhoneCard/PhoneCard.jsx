@@ -1,5 +1,6 @@
-import { Card, Col, Button } from "react-bootstrap";
-
+import { Card } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const PhoneCard = ({id, name, manufacturer, imageFileName}) => {
 

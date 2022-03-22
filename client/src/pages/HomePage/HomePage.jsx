@@ -1,8 +1,7 @@
-import { React, useEffect, useState } from "react";
-import telephoneService from "../../services/telephones.services";
-import "./HomePage.css"
+import { React } from "react";
 import { Container, Row } from "react-bootstrap";
 import PhoneList from "../TelephoneList/PhoneList";
+import "./HomePage.css"
 
 function HomePage() {
   
