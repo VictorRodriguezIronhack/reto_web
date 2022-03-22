@@ -13,7 +13,7 @@ const PhoneCard = ({id, name, manufacturer, imageFileName}) => {
                 <h4 key={id}>{name}</h4>
               </Card.Title>
               <Card.Text>
-                <p>{manufacturer}</p>
+                {manufacturer}
               </Card.Text>
               <div className="d-grid gap-2">
                 <Button variant="outline-dark">Details</Button>
