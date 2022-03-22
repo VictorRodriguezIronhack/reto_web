@@ -1,4 +1,4 @@
-import { Card, Col, Button } from "react-bootstrap";
+import { Card, Col, Button, Row } from "react-bootstrap";
 import "./TelephoneList.css";
 import { React, useEffect, useState } from "react";
 import telephoneService from "../../services/telephones.services";
@@ -20,15 +20,18 @@ function TelephoneList() {
 
   return (
     <>
-      {telephone?.map((phone) => (
-        <Col md={3}>
-          <PhoneCard 
-            manufacturer={phone.manufacturer}
-            name={phone.name}
-            imageFileName={phone.imageFileName}
-            id={phone.id} />
-        </Col>
-      ))}
+      <Row>
+        {telephone?.map((phone) => (
+          <Col md={3}>
+            <PhoneCard
+              manufacturer={phone.manufacturer}
+              name={phone.name}
+              imageFileName={phone.imageFileName}
+              id={phone.id}
+            />
+          </Col>
+        ))}
+      </Row>
     </>
   );
 }
