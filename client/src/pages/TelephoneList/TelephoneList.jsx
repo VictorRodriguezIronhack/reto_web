@@ -20,7 +20,7 @@ function TelephoneList() {
   return (
     <>
       {telephone?.map((phone) => (
-        <Col md={6}>
+        <Col md={3}>
           <Card>
             <Card.Img className="img" src={`images/${phone.imageFileName}`} />
             <Card.Body>
@@ -30,7 +30,9 @@ function TelephoneList() {
               <Card.Text>
                 <p>{phone.manufacturer}</p>
               </Card.Text>
-              <Button variant="outline-dark">Go somewhere</Button>
+              <div className="d-grid gap-2">
+                <Button variant="outline-dark">Details</Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>

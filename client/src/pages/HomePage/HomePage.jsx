@@ -11,10 +11,10 @@ function HomePage() {
     <>
       <Container>
         <Row>
-          <h1>Welcome</h1>
-          <h3>Available phones</h3>
+          <h1>The phone shop</h1>
+          <h3>Available phones 📱</h3>
         </Row>
-          <TelephoneList />
+        <TelephoneList />
       </Container>
     </>
   );

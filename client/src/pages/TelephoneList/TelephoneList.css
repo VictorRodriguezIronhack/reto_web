@@ -1,11 +1,13 @@
 .img {
-    width: 250px;
+    width: 290px;
 }
 
 h4 {
+    text-align: center;
     color: rgb(29, 29, 29);   
 }
 
 p {
+    text-align: center;
     color: rgb(80, 80, 80)
 }
