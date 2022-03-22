@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import telephoneService from "../../services/telephones.services";
-import PhoneCard from "../../components/PhoneCard/PhoneCard";
+import PhoneCard from "../PhoneCard/PhoneCard";
 import "./PhoneList.css";
 
 function PhoneList() {

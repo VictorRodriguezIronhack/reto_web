@@ -1,6 +1,6 @@
 import { React } from "react";
 import { Container, Row } from "react-bootstrap";
-import PhoneList from "../TelephoneList/PhoneList";
+import PhoneList from "../../components/PhoneList/PhoneList";
 import "./HomePage.css"
 
 function HomePage() {

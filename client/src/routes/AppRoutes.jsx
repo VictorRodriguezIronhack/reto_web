@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
-import PhoneList from "../pages/TelephoneList/PhoneList";
+import PhoneList from "../components/PhoneList/PhoneList";
 
 
 const AppRoutes = () => {
