@@ -2,6 +2,7 @@ import { Card, Col, Button } from "react-bootstrap";
 import "./TelephoneList.css";
 import { React, useEffect, useState } from "react";
 import telephoneService from "../../services/telephones.services";
+import PhoneCard from "../../components/PhoneCard";
 
 function TelephoneList() {
   const [telephone, setTelephone] = useState([]);
@@ -21,20 +22,11 @@ function TelephoneList() {
     <>
       {telephone?.map((phone) => (
         <Col md={3}>
-          <Card>
-            <Card.Img className="img" src={`images/${phone.imageFileName}`} />
-            <Card.Body>
-              <Card.Title>
-                <h4 key={phone.id}>{phone.name}</h4>
-              </Card.Title>
-              <Card.Text>
-                <p>{phone.manufacturer}</p>
-              </Card.Text>
-              <div className="d-grid gap-2">
-                <Button variant="outline-dark">Details</Button>
-              </div>
-            </Card.Body>
-          </Card>
+          <PhoneCard 
+            manufacturer={phone.manufacturer}
+            name={phone.name}
+            imageFileName={phone.imageFileName}
+            id={phone.id} />
         </Col>
       ))}
     </>
