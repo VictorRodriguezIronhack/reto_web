@@ -7,7 +7,7 @@ import "./PhoneList.css";
 
 function PhoneList() {
   const [phones, setPhones] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  const [mustShowModal, setMustShowModal] = useState(false);
   const [selectedPhone, setSelectedPhone] = useState();
 
   const loadTelephones = () => {
@@ -22,8 +22,11 @@ function PhoneList() {
   }, []);
 
 
- const openModal = () => setShowModal(true)
- const closeModal = () => setShowModal(false)
+function showModal(phone) {
+  console.log('Called!');
+  setSelectedPhone(phone);
+  setMustShowModal(true);
+}
 
   return (
     <>
@@ -35,12 +38,12 @@ function PhoneList() {
               name={phone.name}
               imageFileName={phone.imageFileName}
               id={phone.id}
-              openModal={openModal}
+              onShowDetails={() => showModal(phone)}
             />
           </Col>
         ))}
       </Row>
-      <Modal onClick={showModal} onHide={closeModal}>
+      <Modal show={mustShowModal} onHide={() => setMustShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>{selectedPhone?.name}</Modal.Title>
         </Modal.Header>
