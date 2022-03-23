@@ -4,9 +4,19 @@ import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PhoneDetails from "../PhoneDetails/PhoneDetails";
 
-const PhoneCard = ({ id, name, manufacturer, imageFileName }) => {
-
-  const [ mustShowModal, setMustShowModal ] = useState(false);
+const PhoneCard = ({
+  id,
+  name,
+  manufacturer,
+  imageFileName,
+  description,
+  color,
+  price,
+  screen,
+  processor,
+  ram,
+}) => {
+  const [mustShowModal, setMustShowModal] = useState(false);
   const showModal = () => setMustShowModal(true);
   const hideModal = () => setMustShowModal(false);
 
@@ -31,14 +41,19 @@ const PhoneCard = ({ id, name, manufacturer, imageFileName }) => {
         <Modal.Header closeButton>
           <Modal.Title>{name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <PhoneDetails />
+        <Modal.Body>
+          <PhoneDetails
+            id={id}
+            name={name}
+            manufacturer={manufacturer}
+            imageFileName={imageFileName}
+            description={description}
+            color={color}
+            price={price}
+            screen={screen}
+            processor={processor}
+            ram={ram}
+          />
         </Modal.Body>
       </Modal>
     </>

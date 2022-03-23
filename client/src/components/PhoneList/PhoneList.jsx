@@ -28,11 +28,16 @@ function PhoneList() {
               name={phone.name}
               imageFileName={phone.imageFileName}
               id={phone.id}
+              color={phone.color}
+              price={phone.price}
+              screen={phone.screen}
+              processor={phone.processor}
+              ram={phone.ram}
+              description={phone.description}
             />
           </Col>
         ))}
       </Row>
-
     </>
   );
 }

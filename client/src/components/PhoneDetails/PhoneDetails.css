@@ -1,0 +1,13 @@
+.imgPhoneDetails {
+    width: 300px;
+    margin-left: 85px;
+}
+
+.manufacturer{
+    font-weight: bold;
+}
+
+p {
+    text-align: left;
+    padding: .5px;
+}
