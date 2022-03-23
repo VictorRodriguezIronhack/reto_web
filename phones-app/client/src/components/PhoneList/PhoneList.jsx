@@ -35,9 +35,9 @@ function PhoneList() {
 
     return (
         <>
-            {/* {loading && <LoadingComponent/>}
-            {!loading && */}
-                {/* <> */}
+            {loading && <LoadingComponent />}
+            {!loading &&
+                <>
                     <Container>
                         <section>
                             {phones.map(elm => {
@@ -49,15 +49,15 @@ function PhoneList() {
                     </Container>
 
 
-                    {/* <Modal show={modal} onHide={closeModal}>
+                    <Modal show={modal} onHide={closeModal}>
                         <Modal.Header closeButton>
                             <Modal.Title>{showP?.name}</Modal.Title>
                         </Modal.Header>
                         <Modal.Body >
                             <Details {...showP} />
                         </Modal.Body>
-                    </Modal> */}
-                {/* </>} */}
+                    </Modal>
+                </>}
         </>
 
     )

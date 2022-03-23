@@ -8,6 +8,7 @@ function HomePage() {
   const goToPhones=()=>navigate("/phones")
   return (
     <div className="App">
+      <h1>¿listo para encontrar el mejor teléfono?</h1>
     <Button variant="warning" onClick={goToPhones}> Estoy Listo
     </Button>
     </div>
