@@ -39,7 +39,7 @@ const PhoneCard = ({
 
       <Modal show={mustShowModal} onHide={hideModal}>
         <Modal.Header closeButton>
-          <Modal.Title>{name}</Modal.Title>
+          <Modal.Title>{manufacturer} - {name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <PhoneDetails

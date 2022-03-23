@@ -1,6 +1,6 @@
 .imgPhoneDetails {
     width: 300px;
-    margin-left: 85px;
+    margin-left: 60px;
 }
 
 .manufacturer{
@@ -10,4 +10,21 @@
 p {
     text-align: left;
     padding: .5px;
+}
+
+span {
+    font-weight: bold;
+}
+
+ul li {
+    list-style:none
+}
+
+.description {
+    margin-bottom: 25px;
+}
+
+.modal {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
