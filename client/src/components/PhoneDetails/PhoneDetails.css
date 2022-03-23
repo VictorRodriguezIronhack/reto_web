@@ -17,11 +17,13 @@ span {
 }
 
 ul li {
-    list-style:none
+    list-style: none
 }
 
 .description {
     margin-bottom: 25px;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .modal {

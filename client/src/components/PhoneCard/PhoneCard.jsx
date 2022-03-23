@@ -3,6 +3,7 @@ import { Card, Modal } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PhoneDetails from "../PhoneDetails/PhoneDetails";
+import './PhoneCard.css';
 
 const PhoneCard = ({
   id,
@@ -22,7 +23,7 @@ const PhoneCard = ({
 
   return (
     <>
-      <Card>
+      <Card className="phone-card">
         <Card.Img className="img" src={`images/${imageFileName}`} />
         <Card.Body>
           <Card.Title>
