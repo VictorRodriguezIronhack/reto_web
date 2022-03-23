@@ -1,13 +1,15 @@
 import React from 'react'
 import phoneService from '../../services/phone.service'
 import { useState, useEffect } from "react"
-import { Container, Modal, Spinner } from "react-bootstrap"
+import { Container, Modal } from "react-bootstrap"
 import LoadingComponent from '../Loading'
-
+import PhoneCard from '../PhoneCard/PhoneCard'
+import Details from '../Details/Details'
 
 function PhoneList() {
     const [phones, setPhones] = useState([])
     const [loading, setLoading] = useState([undefined])
+    const [showP, setShowP] = useState(undefined)
     const [modal, setModal] = useState(false)
 
     useEffect(() => {
@@ -33,20 +35,29 @@ function PhoneList() {
 
     return (
         <>
-            {loading && <Spinner animation="border" role="status"> <span className="visually-hidden">Loading...</span> </Spinner>}
-            {/* {!loading &&
-
-                <>
+            {/* {loading && <LoadingComponent/>}
+            {!loading && */}
+                {/* <> */}
                     <Container>
-                        {phones.map(elm => {
-                            return (
-                                <div key={elm.id}>
-
+                        <section>
+                            {phones.map(elm => {
+                                return (<div key={elm.id}>
+                                    <PhoneCard {...elm} openModal={openModal} setShowP={setShowP} />
                                 </div>)
-                        }
-            </Container>
-                </>
-            } */}
+                            })}
+                        </section>
+                    </Container>
+
+
+                    {/* <Modal show={modal} onHide={closeModal}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>{showP?.name}</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body >
+                            <Details {...showP} />
+                        </Modal.Body>
+                    </Modal> */}
+                {/* </>} */}
         </>
 
     )
