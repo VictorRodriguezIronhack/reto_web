@@ -1,0 +1,23 @@
+.card{
+    display: flex;
+    border-radius: 13px;
+ margin: 0.5rem;
+    align-content: center;
+width: auto;
+
+}
+.card:hover{
+transform: scale(1.05)
+}
+.card .btn{
+    background-color: brown;
+    margin-bottom: 20px;
+    border-color: brown;
+}
+.info{
+    margin-left: 2rem;
+}
+.card img{
+   
+   height: 600px;
+}

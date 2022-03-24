@@ -1,0 +1,38 @@
+.Bar{
+    color:white;
+}
+.title{
+    font-size: 40px;
+margin-left: 1.75rem;
+ text-decoration: none;
+    color:white;
+}
+.navbar img{
+    height: 80px;
+    margin-left: 10px;
+    margin-top:3px
+}
+.Bar .links{
+    display: flex;
+justify-items: right;
+}
+.Bar a.nav-link{
+   font-size: 17px;
+   
+margin-left: 1.75rem;
+ text-decoration: none;
+    color:white;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color:rgb(99, 96, 96) ;
+}
+.navbar-light .navbar-toggler{
+    color:white;
+    border-color: white;
+}
+.navbar-light .navbar-toggler-icon{
+    color:white;
+}

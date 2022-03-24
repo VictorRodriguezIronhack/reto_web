@@ -9,11 +9,13 @@ class PhoneService {
     getAllPhones = () => {
 
         return this.api.get('/getAllPhones')
-
+        
+        
     }
     getOnePhone = id => {
         return this.api.get(`/getOnePhone/${id}`)
     }
+   
 
 }
 

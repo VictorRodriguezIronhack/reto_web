@@ -1,10 +1,11 @@
 import React from 'react'
 import phoneService from '../../services/phone.service'
 import { useState, useEffect } from "react"
-import { Container, Modal } from "react-bootstrap"
+import { Container, Row, Col, Modal } from "react-bootstrap"
 import LoadingComponent from '../Loading'
 import PhoneCard from '../PhoneCard/PhoneCard'
 import Details from '../Details/Details'
+import "./PhoneList.css"
 
 function PhoneList() {
     const [phones, setPhones] = useState([])
@@ -24,28 +25,38 @@ function PhoneList() {
     const openModal = () => {
         setModal(true)
     }
-
-    phoneService
-        .getAllPhones()
-        .then(({ data }) => {
-            setPhones(data)
-            setLoading(false)
-        })
-        .catch(err => console.log(err))
+    useEffect(() => {
+        loadPhones()
+    }, [])
+    const loadPhones = () => {
+        phoneService
+            .getAllPhones()
+            .then(({ data }) => {
+                setPhones(data)
+                setLoading(false)
+            })
+            .catch(err => console.log(err))
+    }
 
     return (
         <>
             {loading && <LoadingComponent />}
             {!loading &&
-                <>
-                    <Container>
-                        <section>
+                <div className='phone' >
+                    <Container >
+                        <Row>
+
                             {phones.map(elm => {
-                                return (<div key={elm.id}>
-                                    <PhoneCard {...elm} openModal={openModal} setShowP={setShowP} />
-                                </div>)
+                                return (
+                                    <Col md={4} key={elm.id}>
+                                     
+                                        <PhoneCard {...elm} openModal={openModal} setShowP={setShowP} />
+                                      
+                                    </Col>
+                                )
                             })}
-                        </section>
+
+                        </Row>
                     </Container>
 
 
@@ -57,7 +68,7 @@ function PhoneList() {
                             <Details {...showP} />
                         </Modal.Body>
                     </Modal>
-                </>}
+                </div>}
         </>
 
     )

@@ -1,0 +1,13 @@
+.detail{
+background-color: rgb(194, 189, 189,3px);
+}
+.detail .card{
+    border-radius: 15px;
+    width: 25rem;
+}
+.card img{
+    height: 390px;
+}
+.modal-content{
+    opacity: 0.9;
+}

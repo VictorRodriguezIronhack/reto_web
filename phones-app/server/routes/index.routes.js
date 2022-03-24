@@ -10,8 +10,7 @@ router.get("/phones/getAllPhones", (req, res, next) => {
 
 
 router.get("/phones/getOnePhone/:phone_id", (req, res, next) => {
-  //lo qeu toque 
-  //no te oigo
+
   
 })
 module.exports = router;
