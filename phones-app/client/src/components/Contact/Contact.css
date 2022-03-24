@@ -1,0 +1,30 @@
+.cont{
+font-size: 1em;
+margin-top: 80px;
+height:44rem;
+}
+
+.cont .form-label{
+    font-size: 1.5em;
+}
+.cont2 h1{
+margin-top: 200px;
+font-size: 2em;
+}
+.cont .btn-primary{
+    border-color: aliceblue;
+    background-color: #212529;
+    width: 150px;
+    height: 80px;
+    font-size: 0.7em;
+    padding-bottom: 20px;
+}
+.cont .btn-primary:hover{
+ background-color:#212529;
+}
+.lost{
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 100%;
+    border-radius: 20px;
+}

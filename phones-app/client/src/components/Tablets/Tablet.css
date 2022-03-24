@@ -1,0 +1,11 @@
+.box{
+background-color: brown;
+display: flex;
+align-items: center;
+}
+.ship{
+    height: 650px;
+    width: 300px;
+   
+}
+
