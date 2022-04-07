@@ -46,42 +46,4 @@ router.delete('/delete/:user_id', (req, res) => {
 })
 
 
-// //ADD PRODUCT TO USER-CART
-// router.put('/cart/addProduct/:product_id', isAuthenticated, (req, res) => {
-//     const { product_id } = req.params
-//     const { _id } = req.payload
-
-//     Product
-//         .findById(product_id)
-//         .then(foundProduct => User.findByIdAndUpdate(_id, { $push: { productsCart: { product: foundProduct } } }, { new: true }))
-//         .then(response => res.json(response))
-//         .catch(err => res.status(500).json(err))
-// })
-
-
-// // REMOVE PRODUCT FROM USER-CART
-// router.put('/cart/removeProduct/:product_id', isAuthenticated, (req, res) => {
-//     const { product_id } = req.params
-//     const { _id } = req.payload
-
-//     Product
-//         .findById(product_id)
-//         .then(foundProduct => User.findByIdAndUpdate(_id, { $pull: { productsCart: { product: foundProduct } } }, { new: true }))
-//         .then(response => res.json(response))
-//         .catch(err => res.status(500).json(err))
-// })
-
-// //GET PRODUCT FROM USER-CART
-// router.get('/cart/getCartProducts', isAuthenticated, (req, res) => {
-//     //const { product_id } = req.params
-//     const { _id } = req.payload
-
-//     User
-//         .findById(_id)
-//         .select('productsCart')
-//         .then(response => res.json(response))
-//         .catch(err => res.status(500).json(err))
-// })
-
-
 module.exports = router

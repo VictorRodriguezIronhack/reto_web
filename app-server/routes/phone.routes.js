@@ -48,7 +48,7 @@ router.put('/edit/:phone_id', (req, res) => {
 router.delete('/delete/:phone_id', (req, res) => {
     const { phone_id } = req.params
 
-    Product
+    Phone
         .findByIdAndDelete(phone_id)
         .then(res.json({ message: 'Producto eliminado' }))
         .catch(err => res.status(500).json(err))
