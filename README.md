@@ -1,7 +1,10 @@
 # The Phone Cave
-The Phone Cave is a web application that offers the best smartphones for the best prices
+The Phone Cave is an app made for practicing both front-end and back-end with Javascript (Node and React)
+
+Try it here: [https://the-phone-cave.onrender.com](https://the-phone-cave.onrender.com)
 
 ## Setup
+* Create a server .env file through the .env.sample file
 * Server:
 
 ```
@@ -42,5 +45,4 @@ $ npm start
 
 ## Contact
 This is a project performed by Abel Andrés
-* Linkedin: https://www.linkedin.com/in/abel-andres/
-* GitHub: https://github.com/abel296
+* Linkedin: https://www.linkedin.com/in/abel-andres
