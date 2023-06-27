@@ -1,0 +1,17 @@
+.detailsCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detailsBox {
+padding: 10px 0 10px;
+display: flex;
+justify-content: center;
+
+}
+.detailsImage {
+    
+    width: 20px;
+
+}

@@ -47,3 +47,6 @@ Ahora bien, hablemos de el limite de entrega:
 
 
 Para comenzar con el reto haz fork del repositorio y para entregarlo no olvides hacer PR. Currate un Readme.MD bueno, si no se adjuntan las instrucciones para correr el repo tu candidatura quedará invalidada.
+
+## EXTRA
+Una página sencilla que muestra un listado de móviles disponibles ne la tienda. Si hacemos click en cada uno de ellos podemos ver la información detallada de cada móvil.

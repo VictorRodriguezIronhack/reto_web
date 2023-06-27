@@ -1,0 +1,16 @@
+.phoneCard {
+    margin-bottom: 20px;
+    border-radius: 2%;
+    text-align: center;
+
+}
+
+.phoneCard img {
+    height: 300px;
+    object-fit: contain;
+    opacity: inherit;
+}
+
+.button {
+    border-radius: 5%;
+}

@@ -1,0 +1,15 @@
+.App {
+  background-color: #0e6428;
+  padding: 5% 0 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  text-align: center;
+  padding: 30px 0 30px;
+  color: white
+}
+
