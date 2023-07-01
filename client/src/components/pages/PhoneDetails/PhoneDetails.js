@@ -62,7 +62,7 @@ class PhoneDetails extends Component {
                     </Row>
                     :
                     <div className="details-spinner">
-                        <Spinner tittle="phone's details"></Spinner>
+                        <Spinner></Spinner>
                     </div>
                 }
             </Container>

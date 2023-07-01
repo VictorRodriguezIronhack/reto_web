@@ -4,7 +4,7 @@ const Spinner = ({tittle, message}) => {
     return <>
         <div className="spinner"></div>
         <i>
-            <h5>Loading { tittle }</h5>
+            <h5>{ tittle }</h5>
             <p>{ message }</p>
         </i>
     </> 

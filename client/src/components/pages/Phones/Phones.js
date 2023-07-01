@@ -34,7 +34,7 @@ class Phones extends Component {
     }
     
     render() {
-        const tittle = 'the phone list'
+        const tittle = 'Loading'
         const message = 'If you opened the web for the first time the phone list will appear after 30 seconds due to hosting conditions'
         
         return(
@@ -48,7 +48,7 @@ class Phones extends Component {
                             <PhonesList phones={this.state.phones}></PhonesList>
                         
                         :
-                        <Spinner tittle={tittle} message={message}></Spinner> }
+                        <Spinner tittle={ tittle } message={ message }></Spinner> }
                 </Container>
 
                 <Modal show={this.state.showForm} onHide={() => this.togglemodalForm(false)}>
