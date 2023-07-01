@@ -8,7 +8,10 @@
     border-left-color: black;
     border-right-color: rgb(179, 179, 179);
     border-bottom-color: rgb(179, 179, 179);
-    animation: spinner .3s infinite linear
+    animation: spinner .3s infinite linear;
+    position: relative;
+    left: 48%;
+    margin-bottom: 15px;
 }
 
 

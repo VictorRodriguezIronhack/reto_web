@@ -4,6 +4,7 @@ import {Container, Button, Modal} from 'react-bootstrap'
 import PhonesList from './PhonesList'
 import PhoneForm from '../PhoneForm/PhoneForm'
 import Spinner from '../../Shared/Spinner/Spinner'
+import './Phones.css'
 
 class Phones extends Component {
 
@@ -33,7 +34,9 @@ class Phones extends Component {
     }
     
     render() {
-
+        const tittle = 'the phone list'
+        const message = 'If you opened the web for the first time the phone list will appear after 30 seconds due to hosting conditions'
+        
         return(
             <>
                 <Container>
@@ -45,7 +48,7 @@ class Phones extends Component {
                             <PhonesList phones={this.state.phones}></PhonesList>
                         
                         :
-                    <Spinner></Spinner>}
+                        <Spinner tittle={tittle} message={message}></Spinner> }
                 </Container>
 
                 <Modal show={this.state.showForm} onHide={() => this.togglemodalForm(false)}>

@@ -1,5 +1,13 @@
 import './Spinner.css'
 
-const Spinner = () => <div className="spinner"></div>
+const Spinner = ({tittle, message}) => {
+    return <>
+        <div className="spinner"></div>
+        <i>
+            <h5>Loading { tittle }</h5>
+            <p>{ message }</p>
+        </i>
+    </> 
+}
 
 export default Spinner
